@@ -36,7 +36,7 @@ export default function RootLayout({
         />
         {/* Analytics architecture goes here. E.g. script that listens to cookie-consent-updated event */}
       </head>
-      <body className="font-heebo bg-charcoal text-silver antialiased">
+      <body className="font-heebo bg-primary text-silver antialiased">
         {children}
         <FloatingWhatsApp />
         <CookieBanner />

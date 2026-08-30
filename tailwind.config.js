@@ -7,8 +7,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        charcoal: "#0A0B0D",
-        steel: "#1E2229",
+        primary: "#0B0D10",
+        charcoal: "#14181D",
+        elevated: "#1B2026",
+        offwhite: "#F3F3F0",
+        "primary-text": "#111317",
+        "secondary-text": "#666B72",
         brand: "#3E6FA8",
         "brand-bright": "#5B8EC4",
         "brand-dim": "#2A4F7A",
@@ -19,8 +23,8 @@ module.exports = {
         barlow: ["Barlow Condensed", "sans-serif"],
       },
       backgroundImage: {
-        "gradient-dark": "linear-gradient(135deg, #0A0B0D 0%, #111820 100%)",
-        "gradient-card": "linear-gradient(135deg, #1E2229 0%, #161b22 100%)",
+        "gradient-dark": "linear-gradient(135deg, #0B0D10 0%, #14181D 100%)",
+        "gradient-card": "linear-gradient(135deg, #14181D 0%, #1B2026 100%)",
         "diagonal-accent":
           "linear-gradient(135deg, transparent 40%, rgba(62,111,168,0.08) 40%)",
       },

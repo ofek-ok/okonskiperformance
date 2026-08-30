@@ -39,29 +39,29 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-white">
-      <div className="container mx-auto px-6 max-w-3xl">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl sm:text-5xl font-black text-charcoal leading-tight">
+    <section className="py-24 sm:py-32 md:py-40 bg-offwhite">
+      <div className="container mx-auto px-6 max-w-4xl">
+        <div className="text-center mb-24">
+          <h2 className="text-5xl sm:text-6xl font-black text-primary-text leading-tight">
             שאלות נפוצות
           </h2>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-6">
           {faqs.map((faq, index) => (
             <details
               key={index}
-              className="group bg-gray-50 border border-gray-200 rounded-xl open:bg-white open:shadow-sm transition-all"
+              className="group bg-white border border-gray-200 rounded-none open:border-brand/30 transition-colors"
             >
-              <summary className="flex items-center justify-between cursor-pointer p-6 list-none font-bold text-charcoal text-lg select-none">
+              <summary className="flex items-center justify-between cursor-pointer p-8 list-none font-black text-primary-text text-xl select-none group-open:text-brand">
                 {faq.q}
-                <span className="ml-4 flex-shrink-0 text-brand group-open:rotate-45 transition-transform duration-300">
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <span className="ml-4 flex-shrink-0 text-charcoal/30 group-open:text-brand transition-colors duration-300">
+                  <svg className="w-8 h-8 group-open:rotate-45 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                   </svg>
                 </span>
               </summary>
-              <div className="px-6 pb-6 text-charcoal/70 text-base leading-relaxed">
+              <div className="px-8 pb-8 text-secondary-text text-lg leading-relaxed">
                 {faq.a}
               </div>
             </details>

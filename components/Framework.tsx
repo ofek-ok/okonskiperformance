@@ -1,42 +1,52 @@
 export default function Framework() {
   const steps = [
-    { title: "ASSESS", desc: "להבין מה קורה." },
-    { title: "RECOVER", desc: "לטפל בכאב ועומס." },
-    { title: "BUILD", desc: "לשפר יכולת ותנועה." },
-    { title: "PERFORM", desc: "לחזור לדרוש יותר." },
+    { num: "01", title: "ASSESS", desc: "להבין מה קורה." },
+    { num: "02", title: "RECOVER", desc: "לטפל בכאב ועומס." },
+    { num: "03", title: "BUILD", desc: "לשפר יכולת ותנועה." },
+    { num: "04", title: "PERFORM", desc: "לחזור לדרוש יותר." },
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-white relative">
-      <div className="container mx-auto px-6 max-w-6xl text-center">
-        <h2 className="font-barlow text-brand font-black tracking-[0.2em] uppercase text-2xl sm:text-3xl mb-24">
-          The Performance System
-        </h2>
+    <section className="py-24 sm:py-32 md:py-48 bg-primary relative overflow-hidden">
+      {/* Subtle brand motif in background */}
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[url('/logo-official.png')] bg-no-repeat bg-contain opacity-[0.02] pointer-events-none -translate-y-1/3 translate-x-1/3" />
+
+      <div className="container mx-auto px-6 max-w-7xl relative z-10">
+        <div className="text-center mb-32">
+          <h2 className="font-barlow text-5xl sm:text-6xl lg:text-7xl font-black text-white tracking-widest uppercase">
+            The <span className="text-brand">Performance</span> System
+          </h2>
+        </div>
 
         {/* Framework Steps */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-4 relative max-w-5xl mx-auto">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-16 md:gap-4 relative">
           
-          {/* Connector Line (Desktop) */}
-          <div className="hidden md:block absolute top-1/2 left-[10%] right-[10%] h-px bg-gray-200 -translate-y-1/2 z-0" />
+          {/* Active Connector Line (Desktop) */}
+          <div className="hidden md:block absolute top-8 left-[5%] right-[5%] h-px bg-white/10 z-0 overflow-hidden">
+            <div className="h-full w-1/3 bg-brand animate-[slideRight_3s_ease-in-out_infinite]" />
+          </div>
           
           {/* Connector Line (Mobile) */}
-          <div className="block md:hidden absolute top-[10%] bottom-[10%] left-1/2 w-px bg-gray-200 -translate-x-1/2 z-0" />
+          <div className="block md:hidden absolute top-8 bottom-[10%] right-8 w-px bg-white/10 z-0 overflow-hidden">
+            <div className="w-full h-1/3 bg-brand animate-[slideDown_3s_ease-in-out_infinite]" />
+          </div>
 
           {steps.map((step, idx) => (
-            <div key={step.title} className="relative z-10 flex flex-col items-center group w-full md:w-auto">
-              {/* Node */}
-              <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white border border-gray-200 rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:border-brand/40 transition-all duration-300">
-                <span className="font-barlow text-brand font-black text-xl sm:text-2xl tracking-wider">
-                  {idx + 1}
+            <div key={step.title} className="relative z-10 flex flex-row md:flex-col items-center md:items-start group w-full md:w-1/4">
+              
+              {/* Node Number */}
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-primary border border-white/10 rounded-full flex items-center justify-center shrink-0 mb-0 md:mb-8 ml-8 md:ml-0 group-hover:border-brand/50 group-hover:bg-elevated transition-all duration-300 relative">
+                <span className="font-barlow text-silver/30 font-black text-2xl sm:text-3xl tracking-wider group-hover:text-brand transition-colors">
+                  {step.num}
                 </span>
               </div>
               
               {/* Text */}
-              <div className="bg-white px-4 py-2">
-                <h3 className="font-barlow text-2xl sm:text-3xl font-black text-charcoal tracking-wide mb-2 uppercase">
+              <div className="md:pr-4">
+                <h3 className="font-barlow text-3xl sm:text-4xl font-black text-white tracking-widest mb-3 uppercase group-hover:text-brand-bright transition-colors">
                   {step.title}
                 </h3>
-                <p className="text-charcoal/70 text-base sm:text-lg">
+                <p className="text-secondary-text text-lg sm:text-xl font-medium">
                   {step.desc}
                 </p>
               </div>
@@ -44,10 +54,28 @@ export default function Framework() {
           ))}
         </div>
 
-        <p className="text-xs text-charcoal/40 mt-20 max-w-2xl mx-auto">
+        <div className="mt-40 text-center max-w-4xl mx-auto border-t border-white/5 pt-20">
+          <p className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-[1.2]">
+            המטרה היא לא יותר טיפולים.<br />
+            <span className="text-brand">המטרה היא הטיפול הנכון עבורכם.</span>
+          </p>
+        </div>
+
+        <p className="text-xs text-white/20 mt-32 max-w-2xl mx-auto text-center">
           * התוכן אינו מהווה ייעוץ רפואי. יש להתאים את הפעילות למצבך הבריאותי וליכולתך האישית. במקרה של פציעה, מצב רפואי או ספק, יש להתייעץ עם גורם רפואי מוסמך לפני ביצוע הפעילות.
         </p>
       </div>
+
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes slideRight {
+          0% { transform: translateX(300%); }
+          100% { transform: translateX(-100%); }
+        }
+        @keyframes slideDown {
+          0% { transform: translateY(-100%); }
+          100% { transform: translateY(300%); }
+        }
+      `}} />
     </section>
   );
 }
