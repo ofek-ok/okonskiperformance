@@ -1,65 +1,57 @@
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-steel">
+    <section id="about" className="py-32 bg-steel border-t border-white/5">
       <div className="container mx-auto px-6 max-w-6xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image Side */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          
+          {/* Image / Visual Side */}
           <div className="relative">
-            <div className="aspect-[4/5] bg-charcoal rounded-lg overflow-hidden border border-white/5 relative">
-              <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" style={{ backgroundImage: "url('/placeholder-about.jpg')" }} />
-              {/* Optional: Add a second image overlay for the BJJ/MMA theme */}
-              <div className="absolute bottom-4 left-4 right-4 bg-charcoal/90 backdrop-blur p-4 rounded border border-white/10 text-center">
-                <p className="font-barlow text-brand font-bold tracking-widest uppercase text-sm">Ofek Okonski</p>
-                <p className="text-silver/60 text-xs mt-1">Founder, Okonski Performance</p>
+            <div className="aspect-[4/5] bg-black rounded-lg overflow-hidden border border-white/10 relative">
+              <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" style={{ backgroundImage: "url('/placeholder-about.jpg')" }} />
+              
+              <div className="absolute bottom-6 left-6 right-6 bg-charcoal/90 backdrop-blur-md p-6 rounded border border-white/10">
+                <p className="font-barlow text-white font-black tracking-widest uppercase text-xl mb-1">Ofek Okonski</p>
+                <p className="text-brand-bright text-sm font-bold tracking-wide uppercase">Founder, Okonski Performance</p>
               </div>
             </div>
           </div>
 
           {/* Text Side */}
           <div>
-            <span className="text-brand font-bold tracking-widest uppercase text-sm mb-4 block">
-              הסיפור מאחורי הקליניקה
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-black text-white leading-tight mb-8">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-[1.15] mb-12">
               ביצועים הם לא משהו שנולדים איתו. <br className="hidden sm:block" />
               <span className="text-brand-bright">הם משהו שבונים.</span>
             </h2>
 
-            <div className="space-y-4 text-silver/80 text-sm sm:text-base leading-relaxed">
+            <div className="space-y-6 text-silver/70 text-lg leading-relaxed mb-16">
               <p>
-                אני אופק אוקונסקי.
-              </p>
-              <p>
-                כשהייתי צעיר הייתי ילד חסר ביטחון, כזה שלא תמיד האמין בעצמו או במה שהוא מסוגל לעשות. 
-                הכניסה לעולם אמנויות הלחימה שינתה עבורי הרבה יותר מהיכולת להילחם. היא הכניסה לחיים שלי משמעת, התמדה, התמודדות עם קושי והבנה שאפשר לבנות יכולת וביטחון לאורך זמן.
+                כילד הייתי חסר ביטחון, כזה שלא תמיד האמין במה שהוא מסוגל לעשות. הכניסה לעולם אמנויות הלחימה שינתה הכל — היא הכניסה משמעת, התמדה והבנה שאפשר לבנות יכולת וביטחון לאורך זמן.
               </p>
               <p>
-                מאז עברו כ-15 שנה. הפכתי לבעל חגורה שחורה בג'יוג'יטסו ברזילאי, נכנסתי לעולם ה-MMA והפכתי גם למדריך. 
-                במקביל בניתי מסלול מקצועי ואקדמי: שני תארים וקריירה של שנים בניהול פרויקטים בעולם הטכנולוגיה.
+                מאז עברו כ-15 שנה. הפכתי לבעל חגורה שחורה ב-BJJ, נכנסתי לעולם ה-MMA ובמקביל בניתי קריירה אקדמית וטכנולוגית תובענית.
               </p>
               <p>
-                לאורך הדרך הבנתי שהעקרונות שעזרו לי להתפתח באמנויות הלחימה הם אותם עקרונות שפגשתי שוב ושוב גם בקריירה ובחיים: עקביות, ניהול נכון של עומס, הסתגלות, משמעת והיכולת להשתפר לאורך זמן.
+                לאורך הדרך הבנתי שהעקרונות הם זהים: עקביות, ניהול עומס והסתגלות. מתוך המסע הזה, נכנסתי לעולם הספורט-תרפיה, ושם העולמות התחברו.
               </p>
-              <p className="font-bold text-white border-r-2 border-brand pr-4 my-6 py-2">
-                למדתי שביצועים גבוהים הם לא תכונה שנולדים איתה. הם משהו שבונים.
-              </p>
-              <p>
-                מתוך המסע הזה נכנסתי גם לעולם הספורט-תרפיה והתחלתי להעמיק בגוף, בתנועה, בטיפול ובשיקום. וככל שהעמקתי, התחברו עבורי העולמות.
-              </p>
-              <p>
-                הבנתי שהגוף פועל לפי אותו עיקרון: לא מספיק לטפל בו רק כשמשהו משתבש. צריך ללמוד להבין אותו, לתחזק אותו ולבנות את היכולת שלו להתמודד עם הדרישות שאנחנו מציבים בפניו.
-              </p>
-              <p className="font-bold text-white text-xl mt-6 mb-2">
+              <div className="border-r-2 border-brand pr-6 py-2 my-8">
+                <p className="text-white font-bold text-xl leading-snug">
+                  הגוף פועל לפי אותו עיקרון: לא מספיק לטפל בו רק כשמשהו משתבש. צריך לבנות את היכולת שלו להתמודד עם הדרישות שאנחנו מציבים לו.
+                </p>
+              </div>
+              <p className="text-white font-bold">
                 מכאן נולדה Okonski Performance.
               </p>
-              <p>
-                היום זה מתחיל בטיפול, שיקום ותחזוקת הגוף. 
-                בהמשך, החזון הוא לבנות הסתכלות רחבה יותר על Performance — גוף, אימון, תזונה, מנטליות וההרגלים שמאפשרים לנו לתפקד ברמה גבוהה לאורך זמן.
-              </p>
-              <p className="font-bold text-brand-bright text-lg mt-6">
-                המטרה שלי היא לעזור לאנשים לבנות את היכולת לדרוש מעצמם יותר.
+            </div>
+
+            {/* Brand Vision */}
+            <div className="bg-charcoal border border-brand/20 p-8 rounded-lg">
+              <p className="font-barlow text-brand text-sm font-bold tracking-[0.2em] uppercase mb-3">Brand Vision</p>
+              <h3 className="text-2xl font-black text-white mb-3">מתחילים בספורט־תרפיה. בונים הרבה מעבר.</h3>
+              <p className="text-silver/60">
+                החזון שלנו הוא לבנות הסתכלות רחבה יותר על Human Performance. המטרה היא לעזור לאנשים לבנות את היכולת לדרוש מעצמם יותר.
               </p>
             </div>
+
           </div>
         </div>
       </div>

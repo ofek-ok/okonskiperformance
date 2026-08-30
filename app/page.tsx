@@ -4,8 +4,9 @@ import Message from "@/components/Message";
 import Method from "@/components/Method";
 import Audiences from "@/components/Audiences";
 import HowItWorks from "@/components/HowItWorks";
+import Framework from "@/components/Framework";
 import About from "@/components/About";
-import Approach from "@/components/Approach";
+import FAQ from "@/components/FAQ";
 import FooterCTA from "@/components/FooterCTA";
 
 export default function Home() {
@@ -17,8 +18,9 @@ export default function Home() {
       <Method />
       <Audiences />
       <HowItWorks />
+      <Framework />
       <About />
-      <Approach />
+      <FAQ />
       <FooterCTA />
     </main>
   );

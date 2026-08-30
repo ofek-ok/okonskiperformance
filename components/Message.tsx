@@ -1,27 +1,19 @@
 export default function Message() {
   return (
-    <section className="py-24 bg-charcoal">
-      <div className="container mx-auto px-6 max-w-4xl text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-8">
-          הגוף שלך עובד קשה. <br className="hidden sm:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-l from-brand-bright to-brand">
-            הגיע הזמן לטפל בו בהתאם.
-          </span>
+    <section className="py-32 sm:py-48 bg-black relative flex items-center justify-center">
+      {/* Subtle glow behind the text */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] max-w-3xl h-[80%] bg-brand/5 blur-[120px] rounded-full pointer-events-none" />
+      
+      <div className="container mx-auto px-6 max-w-5xl text-center relative z-10">
+        <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white leading-[1.15] tracking-tight mb-12">
+          מה מפריע לך היום — <br className="hidden md:block" />
+          <span className="text-silver/60 block mt-4 sm:mt-6">ומה אתה צריך שהגוף שלך יהיה מסוגל לעשות?</span>
         </h2>
         
-        <div className="space-y-6 text-lg sm:text-xl text-silver/80 leading-relaxed max-w-3xl mx-auto">
-          <p className="font-bold text-white">
-            לא צריך לחכות לפציעה כדי לטפל בגוף.
-          </p>
-          <p>
-            אימונים, שעות עבודה ארוכות, עומס, ישיבה ממושכת ושגרת חיים אינטנסיבית מצטברים לאורך זמן.
-          </p>
-          <p>
-            לפעמים זה מופיע ככאב או מגבלה. <br className="hidden sm:block" />
-            לפעמים כהתאוששות איטית, נוקשות או תחושה שהגוף פשוט לא עובד כמו שאתה רוצה.
-          </p>
-          <p className="text-brand-bright font-medium mt-8 text-xl sm:text-2xl">
-            ב-Okonski Performance המטרה היא להבין מה הגוף שלך צריך ולעזור לך לחזור להרגיש, לנוע ולתפקד טוב יותר.
+        <div className="max-w-2xl mx-auto border-t border-brand/30 pt-12 mt-12">
+          <p className="text-xl sm:text-2xl text-silver/80 leading-relaxed font-medium">
+            אנחנו לא מסתכלים רק על הכאב. <br className="hidden sm:block" />
+            אנחנו מסתכלים על <span className="text-white font-bold">הדרישות שהגוף שלך צריך לעמוד בהן.</span>
           </p>
         </div>
       </div>
