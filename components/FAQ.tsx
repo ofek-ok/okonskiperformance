@@ -39,10 +39,10 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-20 sm:py-32 bg-charcoal border-t border-white/5">
+    <section className="py-24 sm:py-32 bg-white">
       <div className="container mx-auto px-6 max-w-3xl">
         <div className="text-center mb-20">
-          <h2 className="text-4xl sm:text-5xl font-black text-white leading-tight">
+          <h2 className="text-4xl sm:text-5xl font-black text-charcoal leading-tight">
             שאלות נפוצות
           </h2>
         </div>
@@ -51,9 +51,9 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <details
               key={index}
-              className="group bg-steel/30 border border-white/10 rounded-lg open:bg-steel/50 transition-colors"
+              className="group bg-gray-50 border border-gray-200 rounded-xl open:bg-white open:shadow-sm transition-all"
             >
-              <summary className="flex items-center justify-between cursor-pointer p-6 list-none font-bold text-white text-lg select-none">
+              <summary className="flex items-center justify-between cursor-pointer p-6 list-none font-bold text-charcoal text-lg select-none">
                 {faq.q}
                 <span className="ml-4 flex-shrink-0 text-brand group-open:rotate-45 transition-transform duration-300">
                   <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -61,7 +61,7 @@ export default function FAQ() {
                   </svg>
                 </span>
               </summary>
-              <div className="px-6 pb-6 text-silver/70 text-base leading-relaxed">
+              <div className="px-6 pb-6 text-charcoal/70 text-base leading-relaxed">
                 {faq.a}
               </div>
             </details>

@@ -1,9 +1,9 @@
 export default function HowItWorks() {
   return (
-    <section className="py-24 sm:py-32 bg-black">
+    <section className="py-24 sm:py-32 bg-gray-50">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="mb-20 text-center">
-          <h2 className="text-4xl sm:text-5xl font-black text-white leading-tight">
+          <h2 className="text-4xl sm:text-5xl font-black text-charcoal leading-tight">
             פשוט מתחילים.
           </h2>
         </div>
@@ -11,19 +11,19 @@ export default function HowItWorks() {
         {/* Use grid with distinct lines instead of cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16 relative">
           {/* Step 1 */}
-          <div className="relative md:border-l md:border-white/10 md:pl-12">
+          <div className="relative md:border-l md:border-charcoal/10 md:pl-12">
             <p className="font-barlow text-brand text-sm font-bold tracking-[0.2em] uppercase mb-4">01 — Understand</p>
-            <h3 className="text-2xl font-black text-white mb-4">מדברים</h3>
-            <p className="text-silver/60 text-lg leading-relaxed">
+            <h3 className="text-2xl font-black text-charcoal mb-4">מדברים</h3>
+            <p className="text-charcoal/70 text-lg leading-relaxed">
               מספרים לי מה מפריע, איך נראית השגרה ומה הייתם רוצים לשפר ולשנות בתפקוד היומיומי שלכם.
             </p>
           </div>
 
           {/* Step 2 */}
-          <div className="relative md:border-l md:border-white/10 md:pl-12">
+          <div className="relative md:border-l md:border-charcoal/10 md:pl-12">
             <p className="font-barlow text-brand text-sm font-bold tracking-[0.2em] uppercase mb-4">02 — Treat</p>
-            <h3 className="text-2xl font-black text-white mb-4">נפגשים</h3>
-            <p className="text-silver/60 text-lg leading-relaxed">
+            <h3 className="text-2xl font-black text-charcoal mb-4">נפגשים</h3>
+            <p className="text-charcoal/70 text-lg leading-relaxed">
               מבצעים הערכה מקיפה ומתאימים את הטיפול המדויק לצורך, למצב הגופני ולמטרה שלכם.
             </p>
           </div>
@@ -31,17 +31,17 @@ export default function HowItWorks() {
           {/* Step 3 */}
           <div className="relative">
             <p className="font-barlow text-brand text-sm font-bold tracking-[0.2em] uppercase mb-4">03 — Progress</p>
-            <h3 className="text-2xl font-black text-white mb-4">מחליטים איך ממשיכים</h3>
-            <p className="text-silver/60 text-lg leading-relaxed">
+            <h3 className="text-2xl font-black text-charcoal mb-4">מחליטים איך ממשיכים</h3>
+            <p className="text-charcoal/70 text-lg leading-relaxed">
               לפעמים טיפול נקודתי מספיק. במקרים אחרים נכון לבנות תהליך הדרגתי של טיפול, תרגול וחזרה לפעילות.
             </p>
           </div>
         </div>
 
-        <div className="mt-24 text-center max-w-3xl mx-auto border-t border-white/5 pt-16">
-          <p className="text-3xl sm:text-4xl font-black text-white leading-tight">
+        <div className="mt-24 text-center max-w-3xl mx-auto border-t border-charcoal/10 pt-16">
+          <p className="text-3xl sm:text-4xl font-black text-charcoal leading-tight">
             המטרה היא לא יותר טיפולים.<br />
-            <span className="text-brand-bright">המטרה היא הטיפול הנכון עבורכם.</span>
+            <span className="text-brand">המטרה היא הטיפול הנכון עבורכם.</span>
           </p>
           <div className="mt-12">
             <a

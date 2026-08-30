@@ -1,6 +1,6 @@
 export default function Audiences() {
   return (
-    <section id="audiences" className="py-24 sm:py-32 bg-gradient-dark border-t border-white/5">
+    <section id="audiences" className="py-24 sm:py-32 bg-charcoal">
       <div className="container mx-auto px-6 max-w-6xl">
         
         <div className="mb-20 text-center max-w-3xl mx-auto">
@@ -13,8 +13,8 @@ export default function Audiences() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           {/* Audience 1: SPORT / ACTIVE */}
-          <div className="bg-charcoal/50 border border-white/10 p-10 sm:p-14 rounded-3xl hover:border-brand/40 transition-all duration-500 relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-brand/10 blur-[50px] rounded-full group-hover:bg-brand/20 transition-all duration-500" />
+          <div className="bg-steel/30 border border-white/5 p-10 sm:p-14 rounded-3xl hover:border-brand/30 transition-all duration-500 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-brand/5 blur-[50px] rounded-full group-hover:bg-brand/10 transition-all duration-500" />
             <p className="font-barlow text-brand-bright font-black tracking-[0.2em] uppercase text-xl mb-6 relative z-10">
               SPORT / ACTIVE
             </p>
@@ -32,8 +32,8 @@ export default function Audiences() {
           </div>
 
           {/* Audience 2: PERFORMANCE / LIFE */}
-          <div className="bg-charcoal/50 border border-white/10 p-10 sm:p-14 rounded-3xl hover:border-brand/40 transition-all duration-500 relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-brand/10 blur-[50px] rounded-full group-hover:bg-brand/20 transition-all duration-500" />
+          <div className="bg-steel/30 border border-white/5 p-10 sm:p-14 rounded-3xl hover:border-brand/30 transition-all duration-500 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-brand/5 blur-[50px] rounded-full group-hover:bg-brand/10 transition-all duration-500" />
             <p className="font-barlow text-silver/50 font-black tracking-[0.2em] uppercase text-xl mb-6 relative z-10">
               PERFORMANCE / LIFE
             </p>
