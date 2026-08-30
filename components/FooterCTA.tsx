@@ -1,43 +1,31 @@
 import Link from "next/link";
 import Image from "next/image";
+import WaitlistForm from "./WaitlistForm";
 
 export default function FooterCTA() {
   return (
     <>
-      <section className="py-24 bg-steel relative overflow-hidden">
+      <section id="performance-list" className="py-24 bg-steel relative overflow-hidden">
         {/* Background Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal to-transparent opacity-80" />
         
         <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-6">
-            הגוף שלכם עובד בשבילכם כל יום.
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-l from-brand-bright to-brand">
-              הגיע הזמן להשקיע בו בהתאם.
-            </span>
+            הצטרפו ל־Performance List
           </h2>
           
-          <p className="text-silver/80 text-lg sm:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-            בין אם משהו כואב, הגוף מרגיש עמוס, אתם רוצים לחזור לפעילות או שפשוט הגיע הזמן לטיפול ותחזוקה — מתחילים בשיחה קצרה.
-            <br /><br />
-            שלחו לי הודעה ב-WhatsApp, ספרו לי מה מביא אתכם, ונבדוק מה יכול להתאים.
+          <p className="text-silver/80 text-lg sm:text-xl mb-6 max-w-2xl mx-auto leading-relaxed">
+            הטיפולים מתחילים בינואר 2027.
+            <br />
+            עד אז — הצטרפו אלינו לתוכן, עדכונים וגישה מוקדמת לפתיחת היומן.
           </p>
 
-          <a
-            href="https://wa.me/972555172571"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 bg-brand text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-brand-bright transition-all shadow-[0_0_20px_rgba(62,111,168,0.3)] hover:shadow-[0_0_30px_rgba(62,111,168,0.5)] transform hover:-translate-y-1"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12.031 21.096A9.97 9.97 0 017.39 19.8l-.348-.205-3.412.894.912-3.324-.225-.357a9.962 9.962 0 01-1.528-5.32 9.99 9.99 0 119.242 9.608zm.006-18.3A8.307 8.307 0 003.73 11.488c0 1.485.394 2.924 1.144 4.195l-1.042 3.797 3.882-1.018a8.27 8.27 0 003.993 1.026h.004c4.582 0 8.31-3.73 8.31-8.31a8.316 8.316 0 00-8.31-8.31h.001v-.069h-.001zm4.567 11.758c-.25-.125-1.484-.734-1.714-.818-.231-.084-.4-.125-.568.125-.168.25-.648.818-.795.986-.147.168-.295.188-.545.063a6.837 6.837 0 01-2.008-1.238 7.55 7.55 0 01-1.39-1.74c-.147-.25-.016-.386.11-.51.112-.112.25-.292.375-.438.125-.146.167-.25.25-.417.084-.167.042-.313-.02-.438-.063-.125-.568-1.368-.778-1.874-.204-.492-.41-.424-.568-.432h-.484c-.21 0-.545.084-.83.395-.284.312-1.09 1.066-1.09 2.597 0 1.531 1.116 3.013 1.272 3.22.156.208 2.195 3.35 5.318 4.698 2.08.898 2.766.974 3.266.924.571-.057 1.484-.606 1.694-1.19.21-.585.21-1.087.147-1.191-.063-.105-.231-.168-.484-.294h.004z" />
-            </svg>
-            <span dir="ltr">לפרטים ועדכונים</span>
-          </a>
-          
-          <p className="text-silver/50 text-sm mt-6">
-            אין התחייבות. מתחילים בשיחה.
+          <p className="text-brand-bright font-bold tracking-wide text-sm sm:text-base mb-12">
+            תוכן פרקטי &bull; עדכונים &bull; גישה ראשונה לפתיחת היומן
           </p>
+
+          <WaitlistForm />
+          
         </div>
       </section>
 

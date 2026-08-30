@@ -44,12 +44,12 @@ export default function HowItWorks() {
           </p>
           <div className="mt-12">
             <a
-              href="https://wa.me/972555172571"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#performance-list"
+              
+              
               className="inline-flex items-center justify-center bg-brand text-white font-bold py-5 px-10 rounded-full text-sm tracking-widest uppercase hover:bg-brand-bright transition-all"
             >
-              לפרטים ועדכונים
+              הצטרפו ל־Performance List
             </a>
           </div>
         </div>

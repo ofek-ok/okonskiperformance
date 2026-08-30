@@ -26,19 +26,24 @@ export default function Hero() {
           לעמוד בקצב שלך.
         </h1>
 
-        <p className="font-barlow text-silver/50 font-bold tracking-[0.2em] uppercase text-xl sm:text-3xl mb-16 animate-fade-up" style={{ animationDelay: "200ms" }}>
+        <p className="font-barlow text-silver/50 font-bold tracking-[0.2em] uppercase text-xl sm:text-3xl mb-8 animate-fade-up" style={{ animationDelay: "200ms" }}>
           Built for What You Demand.
         </p>
+
+        {/* Pre-launch Announcement */}
+        <div className="inline-block border border-brand/30 bg-brand/5 px-6 py-2 rounded-full mb-16 animate-fade-up" style={{ animationDelay: "250ms" }}>
+          <p className="text-brand-bright font-bold tracking-wide text-sm sm:text-base">
+            נפתחים בינואר 2027
+          </p>
+        </div>
 
         {/* Pre-launch CTA */}
         <div className="flex justify-center animate-fade-up" style={{ animationDelay: "300ms" }}>
           <a
-            href="https://wa.me/972555172571"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#performance-list"
             className="inline-flex items-center justify-center bg-brand text-white font-bold py-5 px-12 rounded-full text-sm tracking-widest uppercase hover:bg-brand-bright transition-all shadow-[0_0_40px_rgba(62,111,168,0.2)] hover:shadow-[0_0_50px_rgba(62,111,168,0.4)]"
           >
-            לפרטים ועדכונים
+            הצטרפו ל־Performance List
           </a>
         </div>
       </div>
