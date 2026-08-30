@@ -48,7 +48,7 @@ export default function Navbar() {
 
         {/* Action */}
         <a
-          href="https://wa.me/972500000000"
+          href="https://wa.me/972555172571"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden sm:flex items-center gap-2 bg-brand/10 text-brand border border-brand/20 px-4 py-2 rounded-full font-medium hover:bg-brand hover:text-white transition-all text-sm"

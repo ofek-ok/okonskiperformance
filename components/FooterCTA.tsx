@@ -23,7 +23,7 @@ export default function FooterCTA() {
           </p>
 
           <a
-            href="https://wa.me/972500000000"
+            href="https://wa.me/972555172571"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 bg-brand text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-brand-bright transition-all shadow-[0_0_20px_rgba(62,111,168,0.3)] hover:shadow-[0_0_30px_rgba(62,111,168,0.5)] transform hover:-translate-y-1"

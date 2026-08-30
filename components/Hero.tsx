@@ -27,7 +27,7 @@ export default function Hero() {
         {/* Pre-launch CTA */}
         <div className="flex justify-center animate-fade-up" style={{ animationDelay: "300ms" }}>
           <a
-            href="https://wa.me/972500000000"
+            href="https://wa.me/972555172571"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-brand text-white font-bold py-5 px-12 rounded-full text-sm tracking-widest uppercase hover:bg-brand-bright transition-all shadow-[0_0_40px_rgba(62,111,168,0.2)] hover:shadow-[0_0_50px_rgba(62,111,168,0.4)]"
