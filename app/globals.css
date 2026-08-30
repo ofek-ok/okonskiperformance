@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    direction: rtl;
+    font-family: 'Heebo', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #0A0B0D;
+  }
+
+  body {
+    @apply bg-charcoal text-silver antialiased;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    background-color: #3E6FA8;
+    color: #fff;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-black tracking-tight;
+  }
+}
+
+@layer components {
+  /* ── Buttons ───────────────────────────── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-brand text-white font-bold px-8 py-4
+           text-sm tracking-widest uppercase rounded-full
+           hover:bg-brand-bright active:bg-brand-dim
+           transition-all duration-200 cursor-pointer
+           border border-brand hover:border-brand-bright
+           font-barlow;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2
+           bg-transparent text-silver font-bold px-8 py-4
+           text-sm tracking-wide uppercase rounded-full
+           border border-silver/20
+           hover:border-brand hover:text-brand
+           transition-all duration-200 cursor-pointer;
+  }
+
+  .btn-ghost-blue {
+    @apply inline-flex items-center justify-center gap-2
+           bg-transparent text-brand font-bold px-8 py-4
+           text-sm tracking-wide uppercase rounded-full
+           border border-brand/40
+           hover:border-brand hover:bg-brand/10
+           transition-all duration-200 cursor-pointer;
+  }
+
+  /* ── Labels ────────────────────────────── */
+  .eyebrow {
+    @apply text-brand text-[10px] font-bold tracking-[0.35em] uppercase mb-4 block;
+  }
+
+  .section-rule {
+    @apply w-12 h-px bg-brand mb-6 block;
+  }
+
+  /* ── Cards ─────────────────────────────── */
+  .card-dark {
+    @apply bg-steel border border-white/5;
+  }
+
+  /* ── Inputs ────────────────────────────── */
+  .input-dark {
+    @apply w-full bg-steel border border-white/10 text-silver placeholder-silver/25
+           px-5 py-4 text-sm
+           focus:outline-none focus:border-brand
+           transition-colors duration-200;
+  }
+
+  /* ── Diagonal accent motif ─────────────── */
+  .diagonal-accent::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #3E6FA8 0%, transparent 100%);
+  }
+}
+
+@layer utilities {
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #5B8EC4 0%, #3E6FA8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-slash {
+    border-right: 2px solid #3E6FA8;
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 40px rgba(62, 111, 168, 0.15);
+  }
+}
