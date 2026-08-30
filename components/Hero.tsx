@@ -1,14 +1,21 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-24 sm:pt-32 pb-16 sm:pb-20 overflow-hidden bg-charcoal">
       {/* Background Deep Gradient / Vignette */}
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-steel/20 via-charcoal to-black" />
       
-      {/* Subtle Logo-inspired Background Elements */}
-      {/* Huge subtle circle */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] sm:w-[1200px] sm:h-[1200px] rounded-full border-[1px] border-brand/10 z-0 pointer-events-none" />
-      {/* Diagonal subtle line matching the 'Ø' angle */}
-      <div className="absolute top-0 bottom-0 left-1/2 w-px bg-gradient-to-b from-transparent via-brand/20 to-transparent transform rotate-45 z-0 pointer-events-none" />
+      {/* Dimmed Logo Background */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] sm:w-[800px] sm:h-[800px] opacity-[0.05] z-0 pointer-events-none flex items-center justify-center">
+        <Image 
+          src="/logo-official.png" 
+          alt="Okonski Performance Background Logo" 
+          fill
+          className="object-contain"
+          priority
+        />
+      </div>
 
       {/* Subtle Texture Overlay */}
       <div className="absolute inset-0 z-0 opacity-20 bg-[url('/noise.png')] mix-blend-overlay pointer-events-none" />
