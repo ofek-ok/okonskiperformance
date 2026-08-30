@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function FooterCTA() {
   return (
@@ -44,11 +45,15 @@ export default function FooterCTA() {
       <footer className="bg-charcoal border-t border-white/10 pt-16 pb-8">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-8">
-            <div className="text-center md:text-right text-silver">
-              <p className="font-barlow text-2xl font-black tracking-widest uppercase mb-1 hover:text-brand transition-colors cursor-default">
-                OKONSKI PERFORMANCE
-              </p>
-              <p className="font-barlow text-brand-bright font-bold tracking-[0.2em] uppercase text-sm">
+            <div className="flex flex-col items-center md:items-end text-silver">
+              <Image
+                src="/logo-official.png"
+                alt="Okonski Performance Logo"
+                width={80}
+                height={80}
+                className="w-16 h-16 sm:w-20 sm:h-20 object-contain mb-2"
+              />
+              <p className="font-barlow text-brand-bright font-bold tracking-[0.2em] uppercase text-sm mt-2">
                 Built for What You Demand.
               </p>
             </div>

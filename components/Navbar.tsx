@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -24,13 +25,14 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex flex-col items-start gap-0.5 group">
-          <span className="font-barlow text-xl sm:text-2xl font-black tracking-widest text-silver group-hover:text-brand transition-colors">
-            OKONSKI
-          </span>
-          <span className="font-barlow text-[10px] sm:text-xs font-bold tracking-[0.3em] text-brand uppercase">
-            Performance
-          </span>
+        <Link href="/" className="flex items-center group">
+          <Image
+            src="/logo-official.png"
+            alt="Okonski Performance Logo"
+            width={64}
+            height={64}
+            className="w-12 h-12 sm:w-16 sm:h-16 object-contain group-hover:scale-105 transition-transform"
+          />
         </Link>
 
         {/* Desktop Nav */}

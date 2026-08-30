@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   title: "Okonski Performance | ביצועים. שיקום. תפקוד.",
   description:
     "קליניקה לביצועים, שיקום ותחזוקת הגוף. עובדים עם ספורטאים, יזמים ואנשי ביצועים כדי לשפר תפקוד, עמידות לעומס ואיכות חיים.",
+  icons: {
+    icon: '/logo-official.png',
+    apple: '/logo-official.png',
+  },
   openGraph: {
     title: "Okonski Performance",
     description: "הגוף שלך צריך לעמוד בקצב שלך.",

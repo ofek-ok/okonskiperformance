@@ -4,8 +4,14 @@ export default function Hero() {
       {/* Background Deep Gradient / Vignette */}
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-steel/20 via-charcoal to-black" />
       
+      {/* Subtle Logo-inspired Background Elements */}
+      {/* Huge subtle circle */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] sm:w-[1200px] sm:h-[1200px] rounded-full border-[1px] border-brand/10 z-0 pointer-events-none" />
+      {/* Diagonal subtle line matching the 'Ø' angle */}
+      <div className="absolute top-0 bottom-0 left-1/2 w-px bg-gradient-to-b from-transparent via-brand/20 to-transparent transform rotate-45 z-0 pointer-events-none" />
+
       {/* Subtle Texture Overlay */}
-      <div className="absolute inset-0 z-0 opacity-20 bg-[url('/noise.png')] mix-blend-overlay" />
+      <div className="absolute inset-0 z-0 opacity-20 bg-[url('/noise.png')] mix-blend-overlay pointer-events-none" />
 
       <div className="container relative z-10 mx-auto px-6 text-center">
         
