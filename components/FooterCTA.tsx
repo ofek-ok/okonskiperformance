@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import WaitlistForm from "./WaitlistForm";
@@ -81,13 +82,17 @@ export default function FooterCTA() {
           </div>
           
           <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 text-sm text-silver/40 gap-4">
-            <p>&copy; {new Date().getFullYear()} Okonski Performance. כל הזכויות שמורות.</p>
-            <div className="flex gap-4">
-              <a href="#" className="hover:text-silver/80 transition-colors">פרטי קשר</a>
-              <a href="#" className="hover:text-silver/80 transition-colors">מיקום הקליניקה</a>
-              <a href="#" className="hover:text-silver/80 transition-colors">מדיניות פרטיות</a>
-              <a href="#" className="hover:text-silver/80 transition-colors">נגישות</a>
+            <p>&copy; {new Date().getFullYear()} Okonski Performance. All rights reserved.</p>
+            
+            <div className="flex flex-wrap justify-center gap-4 text-center">
+              <Link href="/terms" className="hover:text-silver/80 transition-colors">תנאי שימוש</Link>
+              <Link href="/privacy" className="hover:text-silver/80 transition-colors">מדיניות פרטיות</Link>
+              <Link href="/accessibility" className="hover:text-silver/80 transition-colors">הצהרת נגישות</Link>
+              <Link href="/disclaimer" className="hover:text-silver/80 transition-colors">הבהרה מקצועית ובריאותית</Link>
+              <button id="cookie-settings-btn" onClick={() => document.dispatchEvent(new CustomEvent("open-cookie-settings"))} className="hover:text-silver/80 transition-colors">הגדרות עוגיות</button>
+              <Link href="#performance-list" className="hover:text-silver/80 transition-colors">צור קשר</Link>
             </div>
+
           </div>
         </div>
       </footer>

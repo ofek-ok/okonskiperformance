@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import CookieBanner from "@/components/CookieBanner";
 
 export const metadata: Metadata = {
   title: "Okonski Performance | ביצועים. שיקום. תפקוד.",
@@ -32,10 +33,12 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800;900&display=swap"
           rel="stylesheet"
         />
+        {/* Analytics architecture goes here. E.g. script that listens to cookie-consent-updated event */}
       </head>
       <body className="font-heebo bg-charcoal text-silver antialiased">
         {children}
         <FloatingWhatsApp />
+        <CookieBanner />
       </body>
     </html>
   );

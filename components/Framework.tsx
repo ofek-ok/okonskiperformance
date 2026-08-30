@@ -43,6 +43,10 @@ export default function Framework() {
             </div>
           ))}
         </div>
+
+        <p className="text-xs text-silver/40 mt-16 max-w-2xl mx-auto">
+          * התוכן אינו מהווה ייעוץ רפואי. יש להתאים את הפעילות למצבך הבריאותי וליכולתך האישית. במקרה של פציעה, מצב רפואי או ספק, יש להתייעץ עם גורם רפואי מוסמך לפני ביצוע הפעילות.
+        </p>
       </div>
     </section>
   );
