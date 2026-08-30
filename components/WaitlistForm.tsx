@@ -36,7 +36,7 @@ export default function WaitlistForm() {
         <input
           type="tel"
           required
-          placeholder="טלפון / WhatsApp"
+          placeholder="טלפון"
           className="w-full bg-charcoal/50 border border-white/10 rounded-lg px-5 py-4 text-white placeholder:text-silver/40 focus:outline-none focus:border-brand transition-colors text-right"
           dir="rtl"
         />
