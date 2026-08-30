@@ -9,13 +9,16 @@ export default function Hero() {
       {/* Huge subtle glow to emphasize the blue */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[50%] w-[600px] h-[600px] bg-brand/10 blur-[120px] rounded-full pointer-events-none z-0" />
 
-      {/* Dimmed Logo Background - Zoomed in heavily on the Blue Circle to hide the text */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[10%] w-[1200px] h-[1200px] sm:w-[1800px] sm:h-[1800px] opacity-[0.08] z-0 pointer-events-none flex items-center justify-center">
+      {/* Dimmed Logo Background - Clipped to only show the top half (the circle) */}
+      <div 
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[35%] w-[800px] h-[800px] sm:w-[1200px] sm:h-[1200px] opacity-[0.08] z-0 pointer-events-none flex items-center justify-center"
+        style={{ clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 65%)" }}
+      >
         <Image 
           src="/logo-official.png" 
           alt="Okonski Performance Background Logo" 
           fill
-          className="object-contain object-top scale-[1.2]"
+          className="object-contain"
           priority
         />
       </div>
