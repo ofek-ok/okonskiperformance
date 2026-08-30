@@ -7,15 +7,15 @@ export default function Hero() {
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-steel/20 via-charcoal to-black" />
       
       {/* Huge subtle glow to emphasize the blue */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[600px] h-[600px] bg-brand/10 blur-[100px] rounded-full pointer-events-none z-0" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[50%] w-[600px] h-[600px] bg-brand/10 blur-[120px] rounded-full pointer-events-none z-0" />
 
-      {/* Dimmed Logo Background - Zoomed in on the Blue Circle */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[1000px] h-[1000px] sm:w-[1500px] sm:h-[1500px] opacity-[0.08] z-0 pointer-events-none flex items-center justify-center">
+      {/* Dimmed Logo Background - Zoomed in heavily on the Blue Circle to hide the text */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[10%] w-[1200px] h-[1200px] sm:w-[1800px] sm:h-[1800px] opacity-[0.08] z-0 pointer-events-none flex items-center justify-center">
         <Image 
           src="/logo-official.png" 
           alt="Okonski Performance Background Logo" 
           fill
-          className="object-cover object-top scale-[1.5]"
+          className="object-contain object-top scale-[1.2]"
           priority
         />
       </div>
