@@ -28,7 +28,7 @@ export default function WaitlistForm() {
         <input
           type="text"
           required
-          placeholder="שם פרטי"
+          placeholder="שם מלא"
           className="w-full bg-charcoal/50 border border-white/10 rounded-lg px-5 py-4 text-white placeholder:text-silver/40 focus:outline-none focus:border-brand transition-colors"
         />
       </div>
@@ -39,6 +39,16 @@ export default function WaitlistForm() {
           placeholder="טלפון / WhatsApp"
           className="w-full bg-charcoal/50 border border-white/10 rounded-lg px-5 py-4 text-white placeholder:text-silver/40 focus:outline-none focus:border-brand transition-colors text-right"
           dir="rtl"
+        />
+      </div>
+      <div>
+        <input
+          type="email"
+          required
+          placeholder="אימייל"
+          className="w-full bg-charcoal/50 border border-white/10 rounded-lg px-5 py-4 text-white placeholder:text-silver/40 focus:outline-none focus:border-brand transition-colors"
+          dir="ltr"
+          style={{ textAlign: 'right' }}
         />
       </div>
       <button
