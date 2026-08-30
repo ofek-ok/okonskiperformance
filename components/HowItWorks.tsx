@@ -1,16 +1,17 @@
 export default function HowItWorks() {
   return (
-    <section className="py-20 sm:py-32 bg-black border-t border-white/5">
-      <div className="container mx-auto px-6 max-w-5xl">
-        <div className="mb-24 text-center">
+    <section className="py-24 sm:py-32 bg-black">
+      <div className="container mx-auto px-6 max-w-6xl">
+        <div className="mb-20 text-center">
           <h2 className="text-4xl sm:text-5xl font-black text-white leading-tight">
             פשוט מתחילים.
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-16 relative">
+        {/* Use grid with distinct lines instead of cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16 relative">
           {/* Step 1 */}
-          <div className="relative">
+          <div className="relative md:border-l md:border-white/10 md:pl-12">
             <p className="font-barlow text-brand text-sm font-bold tracking-[0.2em] uppercase mb-4">01 — Understand</p>
             <h3 className="text-2xl font-black text-white mb-4">מדברים</h3>
             <p className="text-silver/60 text-lg leading-relaxed">
@@ -19,7 +20,7 @@ export default function HowItWorks() {
           </div>
 
           {/* Step 2 */}
-          <div className="relative">
+          <div className="relative md:border-l md:border-white/10 md:pl-12">
             <p className="font-barlow text-brand text-sm font-bold tracking-[0.2em] uppercase mb-4">02 — Treat</p>
             <h3 className="text-2xl font-black text-white mb-4">נפגשים</h3>
             <p className="text-silver/60 text-lg leading-relaxed">
@@ -37,7 +38,7 @@ export default function HowItWorks() {
           </div>
         </div>
 
-        <div className="mt-24 text-center max-w-3xl mx-auto">
+        <div className="mt-24 text-center max-w-3xl mx-auto border-t border-white/5 pt-16">
           <p className="text-3xl sm:text-4xl font-black text-white leading-tight">
             המטרה היא לא יותר טיפולים.<br />
             <span className="text-brand-bright">המטרה היא הטיפול הנכון עבורכם.</span>
@@ -45,9 +46,7 @@ export default function HowItWorks() {
           <div className="mt-12">
             <a
               href="#performance-list"
-              
-              
-              className="inline-flex items-center justify-center bg-brand text-white font-bold py-5 px-10 rounded-full text-sm tracking-widest uppercase hover:bg-brand-bright transition-all"
+              className="inline-flex items-center justify-center bg-brand text-white font-bold py-5 px-10 rounded-full text-sm tracking-widest uppercase hover:bg-brand-bright transition-all shadow-[0_0_20px_rgba(62,111,168,0.2)] hover:shadow-[0_0_30px_rgba(62,111,168,0.4)]"
             >
               הצטרפו ל־Performance List
             </a>

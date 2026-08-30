@@ -7,7 +7,7 @@ export default function About() {
           {/* Image / Visual Side */}
           <div className="relative">
             <div className="aspect-[4/5] bg-black rounded-lg overflow-hidden border border-white/10 relative">
-              <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" style={{ backgroundImage: "url('/placeholder-about.jpg')" }} />
+              <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" style={{ backgroundImage: "url('/about-portrait.jpg')" }} />
               
               <div className="absolute bottom-6 left-6 right-6 bg-charcoal/90 backdrop-blur-md p-6 rounded border border-white/10">
                 <p className="font-barlow text-white font-black tracking-widest uppercase text-xl mb-1">Ofek Okonski</p>

@@ -1,28 +1,26 @@
 export default function Audiences() {
   return (
-    <section id="audiences" className="py-32 bg-steel">
+    <section id="audiences" className="py-24 sm:py-32 bg-gradient-dark border-t border-white/5">
       <div className="container mx-auto px-6 max-w-6xl">
         
-        <div className="mb-24">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight">
+        <div className="mb-20 text-center max-w-3xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.1]">
             לאנשים שדורשים <br className="hidden sm:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-l from-brand-bright to-brand">מהגוף שלהם יותר.</span>
+            <span className="text-brand-bright">מהגוף שלהם יותר.</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
-          {/* Vertical Divider (Desktop) */}
-          <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-px bg-white/10 -translate-x-1/2" />
-
           {/* Audience 1: SPORT / ACTIVE */}
-          <div>
-            <p className="font-barlow text-brand-bright font-black tracking-[0.2em] uppercase text-2xl mb-6">
+          <div className="bg-charcoal/50 border border-white/10 p-10 sm:p-14 rounded-3xl hover:border-brand/40 transition-all duration-500 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-brand/10 blur-[50px] rounded-full group-hover:bg-brand/20 transition-all duration-500" />
+            <p className="font-barlow text-brand-bright font-black tracking-[0.2em] uppercase text-xl mb-6 relative z-10">
               SPORT / ACTIVE
             </p>
-            <h3 className="text-3xl font-black text-white mb-6">ספורטאים ואנשים פעילים</h3>
+            <h3 className="text-3xl font-black text-white mb-6 relative z-10">ספורטאים ואנשים פעילים</h3>
             
-            <div className="space-y-6 text-silver/70 text-lg leading-relaxed">
+            <div className="space-y-4 text-silver/70 text-lg leading-relaxed relative z-10">
               <p className="text-white font-medium">מקצוענים וחובבים מכל ענפי הספורט.</p>
               <p>
                 ריצה, כוח, CrossFit, אומנויות לחימה, משחקי כדור, רכיבה, שחייה ועוד.
@@ -34,18 +32,19 @@ export default function Audiences() {
           </div>
 
           {/* Audience 2: PERFORMANCE / LIFE */}
-          <div>
-            <p className="font-barlow text-silver/50 font-black tracking-[0.2em] uppercase text-2xl mb-6">
+          <div className="bg-charcoal/50 border border-white/10 p-10 sm:p-14 rounded-3xl hover:border-brand/40 transition-all duration-500 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-brand/10 blur-[50px] rounded-full group-hover:bg-brand/20 transition-all duration-500" />
+            <p className="font-barlow text-silver/50 font-black tracking-[0.2em] uppercase text-xl mb-6 relative z-10">
               PERFORMANCE / LIFE
             </p>
-            <h3 className="text-3xl font-black text-white mb-6">אנשי קריירה ושגרה עמוסה</h3>
+            <h3 className="text-3xl font-black text-white mb-6 relative z-10">אנשי קריירה ושגרה עמוסה</h3>
             
-            <div className="space-y-6 text-silver/70 text-lg leading-relaxed">
+            <div className="space-y-4 text-silver/70 text-lg leading-relaxed relative z-10">
               <p className="text-white font-medium">מנהלים, יזמים, בעלי עסקים ואנשים עם קריירה תובענית.</p>
               <p>
                 שעות עבודה ארוכות, ישיבה, נסיעות, מתח ועומס מצטבר משפיעים ישירות גם על הגוף.
               </p>
-              <p className="text-brand-bright font-bold text-xl leading-snug mt-4">
+              <p className="text-brand-bright font-bold mt-4">
                 הגוף צריך לתמוך בדרך שבה אתם רוצים לחיות — לא להגביל אותה.
               </p>
             </div>
