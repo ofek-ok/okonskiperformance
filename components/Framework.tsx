@@ -7,7 +7,7 @@ export default function Framework() {
   ];
 
   return (
-    <section className="py-32 bg-charcoal relative border-t border-white/5">
+    <section className="py-20 sm:py-32 bg-charcoal relative border-t border-white/5">
       <div className="container mx-auto px-6 max-w-6xl text-center">
         <h2 className="font-barlow text-brand-bright font-black tracking-[0.2em] uppercase text-2xl sm:text-3xl mb-24">
           The Performance System

@@ -31,7 +31,7 @@ export default function Navbar() {
             alt="Okonski Performance Logo"
             width={64}
             height={64}
-            className="w-12 h-12 sm:w-16 sm:h-16 object-contain group-hover:scale-105 transition-transform"
+            className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 object-contain group-hover:scale-105 transition-transform"
           />
         </Link>
 
@@ -48,10 +48,10 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        {/* Action */}
+        {/* Action - Visible on Mobile too */}
         <a
           href="#performance-list"
-          className="hidden sm:flex items-center gap-2 bg-brand/10 text-brand border border-brand/20 px-4 py-2 rounded-full font-medium hover:bg-brand hover:text-white transition-all text-sm"
+          className="flex items-center gap-2 bg-brand/10 text-brand border border-brand/20 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-medium hover:bg-brand hover:text-white transition-all text-[11px] sm:text-sm"
         >
           <span dir="ltr">Performance List</span>
         </a>

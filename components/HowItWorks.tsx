@@ -1,6 +1,6 @@
 export default function HowItWorks() {
   return (
-    <section className="py-32 bg-black border-t border-white/5">
+    <section className="py-20 sm:py-32 bg-black border-t border-white/5">
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="mb-24 text-center">
           <h2 className="text-4xl sm:text-5xl font-black text-white leading-tight">

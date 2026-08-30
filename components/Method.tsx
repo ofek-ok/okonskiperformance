@@ -1,6 +1,6 @@
 export default function Method() {
   return (
-    <section id="services" className="py-32 bg-charcoal">
+    <section id="services" className="py-20 sm:py-32 bg-charcoal">
       <div className="container mx-auto px-6 max-w-6xl">
         
         {/* Core Product Header */}

@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-20 overflow-hidden bg-charcoal">
+    <section className="relative min-h-[90vh] flex flex-col justify-center items-center pt-24 sm:pt-32 pb-16 sm:pb-20 overflow-hidden bg-charcoal">
       {/* Background Deep Gradient / Vignette */}
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-steel/20 via-charcoal to-black" />
       
@@ -21,7 +21,7 @@ export default function Hero() {
         </p>
 
         {/* Huge Headline */}
-        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black text-white leading-[1.05] tracking-tight mb-8 animate-fade-up" style={{ animationDelay: "100ms" }}>
+        <h1 className="text-4xl sm:text-7xl lg:text-8xl font-black text-white leading-[1.05] tracking-tight mb-8 animate-fade-up" style={{ animationDelay: "100ms" }}>
           הגוף שלך צריך <br className="hidden sm:block" />
           לעמוד בקצב שלך.
         </h1>

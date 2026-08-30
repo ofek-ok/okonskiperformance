@@ -5,7 +5,7 @@ import WaitlistForm from "./WaitlistForm";
 export default function FooterCTA() {
   return (
     <>
-      <section id="performance-list" className="py-24 bg-steel relative overflow-hidden">
+      <section id="performance-list" className="py-16 sm:py-24 bg-steel relative overflow-hidden">
         {/* Background Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal to-transparent opacity-80" />
         
