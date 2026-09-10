@@ -20,38 +20,40 @@ export default function Hero() {
         />
       </div>
 
-      <div className="container relative z-10 mx-auto px-6 text-center">
+      <div className="container relative z-10 mx-auto px-6 text-center mt-8">
         
         {/* Eyebrow */}
-        <p className="font-barlow text-brand font-black tracking-[0.3em] uppercase text-sm sm:text-base mb-8 animate-fade-up">
-          OKONSKI PERFORMANCE
+        <p className="font-barlow text-brand font-black tracking-[0.2em] uppercase text-sm sm:text-base mb-8 animate-fade-up">
+          OKONSKI PERFORMANCE | JANUARY 2027
         </p>
 
         {/* Huge Headline */}
-        <h1 className="text-4xl sm:text-7xl lg:text-8xl font-black text-white leading-[1.05] tracking-tight mb-8 animate-fade-up" style={{ animationDelay: "100ms" }}>
-          הגוף שלך צריך <br className="hidden sm:block" />
-          לעמוד בקצב שלך.
+        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black text-white leading-[1.05] tracking-tight mb-8 animate-fade-up" style={{ animationDelay: "100ms" }}>
+          BUILT FOR WHAT <br className="hidden sm:block" />
+          YOU DEMAND.
         </h1>
 
-        <p className="font-barlow text-silver/60 font-bold tracking-[0.2em] uppercase text-xl sm:text-3xl mb-8 animate-fade-up" style={{ animationDelay: "200ms" }}>
-          Built for What You Demand.
-        </p>
-
-        {/* Pre-launch Announcement */}
-        <div className="inline-block border border-brand/30 bg-brand/5 px-6 py-2 rounded-full mb-16 animate-fade-up" style={{ animationDelay: "250ms" }}>
-          <p className="text-brand font-bold tracking-wide text-sm sm:text-base">
-            נפתחים בינואר 2027
+        <div className="max-w-3xl mx-auto space-y-4 mb-12 animate-fade-up" style={{ animationDelay: "200ms" }}>
+          <p className="text-xl sm:text-2xl text-white font-bold leading-relaxed">
+            אתה דורש מהגוף שלך הרבה.<br />
+            באימונים. בעבודה. בחיים.
+          </p>
+          <p className="text-lg sm:text-xl text-secondary-text leading-relaxed">
+            Okonski Performance נבנית כדי לעזור לגוף לעמוד בדרישות האלה — דרך Sports Therapy, Recovery ותפיסה שמסתכלת מעבר לכאב, אל היכולת לחזור לבצע.
           </p>
         </div>
 
         {/* Pre-launch CTA */}
-        <div className="flex justify-center animate-fade-up" style={{ animationDelay: "300ms" }}>
+        <div className="flex flex-col items-center justify-center animate-fade-up" style={{ animationDelay: "300ms" }}>
           <a
             href="#performance-list"
-            className="inline-flex items-center justify-center bg-brand text-white font-bold py-5 px-12 rounded-full text-sm tracking-widest uppercase hover:bg-brand-bright transition-all shadow-[0_0_30px_rgba(62,111,168,0.15)] hover:shadow-[0_0_40px_rgba(62,111,168,0.3)]"
+            className="inline-flex items-center justify-center bg-brand text-white font-bold py-5 px-12 rounded-full text-sm sm:text-base tracking-widest uppercase hover:bg-brand-bright transition-all shadow-[0_0_30px_rgba(62,111,168,0.15)] hover:shadow-[0_0_40px_rgba(62,111,168,0.3)] mb-4"
           >
             הצטרפו ל־Performance List
           </a>
+          <p className="text-sm text-secondary-text max-w-md mx-auto">
+            קבלו עדכונים, תוכן וגישה מוקדמת לפתיחת היומן בינואר 2027.
+          </p>
         </div>
       </div>
     </section>
