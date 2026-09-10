@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import FooterCTA from "@/components/FooterCTA";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "תנאי שימוש | Okonski Performance",
