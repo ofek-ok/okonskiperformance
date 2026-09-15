@@ -3,13 +3,25 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-interface ConsentPreferences {
+export interface ConsentPreferences {
   essential: true; // Always true — no opt-out
   analytics: boolean;
   marketing: boolean;
 }
 
-const CONSENT_KEY = "cookie_consent";
+export const CONSENT_KEY = "cookie_consent";
+
+export function hasConsent(type: "analytics" | "marketing"): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    const stored = localStorage.getItem(CONSENT_KEY);
+    if (!stored) return false;
+    const parsed = JSON.parse(stored);
+    return Boolean(parsed[type]);
+  } catch {
+    return false;
+  }
+}
 
 export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(false);
