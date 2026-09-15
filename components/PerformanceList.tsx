@@ -144,7 +144,7 @@ export default function PerformanceList() {
             >
               {/* Name */}
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="pl-name" className="text-sm font-bold text-silver/70">
+                <label htmlFor="pl-name" className="text-sm font-semibold text-silver/90 mr-1">
                   שם מלא <span aria-hidden="true" className="text-brand">*</span>
                 </label>
                 <input
@@ -159,15 +159,15 @@ export default function PerformanceList() {
                   aria-required="true"
                   aria-describedby={errors.name ? "err-name" : undefined}
                   aria-invalid={errors.name ? "true" : "false"}
-                  className={`w-full bg-charcoal/60 border rounded-xl px-5 py-4 text-white text-base focus:outline-none focus:ring-2 transition-all disabled:opacity-50 ${
+                  className={`w-full bg-charcoal/80 border rounded-xl px-5 py-4 text-white text-base focus:outline-none focus:ring-2 transition-all disabled:opacity-50 hover:border-white/20 cursor-text ${
                     errors.name
                       ? "border-red-500/70 focus:ring-red-500/40"
-                      : "border-white/10 focus:ring-brand/60 focus:border-brand/50"
+                      : "border-white/10 focus:ring-brand/60 focus:border-brand"
                   }`}
                   dir="rtl"
                 />
                 {errors.name && (
-                  <p id="err-name" role="alert" className="text-red-400 text-sm">
+                  <p id="err-name" role="alert" className="text-red-400 text-sm font-medium mr-1">
                     {errors.name}
                   </p>
                 )}
@@ -175,7 +175,7 @@ export default function PerformanceList() {
 
               {/* Phone */}
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="pl-phone" className="text-sm font-bold text-silver/70">
+                <label htmlFor="pl-phone" className="text-sm font-semibold text-silver/90 mr-1">
                   טלפון / WhatsApp <span aria-hidden="true" className="text-brand">*</span>
                 </label>
                 <input
@@ -191,15 +191,15 @@ export default function PerformanceList() {
                   aria-required="true"
                   aria-describedby={errors.phone ? "err-phone" : undefined}
                   aria-invalid={errors.phone ? "true" : "false"}
-                  className={`w-full bg-charcoal/60 border rounded-xl px-5 py-4 text-white text-base focus:outline-none focus:ring-2 transition-all disabled:opacity-50 text-right ${
+                  className={`w-full bg-charcoal/80 border rounded-xl px-5 py-4 text-white text-base focus:outline-none focus:ring-2 transition-all disabled:opacity-50 text-right hover:border-white/20 cursor-text ${
                     errors.phone
                       ? "border-red-500/70 focus:ring-red-500/40"
-                      : "border-white/10 focus:ring-brand/60 focus:border-brand/50"
+                      : "border-white/10 focus:ring-brand/60 focus:border-brand"
                   }`}
                   dir="rtl"
                 />
                 {errors.phone && (
-                  <p id="err-phone" role="alert" className="text-red-400 text-sm">
+                  <p id="err-phone" role="alert" className="text-red-400 text-sm font-medium mr-1">
                     {errors.phone}
                   </p>
                 )}
@@ -207,7 +207,7 @@ export default function PerformanceList() {
 
               {/* Email */}
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="pl-email" className="text-sm font-bold text-silver/70">
+                <label htmlFor="pl-email" className="text-sm font-semibold text-silver/90 mr-1">
                   אימייל <span aria-hidden="true" className="text-brand">*</span>
                 </label>
                 <input
@@ -223,16 +223,16 @@ export default function PerformanceList() {
                   aria-required="true"
                   aria-describedby={errors.email ? "err-email" : undefined}
                   aria-invalid={errors.email ? "true" : "false"}
-                  className={`w-full bg-charcoal/60 border rounded-xl px-5 py-4 text-white text-base focus:outline-none focus:ring-2 transition-all disabled:opacity-50 ${
+                  className={`w-full bg-charcoal/80 border rounded-xl px-5 py-4 text-white text-base focus:outline-none focus:ring-2 transition-all disabled:opacity-50 hover:border-white/20 cursor-text ${
                     errors.email
                       ? "border-red-500/70 focus:ring-red-500/40"
-                      : "border-white/10 focus:ring-brand/60 focus:border-brand/50"
+                      : "border-white/10 focus:ring-brand/60 focus:border-brand"
                   }`}
                   dir="ltr"
                   style={{ textAlign: "right" }}
                 />
                 {errors.email && (
-                  <p id="err-email" role="alert" className="text-red-400 text-sm">
+                  <p id="err-email" role="alert" className="text-red-400 text-sm font-medium mr-1">
                     {errors.email}
                   </p>
                 )}
@@ -250,7 +250,7 @@ export default function PerformanceList() {
                 />
                 <label
                   htmlFor="marketing-consent"
-                  className="text-[13px] text-silver/55 text-right leading-relaxed cursor-pointer"
+                  className="text-xs sm:text-sm text-silver/75 text-right leading-relaxed cursor-pointer"
                 >
                   אני מאשר/ת לקבל עדכונים ותוכן מקצועי מ-Okonski Performance, בהתאם ל
                   <Link
@@ -266,9 +266,9 @@ export default function PerformanceList() {
               </div>
 
               {/* Privacy notice */}
-              <p className="text-[11px] text-silver/30 text-right leading-relaxed">
+              <p className="text-xs text-silver/50 text-right leading-relaxed">
                 שליחת הטופס מהווה הסכמה ל
-                <Link href="/privacy" className="underline hover:text-silver/55 transition-colors">
+                <Link href="/privacy" className="underline hover:text-silver/80 transition-colors">
                   מדיניות הפרטיות
                 </Link>
                 .
@@ -280,7 +280,7 @@ export default function PerformanceList() {
                   type="submit"
                   disabled={status === "loading" || hasSubmitted}
                   aria-busy={status === "loading"}
-                  className="relative w-full inline-flex items-center justify-center bg-brand text-white font-black py-5 px-8 rounded-xl text-sm tracking-widest uppercase hover:bg-brand-bright transition-all duration-300 shadow-[0_4px_25px_rgba(62,111,168,0.25)] hover:shadow-[0_4px_40px_rgba(62,111,168,0.45)] focus:outline-none focus:ring-4 focus:ring-brand/40 active:scale-[0.99] disabled:opacity-70 disabled:cursor-not-allowed overflow-hidden"
+                  className="relative w-full inline-flex items-center justify-center bg-brand text-white font-black py-5 px-8 rounded-xl text-sm tracking-widest uppercase hover:bg-brand-bright cursor-pointer transition-all duration-300 shadow-[0_4px_25px_rgba(62,111,168,0.25)] hover:shadow-[0_6px_40px_rgba(62,111,168,0.45)] focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-primary active:scale-[0.99] disabled:opacity-70 disabled:cursor-not-allowed overflow-hidden"
                 >
                   <span className={`transition-opacity ${status === "loading" ? "opacity-0" : "opacity-100"}`}>
                     הצטרפו ל־Performance List

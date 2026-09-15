@@ -10,7 +10,7 @@ export default function WhoItsFor() {
         <div className="mb-20 sm:mb-28 max-w-2xl">
           <h2
             id="audiences-heading"
-            className="text-[clamp(2rem,6vw,3.75rem)] font-black text-white leading-[1.1] tracking-tight"
+            className="text-[clamp(2rem,6vw,3.75rem)] font-black text-white leading-[1.1] tracking-tight text-balance"
           >
             לאנשים שדורשים מהגוף שלהם יותר.
           </h2>
@@ -28,7 +28,7 @@ export default function WhoItsFor() {
             />
 
             <p
-              className="font-barlow text-white/15 font-black tracking-widest uppercase text-base mb-8 group-hover:text-brand/50 transition-colors duration-500"
+              className="font-barlow text-white/30 font-black tracking-widest uppercase text-base mb-8 group-hover:text-brand transition-colors duration-500"
               dir="ltr"
             >
               01
@@ -51,7 +51,7 @@ export default function WhoItsFor() {
             />
 
             <p
-              className="font-barlow text-white/15 font-black tracking-widest uppercase text-base mb-8 group-hover:text-brand/50 transition-colors duration-500"
+              className="font-barlow text-white/30 font-black tracking-widest uppercase text-base mb-8 group-hover:text-brand transition-colors duration-500"
               dir="ltr"
             >
               02
@@ -69,7 +69,7 @@ export default function WhoItsFor() {
 
         {/* Closing line */}
         <div className="mt-20 sm:mt-28 pt-10 border-t border-white/8 max-w-3xl">
-          <p className="text-[clamp(1.1rem,3vw,1.5rem)] font-bold text-white/80 leading-relaxed">
+          <p className="text-[clamp(1.1rem,3vw,1.5rem)] font-bold text-white leading-relaxed">
             שגרה שונה. דרישות שונות. אותו גוף שצריך לעמוד בהן.
           </p>
         </div>

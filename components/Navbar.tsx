@@ -52,10 +52,10 @@ export default function Navbar() {
         {/* CTA — always visible, style changes with scroll */}
         <a
           href="#performance-list"
-          className={`inline-flex items-center justify-center font-bold tracking-widest uppercase transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand/50 rounded-full active:scale-[0.98] ${
+          className={`inline-flex items-center justify-center font-bold tracking-widest uppercase transition-all duration-300 cursor-pointer focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-primary rounded-full active:scale-[0.98] ${
             scrolled
               ? "bg-brand text-white hover:bg-brand-bright text-xs px-5 py-2.5 shadow-[0_2px_20px_rgba(62,111,168,0.3)]"
-              : "text-white/70 hover:text-white text-xs sm:text-sm"
+              : "text-white/80 hover:text-white text-xs sm:text-sm"
           }`}
         >
           {scrolled ? "הצטרפו לרשימה" : "Performance List"}

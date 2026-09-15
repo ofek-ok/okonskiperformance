@@ -30,7 +30,7 @@ export default function WhatWeAreBuilding() {
 
         {/* ── Section label ── */}
         <p
-          className="font-barlow text-silver/30 font-bold tracking-[0.22em] uppercase text-[11px] sm:text-xs mb-10 sm:mb-12"
+          className="font-barlow text-silver/70 font-bold tracking-[0.22em] uppercase text-xs sm:text-sm mb-8 sm:mb-10"
           dir="ltr"
         >
           SPORTS THERAPY / RECOVERY
@@ -39,7 +39,7 @@ export default function WhatWeAreBuilding() {
         {/* ── Main heading ── */}
         <h2
           id="section-treatment-heading"
-          className="text-[clamp(1.9rem,5.5vw,3.25rem)] font-black text-white leading-[1.15] tracking-tight mb-14 sm:mb-16 max-w-3xl"
+          className="text-[clamp(1.9rem,5.5vw,3.25rem)] font-black text-white leading-[1.15] tracking-tight mb-12 sm:mb-16 max-w-3xl text-balance"
         >
           טיפול שמתחיל במה שהגוף שלך צריך לעשות.
         </h2>

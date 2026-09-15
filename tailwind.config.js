@@ -12,7 +12,7 @@ module.exports = {
         elevated: "#1B2026",
         offwhite: "#F3F3F0",
         "primary-text": "#111317",
-        "secondary-text": "#666B72",
+        "secondary-text": "#94A3B8",
         brand: "#3E6FA8",
         "brand-bright": "#5B8EC4",
         "brand-dim": "#2A4F7A",

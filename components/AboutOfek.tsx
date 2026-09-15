@@ -19,7 +19,7 @@ export default function AboutOfek() {
           <div className="lg:col-span-4 order-1 relative">
             {/* Offset frame accent — behind image */}
             <div
-              className="absolute -top-4 -right-4 w-full h-full border border-white/5 pointer-events-none"
+              className="absolute -top-3 -right-3 w-full h-full border border-white/10 rounded-2xl pointer-events-none"
               aria-hidden="true"
             />
 
@@ -28,20 +28,18 @@ export default function AboutOfek() {
               If original resolution is limited, prefer smaller display over stretching.
               object-top ensures the face is always visible.
             */}
-            <div className="relative w-full max-w-[340px] mx-auto lg:mx-0 aspect-square overflow-hidden bg-primary shadow-xl">
+            <div className="relative w-full max-w-[340px] mx-auto lg:mx-0 aspect-square overflow-hidden rounded-2xl border border-white/10 bg-primary shadow-2xl">
               <Image
                 src="/ofek-portrait.jpg"
                 alt="אופק אוקונסקי, מייסד Okonski Performance"
                 fill
-                className="object-cover object-top"
+                className="object-cover object-center"
                 sizes="(max-width: 1024px) 340px, 33vw"
               />
-              {/* Very subtle gradient at bottom — preserves photo authenticity */}
-              <div className="absolute inset-x-0 bottom-0 h-1/5 bg-gradient-to-t from-charcoal/50 to-transparent" />
             </div>
 
             {/* Name badge */}
-            <div className="absolute -bottom-5 right-0 sm:-right-4 bg-primary border border-white/10 px-5 py-3 shadow-xl">
+            <div className="absolute -bottom-4 right-2 sm:-right-2 bg-charcoal/95 border border-white/10 rounded-xl px-5 py-3 shadow-xl backdrop-blur-md">
               <p className="font-barlow text-white font-black tracking-widest uppercase text-base sm:text-lg leading-tight">
                 Ofek Okonski
               </p>
@@ -59,7 +57,7 @@ export default function AboutOfek() {
 
             <h2
               id="about-heading"
-              className="text-[clamp(1.8rem,5vw,3rem)] font-black text-white leading-[1.15] tracking-tight mb-10 sm:mb-12"
+              className="text-[clamp(1.8rem,5vw,3rem)] font-black text-white leading-[1.15] tracking-tight mb-8 sm:mb-12 text-balance"
             >
               מי עומד מאחורי Okonski Performance?
             </h2>
