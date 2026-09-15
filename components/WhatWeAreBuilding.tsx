@@ -1,102 +1,83 @@
 export default function WhatWeAreBuilding() {
   return (
-    <section className="py-24 sm:py-36 md:py-48 bg-charcoal relative overflow-hidden border-t border-white/5">
-      {/* Subtle right glow */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-brand/5 blur-[120px] rounded-full pointer-events-none opacity-40 mix-blend-screen" aria-hidden="true" />
+    <section
+      className="relative py-24 sm:py-36 md:py-48 bg-charcoal overflow-hidden border-t border-white/5"
+      aria-labelledby="section-treatment-heading"
+    >
+      {/* ── Background structural typography ── */}
+      {/* These are decorative only — screen readers skip them */}
+      <div
+        className="absolute inset-0 pointer-events-none select-none overflow-hidden"
+        aria-hidden="true"
+      >
+        {/* Large word: TREATMENT — top right */}
+        <p
+          className="absolute -top-6 -left-4 sm:-left-8 font-barlow font-black uppercase text-[clamp(5rem,18vw,14rem)] text-white/[0.022] leading-none tracking-tight whitespace-nowrap"
+          dir="ltr"
+        >
+          TREATMENT
+        </p>
+        {/* Large word: RECOVERY — bottom */}
+        <p
+          className="absolute -bottom-6 -right-4 sm:-right-8 font-barlow font-black uppercase text-[clamp(5rem,16vw,12rem)] text-brand/[0.06] leading-none tracking-tight whitespace-nowrap"
+          dir="ltr"
+        >
+          RECOVERY
+        </p>
+      </div>
 
-      <div className="container mx-auto px-5 sm:px-8 max-w-7xl relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 items-start">
+      <div className="container mx-auto px-5 sm:px-8 max-w-5xl relative z-10">
 
-          {/* ── Left / text column ── */}
-          <div className="lg:col-span-7 space-y-10">
+        {/* ── Section label ── */}
+        <p
+          className="font-barlow text-silver/30 font-bold tracking-[0.22em] uppercase text-[11px] sm:text-xs mb-10 sm:mb-12"
+          dir="ltr"
+        >
+          SPORTS THERAPY / RECOVERY
+        </p>
 
-            <div>
-              <p
-                className="font-barlow text-silver/35 font-bold tracking-[0.2em] uppercase text-[11px] sm:text-xs mb-6"
-                dir="ltr"
-              >
-                BEYOND PAIN <span className="mx-2 text-brand opacity-60">/</span> TOWARD PERFORMANCE
-              </p>
+        {/* ── Main heading ── */}
+        <h2
+          id="section-treatment-heading"
+          className="text-[clamp(1.9rem,5.5vw,3.25rem)] font-black text-white leading-[1.15] tracking-tight mb-14 sm:mb-16 max-w-3xl"
+        >
+          טיפול שמתחיל במה שהגוף שלך צריך לעשות.
+        </h2>
 
-              <h2 className="text-[clamp(2rem,6vw,3.75rem)] font-black text-white leading-[1.1] tracking-tight mb-0">
-                מה מפריע לך היום —{" "}
-                <span className="text-secondary-text">ומה אתה צריך שהגוף שלך יהיה מסוגל לעשות?</span>
-              </h2>
-            </div>
+        {/* ── Body copy — editorial grid ── */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-14 lg:gap-20">
 
-            <div className="space-y-6 text-secondary-text text-[clamp(1rem,2.5vw,1.35rem)] leading-[1.75] font-medium pl-0 md:pr-0 lg:pl-0 rtl:border-r-2 rtl:border-brand/30 rtl:pr-8">
-              <p className="text-white/90">
-                אנחנו לא מסתכלים רק על הכאב. אנחנו מסתכלים על הדרישות שהגוף שלך צריך לעמוד בהן.
-              </p>
-              <p>
-                <span className="text-white font-bold">Okonski Performance מתחילה מ-Sports Therapy</span>{" "}
-                — טיפול, תנועה, עומס והתאוששות — עם מטרה אחת: לעזור לגוף לחזור להתמודד עם מה שאתה דורש ממנו.
-              </p>
-            </div>
-
-            {/* Closing statement */}
-            <div className="pt-6 border-t border-white/8">
-              <p
-                className="font-barlow text-[clamp(1.1rem,2.5vw,1.5rem)] font-black tracking-wider uppercase text-white leading-snug"
-                dir="ltr"
-              >
-                SPORTS THERAPY IS WHERE WE START.
-                <br />
-                <span className="text-brand">PERFORMANCE IS WHERE WE'RE GOING.</span>
-              </p>
-            </div>
+          {/* Left: lead paragraph */}
+          <div className="lg:col-span-5">
+            <p className="text-white/85 text-[clamp(1.05rem,2.5vw,1.2rem)] leading-[1.8] font-medium">
+              לא כל מי שמגיע לטיפול מגיע מאותה סיבה.
+            </p>
           </div>
 
-          {/* ── Right / visual column ── */}
-          <div className="lg:col-span-5 relative mt-4 lg:mt-0">
-            {/*
-              Visual: editorial typographic composition.
-              When real treatment photography is available, replace this block
-              with: <Image src="/treatment.jpg" alt="..." fill className="object-cover" />
-              inside an aspect-ratio container.
-            */}
-            <div className="relative aspect-[4/5] bg-primary border border-white/5 overflow-hidden flex flex-col items-start justify-end p-8 sm:p-10 lg:p-12">
+          {/* Right: detail paragraphs */}
+          <div className="lg:col-span-7 space-y-6 text-secondary-text text-[clamp(0.95rem,2.2vw,1.1rem)] leading-[1.8]">
+            <p>
+              לפעמים זו מגבלה שמפריעה באימון. לפעמים כאב שחוזר תחת עומס. לפעמים הגוף פשוט לא מתאושש בקצב של השגרה.
+            </p>
+            <p>
+              ב-Okonski Performance הטיפול מתחיל בהבנת הדרישות שלך מהגוף, ומשם מחברים בין טיפול, תנועה והתאוששות.
+            </p>
 
-              {/* Top-right geometric accent */}
-              <div className="absolute top-0 left-0 w-16 h-16 border-r border-b border-brand/30" aria-hidden="true" />
-              <div className="absolute bottom-0 right-0 w-16 h-16 border-l border-t border-white/10" aria-hidden="true" />
-
-              {/* Large background word */}
-              <p
-                className="absolute top-6 right-0 font-barlow font-black text-[clamp(3rem,8vw,5rem)] uppercase text-white/[0.025] tracking-widest leading-none select-none pointer-events-none"
-                dir="ltr"
-                aria-hidden="true"
-              >
-                TREAT<br />
-                MENT
+            {/* Closing statement — on its own, with clear visual separation */}
+            <div className="pt-6 border-t border-white/8">
+              <p className="text-white font-bold text-[clamp(1rem,2.3vw,1.15rem)] leading-[1.75]">
+                המטרה: לעזור לך לחזור לעשות את מה שאתה צריך לעשות, ולהמשיך לעשות אותו לאורך זמן.
               </p>
-
-              {/* Content */}
-              <div className="relative z-10 space-y-6">
-                <p
-                  className="font-barlow font-black uppercase tracking-widest text-xs text-brand"
-                  dir="ltr"
-                >
-                  SPORTS THERAPY / RECOVERY
-                </p>
-
-                <p className="text-white text-2xl sm:text-3xl font-black leading-snug max-w-xs">
-                  לא רק להעלים את הכאב.
-                </p>
-
-                <p className="text-secondary-text text-base sm:text-lg leading-relaxed max-w-xs">
-                  לבנות גוף שמסוגל לעמוד במה שאתה דורש ממנו.
-                </p>
-
-                {/* Visual divider */}
-                <div className="w-12 h-px bg-brand" aria-hidden="true" />
-              </div>
             </div>
-
-            {/* Photography placeholder notice (dev only — remove before launch) */}
-            {/* Replace this entire right column with a high-quality treatment photograph */}
           </div>
         </div>
+
+        {/* ── Bottom rule line — editorial breath ── */}
+        <div className="mt-16 sm:mt-20 flex items-center gap-6" aria-hidden="true">
+          <div className="w-12 h-px bg-brand" />
+          <div className="flex-1 h-px bg-white/5" />
+        </div>
+
       </div>
     </section>
   );
