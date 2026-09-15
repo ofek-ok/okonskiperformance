@@ -167,3 +167,93 @@
   clip: auto;
   white-space: normal;
 }
+
+/* =============================================
+   MOTION & ANIMATION SYSTEM
+   ============================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease both;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-in,
+  .animate-bounce {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =============================================
+   RTL/LTR ISOLATION
+   ============================================= */
+
+/* English labels inside RTL layout — isolate direction */
+[dir="ltr"] {
+  unicode-bidi: isolate;
+}
+
+/* Prevent horizontal overflow globally */
+html, body {
+  overflow-x: hidden;
+}
+
+/* =============================================
+   FOCUS RING SYSTEM
+   ============================================= */
+
+:focus-visible {
+  outline: 2px solid #3E6FA8;
+  outline-offset: 3px;
+}
+
+/* Remove default outline for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* =============================================
+   FORM INPUT SYSTEM
+   ============================================= */
+
+input::placeholder {
+  color: rgba(255,255,255,0.2);
+}
+
+input:disabled {
+  cursor: not-allowed;
+}
+
+/* =============================================
+   BLOCKQUOTE
+   ============================================= */
+
+blockquote {
+  margin: 0;
+}
