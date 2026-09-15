@@ -71,20 +71,20 @@ export default function FloatingAccessibility() {
 
   return (
     <>
-      {/* Floating Trigger Button */}
+      {/* Floating Trigger Button — Refined secondary utility */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         aria-label="פתיחת תפריט נגישות"
         aria-expanded={isOpen}
         aria-controls="a11y-modal"
-        className="fixed bottom-6 right-6 z-40 flex h-12 w-12 sm:h-13 sm:w-13 items-center justify-center rounded-full bg-brand text-white shadow-xl hover:bg-brand-bright transition-transform duration-200 hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-primary cursor-pointer border border-white/10"
+        className="fixed bottom-6 right-6 z-40 flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-charcoal/90 hover:bg-charcoal text-silver/80 hover:text-white shadow-md backdrop-blur-sm transition-transform duration-200 hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-primary cursor-pointer border border-white/15"
       >
         {/* Universal Accessibility Icon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="h-6 w-6 sm:h-7 sm:w-7"
+          className="h-5 w-5 sm:h-6 sm:w-6"
           aria-hidden="true"
         >
           <circle cx="12" cy="4" r="2" />

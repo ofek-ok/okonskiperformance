@@ -17,7 +17,7 @@ export default function WhatWeAreBuilding() {
         {/* ── Editorial copy — high contrast near-white for important info ── */}
         <div className="space-y-6 sm:space-y-8 text-[clamp(1.05rem,2.4vw,1.25rem)] leading-[1.8] text-white/90 font-normal">
           <p>
-            כל טיפול מתחיל בהבנה של מה מפריע לך, מה הדרישות שלך מהגוף ומה המטרה שאליה אתה רוצה לחזור.
+            כל טיפול מתחיל בהבנה של מה מפריע לך, מה אתה דורש מהגוף שלך ומה אתה רוצה לחזור לעשות.
           </p>
 
           <p className="p-6 sm:p-8 bg-primary/60 border-r-2 border-brand rounded-l-xl text-white font-medium">

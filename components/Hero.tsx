@@ -59,14 +59,14 @@ export default function Hero() {
           לעמוד בקצב שלך.
         </h1>
 
-        {/* 4. Supporting copy — High contrast near-white per requirement #4 */}
-        <p className="text-[clamp(1.05rem,2.5vw,1.25rem)] text-white/90 leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-9 font-medium px-2">
-          טיפול פיזי מותאם לספורטאים, מתאמנים ואנשים עם שגרה תובענית, להתמודדות עם כאב, עומס, מגבלות בתנועה והתאוששות.
+        {/* 4. Supporting copy — High contrast per polish pass */}
+        <p className="text-[clamp(1.05rem,2.5vw,1.25rem)] text-white/95 leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-9 font-medium px-2">
+          טיפול מותאם לספורטאים, מתאמנים ואנשים עם שגרה תובענית, להתמודדות עם כאב, עומס, מגבלות בתנועה והתאוששות.
         </p>
 
         {/* 5. Brand statement */}
         <p
-          className="font-barlow text-silver/60 font-black tracking-[0.22em] uppercase text-xs sm:text-sm mb-9 sm:mb-11"
+          className="font-barlow text-silver/65 font-black tracking-[0.22em] uppercase text-xs sm:text-sm mb-9 sm:mb-11"
           dir="ltr"
         >
           BUILT FOR WHAT YOU DEMAND.
@@ -81,7 +81,7 @@ export default function Hero() {
           >
             הצטרפו ל־Performance List
           </a>
-          <p className="text-xs text-silver/70 mt-4 font-medium">
+          <p className="text-xs text-silver/85 mt-4 font-medium">
             גישה מוקדמת לפתיחת היומן בינואר 2027
           </p>
         </div>

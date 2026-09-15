@@ -82,7 +82,7 @@ export default function PerformanceList() {
         aria-hidden="true"
       />
 
-      <div className="container mx-auto px-5 sm:px-8 max-w-xl relative z-10">
+      <div className="container mx-auto px-5 sm:px-8 max-w-xl lg:max-w-2xl relative z-10">
 
         {/* ── SUCCESS STATE ── */}
         {status === "success" ? (
@@ -93,10 +93,10 @@ export default function PerformanceList() {
             >
               YOU&rsquo;RE ON<br />THE LIST.
             </p>
-            <p className="text-white font-bold text-[clamp(1.1rem,3vw,1.35rem)] mb-5">
+            <p className="text-white font-bold text-[clamp(1.2rem,3vw,1.6rem)] mb-5">
               ברוכים הבאים ל-Performance List.
             </p>
-            <p className="text-secondary-text text-[clamp(0.95rem,2.2vw,1.1rem)] leading-relaxed max-w-md mx-auto mb-12">
+            <p className="text-white/90 text-[clamp(1.05rem,1.4vw,1.25rem)] leading-relaxed max-w-lg mx-auto mb-12">
               נעדכן אתכם לקראת פתיחת Okonski Performance בינואר 2027 ונשלח הודעה כשהיומן ייפתח לקביעת טיפולים.
             </p>
             <p
@@ -120,13 +120,13 @@ export default function PerformanceList() {
               JANUARY 2027
             </p>
 
-            {/* Headline */}
-            <h2 className="text-[clamp(2.5rem,8vw,4.25rem)] font-black text-white tracking-tight leading-[1.08] mb-8 text-balance">
-              הצטרפו ל־Performance List.
+            {/* Headline: Natural RTL/LTR rendering without period or line-break glitch */}
+            <h2 className="text-[clamp(2.5rem,7.5vw,4.5rem)] font-black text-white tracking-tight leading-[1.1] mb-8 text-balance">
+              הצטרפו ל־<span dir="ltr" className="inline-block whitespace-nowrap">Performance List</span>
             </h2>
 
-            {/* Body — High contrast near-white per requirement #4 */}
-            <div className="text-white/90 text-[clamp(1.05rem,2.2vw,1.2rem)] leading-[1.8] space-y-4 mb-10 max-w-lg mx-auto font-normal">
+            {/* Body — High contrast, slightly larger readable size on desktop */}
+            <div className="text-white/95 text-[clamp(1.05rem,1.4vw,1.3rem)] leading-[1.8] space-y-4 mb-10 max-w-xl mx-auto font-normal">
               <p>
                 הטיפולים הראשונים של Okonski Performance נפתחים בינואר 2027.
               </p>
@@ -250,7 +250,7 @@ export default function PerformanceList() {
                 />
                 <label
                   htmlFor="marketing-consent"
-                  className="text-xs sm:text-sm text-silver/75 text-right leading-relaxed cursor-pointer"
+                  className="text-xs sm:text-sm lg:text-[15px] text-silver/85 text-right leading-relaxed cursor-pointer"
                 >
                   אני מאשר/ת לקבל עדכונים ותוכן מקצועי מ-Okonski Performance, בהתאם ל
                   <Link
@@ -266,9 +266,9 @@ export default function PerformanceList() {
               </div>
 
               {/* Privacy notice */}
-              <p className="text-xs text-silver/50 text-right leading-relaxed">
+              <p className="text-xs sm:text-sm text-silver/70 text-right leading-relaxed">
                 שליחת הטופס מהווה הסכמה ל
-                <Link href="/privacy" className="underline hover:text-silver/80 transition-colors">
+                <Link href="/privacy" className="underline hover:text-silver/90 transition-colors">
                   מדיניות הפרטיות
                 </Link>
                 .
@@ -280,7 +280,7 @@ export default function PerformanceList() {
                   type="submit"
                   disabled={status === "loading" || hasSubmitted}
                   aria-busy={status === "loading"}
-                  className="relative w-full inline-flex items-center justify-center bg-brand text-white font-black py-5 px-8 rounded-xl text-sm tracking-widest uppercase hover:bg-brand-bright cursor-pointer transition-all duration-300 shadow-[0_4px_25px_rgba(62,111,168,0.25)] hover:shadow-[0_6px_40px_rgba(62,111,168,0.45)] focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-primary active:scale-[0.99] disabled:opacity-70 disabled:cursor-not-allowed overflow-hidden"
+                  className="relative w-full inline-flex items-center justify-center bg-brand text-white font-black py-5 px-8 rounded-xl text-sm lg:text-base tracking-widest uppercase hover:bg-brand-bright cursor-pointer transition-all duration-300 shadow-[0_4px_25px_rgba(62,111,168,0.25)] hover:shadow-[0_6px_40px_rgba(62,111,168,0.45)] focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-primary active:scale-[0.99] disabled:opacity-70 disabled:cursor-not-allowed overflow-hidden"
                 >
                   <span className={`transition-opacity ${status === "loading" ? "opacity-0" : "opacity-100"}`}>
                     הצטרפו ל־Performance List

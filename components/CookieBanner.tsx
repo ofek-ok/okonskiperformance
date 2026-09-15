@@ -27,7 +27,12 @@ export default function CookieBanner() {
     } else {
       try {
         const parsed = JSON.parse(stored);
-        setPreferences({ ...parsed, essential: true });
+        const validated = { ...parsed, essential: true as const };
+        setPreferences(validated);
+        if (typeof window !== "undefined") {
+          (window as any).cookieConsent = validated;
+          window.dispatchEvent(new CustomEvent("cookie-consent-updated", { detail: validated }));
+        }
       } catch {
         setShowBanner(true);
       }
@@ -48,7 +53,10 @@ export default function CookieBanner() {
     setPreferences(record);
     setShowBanner(false);
     setShowSettings(false);
-    window.dispatchEvent(new CustomEvent("cookie-consent-updated", { detail: record }));
+    if (typeof window !== "undefined") {
+      (window as any).cookieConsent = record;
+      window.dispatchEvent(new CustomEvent("cookie-consent-updated", { detail: record }));
+    }
   };
 
   const handleAcceptAll = () => {
