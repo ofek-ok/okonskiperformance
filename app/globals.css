@@ -257,3 +257,33 @@ input:disabled {
 blockquote {
   margin: 0;
 }
+
+/* =============================================
+   ACCESSIBILITY MODAL ACTIVE CLASSES
+   ============================================= */
+html.text-size-sm {
+  font-size: 90%;
+}
+html.text-size-lg {
+  font-size: 110%;
+}
+html.text-size-xl {
+  font-size: 120%;
+}
+html.a11y-high-contrast {
+  filter: contrast(135%);
+}
+html.a11y-readable-font * {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  letter-spacing: 0.03em !important;
+}
+html.a11y-highlight-links a {
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 4px !important;
+  color: #5B8EC4 !important;
+}
+html.a11y-stop-motion * {
+  animation: none !important;
+  transition: none !important;
+}

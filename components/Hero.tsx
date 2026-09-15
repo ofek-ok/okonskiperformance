@@ -32,52 +32,52 @@ export default function Hero() {
 
         {/* 1. Brand + date */}
         <p
-          className="font-barlow text-silver/70 font-bold tracking-[0.25em] uppercase text-xs sm:text-sm mb-6 sm:mb-8"
+          className="font-barlow text-silver/80 font-bold tracking-[0.25em] uppercase text-xs sm:text-sm mb-6 sm:mb-8"
           dir="ltr"
         >
-          OKONSKI PERFORMANCE
-          <span className="mx-2 text-brand">|</span>
-          JANUARY 2027
+          OKONSKI PERFORMANCE <span className="mx-2 text-brand">•</span> JANUARY 2027
         </p>
 
-        {/* 2. Service descriptor — FIRST, most visible */}
+        {/* 2. Service descriptor — clearly visible */}
         <div className="mb-7 sm:mb-9" dir="ltr">
           <p
             className="font-barlow text-brand font-black uppercase tracking-[0.16em] sm:tracking-[0.24em] text-[clamp(0.95rem,3.5vw,1.35rem)]"
             aria-label="Sports Therapy, Recovery, Performance"
           >
             SPORTS THERAPY
-            <span className="mx-3 sm:mx-4 text-white/25 font-light">•</span>
+            <span className="mx-3 sm:mx-4 text-white/30 font-light">•</span>
             RECOVERY
-            <span className="mx-3 sm:mx-4 text-white/25 font-light">•</span>
+            <span className="mx-3 sm:mx-4 text-white/30 font-light">•</span>
             PERFORMANCE
           </p>
         </div>
 
-        {/* 3. Hebrew headline with balanced wrapping */}
+        {/* 3. Main headline */}
         <h1 className="text-[clamp(2.5rem,8.5vw,5rem)] font-black text-white leading-[1.1] tracking-tight mb-6 sm:mb-8 max-w-3xl text-balance">
-          הגוף שלך צריך לעמוד בקצב שלך.
+          הגוף שלך צריך
+          <br />
+          לעמוד בקצב שלך.
         </h1>
 
-        {/* 4. Supporting copy */}
-        <p className="text-[clamp(1.05rem,2.5vw,1.25rem)] text-secondary-text leading-relaxed max-w-xl mx-auto mb-8 sm:mb-9 font-medium px-2">
-          טיפולי Sports Therapy לאנשים שדורשים מהגוף שלהם יותר, באימונים, בעבודה ובחיים.
+        {/* 4. Supporting copy — High contrast near-white per requirement #4 */}
+        <p className="text-[clamp(1.05rem,2.5vw,1.25rem)] text-white/90 leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-9 font-medium px-2">
+          טיפול פיזי מותאם לספורטאים, מתאמנים ואנשים עם שגרה תובענית, להתמודדות עם כאב, עומס, מגבלות בתנועה והתאוששות.
         </p>
 
         {/* 5. Brand statement */}
         <p
-          className="font-barlow text-silver/50 font-black tracking-[0.22em] uppercase text-xs sm:text-sm mb-9 sm:mb-11"
+          className="font-barlow text-silver/60 font-black tracking-[0.22em] uppercase text-xs sm:text-sm mb-9 sm:mb-11"
           dir="ltr"
         >
           BUILT FOR WHAT YOU DEMAND.
         </p>
 
-        {/* 6. Primary CTA with enhanced interactive state */}
+        {/* 6. Primary CTA */}
         <div className="flex flex-col items-center w-full max-w-[320px]">
           <a
             href="#performance-list"
             className="w-full inline-flex items-center justify-center bg-brand text-white font-black py-4 sm:py-5 px-8 rounded-full text-sm tracking-widest uppercase hover:bg-brand-bright cursor-pointer transition-all duration-300 shadow-[0_4px_25px_rgba(62,111,168,0.25)] hover:shadow-[0_6px_35px_rgba(62,111,168,0.45)] focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-primary active:scale-[0.98]"
-            aria-label="הצטרפו ל-Performance List — גישה מוקדמת לפתיחת היומן בינואר 2027"
+            aria-label="הצטרפו ל-Performance List — פתיחה בינואר 2027"
           >
             הצטרפו ל־Performance List
           </a>

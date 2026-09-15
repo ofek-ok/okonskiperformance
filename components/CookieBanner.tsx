@@ -91,9 +91,9 @@ export default function CookieBanner() {
             <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto shrink-0">
               <button
                 onClick={handleAcceptAll}
-                className="bg-brand text-white font-bold py-3 px-6 rounded-full hover:bg-brand-bright transition-colors text-sm focus:outline-none focus:ring-2 focus:ring-white/50"
+                className="bg-brand text-white font-bold py-3 px-6 rounded-full hover:bg-brand-bright cursor-pointer transition-colors text-sm focus:outline-none focus:ring-2 focus:ring-white/50"
               >
-                אישור הכל
+                אישור
               </button>
               <button
                 onClick={handleRejectNonEssential}

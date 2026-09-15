@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import FloatingAccessibility from "@/components/FloatingAccessibility";
 import CookieBanner from "@/components/CookieBanner";
 
 export const metadata: Metadata = {
@@ -39,6 +40,7 @@ export default function RootLayout({
       <body className="font-heebo bg-primary text-silver antialiased">
         {children}
         <FloatingWhatsApp />
+        <FloatingAccessibility />
         <CookieBanner />
         
         {/* Accessibility Plugin */}

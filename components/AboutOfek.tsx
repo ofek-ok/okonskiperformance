@@ -62,9 +62,9 @@ export default function AboutOfek() {
               מי עומד מאחורי Okonski Performance?
             </h2>
 
-            <div className="space-y-6 text-secondary-text text-[clamp(0.95rem,2.2vw,1.1rem)] leading-[1.85] font-medium">
+            <div className="space-y-6 text-white/90 text-[clamp(1.05rem,2.2vw,1.2rem)] leading-[1.85] font-normal">
 
-              <p className="text-white font-bold text-[clamp(1rem,2.4vw,1.2rem)]">
+              <p className="text-white font-bold text-[clamp(1.15rem,2.4vw,1.35rem)]">
                 אני אופק אוקונסקי.
               </p>
 
@@ -73,11 +73,11 @@ export default function AboutOfek() {
               </p>
 
               <p>
-                החיבור בין העולמות האלה הוביל אותי ללמוד ולהעמיק ב-Sports Therapy ולהקים את Okonski Performance.
+                החיבור בין העולמות האלה הוביל אותי ללמוד ולהעמיק ב־Sports Therapy ולהקים את Okonski Performance.
               </p>
 
-              <p>
-                המטרה שלי היא לעזור לאנשים לטפל בגוף שלהם בהתאם למה שהם באמת דורשים ממנו ביום-יום.
+              <p className="text-white font-medium">
+                המטרה שלי היא לעזור לאנשים לטפל בגוף שלהם בהתאם למה שהם באמת דורשים ממנו ביום־יום.
               </p>
 
             </div>

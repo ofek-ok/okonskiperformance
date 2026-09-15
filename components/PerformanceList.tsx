@@ -121,17 +121,17 @@ export default function PerformanceList() {
             </p>
 
             {/* Headline */}
-            <h2 className="text-[clamp(2.5rem,8vw,4.25rem)] font-black text-white tracking-tight leading-[1.08] mb-8">
-              הצטרפו ל-Performance List.
+            <h2 className="text-[clamp(2.5rem,8vw,4.25rem)] font-black text-white tracking-tight leading-[1.08] mb-8 text-balance">
+              הצטרפו ל־Performance List.
             </h2>
 
-            {/* Body */}
-            <div className="text-secondary-text text-[clamp(0.95rem,2.2vw,1.05rem)] leading-[1.8] space-y-4 mb-10 max-w-md mx-auto">
+            {/* Body — High contrast near-white per requirement #4 */}
+            <div className="text-white/90 text-[clamp(1.05rem,2.2vw,1.2rem)] leading-[1.8] space-y-4 mb-10 max-w-lg mx-auto font-normal">
               <p>
-                הטיפולים הראשונים של Okonski Performance ייפתחו בינואר 2027.
+                הטיפולים הראשונים של Okonski Performance נפתחים בינואר 2027.
               </p>
               <p>
-                הצטרפו לרשימה כדי לקבל תוכן מקצועי ועדכונים, ולהיות הראשונים לדעת כשייפתח היומן לקביעת טיפולים.
+                הצטרפו ל־Performance List כדי לקבל תוכן מקצועי ועדכונים ולהיות הראשונים לדעת כשהיומן ייפתח לקביעת טיפולים.
               </p>
             </div>
 
@@ -176,7 +176,7 @@ export default function PerformanceList() {
               {/* Phone */}
               <div className="flex flex-col gap-1.5">
                 <label htmlFor="pl-phone" className="text-sm font-semibold text-silver/90 mr-1">
-                  טלפון / WhatsApp <span aria-hidden="true" className="text-brand">*</span>
+                  טלפון <span aria-hidden="true" className="text-brand">*</span>
                 </label>
                 <input
                   id="pl-phone"
