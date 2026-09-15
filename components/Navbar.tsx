@@ -1,15 +1,16 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      // Only show sticky background after scrolling past Hero (approx 80vh)
+      setScrolled(window.scrollY > window.innerHeight * 0.8);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -17,44 +18,44 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 border-b ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${
         scrolled
-          ? "bg-charcoal/90 backdrop-blur-md border-white/10 py-3"
-          : "bg-transparent border-transparent py-5"
+          ? "bg-primary/95 backdrop-blur-md border-white/5 py-3 shadow-2xl"
+          : "bg-transparent border-transparent py-6"
       }`}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
+      <div className="container mx-auto px-6 max-w-7xl flex items-center justify-between">
+        
         {/* Logo */}
-        <Link href="/" className="flex items-center group">
-          <Image
-            src="/logo-official.png"
-            alt="Okonski Performance Logo"
-            width={64}
-            height={64}
-            className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 object-contain group-hover:scale-105 transition-transform"
-          />
+        <Link href="/" className="flex items-center gap-3 group relative z-10">
+          <div className="w-10 h-10 relative">
+            <Image
+              src="/logo-official.png"
+              alt="Okonski Performance"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <div className="hidden sm:block">
+            <span className="block text-sm font-black text-white tracking-widest uppercase">
+              OKONSKI PERFORMANCE
+            </span>
+          </div>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          <Link href="#about" className="text-sm font-medium text-silver/70 hover:text-white transition-colors">
-            אודות
-          </Link>
-          <Link href="#services" className="text-sm font-medium text-silver/70 hover:text-white transition-colors">
-            טיפולים
-          </Link>
-          <Link href="#audiences" className="text-sm font-medium text-silver/70 hover:text-white transition-colors">
-            למי מתאים
-          </Link>
-        </nav>
-
-        {/* Action - Visible on Mobile too */}
-        <a
-          href="#performance-list"
-          className="flex items-center gap-2 bg-brand/10 text-brand border border-brand/20 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-medium hover:bg-brand hover:text-white transition-all text-[11px] sm:text-sm"
-        >
-          <span dir="ltr">Performance List</span>
-        </a>
+        {/* CTA */}
+        <div className="relative z-10">
+          <a
+            href="#performance-list"
+            className={`inline-flex items-center justify-center font-bold tracking-widest uppercase transition-all duration-300 ${
+              scrolled 
+                ? "bg-brand text-white hover:bg-white hover:text-brand px-6 py-2.5 text-xs sm:text-sm rounded-full" 
+                : "text-white hover:text-brand-bright text-xs sm:text-sm"
+            }`}
+          >
+            {scrolled ? "הצטרפו לרשימה" : "Performance List"}
+          </a>
+        </div>
       </div>
     </header>
   );
