@@ -23,7 +23,7 @@ function getUtmFromUrl(): UtmData {
   return result;
 }
 
-type FormStatus = "idle" | "loading" | "success";
+type FormStatus = "idle" | "loading" | "success" | "error";
 
 export default function PerformanceList() {
   const [status, setStatus] = useState<FormStatus>("idle");
@@ -31,6 +31,7 @@ export default function PerformanceList() {
   const [marketingConsent, setMarketingConsent] = useState(false); // never pre-checked
   const [errors, setErrors] = useState<{ name?: string; phone?: string; email?: string }>({});
   const [hasSubmitted, setHasSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const validate = () => {
     const e: typeof errors = {};
@@ -50,7 +51,7 @@ export default function PerformanceList() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (hasSubmitted || status === "loading") return;
     const newErrors = validate();
@@ -59,12 +60,34 @@ export default function PerformanceList() {
       document.getElementById(`pl-${Object.keys(newErrors)[0]}`)?.focus();
       return;
     }
+
     setHasSubmitted(true);
+    setSubmitError("");
     setStatus("loading");
-    const utm = getUtmFromUrl();
-    // Future: POST /api/subscribe — no PII in URLs or console
-    void utm;
-    setTimeout(() => setStatus("success"), 1200);
+
+    try {
+      const utm = getUtmFromUrl();
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          full_name: formData.name.trim(),
+          phone: formData.phone.trim(),
+          email: formData.email.trim(),
+          marketing_consent: marketingConsent,
+          utm_source: utm.utm_source || "website",
+          utm_medium: utm.utm_medium || "organic",
+          utm_campaign: utm.utm_campaign || "performance_list"
+        })
+      });
+
+      if (!response.ok) throw new Error("subscribe_failed");
+      setStatus("success");
+    } catch {
+      setStatus("error");
+      setSubmitError("לא הצלחנו לשמור את הפרטים כרגע. נסו שוב בעוד רגע.");
+      setHasSubmitted(false);
+    }
   };
 
   return (
@@ -273,6 +296,12 @@ export default function PerformanceList() {
                 </Link>
                 .
               </p>
+
+              {submitError && (
+                <p role="alert" className="text-red-400 text-sm font-medium text-right">
+                  {submitError}
+                </p>
+              )}
 
               {/* Submit */}
               <div className="pt-2">
