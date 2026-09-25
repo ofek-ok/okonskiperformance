@@ -1,74 +1,25 @@
+const audiences = [
+  { n: "01", title: "כאב שמפריע", text: "גב, צוואר, ברך או כל כאב שמפריע לך לעבוד, לזוז, להתאמן או פשוט להרגיש בנוח." },
+  { n: "02", title: "עומס והתאוששות", text: "כשהשגרה, האימונים או העבודה מצטברים בגוף ואתה רוצה להוריד עומס ולהרגיש טוב יותר." },
+  { n: "03", title: "חזרה מפציעה", text: "כשצריך לחזור בהדרגה לפעילות, לאימון ולדברים שהגוף שלך צריך להיות מסוגל לעשות." },
+  { n: "04", title: "יותר מהגוף שלך", text: "כשאתה מרגיש טוב ורוצה לשמור על זה, לנוע טוב יותר, להתאושש ולשפר ביצועים." },
+];
+
 export default function WhoItsFor() {
   return (
-    <section
-      className="py-16 sm:py-20 md:py-24 lg:py-28 bg-primary relative overflow-hidden"
-      aria-labelledby="audiences-heading"
-    >
-      <div className="container mx-auto px-5 sm:px-8 max-w-7xl relative z-10">
-
-        {/* Section heading */}
-        <div className="mb-10 sm:mb-14 max-w-2xl">
-          <h2
-            id="audiences-heading"
-            className="text-[clamp(2rem,6vw,3.5rem)] font-black text-white leading-[1.1] tracking-tight text-balance"
-          >
-            למי זה מתאים?
-          </h2>
+    <section className="py-20 sm:py-28 bg-primary relative overflow-hidden" aria-labelledby="audiences-heading">
+      <div className="container mx-auto px-5 sm:px-8 max-w-7xl">
+        <div className="max-w-3xl mb-12 sm:mb-16">
+          <h2 id="audiences-heading" className="text-[clamp(2rem,6vw,3.5rem)] font-black text-white leading-[1.1] tracking-tight mb-5">לא צריך להיות ספורטאי כדי לטפל בגוף שלך.</h2>
+          <p className="text-white/70 text-lg sm:text-xl leading-relaxed">אפשר להגיע בגלל כאב. בגלל עומס. בשביל התאוששות. או כי אתה רוצה להמשיך לעשות יותר בלי להתפשר על הגוף בדרך.</p>
         </div>
-
-        {/* Two audiences — clean editorial layout, high contrast */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-0">
-
-          {/* Audience 1 */}
-          <div className="group relative py-6 sm:py-8 lg:py-10 lg:pr-16 lg:pl-12 border-b border-white/10 lg:border-b-0 lg:border-l border-white/10">
-            {/* Top hover accent */}
-            <div
-              className="absolute top-0 right-0 h-px bg-brand w-16 group-hover:w-full transition-all duration-700 ease-out"
-              aria-hidden="true"
-            />
-
-            <p
-              className="font-barlow text-silver/60 font-black tracking-widest uppercase text-base mb-5 group-hover:text-brand transition-colors duration-500"
-              dir="ltr"
-            >
-              01
-            </p>
-
-            <h3 className="text-[clamp(1.5rem,3.5vw,2.25rem)] font-black text-white leading-tight mb-4">
-              ספורטאים ומתאמנים
-            </h3>
-
-            {/* High contrast near-white for important service explanation */}
-            <p className="text-white/90 text-[clamp(1.05rem,2vw,1.2rem)] leading-[1.75] max-w-md font-normal">
-              כאב שמפריע באימון, עומסים שמצטברים, מגבלות בתנועה, צורך בהתאוששות או חזרה לפעילות.
-            </p>
-          </div>
-
-          {/* Audience 2 */}
-          <div className="group relative py-6 sm:py-8 lg:py-10 lg:pr-20 lg:pl-12 lg:mt-8">
-            <div
-              className="absolute top-0 right-0 h-px bg-white/20 w-16 group-hover:w-full group-hover:bg-brand/60 transition-all duration-700 ease-out"
-              aria-hidden="true"
-            />
-
-            <p
-              className="font-barlow text-silver/60 font-black tracking-widest uppercase text-base mb-6 group-hover:text-brand transition-colors duration-500"
-              dir="ltr"
-            >
-              02
-            </p>
-
-            <h3 className="text-[clamp(1.5rem,3.5vw,2.25rem)] font-black text-white leading-tight mb-5">
-              אנשים עם שגרה תובענית
-            </h3>
-
-            {/* High contrast near-white for important service explanation */}
-            <p className="text-white/90 text-[clamp(1.05rem,2vw,1.2rem)] leading-[1.8] max-w-md font-normal">
-              עבודה, ישיבה, סטרס, אימונים ושגרה שמעמיסה על הגוף ודורשת ממנו הרבה.
-            </p>
-          </div>
+        <div className="grid sm:grid-cols-2">
+          {audiences.map((a,i)=><article key={a.n} className={`py-8 sm:p-9 border-t border-white/10 ${i%2===0?"sm:border-l":""}`}>
+            <span className="font-barlow text-brand font-black tracking-widest text-sm">{a.n}</span>
+            <h3 className="text-xl sm:text-2xl font-black text-white mt-4 mb-3">{a.title}</h3>
+            <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-lg">{a.text}</p>
+          </article>)}
         </div>
-
       </div>
     </section>
   );
