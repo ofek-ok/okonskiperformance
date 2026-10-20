@@ -1,26 +1,2 @@
-const audiences = [
-  { n: "01", title: "כאב שמפריע", text: "גב, צוואר, ברך או כל כאב שמפריע לך לעבוד, לזוז, להתאמן או פשוט להרגיש בנוח." },
-  { n: "02", title: "עומס והתאוששות", text: "כשהשגרה, האימונים או העבודה מצטברים בגוף ואתה רוצה להוריד עומס ולהרגיש טוב יותר." },
-  { n: "03", title: "חזרה מפציעה", text: "כשצריך לחזור בהדרגה לפעילות, לאימון ולדברים שהגוף שלך צריך להיות מסוגל לעשות." },
-  { n: "04", title: "יותר מהגוף שלך", text: "כשאתה מרגיש טוב ורוצה לשמור על זה, לנוע טוב יותר, להתאושש ולשפר ביצועים." },
-];
-
-export default function WhoItsFor() {
-  return (
-    <section className="py-20 sm:py-28 bg-primary relative overflow-hidden" aria-labelledby="audiences-heading">
-      <div className="container mx-auto px-5 sm:px-8 max-w-7xl">
-        <div className="max-w-3xl mb-12 sm:mb-16">
-          <h2 id="audiences-heading" className="text-[clamp(2rem,6vw,3.5rem)] font-black text-white leading-[1.1] tracking-tight mb-5">לא צריך להיות ספורטאי כדי לטפל בגוף שלך.</h2>
-          <p className="text-white/70 text-lg sm:text-xl leading-relaxed">אפשר להגיע בגלל כאב. בגלל עומס. בשביל התאוששות. או כי אתה רוצה להמשיך לעשות יותר בלי להתפשר על הגוף בדרך.</p>
-        </div>
-        <div className="grid sm:grid-cols-2">
-          {audiences.map((a,i)=><article key={a.n} className={`py-8 sm:p-9 border-t border-white/10 ${i%2===0?"sm:border-l":""}`}>
-            <span className="font-barlow text-brand font-black tracking-widest text-sm">{a.n}</span>
-            <h3 className="text-xl sm:text-2xl font-black text-white mt-4 mb-3">{a.title}</h3>
-            <p className="text-white/70 text-base sm:text-lg leading-relaxed max-w-lg">{a.text}</p>
-          </article>)}
-        </div>
-      </div>
-    </section>
-  );
-}
+const audiences=[{n:"01",title:"כאב ופציעה",lead:"כשמשהו כואב, מגביל או מפריע לך לעשות את מה שאתה רגיל לעשות.",example:"כאב בכתף בזמן אימון, אי־נוחות בגב במהלך יום העבודה או מגבלה בתנועה שמקשה עליך לחזור לפעילות.",details:"נתחיל בהבנת התסמינים והמגבלות, נבצע הערכה בהתאם לצורך ונתאים את העבודה הגופנית לממצאים ולמטרה שלך."},{n:"02",title:"תחזוקה והתאוששות",lead:"לא צריך לחכות לפציעה כדי לטפל בגוף.",example:"שבועות עמוסים באימונים, שעות ארוכות מול מחשב או שגרה שמשלבת עבודה אינטנסיבית ופעילות גופנית.",details:"נבחן את העומסים, את התחושות בגוף ואת הצורך בטיפול, בתנועה ובהתאוששות. המטרה היא למצוא מענה מתאים לשגרה שלך, גם כשאין פציעה קיימת."},{n:"03",title:"שיפור יכולת",lead:"כשיש לך מטרה גופנית שאתה רוצה לעבוד עליה.",example:"למשל, לשפר טווח תנועה שמגביל אותך בתרגיל מסוים, לעבוד על תנועה שמרגישה נוקשה או להתמודד טוב יותר עם הדרישות של הפעילות שלך.",details:"נגדיר מטרה ברורה, נבחן מה מגביל אותך ונשלב טיפול ותרגול בהתאם לצורך."}];
+export default function WhoItsFor(){return <section id="who-its-for" className="bg-primary py-20 sm:py-28" aria-labelledby="who-heading"><div className="max-w-7xl mx-auto px-5 sm:px-8"><h2 id="who-heading" className="text-white text-4xl font-black mb-6">מה הגוף שלך צריך כרגע?</h2><p className="text-silver/85 leading-8 mb-4">יש מי שמגיע בגלל כאב שמפריע לו להתאמן או לתפקד. אחרים מרגישים את העומס המצטבר של השגרה, ויש מי שרוצה לעבוד על יכולת גופנית מסוימת.</p><p className="text-silver/85 leading-8 mb-12">Okonski Performance מציעה טיפול אישי לגברים בוגרים העוסקים בספורט או חיים בשגרה תובענית, בהתאם לצורך ולמטרה שלהם.</p><div className="grid lg:grid-cols-3 gap-5">{audiences.map(a=><article key={a.n} className="rounded-2xl border border-white/10 p-7"><span className="text-brand font-bold">{a.n}</span><h3 className="text-white text-2xl font-bold my-4">{a.title}</h3><p className="text-white font-semibold leading-7 mb-4">{a.lead}</p><p className="text-silver/80 leading-8 mb-4">{a.example}</p><p className="text-silver/80 leading-8">{a.details}</p></article>)}</div><a className="inline-block mt-10 text-brand underline font-bold" href="#treatment">מה כולל הטיפול?</a></div></section>}
