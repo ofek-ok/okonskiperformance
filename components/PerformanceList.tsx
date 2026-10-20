@@ -35,9 +35,8 @@ export default function PerformanceList() {
 
   const validate = () => {
     const e: typeof errors = {};
-    if (!formData.name.trim()) e.name = "שם מלא נדרש";
-    if (!formData.phone.trim()) e.phone = "מספר טלפון נדרש";
-    else if (!/^[\d\s\-+()\u200f]{7,}$/.test(formData.phone.trim())) e.phone = "מספר טלפון אינו תקין";
+    if (!formData.name.trim()) e.name = "שם פרטי נדרש";
+    if (formData.phone.trim() && (!/^[\d\s\-+()\u200f]{7,}$/.test(formData.phone.trim())) e.phone = "מספר טלפון אינו תקין";
     if (!formData.email.trim()) e.email = "כתובת אימייל נדרשת";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) e.email = "כתובת אימייל אינה תקינה";
     return e;
@@ -61,6 +60,7 @@ export default function PerformanceList() {
       return;
     }
 
+    if (!marketingConsent) { setSubmitError("יש לאשר קבלת עדכונים ותוכן מקצועי לפני ההרשמה."); return; }
     setHasSubmitted(true);
     setSubmitError("");
     setStatus("loading");
@@ -151,10 +151,10 @@ export default function PerformanceList() {
             {/* Body — High contrast, slightly larger readable size on desktop */}
             <div className="text-white/95 text-[clamp(1.05rem,1.4vw,1.3rem)] leading-[1.8] space-y-4 mb-10 max-w-xl mx-auto font-normal">
               <p>
-                הטיפולים הראשונים של Okonski Performance נפתחים בינואר 2027.
+                הטיפולים של Okonski Performance צפויים להיפתח בתשלום ב־24 בינואר 2027.
               </p>
               <p>
-                חברי הרשימה יקבלו ראשונים עדכון כשהיומן נפתח, גישה למקומות הראשונים ועדכונים מקצועיים מ־OP.
+                הצטרפו לרשימה כדי לקבל עדכון על פתיחת הפעילות, לצד תוכן מקצועי בנושאי כאב, התאוששות, תחזוקת הגוף ושיפור יכולת.
               </p>
             </div>
 
@@ -168,7 +168,7 @@ export default function PerformanceList() {
               {/* Name */}
               <div className="flex flex-col gap-1.5">
                 <label htmlFor="pl-name" className="text-sm font-semibold text-silver/90 mr-1">
-                  שם מלא <span aria-hidden="true" className="text-brand">*</span>
+                  שם פרטי <span aria-hidden="true" className="text-brand">*</span>
                 </label>
                 <input
                   id="pl-name"
@@ -199,19 +199,18 @@ export default function PerformanceList() {
               {/* Phone */}
               <div className="flex flex-col gap-1.5">
                 <label htmlFor="pl-phone" className="text-sm font-semibold text-silver/90 mr-1">
-                  טלפון <span aria-hidden="true" className="text-brand">*</span>
+                  טלפון נייד (לא חובה)
                 </label>
                 <input
                   id="pl-phone"
                   name="phone"
                   type="tel"
                   autoComplete="tel"
-                  required
                   inputMode="tel"
                   value={formData.phone}
                   onChange={handleChange}
                   disabled={status === "loading"}
-                  aria-required="true"
+                  aria-required="false"
                   aria-describedby={errors.phone ? "err-phone" : undefined}
                   aria-invalid={errors.phone ? "true" : "false"}
                   className={`w-full bg-charcoal/80 border rounded-xl px-5 py-4 text-white text-base focus:outline-none focus:ring-2 transition-all disabled:opacity-50 text-right hover:border-white/20 cursor-text ${
