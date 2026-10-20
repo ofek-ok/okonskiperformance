@@ -6,9 +6,9 @@ import FloatingAccessibility from "@/components/FloatingAccessibility";
 import CookieBanner from "@/components/CookieBanner";
 
 export const metadata: Metadata = {
-  title: "Okonski Performance | ביצועים. שיקום. תפקוד.",
+  title: "Okonski Performance | טיפול ספורטיבי והתאוששות באזור השרון",
   description:
-    "קליניקה לביצועים, שיקום ותחזוקת הגוף. עובדים עם ספורטאים, יזמים ואנשי ביצועים כדי לשפר תפקוד, עמידות לעומס ואיכות חיים.",
+    "Okonski Performance מציעה טיפול גופני אישי לספורטאים, למתאמנים ולאנשי קריירה. כאב ופציעה, התאוששות ושיפור יכולת. הצטרפו לרשימת העדכונים.",
   icons: {
     icon: '/logo-official.png',
     apple: '/logo-official.png',
@@ -18,6 +18,11 @@ export const metadata: Metadata = {
     description: "הגוף שלך צריך לעמוד בקצב שלך.",
     locale: "he_IL",
     type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Okonski Performance | טיפול ספורטיבי והתאוששות באזור השרון",
+    description: "טיפול גופני אישי לספורטאים, למתאמנים ולאנשי קריירה באזור השרון.",
   },
 };
 
