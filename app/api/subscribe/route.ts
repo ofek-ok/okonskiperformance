@@ -17,7 +17,7 @@ export async function POST(request: Request) {
     const email = String(body.email || "").trim();
     const phone = String(body.phone || "").trim();
 
-    if (!fullName || (!email && !phone)) {
+    if (!fullName || !email || body.marketing_consent !== true) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
