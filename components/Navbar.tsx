@@ -46,7 +46,7 @@ export default function Navbar() {
             }`}
             dir="ltr"
           >
-            OKONSKI PERFORMANCE
+            <span className="font-black text-white">OKONSKI</span> <span className="font-normal text-silverOff">PERFORMANCE</span>
           </span>
         </Link>
 
@@ -57,14 +57,14 @@ export default function Navbar() {
           href="#performance-list"
           className={`inline-flex items-center justify-center font-bold tracking-widest uppercase transition-all duration-300 cursor-pointer focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-primary rounded-full active:scale-[0.98] ${
             scrolled
-              ? "bg-brand text-white hover:bg-brand-bright text-xs px-5 py-2.5 shadow-[0_2px_20px_rgba(62,111,168,0.3)]"
-              : "text-white/80 hover:text-white text-xs sm:text-sm"
+              ? "btn-logo-metallic text-xs px-5 py-2.5"
+              : "btn-logo-metallic text-xs sm:text-sm px-4 py-2.5"
           }`}
         >
           {scrolled ? "הצטרפו לרשימה" : "Performance List"}
         </a>
       </div>
-      {menuOpen && <nav id="mobile-site-navigation" aria-label="ניווט מובייל" className="lg:hidden bg-primary/95 border-t border-white/10 px-6 py-5 flex flex-col gap-4 text-white">{[["#who-its-for","למי זה מתאים"],["#treatment","מה כולל הטיפול"],["#about","על אופק"],["#faq","שאלות נפוצות"],["#performance-list","הצטרפות לרשימה"]].map(([href,label])=><a key={href} href={href} onClick={()=>setMenuOpen(false)}>{label}</a>)}</nav>}
+      {menuOpen && <nav id="mobile-site-navigation" aria-label="ניווט מובייל" className="lg:hidden bg-steelDark/95 backdrop-blur-xl border-t border-white/10 px-6 py-5 flex flex-col gap-4 text-white">{[["#who-its-for","למי זה מתאים"],["#treatment","מה כולל הטיפול"],["#about","על אופק"],["#faq","שאלות נפוצות"],["#performance-list","הצטרפות לרשימה"]].map(([href,label])=><a key={href} href={href} onClick={()=>setMenuOpen(false)}>{label}</a>)}</nav>}
     </header>
   );
 }
