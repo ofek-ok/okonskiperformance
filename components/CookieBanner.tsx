@@ -91,39 +91,39 @@ export default function CookieBanner() {
       role="dialog"
       aria-modal="true"
       aria-label="הגדרות פרטיות ו-Cookies"
-      className="fixed bottom-0 left-0 right-0 z-50 bg-charcoal border-t border-white/10 shadow-[0_-10px_60px_rgba(0,0,0,0.6)] p-6"
+      className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 sm:max-w-lg z-50 card-steel rounded-2xl border border-white/15 shadow-2xl p-5 sm:p-6 backdrop-blur-xl"
     >
-      <div className="container mx-auto max-w-5xl">
+      <div>
 
         {!showSettings ? (
-          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
-            <div className="flex-1 text-right">
-              <h2 className="text-white font-bold text-lg mb-2">הפרטיות שלך חשובה לנו</h2>
-              <p className="text-silver/70 text-sm sm:text-base leading-relaxed">
-                אנחנו משתמשים בטכנולוגיות הנדרשות להפעלת האתר, ובכפוף לבחירתך עשויים להשתמש גם בכלי מדידה ושיווק כדי להבין את השימוש באתר ולשפר את הפעילות שלנו.{" "}
-                <Link href="/cookies" className="text-brand hover:text-brand-bright underline text-sm">
+          <div className="flex flex-col gap-4 text-right">
+            <div>
+              <h2 className="text-white font-bold text-base mb-1.5">הפרטיות שלך חשובה לנו</h2>
+              <p className="text-silverMuted text-xs sm:text-sm leading-relaxed">
+                אנחנו משתמשים בטכנולוגיות הנדרשות להפעלת האתר, ובכפוף לבחירתך עשויים להשתמש גם בכלי מדידה כדי לשפר את השירות.{" "}
+                <Link href="/cookies" className="text-logoIce hover:text-white underline text-xs">
                   מידע נוסף
                 </Link>
               </p>
             </div>
 
-            {/* Buttons: Accept and Reject are equal prominence to avoid dark patterns */}
-            <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto shrink-0">
+            {/* Buttons */}
+            <div className="flex flex-wrap items-center gap-2.5 pt-1">
               <button
                 onClick={handleAcceptAll}
-                className="bg-brand text-white font-bold py-3 px-6 rounded-full hover:bg-brand-bright cursor-pointer transition-colors text-sm focus:outline-none focus:ring-2 focus:ring-white/50"
+                className="btn-logo-metallic text-white font-bold py-2.5 px-5 rounded-full text-xs cursor-pointer"
               >
                 אישור
               </button>
               <button
                 onClick={handleRejectNonEssential}
-                className="bg-white/10 text-white font-bold py-3 px-6 rounded-full hover:bg-white/20 transition-colors text-sm focus:outline-none focus:ring-2 focus:ring-white/50"
+                className="bg-steelBase hover:bg-steelElevated text-silverOff font-bold py-2.5 px-4 rounded-full border border-white/10 text-xs transition-colors cursor-pointer"
               >
-                דחיית Cookies לא חיוניים
+                דחיית לא חיוניים
               </button>
               <button
                 onClick={() => setShowSettings(true)}
-                className="text-silver/60 hover:text-white underline text-sm py-3 px-4 focus:outline-none focus:ring-2 focus:ring-brand rounded"
+                className="text-silverDark hover:text-silverOff text-xs py-2 px-2 underline transition-colors mr-auto"
               >
                 ניהול העדפות
               </button>

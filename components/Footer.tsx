@@ -30,22 +30,23 @@ export default function Footer() {
   const hasConfiguredSocial = Object.values(SOCIAL_LINKS).some(isConfiguredUrl);
 
   return (
-    <footer className="bg-primary border-t border-white/5 pt-16 pb-12 relative overflow-hidden" aria-label="תחתית האתר">
+    <footer className="bg-charcoalDark border-t border-white/[0.08] pt-16 pb-12 relative overflow-hidden" aria-label="תחתית האתר">
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
 
         {/* Top footer row: Brand info & Social links */}
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-start mb-14 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-start mb-12 gap-8">
           
           {/* Brand */}
           <div className="flex flex-col items-center md:items-start text-white">
-            <div className="w-12 h-12 relative mb-4">
-              <Image src="/logo-official.png" alt="Okonski Performance Logo" fill className="object-contain" />
+            <div className="w-10 h-10 rounded-full bg-steelBase border border-white/15 p-1 shadow-md mb-3 flex items-center justify-center">
+              <Image src="/logo-official.png" alt="Okonski Performance Logo" width={36} height={36} className="object-contain" />
             </div>
-            <p className="font-barlow font-black tracking-widest uppercase text-2xl mb-1">
-              OKONSKI PERFORMANCE
-            </p>
-            <p className="font-barlow text-silver/60 font-bold tracking-[0.2em] uppercase text-sm">
-              Built for What You Demand.
+            <div className="font-jakarta tracking-[0.16em] uppercase text-lg leading-none" dir="ltr">
+              <span className="font-extrabold text-white">OKONSKI</span>{" "}
+              <span className="font-normal text-silverMuted">PERFORMANCE</span>
+            </div>
+            <p className="text-xs text-silverDark font-medium tracking-normal mt-2">
+              טיפול גופני, התאוששות ושיפור יכולת באזור השרון
             </p>
           </div>
 

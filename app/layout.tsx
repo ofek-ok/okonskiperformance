@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "./globals.css";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import FloatingAccessibility from "@/components/FloatingAccessibility";
@@ -37,19 +36,15 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800;900&display=swap"
           rel="stylesheet"
         />
-        {/* Analytics architecture goes here. E.g. script that listens to cookie-consent-updated event */}
       </head>
-      <body className="font-heebo bg-primary text-silver antialiased">
+      <body className="font-heebo bg-charcoalDark text-silverOff antialiased">
         {children}
         <FloatingWhatsApp />
         <FloatingAccessibility />
         <CookieBanner />
-        
-        {/* Accessibility Plugin */}
-        <Script src="https://cdn.nagish.li/nagishli.js?v=2.3" strategy="lazyOnload" />
       </body>
     </html>
   );

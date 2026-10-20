@@ -13,7 +13,9 @@
   }
 
   body {
-    @apply bg-charcoal text-silver antialiased;
+    background-color: #0A0B0D;
+    color: #E2E8F0;
+    @apply antialiased font-heebo;
   }
 
   * {
@@ -82,15 +84,43 @@
            transition-colors duration-200;
   }
 
-  /* ── Diagonal accent motif ─────────────── */
-  .diagonal-accent::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, #3E6FA8 0%, transparent 100%);
+  /* ── Master Craft: Sculpted Steel & Sapphire Components ───────────────────────────── */
+  .btn-logo-metallic {
+    background: linear-gradient(135deg, #5398D9 0%, #3E6FA8 40%, #1E4E8C 100%);
+    box-shadow: 
+      0 1px 0 rgba(255, 255, 255, 0.35) inset,
+      0 -1px 0 rgba(0, 0, 0, 0.4) inset,
+      0 10px 28px -6px rgba(46, 110, 175, 0.5);
+    border: 1px solid rgba(115, 180, 230, 0.4);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .btn-logo-metallic:hover {
+    background: linear-gradient(135deg, #73B4E6 0%, #4D87C4 45%, #255DA5 100%);
+    box-shadow: 
+      0 1px 0 rgba(255, 255, 255, 0.5) inset,
+      0 14px 36px -4px rgba(62, 111, 168, 0.65);
+    transform: translateY(-1.5px);
+  }
+
+  .card-steel {
+    background: linear-gradient(180deg, #1A1F26 0%, #13171D 100%);
+    border: 1px solid rgba(226, 232, 240, 0.1);
+    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.05) inset;
+    transition: all 0.3s ease;
+  }
+  .card-steel:hover {
+    border-color: rgba(115, 180, 230, 0.35);
+    box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.8), 0 0 24px -4px rgba(62, 111, 168, 0.25);
+    transform: translateY(-2px);
+  }
+
+  .ambient-glow {
+    background: radial-gradient(circle at 50% 18%, rgba(62, 111, 168, 0.24) 0%, rgba(10, 11, 13, 0) 65%);
+  }
+
+  .brushed-panel {
+    background: linear-gradient(135deg, #1E2229 0%, #15181E 100%);
+    border: 1px solid rgba(226, 232, 240, 0.08);
   }
 }
 

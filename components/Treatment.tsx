@@ -1,2 +1,107 @@
-const stages=[["01. היכרות ותשאול","נבין מה הביא אותך לטיפול, מה מפריע לך, מהי שגרת האימונים או העבודה שלך ומה אתה רוצה להשיג."],["02. הערכה גופנית","בהתאם לצורך, נבחן תנועה, טווחי תנועה, מגבלות ואזורים רלוונטיים למטרת הטיפול."],["03. טיפול ראשון","נבצע טיפול גופני המותאם לממצאים, למצב שלך ולמטרת המפגש."],["04. סיכום והמלצה להמשך","בסיום נסביר מה עלה במפגש, מה אפשר לעשות באופן עצמאי ומה עשוי להתאים להמשך, במידת הצורך."]];
-export default function Treatment(){return <section id="treatment" className="bg-primary py-20 sm:py-28"><div className="max-w-6xl mx-auto px-5 sm:px-8"><h2 className="text-white text-4xl font-black mb-6">טיפול אישי שמתחיל בהבנת הגוף שלך.</h2><p className="text-silver/85 leading-8 mb-4">אין שני אנשים שמגיעים עם אותו עומס, אותה מגבלה או אותה מטרה.</p><p className="text-silver/85 leading-8 mb-10">לכן, הטיפול ב־Okonski Performance אינו מבוסס על סדר פעולות זהה לכל לקוח. הוא מתחיל בהבנת המצב שלך ומותאם למה שעולה בתשאול ובהערכה.</p><h3 className="text-white text-2xl font-bold mb-5">המפגש הראשון — 60 דקות</h3><div className="grid md:grid-cols-2 gap-4 mb-10">{stages.map(([title,body])=><article key={title} className="border border-white/10 rounded-2xl p-7"><h4 className="text-brand text-xl font-bold mb-3">{title}</h4><p className="text-silver/85 leading-8">{body}</p></article>)}</div><h3 className="text-white text-2xl font-bold mb-3">מה עשוי להשתלב במפגש?</h3><p className="text-silver/85 leading-8 mb-4">בהתאם לצורך, המפגש יכול לכלול עבודה ידנית על רקמות רכות ושרירים, עבודה על טווחי תנועה, מתיחות ותרגילים מותאמים.</p><p className="text-silver/85 leading-8 mb-4">לדוגמה, אם אתה מגיע עם נוקשות בכתף שמפריעה לך באימון, נוכל לבחון את התנועה, לעבוד על האזורים הרלוונטיים ולשלב תרגול שמתאים למצבך.</p><p className="text-silver/85 leading-8 mb-8">לא כל אדם זקוק לאותן טכניקות, ולא כל מפגש יכלול את כל המרכיבים.</p><h3 className="text-white text-2xl font-bold mb-3">ומה קורה לאחר המפגש הראשון?</h3><p className="text-silver/85 leading-8 mb-4">מפגשי המשך נמשכים 45 דקות ויכולים לכלול טיפול גופני, תרגול, הנחיות לבית, התאמות עומס ומעקב אחר ההתקדמות.</p><p className="text-silver/85 leading-8 mb-8">אפשר להמשיך במפגשים בודדים או לבחון מסלול טיפולי מתאים. ההמלצה נקבעת לפי הצורך — לא כל אדם זקוק לאותו מספר מפגשים.</p><a href="#how-it-works" className="text-brand font-bold underline">איך מתחילים?</a></div></section>}
+const stages = [
+  {
+    num: "1",
+    title: "היכרות ותשאול",
+    body: "נבין מה הביא אותך לטיפול, מה מפריע לך, מהי שגרת האימונים או העבודה שלך ומה אתה רוצה להשיג.",
+  },
+  {
+    num: "2",
+    title: "הערכה גופנית",
+    body: "בהתאם לצורך, נבחן תנועה, טווחי תנועה, מגבלות ואזורים רלוונטיים למטרת הטיפול.",
+  },
+  {
+    num: "3",
+    title: "טיפול ראשון",
+    body: "נבצע טיפול גופני המותאם לממצאים, למצב שלך ולמטרת המפגש.",
+  },
+  {
+    num: "4",
+    title: "סיכום והמלצה",
+    body: "בסיום נסביר מה עלה במפגש, מה אפשר לעשות באופן עצמאי ומה עשוי להתאים להמשך, במידת הצורך.",
+  },
+];
+
+export default function Treatment() {
+  return (
+    <section id="treatment" className="py-24 sm:py-32 bg-charcoalDark relative border-b border-white/[0.06] scroll-mt-24">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8">
+        
+        {/* Section Header */}
+        <div className="max-w-3xl mb-16 text-right">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-5">
+            טיפול אישי שמתחיל בהבנת הגוף שלך.
+          </h2>
+          <p className="text-silverMuted text-base sm:text-lg leading-relaxed mb-3">
+            אין שני אנשים שמגיעים עם אותו עומס, אותה מגבלה או אותה מטרה.
+          </p>
+          <p className="text-silverOff text-sm sm:text-base leading-relaxed">
+            לכן, הטיפול ב־Okonski Performance אינו מבוסס על סדר פעולות זהה לכל לקוח. הוא מתחיל בהבנת המצב שלך ומותאם למה שעולה בתשאול ובהערכה.
+          </p>
+        </div>
+
+        {/* First Session Workflow — 4 Linear Steps */}
+        <div className="mb-16 text-right">
+          <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/[0.08]">
+            <h3 className="text-xl sm:text-2xl font-black text-white flex items-center gap-3">
+              <span>המפגש הראשון</span>
+              <span className="text-xs font-bold px-3 py-1 rounded-full bg-logoBlue/20 text-logoIce border border-logoBlue/40">
+                60 דקות
+              </span>
+            </h3>
+            <span className="text-xs text-silverDark">מבנה עבודה מוגדר</span>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {stages.map((stage) => (
+              <div key={stage.num} className="p-6 rounded-xl brushed-panel">
+                <span className="text-xs font-bold text-logoIce block mb-2">{stage.num}</span>
+                <h4 className="text-lg font-bold text-white mb-2">{stage.title}</h4>
+                <p className="text-xs text-silverMuted leading-relaxed">{stage.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Detail Cards */}
+        <div className="grid md:grid-cols-2 gap-8 text-right">
+          <div className="card-steel rounded-2xl p-7 sm:p-8">
+            <h3 className="text-xl font-bold text-white mb-4">מה עשוי להשתלב במפגש?</h3>
+            <p className="text-sm text-silverOff leading-relaxed mb-4">
+              בהתאם לצורך, המפגש יכול לכלול עבודה ידנית על רקמות רכות ושרירים, עבודה על טווחי תנועה, מתיחות ותרגילים מותאמים.
+            </p>
+            <p className="text-xs text-silverMuted leading-relaxed mb-4">
+              לדוגמה, אם אתה מגיע עם נוקשות בכתף שמפריעה לך באימון, נוכל לבחון את התנועה, לעבוד על האזורים הרלוונטיים ולשלב תרגול שמתאים למצבך.
+            </p>
+            <p className="text-xs text-silverDark italic">
+              * לא כל אדם זקוק לאותן טכניקות, ולא כל מפגש יכלול את כל המרכיבים.
+            </p>
+          </div>
+
+          <div className="card-steel rounded-2xl p-7 sm:p-8">
+            <h3 className="text-xl font-bold text-white mb-4">ומה קורה לאחר המפגש הראשון?</h3>
+            <p className="text-sm text-silverOff leading-relaxed mb-4">
+              מפגשי המשך נמשכים 45 דקות ויכולים לכלול טיפול גופני, תרגול, הנחיות לבית, התאמות עומס ומעקב אחר ההתקדמות.
+            </p>
+            <p className="text-xs text-silverMuted leading-relaxed">
+              אפשר להמשיך במפגשים בודדים או לבחון מסלול טיפולי מתאים. ההמלצה נקבעת לפי הצורך — לא כל אדם זקוק לאותו מספר מפגשים.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-12 text-right">
+          <a
+            href="#how-it-works"
+            className="inline-flex items-center gap-2 text-logoIce hover:text-white text-sm font-bold transition-colors"
+          >
+            <span>איך מתחילים?</span>
+            <svg className="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+  );
+}
+

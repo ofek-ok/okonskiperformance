@@ -93,15 +93,11 @@ export default function PerformanceList() {
   return (
     <section
       id="performance-list"
-      className="py-24 sm:py-36 md:py-48 bg-primary relative overflow-hidden"
+      className="py-24 sm:py-36 bg-charcoalDark relative overflow-hidden scroll-mt-24 border-b border-white/[0.06]"
       aria-label="Performance List — הצטרפות"
     >
       <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_40%,rgba(20,24,29,0.8)_0%,rgba(11,13,16,1)_100%)]"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[55vw] max-w-lg h-[40vh] bg-brand/10 blur-[100px] rounded-full pointer-events-none opacity-40"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_40%,rgba(30,34,41,0.6)_0%,rgba(10,11,13,1)_100%)]"
         aria-hidden="true"
       />
 
@@ -109,25 +105,20 @@ export default function PerformanceList() {
 
         {/* ── SUCCESS STATE ── */}
         {status === "success" ? (
-          <div className="text-center py-8" role="status" aria-live="polite" aria-atomic="true">
-            <p
-              className="font-barlow text-[clamp(2.2rem,9vw,4.5rem)] font-black text-white tracking-[0.08em] uppercase leading-[1.1] mb-10"
-              dir="ltr"
-            >
-              YOU&rsquo;RE ON<br />THE LIST.
-            </p>
-            <p className="text-white font-bold text-[clamp(1.2rem,3vw,1.6rem)] mb-5">
-              ברוכים הבאים ל-Performance List.
-            </p>
-            <p className="text-white/90 text-[clamp(1.05rem,1.4vw,1.25rem)] leading-relaxed max-w-lg mx-auto mb-12">
+          <div className="card-steel rounded-2xl p-8 sm:p-12 text-center" role="status" aria-live="polite" aria-atomic="true">
+            <div className="w-14 h-14 rounded-full bg-steelBase border border-logoIce/30 text-logoIce flex items-center justify-center mx-auto mb-6 shadow-lg">
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-black text-white mb-4">
+              ברוכים הבאים ל־Performance List.
+            </h3>
+            <p className="text-silverOff text-base leading-relaxed max-w-lg mx-auto mb-6">
               נעדכן אתכם לקראת פתיחת Okonski Performance בינואר 2027 ונשלח הודעה כשהיומן ייפתח לקביעת טיפולים.
             </p>
-            <p
-              className="font-barlow text-[clamp(1.1rem,3.5vw,1.5rem)] text-white font-black tracking-widest uppercase"
-              dir="ltr"
-            >
-              UNTIL THEN —{" "}
-              <span className="text-white/30">KEEP PERFORMING.</span>
+            <p className="text-logoIce font-semibold text-sm">
+              שמחים שהצטרפת.
             </p>
           </div>
 
@@ -135,21 +126,13 @@ export default function PerformanceList() {
           /* ── FORM STATE ── */
           <div className="text-center">
 
-            {/* Date */}
-            <p
-              className="font-barlow text-brand font-black tracking-[0.28em] uppercase text-xs sm:text-sm mb-7"
-              dir="ltr"
-            >
-              JANUARY 2027
-            </p>
-
-            {/* Headline: Natural RTL/LTR rendering without period or line-break glitch */}
-            <h2 className="text-[clamp(2.5rem,7.5vw,4.5rem)] font-black text-white tracking-tight leading-[1.1] mb-8 text-balance">
+            {/* Headline */}
+            <h2 className="text-[clamp(2.5rem,7.5vw,4.5rem)] font-black text-white tracking-tight leading-[1.1] mb-6 text-balance">
               הצטרפו ל־<span dir="ltr" className="inline-block whitespace-nowrap">Performance List</span>
             </h2>
 
-            {/* Body — High contrast, slightly larger readable size on desktop */}
-            <div className="text-white/95 text-[clamp(1.05rem,1.4vw,1.3rem)] leading-[1.8] space-y-4 mb-10 max-w-xl mx-auto font-normal">
+            {/* Body */}
+            <div className="text-silverMuted text-base sm:text-lg leading-relaxed space-y-2 mb-10 max-w-lg mx-auto">
               <p>
                 הטיפולים של Okonski Performance צפויים להיפתח בתשלום ב־24 בינואר 2027.
               </p>
@@ -162,18 +145,20 @@ export default function PerformanceList() {
             <form
               onSubmit={handleSubmit}
               noValidate
-              className="text-right space-y-4"
+              className="card-steel rounded-2xl p-6 sm:p-8 text-right space-y-4 shadow-2xl"
               aria-label="טופס הצטרפות ל-Performance List"
             >
               {/* Name */}
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="pl-name" className="text-sm font-semibold text-silver/90 mr-1">
-                  שם פרטי <span aria-hidden="true" className="text-brand">*</span>
+                <label htmlFor="pl-name" className="text-xs font-semibold text-silverOff flex items-center justify-between">
+                  <span>שם פרטי</span>
+                  <span aria-hidden="true" className="text-logoIce">*</span>
                 </label>
                 <input
                   id="pl-name"
                   name="name"
                   type="text"
+                  placeholder="למשל: דניאל"
                   autoComplete="name"
                   required
                   value={formData.name}
@@ -182,15 +167,15 @@ export default function PerformanceList() {
                   aria-required="true"
                   aria-describedby={errors.name ? "err-name" : undefined}
                   aria-invalid={errors.name ? "true" : "false"}
-                  className={`w-full bg-charcoal/80 border rounded-xl px-5 py-4 text-white text-base focus:outline-none focus:ring-2 transition-all disabled:opacity-50 hover:border-white/20 cursor-text ${
+                  className={`w-full bg-charcoalDark border rounded-xl px-4 py-3.5 text-white placeholder-silverDark text-sm focus:outline-none focus:border-logoIce focus:ring-1 focus:ring-logoIce transition-all disabled:opacity-50 cursor-text ${
                     errors.name
                       ? "border-red-500/70 focus:ring-red-500/40"
-                      : "border-white/10 focus:ring-brand/60 focus:border-brand"
+                      : "border-white/15"
                   }`}
                   dir="rtl"
                 />
                 {errors.name && (
-                  <p id="err-name" role="alert" className="text-red-400 text-sm font-medium mr-1">
+                  <p id="err-name" role="alert" className="text-red-400 text-xs font-medium mr-1">
                     {errors.name}
                   </p>
                 )}
@@ -198,13 +183,15 @@ export default function PerformanceList() {
 
               {/* Phone */}
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="pl-phone" className="text-sm font-semibold text-silver/90 mr-1">
-                  טלפון נייד (לא חובה)
+                <label htmlFor="pl-phone" className="text-xs font-semibold text-silverOff flex items-center justify-between">
+                  <span>טלפון נייד</span>
+                  <span className="text-silverDark text-[11px]">(לא חובה)</span>
                 </label>
                 <input
                   id="pl-phone"
                   name="phone"
                   type="tel"
+                  placeholder="050-0000000"
                   autoComplete="tel"
                   inputMode="tel"
                   value={formData.phone}
@@ -213,15 +200,15 @@ export default function PerformanceList() {
                   aria-required="false"
                   aria-describedby={errors.phone ? "err-phone" : undefined}
                   aria-invalid={errors.phone ? "true" : "false"}
-                  className={`w-full bg-charcoal/80 border rounded-xl px-5 py-4 text-white text-base focus:outline-none focus:ring-2 transition-all disabled:opacity-50 text-right hover:border-white/20 cursor-text ${
+                  className={`w-full bg-charcoalDark border rounded-xl px-4 py-3.5 text-white placeholder-silverDark text-sm focus:outline-none focus:border-logoIce focus:ring-1 focus:ring-logoIce transition-all disabled:opacity-50 text-right cursor-text ${
                     errors.phone
                       ? "border-red-500/70 focus:ring-red-500/40"
-                      : "border-white/10 focus:ring-brand/60 focus:border-brand"
+                      : "border-white/15"
                   }`}
                   dir="rtl"
                 />
                 {errors.phone && (
-                  <p id="err-phone" role="alert" className="text-red-400 text-sm font-medium mr-1">
+                  <p id="err-phone" role="alert" className="text-red-400 text-xs font-medium mr-1">
                     {errors.phone}
                   </p>
                 )}
@@ -229,13 +216,15 @@ export default function PerformanceList() {
 
               {/* Email */}
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="pl-email" className="text-sm font-semibold text-silver/90 mr-1">
-                  אימייל <span aria-hidden="true" className="text-brand">*</span>
+                <label htmlFor="pl-email" className="text-xs font-semibold text-silverOff flex items-center justify-between">
+                  <span>כתובת אימייל</span>
+                  <span aria-hidden="true" className="text-logoIce">*</span>
                 </label>
                 <input
                   id="pl-email"
                   name="email"
                   type="email"
+                  placeholder="name@example.com"
                   autoComplete="email"
                   required
                   inputMode="email"
@@ -245,70 +234,60 @@ export default function PerformanceList() {
                   aria-required="true"
                   aria-describedby={errors.email ? "err-email" : undefined}
                   aria-invalid={errors.email ? "true" : "false"}
-                  className={`w-full bg-charcoal/80 border rounded-xl px-5 py-4 text-white text-base focus:outline-none focus:ring-2 transition-all disabled:opacity-50 hover:border-white/20 cursor-text ${
+                  className={`w-full bg-charcoalDark border rounded-xl px-4 py-3.5 text-white placeholder-silverDark text-sm focus:outline-none focus:border-logoIce focus:ring-1 focus:ring-logoIce transition-all disabled:opacity-50 cursor-text text-right ${
                     errors.email
                       ? "border-red-500/70 focus:ring-red-500/40"
-                      : "border-white/10 focus:ring-brand/60 focus:border-brand"
+                      : "border-white/15"
                   }`}
                   dir="ltr"
-                  style={{ textAlign: "right" }}
                 />
                 {errors.email && (
-                  <p id="err-email" role="alert" className="text-red-400 text-sm font-medium mr-1">
+                  <p id="err-email" role="alert" className="text-red-400 text-xs font-medium mr-1">
                     {errors.email}
                   </p>
                 )}
               </div>
 
-              {/* Marketing consent — never pre-checked */}
-              <div className="flex items-start gap-3 pt-4 pb-1 border-t border-white/5">
+              {/* Marketing consent */}
+              <div className="flex items-start gap-3 pt-3 pb-1 border-t border-white/[0.08]">
                 <input
                   id="marketing-consent"
                   type="checkbox"
                   checked={marketingConsent}
                   onChange={(e) => setMarketingConsent(e.target.checked)}
                   disabled={status === "loading"}
-                  className="w-5 h-5 mt-0.5 shrink-0 accent-brand cursor-pointer focus:ring-2 focus:ring-brand focus:ring-offset-1 focus:ring-offset-primary"
+                  className="w-4 h-4 mt-1 rounded bg-charcoalDark border-white/20 text-logoBlue focus:ring-logoBlue shrink-0 cursor-pointer"
                 />
                 <label
                   htmlFor="marketing-consent"
-                  className="text-xs sm:text-sm lg:text-[15px] text-silver/85 text-right leading-relaxed cursor-pointer"
+                  className="text-xs text-silverMuted text-right leading-relaxed cursor-pointer select-none"
                 >
                   אני מאשר/ת לקבל עדכונים ותוכן מקצועי מ-Okonski Performance, בהתאם ל
                   <Link
                     href="/privacy"
-                    className="text-brand hover:text-brand-bright underline mx-0.5 transition-colors focus:outline-none focus:ring-1 focus:ring-brand rounded"
+                    className="text-logoIce underline mx-0.5"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     מדיניות הפרטיות
                   </Link>
-                  . ניתן להסיר את עצמי בכל עת.
+                  . ניתן להסיר את עצמי בכל עת בלחיצה אחת.
                 </label>
               </div>
 
-              {/* Privacy notice */}
-              <p className="text-xs sm:text-sm text-silver/70 text-right leading-relaxed">
-                שליחת הטופס מהווה הסכמה ל
-                <Link href="/privacy" className="underline hover:text-silver/90 transition-colors">
-                  מדיניות הפרטיות
-                </Link>
-                .
-              </p>
-
               {submitError && (
-                <p role="alert" className="text-red-400 text-sm font-medium text-right">
+                <p role="alert" className="text-red-400 text-xs font-medium text-right">
                   {submitError}
                 </p>
               )}
 
-              {/* Submit */}
+              {/* Submit Button */}
               <div className="pt-2">
                 <button
                   type="submit"
                   disabled={status === "loading" || hasSubmitted}
                   aria-busy={status === "loading"}
-                  className="relative w-full inline-flex items-center justify-center bg-brand text-white font-black py-5 px-8 rounded-xl text-sm lg:text-base tracking-widest uppercase hover:bg-brand-bright cursor-pointer transition-all duration-300 shadow-[0_4px_25px_rgba(62,111,168,0.25)] hover:shadow-[0_6px_40px_rgba(62,111,168,0.45)] focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-primary active:scale-[0.99] disabled:opacity-70 disabled:cursor-not-allowed overflow-hidden"
+                  className="btn-logo-metallic w-full text-white font-bold py-4 px-8 rounded-xl text-base tracking-wide flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   <span className={`transition-opacity ${status === "loading" ? "opacity-0" : "opacity-100"}`}>
                     הצטרפו ל־Performance List
@@ -331,8 +310,17 @@ export default function PerformanceList() {
                       </svg>
                     </div>
                   )}
+                  {status !== "loading" && (
+                    <svg className="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  )}
                 </button>
               </div>
+
+              <p className="text-[11px] text-center text-silverDark pt-1">
+                ללא ספאם. הסרה פשוטה בכל שלב. הפרטיות שלך מוגנת.
+              </p>
 
             </form>
           </div>
