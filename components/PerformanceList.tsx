@@ -93,7 +93,7 @@ export default function PerformanceList() {
   return (
     <section
       id="performance-list"
-      className="py-24 sm:py-36 md:py-48 bg-primary relative overflow-hidden"
+      className="py-24 sm:py-36 md:py-48 bg-primary relative overflow-hidden scroll-mt-24"
       aria-label="Performance List — הצטרפות"
     >
       <div
@@ -101,7 +101,7 @@ export default function PerformanceList() {
         aria-hidden="true"
       />
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[55vw] max-w-lg h-[40vh] bg-brand/10 blur-[100px] rounded-full pointer-events-none opacity-40"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[55vw] max-w-lg h-[40vh] btn-logo-metallic/10 blur-[100px] rounded-full pointer-events-none opacity-40"
         aria-hidden="true"
       />
 
@@ -308,7 +308,7 @@ export default function PerformanceList() {
                   type="submit"
                   disabled={status === "loading" || hasSubmitted}
                   aria-busy={status === "loading"}
-                  className="relative w-full inline-flex items-center justify-center bg-brand text-white font-black py-5 px-8 rounded-xl text-sm lg:text-base tracking-widest uppercase hover:bg-brand-bright cursor-pointer transition-all duration-300 shadow-[0_4px_25px_rgba(62,111,168,0.25)] hover:shadow-[0_6px_40px_rgba(62,111,168,0.45)] focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-primary active:scale-[0.99] disabled:opacity-70 disabled:cursor-not-allowed overflow-hidden"
+                  className="relative w-full inline-flex items-center justify-center btn-logo-metallic text-white font-black py-5 px-8 rounded-xl text-sm lg:text-base tracking-widest uppercase hover:bg-brand-bright cursor-pointer transition-all duration-300 shadow-[0_4px_25px_rgba(62,111,168,0.25)] hover:shadow-[0_6px_40px_rgba(62,111,168,0.45)] focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-primary active:scale-[0.99] disabled:opacity-70 disabled:cursor-not-allowed overflow-hidden"
                 >
                   <span className={`transition-opacity ${status === "loading" ? "opacity-0" : "opacity-100"}`}>
                     הצטרפו ל־Performance List
