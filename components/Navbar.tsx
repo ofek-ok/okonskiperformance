@@ -62,7 +62,7 @@ export default function Navbar() {
               className="hover:text-white transition-colors"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -113,10 +113,10 @@ export default function Navbar() {
               className="text-base font-medium text-silverOff hover:text-white py-1 border-b border-white/5"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
           <a
-            href="#performance-list"
+            href="/#performance-list"
             onClick={() => setMenuOpen(false)}
             className="btn-logo-metallic text-center text-white font-bold py-3 px-6 rounded-full text-sm mt-2"
           >
