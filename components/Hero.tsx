@@ -12,21 +12,21 @@ export default function Hero() {
         </h1>
 
         {/* Lead Body Paragraphs */}
-        <p className="text-[clamp(1.15rem,2vw,1.4rem)] text-silverOff leading-relaxed max-w-2xl mx-auto mb-3 font-semibold">
-          טיפול גופני אישי לספורטאים, למתאמנים ולאנשי קריירה עם שגרה תובענית.
+        <p className="text-[clamp(1.15rem,2vw,1.4rem)] text-silverOff leading-relaxed max-w-3xl mx-auto mb-3 font-semibold">
+          טיפול בכאב ובפציעות, תחזוקת הגוף והתאוששות — לספורטאים, למתאמנים ולאנשים עם שגרה תובענית.
         </p>
 
-        <p className="text-base text-silverOff/90 leading-relaxed max-w-xl mx-auto mb-6 sm:mb-7">
-          בין אם אתה מתמודד עם כאב או פציעה, זקוק להתאוששות מעומס או רוצה לשפר את היכולת הגופנית שלך — הטיפול מותאם למצב שלך ולמטרה שאתה רוצה להשיג.
+        <p className="text-base text-silverOff/90 leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-7">
+          בין אם המטרה שלך היא לחזור לפעילות, לשמור על הגוף או לשפר את היכולת הגופנית שלך, ב־Okonski Performance נתאים את הטיפול למצב שלך ולמה שאתה רוצה להשיג.
         </p>
 
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center gap-3 w-full max-w-md justify-center">
+        <div className="flex flex-col sm:flex-row items-center gap-3 w-full max-w-xl justify-center">
           <a
             href="#performance-list"
             className="btn-logo-metallic w-full sm:w-auto text-white font-bold py-3.5 px-7 rounded-full text-sm sm:text-base tracking-wide whitespace-nowrap flex items-center justify-center gap-2.5"
           >
-            <span>עדכנו אותי בפתיחה</span>
+            <span>הצטרפות ל־Performance List</span>
             <svg className="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
@@ -39,8 +39,11 @@ export default function Hero() {
           </a>
         </div>
 
+        <p className="mt-4 text-xs sm:text-sm text-silverMuted">
+          הטיפולים בתשלום צפויים להיפתח ב־24 בינואר 2027.
+        </p>
+
       </div>
     </section>
   );
 }
-
