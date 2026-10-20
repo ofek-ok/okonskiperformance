@@ -121,7 +121,7 @@ export default function Navbar() {
             className="btn-logo-metallic text-center text-white font-bold py-3 px-6 rounded-full text-sm mt-2"
           >
             עדכנו אותי בפתיחה
-          </Link>
+          </a>
         </nav>
       )}
     </header>
