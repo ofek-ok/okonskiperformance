@@ -20,8 +20,7 @@ export default function Navbar() {
 
   const navLinks = [
     { href: "/#who-its-for", label: "למי זה מתאים" },
-    { href: "/treatments", label: "טיפולים וחבילות" },
-    { href: "/#how-it-works", label: "איך זה עובד" },
+    { href: "/#treatment", label: "מה כולל הטיפול" },
     { href: "/#about", label: "על אופק" },
     { href: "/#faq", label: "שאלות נפוצות" },
   ];
