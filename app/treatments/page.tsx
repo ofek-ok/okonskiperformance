@@ -97,7 +97,7 @@ export default function TreatmentsPage() {
                 <p className="text-silverOff text-sm leading-7 mb-5">{format.detail}</p>
                 <p className="text-silverMuted text-sm leading-7 mb-8">{format.note}</p>
                 <div className="mt-auto border-t border-white/10 pt-5">
-                  <p className="text-xs text-silverMuted mb-4">הרשמה ותשלום עדיין אינם פתוחים.</p>
+                  <p className="text-xs text-silverMuted mb-4">ההרשמה עדיין אינה פתוחה.</p>
                   <Link href="/#performance-list" className="btn-logo-metallic inline-flex items-center justify-center rounded-full py-3 px-6 text-sm font-bold text-white w-full">
                     עדכנו אותי בפתיחה
                   </Link>
@@ -135,7 +135,7 @@ export default function TreatmentsPage() {
           <div className="brushed-panel rounded-2xl p-8 sm:p-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
             <div className="max-w-2xl">
               <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">הטיפולים ייפתחו בקרוב.</h2>
-              <p className="text-silverOff leading-relaxed">הפעילות בתשלום צפויה להתחיל ב־24 בינואר 2027. עד אז אפשר להצטרף לרשימת העדכונים, ללא תשלום או התחייבות.</p>
+              <p className="text-silverOff leading-relaxed">הפעילות צפויה להתחיל ב־24 בינואר 2027. עד אז אפשר להצטרף לרשימת העדכונים, ללא התחייבות.</p>
             </div>
             <Link href="/#performance-list" className="btn-logo-metallic rounded-full text-white font-bold text-sm py-4 px-8 text-center shrink-0">עדכנו אותי בפתיחה</Link>
           </div>

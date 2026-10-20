@@ -134,7 +134,7 @@ export default function PerformanceList() {
             {/* Body */}
             <div className="text-silverMuted text-base sm:text-lg leading-relaxed space-y-2 mb-10 max-w-lg mx-auto">
               <p>
-                הטיפולים של Okonski Performance צפויים להיפתח בתשלום ב־24 בינואר 2027.
+                הטיפולים של Okonski Performance צפויים להיפתח ב־24 בינואר 2027.
               </p>
               <p>
                 הצטרפו לרשימה כדי לקבל עדכון על פתיחת הפעילות, לצד תוכן מקצועי בנושאי כאב, התאוששות, תחזוקת הגוף ושיפור יכולת.

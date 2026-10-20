@@ -2,7 +2,7 @@ const steps = [
   {
     num: "1",
     title: "יצירת קשר",
-    body: "כשהפעילות בתשלום תיפתח, תוכל לפנות אליי בוואטסאפ ולספר בקצרה מה הסיבה לפנייה ומה המטרה שלך.",
+    body: "כשהפעילות תיפתח, תוכל לפנות אליי בוואטסאפ ולספר בקצרה מה הסיבה לפנייה ומה המטרה שלך.",
   },
   {
     num: "2",
@@ -51,7 +51,7 @@ export default function HowToStart() {
           <div className="max-w-2xl">
             <h3 className="text-2xl font-bold text-white mb-3">עדיין לא פתחנו את היומן.</h3>
             <p className="text-silverOff text-sm leading-relaxed mb-2">
-              הפעילות בתשלום צפויה להתחיל ב־24 בינואר 2027.
+              הפעילות צפויה להתחיל ב־24 בינואר 2027.
             </p>
             <p className="text-silverMuted text-xs sm:text-sm leading-relaxed">
               עד אז, אפשר להצטרף ל־Performance List ולקבל עדכון כשהאפשרות לפנות לתיאום מפגש תיפתח.
