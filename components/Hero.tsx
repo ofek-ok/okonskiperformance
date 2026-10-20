@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section id="top" className="relative min-h-[85vh] pt-28 pb-16 sm:pt-32 sm:pb-20 flex items-center justify-center overflow-hidden ambient-glow border-b border-white/[0.06]" aria-label="Okonski Performance">
+    <section id="top" className="relative min-h-[85vh] pt-40 pb-16 sm:pt-44 sm:pb-20 lg:pt-48 flex items-center justify-center overflow-hidden ambient-glow border-b border-white/[0.06]" aria-label="Okonski Performance">
       <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 text-center flex flex-col items-center">
         
         {/* Headline with metallic gradient */}
