@@ -91,12 +91,12 @@ export default function CookieBanner() {
       role="dialog"
       aria-modal="true"
       aria-label="הגדרות פרטיות ו-Cookies"
-      className="fixed bottom-0 left-0 right-0 z-50 bg-charcoal border-t border-white/10 shadow-[0_-10px_60px_rgba(0,0,0,0.6)] p-6"
+      className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:max-w-md z-40 p-4 rounded-2xl bg-steelBase/95 backdrop-blur-xl border border-white/15 shadow-2xl max-h-[85vh] overflow-y-auto"
     >
-      <div className="container mx-auto max-w-5xl">
+      <div className="w-full">
 
         {!showSettings ? (
-          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
+          <div className="flex flex-col gap-3">
             <div className="flex-1 text-right">
               <h2 className="text-white font-bold text-lg mb-2">הפרטיות שלך חשובה לנו</h2>
               <p className="text-silver/70 text-sm sm:text-base leading-relaxed">
@@ -108,10 +108,10 @@ export default function CookieBanner() {
             </div>
 
             {/* Buttons: Accept and Reject are equal prominence to avoid dark patterns */}
-            <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto shrink-0">
+            <div className="flex flex-wrap gap-2 w-full shrink-0">
               <button
                 onClick={handleAcceptAll}
-                className="bg-brand text-white font-bold py-3 px-6 rounded-full hover:bg-brand-bright cursor-pointer transition-colors text-sm focus:outline-none focus:ring-2 focus:ring-white/50"
+                className="btn-logo-metallic font-bold py-3 px-6 rounded-full hover:bg-brand-bright cursor-pointer transition-colors text-sm focus:outline-none focus:ring-2 focus:ring-white/50"
               >
                 אישור
               </button>
