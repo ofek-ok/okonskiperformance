@@ -1,2 +1,2 @@
 import type { MetadataRoute } from "next";
-export default function sitemap(): MetadataRoute.Sitemap { const site = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://okonskiperformance.vercel.app"; return [{ url: site, lastModified: new Date(), changeFrequency: "monthly", priority: 1 }]; }
+export default function sitemap(): MetadataRoute.Sitemap { const domain = process.env.NEXT_PUBLIC_SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? "https://" + process.env.VERCEL_PROJECT_PRODUCTION_URL : ""); if (!domain) return []; const site = domain.replace(/\/$/, ""); return [{ url: site, lastModified: new Date(), changeFrequency: "monthly", priority: 1 }]; }
