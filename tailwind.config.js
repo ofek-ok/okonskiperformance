@@ -7,7 +7,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#0B0D10",
+        primary: "#0A0B0D",
+        charcoalDark: "#0A0B0D", steelDark: "#14181F", steelBase: "#1E2229", steelElevated: "#252C36",
+        logoIce: "#73B4E6", logoBlue: "#3E6FA8", logoDeep: "#1E4E8C", logoMidnight: "#0E2A52",
+        silverPure: "#FFFFFF", silverOff: "#E2E8F0", silverMuted: "#94A3B8", silverDark: "#64748B",
+        accentInjury: "#EF4444", accentRecovery: "#3E6FA8", accentCapacity: "#10B981",
         charcoal: "#14181D",
         elevated: "#1B2026",
         offwhite: "#F3F3F0",
@@ -20,6 +24,7 @@ module.exports = {
       },
       fontFamily: {
         heebo: ["Heebo", "sans-serif"],
+        jakarta: ["Plus Jakarta Sans", "sans-serif"],
         barlow: ["Barlow Condensed", "sans-serif"],
       },
       backgroundImage: {
