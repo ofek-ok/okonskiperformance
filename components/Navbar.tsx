@@ -3,8 +3,10 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -17,11 +19,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: "#who-its-for", label: "למי זה מתאים" },
-    { href: "#treatment", label: "מה כולל הטיפול" },
-    { href: "#how-it-works", label: "התהליך" },
-    { href: "#about", label: "על אופק" },
-    { href: "#faq", label: "שאלות נפוצות" },
+    { href: "/#who-its-for", label: "למי זה מתאים" },
+    { href: "/treatments", label: "טיפולים וחבילות" },
+    { href: "/#how-it-works", label: "איך זה עובד" },
+    { href: "/#about", label: "על אופק" },
+    { href: "/#faq", label: "שאלות נפוצות" },
   ];
 
   return (
@@ -36,37 +38,27 @@ export default function Navbar() {
         
         {/* Brand & Official Logo */}
         <Link
-          href="#top"
+          href="/#top"
           className="flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-logoIce rounded-lg"
           aria-label="Okonski Performance — עמוד הבית"
         >
-          <div className="w-10 h-10 rounded-full bg-steelBase border border-white/15 p-1 shadow-md group-hover:border-logoIce/50 transition-colors shrink-0">
-            <Image
-              src="/logo-official.png"
-              alt="Okonski Performance Logo"
-              width={40}
-              height={40}
-              className="w-full h-full object-contain"
-              priority
-            />
-          </div>
-          <div className="flex flex-col text-right">
-            <div className="font-jakarta tracking-[0.16em] uppercase text-sm leading-none" dir="ltr">
-              <span className="font-extrabold text-white">OKONSKI</span>{" "}
-              <span className="font-normal text-silverMuted">PERFORMANCE</span>
-            </div>
-            <span className="text-[11px] text-silverDark font-medium tracking-normal mt-1 hidden sm:block">
-              טיפול גופני, התאוששות ושיפור יכולת
-            </span>
-          </div>
+          <Image
+            src="/logo-official.png"
+            alt="Okonski Performance"
+            width={150}
+            height={72}
+            className="w-[112px] sm:w-[142px] h-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav aria-label="ניווט ראשי" className="hidden md:flex items-center gap-7 lg:gap-8 text-[13px] font-semibold text-silverMuted">
+        <nav aria-label="ניווט ראשי" className="hidden lg:flex items-center gap-4 xl:gap-7 text-[13px] font-semibold text-silverMuted">
           {navLinks.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
+              aria-current={pathname === item.href ? "page" : undefined}
               className="hover:text-white transition-colors"
             >
               {item.label}
@@ -77,16 +69,16 @@ export default function Navbar() {
         {/* Action Button */}
         <div className="flex items-center gap-3 sm:gap-4">
           <a
-            href="#performance-list"
-            className="btn-logo-metallic text-white text-xs sm:text-[13px] font-bold py-2.5 px-5 sm:px-6 rounded-full tracking-wide shadow-lg"
+            href="/#performance-list"
+            className="btn-logo-metallic text-white text-[11px] sm:text-[13px] font-bold py-2.5 px-3 sm:px-6 rounded-full tracking-wide shadow-lg whitespace-nowrap"
           >
-            הצטרפו ל־Performance List
+            עדכנו אותי בפתיחה
           </a>
 
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="md:hidden text-silverOff p-2 rounded-lg border border-white/15 bg-steelBase hover:border-white/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-logoIce"
+            className="lg:hidden text-silverOff p-2 rounded-lg border border-white/15 bg-steelBase hover:border-white/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-logoIce"
             aria-expanded={menuOpen}
             aria-controls="mobile-navigation"
             aria-label={menuOpen ? "סגור תפריט" : "פתח תפריט"}
@@ -111,10 +103,10 @@ export default function Navbar() {
         <nav
           id="mobile-navigation"
           aria-label="ניווט מובייל"
-          className="md:hidden bg-charcoalDark/98 border-t border-white/10 px-6 py-6 flex flex-col gap-4 text-white animate-fade-up shadow-2xl"
+          className="lg:hidden bg-charcoalDark/98 border-t border-white/10 px-6 py-6 flex flex-col gap-4 text-white animate-fade-up shadow-2xl"
         >
           {navLinks.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               onClick={() => setMenuOpen(false)}
@@ -128,8 +120,8 @@ export default function Navbar() {
             onClick={() => setMenuOpen(false)}
             className="btn-logo-metallic text-center text-white font-bold py-3 px-6 rounded-full text-sm mt-2"
           >
-            הצטרפו ל־Performance List
-          </a>
+            עדכנו אותי בפתיחה
+          </Link>
         </nav>
       )}
     </header>
