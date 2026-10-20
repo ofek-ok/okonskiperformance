@@ -74,13 +74,8 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Action Button & Region Pill */}
+        {/* Action Button */}
         <div className="flex items-center gap-3 sm:gap-4">
-          <div className="hidden lg:flex items-center gap-2 text-xs text-silverMuted border-l border-white/10 pl-4" dir="ltr">
-            <span className="w-2 h-2 rounded-full bg-logoIce animate-pulse"></span>
-            <span className="font-jakarta text-[11px] font-bold text-silverOff">SHARON REGION</span>
-          </div>
-          
           <a
             href="#performance-list"
             className="btn-logo-metallic text-white text-xs sm:text-[13px] font-bold py-2.5 px-5 sm:px-6 rounded-full tracking-wide shadow-lg"
