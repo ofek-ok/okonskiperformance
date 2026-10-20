@@ -36,7 +36,7 @@ export default function PerformanceList() {
   const validate = () => {
     const e: typeof errors = {};
     if (!formData.name.trim()) e.name = "שם פרטי נדרש";
-    if (formData.phone.trim() && (!/^[\d\s\-+()\u200f]{7,}$/.test(formData.phone.trim())) e.phone = "מספר טלפון אינו תקין";
+    if (formData.phone.trim() && !/^[\d\s\-+()\u200f]{7,}$/.test(formData.phone.trim())) e.phone = "מספר טלפון אינו תקין";
     if (!formData.email.trim()) e.email = "כתובת אימייל נדרשת";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) e.email = "כתובת אימייל אינה תקינה";
     return e;
