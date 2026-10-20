@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "./globals.css";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import FloatingAccessibility from "@/components/FloatingAccessibility";
@@ -47,9 +46,6 @@ export default function RootLayout({
         <FloatingWhatsApp />
         <FloatingAccessibility />
         <CookieBanner />
-        
-        {/* Accessibility Plugin */}
-        <Script src="https://cdn.nagish.li/nagishli.js?v=2.3" strategy="lazyOnload" />
       </body>
     </html>
   );
