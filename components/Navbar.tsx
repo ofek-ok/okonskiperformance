@@ -6,6 +6,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,6 +51,7 @@ export default function Navbar() {
         </Link>
 
         <nav aria-label="ניווט ראשי" className="hidden lg:flex gap-5 text-sm text-white/80"><a href="#who-its-for">למי זה מתאים</a><a href="#treatment">מה כולל הטיפול</a><a href="#about">על אופק</a><a href="#faq">שאלות נפוצות</a></nav>
+        <button type="button" className="lg:hidden text-white border border-white/30 rounded-lg px-3 py-2 text-sm" aria-expanded={menuOpen} aria-controls="mobile-site-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? "סגור" : "תפריט"}</button>
         {/* CTA — always visible, style changes with scroll */}
         <a
           href="#performance-list"
@@ -62,6 +64,7 @@ export default function Navbar() {
           {scrolled ? "הצטרפו לרשימה" : "Performance List"}
         </a>
       </div>
+      {menuOpen && <nav id="mobile-site-navigation" aria-label="ניווט מובייל" className="lg:hidden bg-primary/95 border-t border-white/10 px-6 py-5 flex flex-col gap-4 text-white">{[["#who-its-for","למי זה מתאים"],["#treatment","מה כולל הטיפול"],["#about","על אופק"],["#faq","שאלות נפוצות"],["#performance-list","הצטרפות לרשימה"]].map(([href,label])=><a key={href} href={href} onClick={()=>setMenuOpen(false)}>{label}</a>)}</nav>}
     </header>
   );
 }
