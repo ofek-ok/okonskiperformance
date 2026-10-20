@@ -43,11 +43,11 @@ export default function Navbar() {
           aria-label="Okonski Performance — עמוד הבית"
         >
           <Image
-            src="/logo-official.png"
+            src="/okonski-logo-updated.svg"
             alt="Okonski Performance"
-            width={150}
-            height={72}
-            className="w-[112px] sm:w-[142px] h-auto object-contain"
+            width={450}
+            height={346}
+            className="w-[96px] sm:w-[116px] h-auto object-contain"
             priority
           />
         </Link>
