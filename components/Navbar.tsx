@@ -49,6 +49,7 @@ export default function Navbar() {
           </span>
         </Link>
 
+        <nav aria-label="ניווט ראשי" className="hidden lg:flex gap-5 text-sm text-white/80"><a href="#who-its-for">למי זה מתאים</a><a href="#treatment">מה כולל הטיפול</a><a href="#about">על אופק</a><a href="#faq">שאלות נפוצות</a></nav>
         {/* CTA — always visible, style changes with scroll */}
         <a
           href="#performance-list"
