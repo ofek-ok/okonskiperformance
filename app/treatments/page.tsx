@@ -51,93 +51,93 @@ export default function TreatmentsPage() {
   return (
     <main className="bg-charcoalDark text-silverOff min-h-screen selection:bg-logoBlue selection:text-white">
       <Navbar />
-      <section className="relative ambient-glow pt-36 sm:pt-44 pb-16 sm:pb-20 border-b border-white/[0.06]">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 text-right">
-          <Link href="/" className="inline-flex text-sm text-logoIce hover:text-white transition-colors mb-8">חזרה לעמוד הבית ←</Link>
-          <p className="text-logoIce text-sm font-bold mb-4">OKONSKI PERFORMANCE</p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">טיפולים וחבילות</h1>
-          <p className="max-w-3xl text-lg sm:text-xl text-silverOff leading-relaxed mb-4">
+      <section className="relative ambient-glow pt-28 sm:pt-44 pb-12 sm:pb-20 border-b border-white/[0.06]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-8 text-right">
+          <Link href="/" className="inline-flex text-sm text-logoIce hover:text-white transition-colors mb-6 sm:mb-8 min-h-[44px] items-center">חזרה לעמוד הבית ←</Link>
+          <p className="text-logoIce text-xs sm:text-sm font-bold mb-3 sm:mb-4">OKONSKI PERFORMANCE</p>
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-4 sm:mb-6">טיפולים וחבילות</h1>
+          <p className="max-w-3xl text-base sm:text-xl text-silverOff leading-relaxed mb-3 sm:mb-4">
             טיפול גופני אישי שמתחיל בהבנת המצב שלך ומותאם למטרה שלך.
           </p>
-          <p className="max-w-3xl text-base text-silverMuted leading-relaxed">
+          <p className="max-w-3xl text-sm sm:text-base text-silverMuted leading-relaxed">
             אפשר להגיע לטיפול בודד, או לבחור ברצף טיפולים. אין חובה לרכוש חבילה כדי לקבל טיפול.
           </p>
         </div>
       </section>
 
-      <section className="py-20 sm:py-24 border-b border-white/[0.06] scroll-mt-24" id="treatment-types">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <h2 className="text-3xl sm:text-4xl font-black text-white mb-4">עם מה אפשר להגיע?</h2>
-          <p className="text-silverMuted max-w-3xl mb-10 leading-relaxed">
+      <section className="py-14 sm:py-24 border-b border-white/[0.06] scroll-mt-20 sm:scroll-mt-24" id="treatment-types">
+        <div className="max-w-6xl mx-auto px-4 sm:px-8">
+          <h2 className="text-2xl sm:text-4xl font-black text-white mb-3 sm:mb-4">עם מה אפשר להגיע?</h2>
+          <p className="text-silverMuted text-sm sm:text-base max-w-3xl mb-8 sm:mb-10 leading-relaxed">
             שלושת התחומים מתארים צרכים שונים, ולא שלושה טיפולים נוקשים. אופי המפגש מותאם לאדם, למצבו ולמטרתו.
           </p>
-          <div className="grid md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {needs.map((need) => (
-              <article key={need.title} className="card-steel rounded-2xl p-7 sm:p-8 border-t-2 border-t-logoBlue">
-                <p className="text-logoIce font-jakarta text-sm font-bold mb-3" dir="ltr">{need.title}</p>
-                <h3 className="text-xl font-bold text-white mb-4">{need.subtitle}</h3>
-                <p className="text-sm leading-7 text-silverMuted">{need.description}</p>
+              <article key={need.title} className="card-steel rounded-2xl p-6 sm:p-8 border-t-2 border-t-logoBlue">
+                <p className="text-logoIce font-jakarta text-xs sm:text-sm font-bold mb-2.5 sm:mb-3" dir="ltr">{need.title}</p>
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">{need.subtitle}</h3>
+                <p className="text-xs sm:text-sm leading-6 sm:leading-7 text-silverMuted">{need.description}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 sm:py-24 bg-steelDark border-b border-white/[0.06] scroll-mt-24" id="packages">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <h2 className="text-3xl sm:text-4xl font-black text-white mb-4">איך אפשר לקבל טיפול?</h2>
-          <p className="text-silverMuted max-w-3xl leading-relaxed mb-10">
+      <section className="py-14 sm:py-24 bg-steelDark border-b border-white/[0.06] scroll-mt-20 sm:scroll-mt-24" id="packages">
+        <div className="max-w-6xl mx-auto px-4 sm:px-8">
+          <h2 className="text-2xl sm:text-4xl font-black text-white mb-3 sm:mb-4">איך אפשר לקבל טיפול?</h2>
+          <p className="text-silverMuted text-sm sm:text-base max-w-3xl leading-relaxed mb-8 sm:mb-10">
             בוחרים את מסגרת הטיפול המתאימה לך. אפשר להתחיל במפגש בודד, ובהתאם לצורך לשקול המשך.
           </p>
-          <div className="grid lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
             {formats.map((format) => (
-              <article key={format.title} className="card-steel rounded-2xl p-7 sm:p-8 flex flex-col">
-                <p className="text-logoIce text-xs font-bold mb-3">{format.eyebrow}</p>
-                <h3 className="text-2xl font-black text-white mb-5">{format.title}</h3>
-                <p className="text-silverOff text-sm leading-7 mb-5">{format.detail}</p>
-                <p className="text-silverMuted text-sm leading-7 mb-8">{format.note}</p>
+              <article key={format.title} className="card-steel rounded-2xl p-6 sm:p-8 flex flex-col">
+                <p className="text-logoIce text-xs font-bold mb-2.5 sm:mb-3">{format.eyebrow}</p>
+                <h3 className="text-xl sm:text-2xl font-black text-white mb-3 sm:mb-5">{format.title}</h3>
+                <p className="text-silverOff text-xs sm:text-sm leading-6 sm:leading-7 mb-4 sm:mb-5">{format.detail}</p>
+                <p className="text-silverMuted text-xs sm:text-sm leading-6 sm:leading-7 mb-6 sm:mb-8">{format.note}</p>
                 <div className="mt-auto border-t border-white/10 pt-5">
-                  <p className="text-xs text-silverMuted mb-4">הרשמה ותשלום עדיין אינם פתוחים.</p>
-                  <Link href="/#performance-list" className="btn-logo-metallic inline-flex items-center justify-center rounded-full py-3 px-6 text-sm font-bold text-white w-full">
-                    עדכנו אותי בפתיחה
+                  <p className="text-xs text-silverMuted mb-3.5 sm:mb-4">ההרשמה עדיין אינה פתוחה.</p>
+                  <Link href="/#performance-list" className="btn-logo-metallic inline-flex items-center justify-center rounded-full py-3.5 px-6 text-sm font-bold text-white w-full min-h-[48px] shadow-lg">
+                    הבטחת מקום בפתיחה
                   </Link>
                 </div>
               </article>
             ))}
           </div>
-          <p className="mt-8 text-sm text-silverMuted leading-7">
+          <p className="mt-6 sm:mt-8 text-xs sm:text-sm text-silverMuted leading-6 sm:leading-7">
             מחירים ותנאי החבילות המלאים יתווספו לאחר אימות הנתונים הסופיים לפרסום. לא מתבצעת רכישה או גבייה דרך עמוד זה.
           </p>
         </div>
       </section>
 
-      <section className="py-20 sm:py-24 border-b border-white/[0.06] scroll-mt-24" id="process">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <h2 className="text-3xl sm:text-4xl font-black text-white mb-8">איך נראה תהליך הטיפול?</h2>
-          <div className="grid md:grid-cols-2 gap-5">
-            <article className="brushed-panel rounded-2xl p-7 sm:p-8">
-              <h3 className="text-xl font-bold text-white mb-4">מפגש ראשון — 60 דקות</h3>
-              <p className="text-sm text-silverOff leading-8">היכרות ותשאול, הערכה גופנית בהתאם לצורך, טיפול ראשון וסיכום עם המלצה להמשך במידת הצורך.</p>
+      <section className="py-14 sm:py-24 border-b border-white/[0.06] scroll-mt-20 sm:scroll-mt-24" id="process">
+        <div className="max-w-6xl mx-auto px-4 sm:px-8">
+          <h2 className="text-2xl sm:text-4xl font-black text-white mb-6 sm:mb-8">איך נראה תהליך הטיפול?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <article className="brushed-panel rounded-2xl p-6 sm:p-8">
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">מפגש ראשון — 60 דקות</h3>
+              <p className="text-xs sm:text-sm text-silverOff leading-7 sm:leading-8">היכרות ותשאול, הערכה גופנית בהתאם לצורך, טיפול ראשון וסיכום עם המלצה להמשך במידת הצורך.</p>
             </article>
-            <article className="brushed-panel rounded-2xl p-7 sm:p-8">
-              <h3 className="text-xl font-bold text-white mb-4">מפגשי המשך — 45 דקות</h3>
-              <p className="text-sm text-silverOff leading-8">טיפול מותאם, תרגול והנחיות לבית לפי הצורך, התאמות עומס ומעקב אחר ההתקדמות.</p>
+            <article className="brushed-panel rounded-2xl p-6 sm:p-8">
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">מפגשי המשך — 45 דקות</h3>
+              <p className="text-xs sm:text-sm text-silverOff leading-7 sm:leading-8">טיפול מותאם, תרגול והנחיות לבית לפי הצורך, התאמות עומס ומעקב אחר ההתקדמות.</p>
             </article>
           </div>
-          <p className="text-xs text-silverMuted mt-7 leading-7 max-w-4xl">
+          <p className="text-xs text-silverMuted mt-6 sm:mt-7 leading-6 sm:leading-7 max-w-4xl">
             אופי הטיפול מותאם לממצאים. הטיפול אינו מחליף אבחון רפואי, ובמצבים שמצריכים בירור או טיפול רפואי תינתן המלצה לפנות לגורם המתאים.
           </p>
         </div>
       </section>
 
-      <section className="py-20 sm:py-24">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <div className="brushed-panel rounded-2xl p-8 sm:p-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
+      <section className="py-14 sm:py-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-8">
+          <div className="brushed-panel rounded-2xl p-6 sm:p-12 flex flex-col md:flex-row md:items-center justify-between gap-6 sm:gap-8">
             <div className="max-w-2xl">
-              <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">הטיפולים ייפתחו בקרוב.</h2>
-              <p className="text-silverOff leading-relaxed">הפעילות בתשלום צפויה להתחיל ב־24 בינואר 2027. עד אז אפשר להצטרף לרשימת העדכונים, ללא תשלום או התחייבות.</p>
+              <h2 className="text-xl sm:text-3xl font-black text-white mb-2.5 sm:mb-4">הטיפולים ייפתחו בקרוב.</h2>
+              <p className="text-silverOff text-xs sm:text-base leading-relaxed">הפעילות צפויה להתחיל ב־24 בינואר 2027. עד אז אפשר להצטרף לרשימת העדכונים, ללא התחייבות.</p>
             </div>
-            <Link href="/#performance-list" className="btn-logo-metallic rounded-full text-white font-bold text-sm py-4 px-8 text-center shrink-0">עדכנו אותי בפתיחה</Link>
+            <Link href="/#performance-list" className="btn-logo-metallic rounded-full text-white font-bold text-sm py-3.5 px-8 text-center shrink-0 w-full md:w-auto min-h-[48px] flex items-center justify-center shadow-lg">הבטחת מקום בפתיחה</Link>
           </div>
         </div>
       </section>

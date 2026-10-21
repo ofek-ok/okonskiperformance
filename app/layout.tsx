@@ -1,8 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import FloatingAccessibility from "@/components/FloatingAccessibility";
 import CookieBanner from "@/components/CookieBanner";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#0A0B0D",
+};
 
 export const metadata: Metadata = {
   title: "Okonski Performance | טיפול ספורטיבי והתאוששות באזור השרון",

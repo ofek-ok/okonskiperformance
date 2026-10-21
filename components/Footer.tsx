@@ -30,8 +30,8 @@ export default function Footer() {
   const hasConfiguredSocial = Object.values(SOCIAL_LINKS).some(isConfiguredUrl);
 
   return (
-    <footer className="bg-charcoalDark border-t border-white/[0.08] pt-16 pb-12 relative overflow-hidden" aria-label="תחתית האתר">
-      <div className="container mx-auto px-6 max-w-7xl relative z-10">
+    <footer className="bg-charcoalDark border-t border-white/[0.08] pt-12 sm:pt-16 pb-24 sm:pb-12 relative overflow-hidden" aria-label="תחתית האתר">
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl relative z-10">
 
         {/* Top footer row: Brand info & Social links */}
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start mb-12 gap-8">
