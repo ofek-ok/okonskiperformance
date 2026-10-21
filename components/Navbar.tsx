@@ -19,9 +19,9 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: "/#who-its-for", label: "למי זה מתאים" },
-    { href: "/#treatment", label: "מה כולל הטיפול" },
-    { href: "/#about", label: "על אופק" },
+    { href: "/#who-its-for", label: "תחומי טיפול" },
+    { href: "/#treatment", label: "תהליך הטיפול" },
+    { href: "/#about", label: "מי אני" },
     { href: "/#faq", label: "שאלות נפוצות" },
   ];
 
@@ -43,7 +43,7 @@ export default function Navbar() {
         >
           <Image
             src="/okonski-logo-updated.svg"
-            alt="Okonski Performance"
+            alt="Okonski Performance — ספורטרפיה וטיפול בכאב ובפציעות ספורט, שיקום תנועתי והגעה עד הבית לספורטאים בשרון"
             width={450}
             height={346}
             className="w-[96px] sm:w-[116px] h-auto object-contain"
@@ -71,7 +71,7 @@ export default function Navbar() {
             href="/#performance-list"
             className="btn-logo-metallic text-white text-[11px] sm:text-[13px] font-bold py-2.5 px-3 sm:px-6 rounded-full tracking-wide shadow-lg whitespace-nowrap"
           >
-            עדכנו אותי בפתיחה
+            הבטחת מקום בפתיחה
           </a>
 
           {/* Mobile Menu Button */}
@@ -119,11 +119,10 @@ export default function Navbar() {
             onClick={() => setMenuOpen(false)}
             className="btn-logo-metallic text-center text-white font-bold py-3 px-6 rounded-full text-sm mt-2"
           >
-            עדכנו אותי בפתיחה
+            הבטחת מקום בפתיחה
           </a>
         </nav>
       )}
     </header>
   );
 }
-

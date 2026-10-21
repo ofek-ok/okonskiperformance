@@ -11,13 +11,16 @@ export default function Hero() {
           </span>
         </h1>
 
-        {/* Lead Body Paragraphs */}
+        {/* Lead Body Paragraph 1: Definition & Service Area */}
         <p className="text-[clamp(1.15rem,2vw,1.4rem)] text-silverOff leading-relaxed max-w-3xl mx-auto mb-3 font-semibold">
-          טיפול בכאב ובפציעות, תחזוקת הגוף והתאוששות — לספורטאים, למתאמנים ולאנשים עם שגרה תובענית.
+          ספורטרפיה, שיקום מפציעות והתאוששות מתקדמת — בקליניקה בשרון ובהגעה עד הבית לספורטאים ואנשים עם שגרה תובענית.
         </p>
 
-        <p className="text-base text-silverOff/90 leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-7">
-          בין אם המטרה שלך היא לחזור לפעילות, לשמור על הגוף או לשפר את היכולת הגופנית שלך, ב־Okonski Performance נתאים את הטיפול למצב שלך ולמה שאתה רוצה להשיג.
+        {/* Lead Body Paragraph 2: Scannable 3-Pillar Copy */}
+        <p className="mt-4 text-base md:text-lg leading-relaxed text-neutral-300 max-w-3xl mx-auto mb-6 sm:mb-8">
+          <strong className="text-white font-semibold">פציעה או כאב?</strong> נחזיר אותך לשגרה ולביצועים גבוהים.<br className="hidden md:inline" />{" "}
+          <strong className="text-white font-semibold">דורש מעצמך הרבה?</strong> הגוף שלך חייב תחזוקה ושימור שוטף.<br className="hidden md:inline" />{" "}
+          <strong className="text-white font-semibold">רוצה יותר?</strong> נבנה מעטפת טיפולית שתיקח את היכולת הגופנית שלך לשלב הבא.
         </p>
 
         {/* Action Buttons */}
@@ -26,7 +29,7 @@ export default function Hero() {
             href="#performance-list"
             className="btn-logo-metallic w-full sm:w-auto text-white font-bold py-3.5 px-7 rounded-full text-sm sm:text-base tracking-wide whitespace-nowrap flex items-center justify-center gap-2.5"
           >
-            <span>הצטרפות ל־Performance List</span>
+            <span>הבטחת מקום בפתיחה</span>
             <svg className="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
@@ -35,12 +38,13 @@ export default function Hero() {
             href="#who-its-for"
             className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-steelBase/70 border border-white/15 hover:border-white/30 text-silverOff text-sm font-bold transition-all hover:bg-steelElevated text-center"
           >
-            למי הטיפול מתאים?
+            גלה את תחומי הטיפול
           </a>
         </div>
 
-        <p className="mt-4 text-xs sm:text-sm text-silverMuted">
-          הטיפולים בתשלום צפויים להיפתח ב־24 בינואר 2027.
+        {/* Status / Micro-copy */}
+        <p className="mt-4 text-xs sm:text-sm text-neutral-400">
+          פתיחת יומן רשמית: ינואר 2027 • עדיפות בתורים למי שברשימה
         </p>
 
       </div>
