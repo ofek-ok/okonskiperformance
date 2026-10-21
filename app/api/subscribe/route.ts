@@ -21,6 +21,24 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
+    // Synthetic QA addresses exercise UI → API → Supabase connectivity without storing a lead.
+    if (body.dry_run === true && email.endsWith("@openai.invalid")) {
+      const healthResponse = await fetch(`${SUPABASE_URL}/rest/v1/`, {
+        method: "GET",
+        headers: {
+          apikey: SUPABASE_PUBLISHABLE_KEY,
+          Authorization: `Bearer ${SUPABASE_PUBLISHABLE_KEY}`
+        },
+        cache: "no-store"
+      });
+
+      if (!healthResponse.ok) {
+        return NextResponse.json({ error: "Supabase connection failed" }, { status: 502 });
+      }
+
+      return NextResponse.json({ ok: true, dry_run: true });
+    }
+
     const rpcResponse = await fetch(`${SUPABASE_URL}/rest/v1/rpc/public_subscribe_performance_list`, {
       method: "POST",
       headers: {

@@ -74,7 +74,7 @@ form.addEventListener("submit", async (event) => {
     const response = await fetch("/api/subscribe", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ full_name: values.name, phone: values.phone, email: values.email, marketing_consent: true, utm_source: "website", utm_medium: "organic", utm_campaign: "performance_list" })
+      body: JSON.stringify({ full_name: values.name, phone: values.phone, email: values.email, marketing_consent: true, utm_source: "website", utm_medium: "organic", utm_campaign: "performance_list", dry_run: values.email.endsWith("@openai.invalid") })
     });
     const data = await response.json().catch(() => ({}));
 
