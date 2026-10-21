@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    direction: rtl;
+    font-family: 'Heebo', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #0A0B0D;
+  }
+
+  body {
+    background-color: #0A0B0D;
+    color: #E2E8F0;
+    @apply antialiased font-heebo;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    background-color: #3E6FA8;
+    color: #fff;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-black tracking-tight;
+  }
+}
+
+@layer components {
+  /* ── Buttons ───────────────────────────── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-brand text-white font-bold px-8 py-4
+           text-sm tracking-widest uppercase rounded-full
+           hover:bg-brand-bright active:bg-brand-dim
+           transition-all duration-200 cursor-pointer
+           border border-brand hover:border-brand-bright
+           font-barlow;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2
+           bg-transparent text-silver font-bold px-8 py-4
+           text-sm tracking-wide uppercase rounded-full
+           border border-silver/20
+           hover:border-brand hover:text-brand
+           transition-all duration-200 cursor-pointer;
+  }
+
+  .btn-ghost-blue {
+    @apply inline-flex items-center justify-center gap-2
+           bg-transparent text-brand font-bold px-8 py-4
+           text-sm tracking-wide uppercase rounded-full
+           border border-brand/40
+           hover:border-brand hover:bg-brand/10
+           transition-all duration-200 cursor-pointer;
+  }
+
+  /* ── Labels ────────────────────────────── */
+  .eyebrow {
+    @apply text-brand text-[10px] font-bold tracking-[0.35em] uppercase mb-4 block;
+  }
+
+  .section-rule {
+    @apply w-12 h-px bg-brand mb-6 block;
+  }
+
+  /* ── Cards ─────────────────────────────── */
+  .card-dark {
+    @apply bg-steel border border-white/5;
+  }
+
+  /* ── Inputs ────────────────────────────── */
+  .input-dark {
+    @apply w-full bg-steel border border-white/10 text-silver placeholder-silver/25
+           px-5 py-4 text-sm
+           focus:outline-none focus:border-brand
+           transition-colors duration-200;
+  }
+
+  /* ── Master Craft: Sculpted Steel & Sapphire Components ───────────────────────────── */
+  .btn-logo-metallic {
+    background: linear-gradient(135deg, #5398D9 0%, #3E6FA8 40%, #1E4E8C 100%);
+    box-shadow: 
+      0 1px 0 rgba(255, 255, 255, 0.35) inset,
+      0 -1px 0 rgba(0, 0, 0, 0.4) inset,
+      0 10px 28px -6px rgba(46, 110, 175, 0.5);
+    border: 1px solid rgba(115, 180, 230, 0.4);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .btn-logo-metallic:hover {
+    background: linear-gradient(135deg, #73B4E6 0%, #4D87C4 45%, #255DA5 100%);
+    box-shadow: 
+      0 1px 0 rgba(255, 255, 255, 0.5) inset,
+      0 14px 36px -4px rgba(62, 111, 168, 0.65);
+    transform: translateY(-1.5px);
+  }
+
+  .card-steel {
+    background: linear-gradient(180deg, #1A1F26 0%, #13171D 100%);
+    border: 1px solid rgba(226, 232, 240, 0.1);
+    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.05) inset;
+    transition: all 0.3s ease;
+  }
+  .card-steel:hover {
+    border-color: rgba(115, 180, 230, 0.35);
+    box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.8), 0 0 24px -4px rgba(62, 111, 168, 0.25);
+    transform: translateY(-2px);
+  }
+
+  .ambient-glow {
+    background: radial-gradient(circle at 50% 18%, rgba(62, 111, 168, 0.24) 0%, rgba(10, 11, 13, 0) 65%);
+  }
+
+  .brushed-panel {
+    background: linear-gradient(135deg, #1E2229 0%, #15181E 100%);
+    border: 1px solid rgba(226, 232, 240, 0.08);
+  }
+}
+
+@layer utilities {
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #5B8EC4 0%, #3E6FA8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-slash {
+    border-right: 2px solid #3E6FA8;
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 40px rgba(62, 111, 168, 0.15);
+  }
+}
+
+/* =============================================
+   LEGAL PROSE STYLES
+   ============================================= */
+.prose-op h2 {
+  @apply text-2xl sm:text-3xl font-black text-white mt-12 mb-4 tracking-tight;
+}
+.prose-op h3 {
+  @apply text-xl font-bold text-white mt-8 mb-3;
+}
+.prose-op p {
+  @apply text-secondary-text text-base sm:text-lg leading-relaxed mb-4;
+}
+.prose-op ul {
+  @apply list-disc space-y-2 text-secondary-text text-base sm:text-lg mr-6 mb-6;
+}
+.prose-op li {
+  @apply leading-relaxed;
+}
+.prose-op strong {
+  @apply text-white font-bold;
+}
+.prose-op a {
+  @apply text-brand hover:text-brand-bright underline transition-colors;
+}
+.prose-op table {
+  @apply w-full text-sm text-secondary-text border-collapse mb-8;
+}
+.prose-op th {
+  @apply text-white font-bold text-right p-3 border border-white/10 bg-charcoal;
+}
+.prose-op td {
+  @apply text-right p-3 border border-white/10;
+}
+
+/* Accessible Skip Link */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.focus\:not-sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* =============================================
+   MOTION & ANIMATION SYSTEM
+   ============================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease both;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-in,
+  .animate-bounce {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =============================================
+   RTL/LTR ISOLATION
+   ============================================= */
+
+/* English labels inside RTL layout — isolate direction */
+[dir="ltr"] {
+  unicode-bidi: isolate;
+}
+
+/* Prevent horizontal overflow globally */
+html, body {
+  overflow-x: hidden;
+}
+
+/* =============================================
+   FOCUS RING SYSTEM
+   ============================================= */
+
+:focus-visible {
+  outline: 2px solid #3E6FA8;
+  outline-offset: 3px;
+}
+
+/* Remove default outline for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* =============================================
+   FORM INPUT SYSTEM
+   ============================================= */
+
+input::placeholder {
+  color: rgba(255,255,255,0.2);
+}
+
+input:disabled {
+  cursor: not-allowed;
+}
+
+/* =============================================
+   BLOCKQUOTE
+   ============================================= */
+
+blockquote {
+  margin: 0;
+}
+
+/* =============================================
+   ACCESSIBILITY MODAL ACTIVE CLASSES
+   ============================================= */
+html.text-size-sm {
+  font-size: 90%;
+}
+html.text-size-lg {
+  font-size: 110%;
+}
+html.text-size-xl {
+  font-size: 120%;
+}
+html.a11y-high-contrast {
+  filter: contrast(135%);
+}
+html.a11y-readable-font * {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  letter-spacing: 0.03em !important;
+}
+html.a11y-highlight-links a {
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 4px !important;
+  color: #5B8EC4 !important;
+}
+html.a11y-stop-motion * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* OP premium visual system */
+.btn-logo-metallic {background:linear-gradient(135deg,#5398D9 0%,#3E6FA8 40%,#1E4E8C 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),inset 0 -1px 0 rgba(0,0,0,.4),0 10px 28px -6px rgba(46,110,175,.5);border:1px solid rgba(115,180,230,.4);transition:all .25s cubic-bezier(.16,1,.3,1);color:white}
+.btn-logo-metallic:hover {background:linear-gradient(135deg,#73B4E6,#4D87C4 45%,#255DA5);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 14px 36px -4px rgba(62,111,168,.65);transform:translateY(-1px)}
+.card-steel {background:linear-gradient(180deg,#1A1F26,#13171D);border:1px solid rgba(226,232,240,.1);box-shadow:0 12px 32px -8px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.05);transition:all .3s ease}
+.card-steel:hover {border-color:rgba(115,180,230,.35);box-shadow:0 16px 40px -8px rgba(0,0,0,.8),0 0 24px -4px rgba(62,111,168,.25);transform:translateY(-2px)}
+.ambient-glow {background:radial-gradient(circle at 50% 18%,rgba(62,111,168,.24),rgba(10,11,13,0) 65%)}
+.brushed-panel {background:linear-gradient(135deg,#1E2229,#15181E);border:1px solid rgba(226,232,240,.08)}

@@ -40,7 +40,7 @@ export default function Hero() {
         </div>
 
         <p className="mt-4 text-xs sm:text-sm text-silverMuted">
-          הטיפולים צפויים להיפתח ב־24 בינואר 2027.
+          הטיפולים בתשלום צפויים להיפתח ב־24 בינואר 2027.
         </p>
 
       </div>
