@@ -1,50 +1,37 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import "./globals.css";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import FloatingAccessibility from "@/components/FloatingAccessibility";
-import CookieBanner from "@/components/CookieBanner";
 
 export const metadata: Metadata = {
-  title: "Okonski Performance | טיפול ספורטיבי והתאוששות באזור השרון",
+  title: "Okonski Performance | נפתחים בינואר 2027",
   description:
-    "Okonski Performance מציעה טיפול גופני אישי לספורטאים, למתאמנים ולאנשי קריירה. כאב ופציעה, התאוששות ושיפור יכולת. הצטרפו לרשימת העדכונים.",
+    "Okonski Performance — ספורט־תרפיה לספורטאים ולאנשים בעלי שגרה תובענית. הפעילות הטיפולית נפתחת בינואר 2027.",
   icons: {
-    icon: '/logo-official.png',
-    apple: '/logo-official.png',
+    icon: "/logo-official.png",
+    apple: "/logo-official.png",
+  },
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: { index: false, follow: false },
   },
   openGraph: {
     title: "Okonski Performance",
-    description: "הגוף שלך צריך לעמוד בקצב שלך.",
+    description: "הגוף שלך צריך להיות בנוי למה שאתה דורש ממנו.",
     locale: "he_IL",
     type: "website",
   },
-  twitter: {
-    card: "summary",
-    title: "Okonski Performance | טיפול ספורטיבי והתאוששות באזור השרון",
-    description: "טיפול גופני אישי לספורטאים, למתאמנים ולאנשי קריירה באזור השרון.",
-  },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="he" dir="rtl" className="scroll-smooth">
+    <html lang="he" dir="rtl">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
+        <link rel="preload" as="image" href="/hero-bg.jpg" />
       </head>
-      <body className="font-heebo bg-charcoalDark text-silverOff antialiased">
+      <body>
         {children}
-        <FloatingWhatsApp />
-        <FloatingAccessibility />
-        <CookieBanner />
+        <script src="/app.js" defer />
       </body>
     </html>
   );
