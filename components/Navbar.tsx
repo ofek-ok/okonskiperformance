@@ -61,7 +61,7 @@ export default function Navbar() {
           >
             <Image
               src="/okonski-logo-updated.svg"
-              alt="Okonski Performance — ספורטרפיה וטיפול בכאב ובפציעות ספורט, שיקום תנועתי והגעה עד הבית לספורטאים בשרון"
+              alt="Okonski Performance — ספורטתרפיה וטיפול בכאב ובפציעות ספורט, שיקום תנועתי והגעה עד הבית לספורטאים בשרון"
               width={450}
               height={346}
               className="w-[90px] xs:w-[102px] sm:w-[116px] h-auto object-contain"

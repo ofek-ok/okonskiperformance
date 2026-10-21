@@ -13,7 +13,7 @@ export default function Hero() {
 
         {/* Lead Body Paragraph 1: Definition & Service Area */}
         <p className="text-base sm:text-[clamp(1.15rem,2vw,1.4rem)] text-silverOff leading-relaxed max-w-3xl mx-auto mb-3 font-semibold">
-          ספורטרפיה, שיקום מפציעות והתאוששות מתקדמת — בקליניקה בשרון ובהגעה עד הבית לספורטאים ואנשים עם שגרה תובענית.
+          ספורטתרפיה, שיקום מפציעות והתאוששות מתקדמת — בקליניקה בשרון ובהגעה עד הבית לספורטאים ואנשים עם שגרה תובענית.
         </p>
 
         {/* Lead Body Paragraph 2: Scannable 3-Pillar Copy */}
