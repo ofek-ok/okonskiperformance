@@ -112,28 +112,31 @@ export default function WhoItsFor() {
               className="card-steel rounded-2xl p-6 sm:p-8 relative flex flex-col justify-between h-full border border-white/[0.08] hover:border-white/20 transition-all shadow-xl"
             >
               <div className="flex-1 flex flex-col">
-                {/* Title */}
-                <h3 className="text-xl sm:text-2xl font-black text-white mb-2.5">
-                  {pillar.title}
-                </h3>
+                {/* Card Header (Title + Lead) - Fixed rhythm prevents vertical drift */}
+                <div className="lg:min-h-[155px] xl:min-h-[135px] flex flex-col justify-start mb-5">
+                  {/* Title */}
+                  <h3 className="text-xl sm:text-2xl font-black text-white mb-2.5">
+                    {pillar.title}
+                  </h3>
 
-                {/* Opening Sub-line */}
-                <p className="text-xs sm:text-sm font-semibold text-silverOff mb-4 leading-relaxed">
-                  {pillar.lead}
-                </p>
+                  {/* Opening Sub-line */}
+                  <p className="text-xs sm:text-sm font-semibold text-silverOff leading-relaxed">
+                    {pillar.lead}
+                  </p>
+                </div>
 
-                {/* Field Examples Box */}
-                <div className="bg-charcoalDark/80 p-4 rounded-xl border border-white/[0.06] text-xs sm:text-sm text-silverMuted leading-relaxed mb-6">
+                {/* Field Examples Box - Standardized min-height prevents uneven push-down */}
+                <div className="bg-charcoalDark/80 p-4 rounded-xl border border-white/[0.06] text-xs sm:text-sm text-silverMuted leading-relaxed mb-6 min-h-[110px] md:min-h-[100px] lg:min-h-[135px] xl:min-h-[115px] flex flex-col justify-center">
                   <span className="text-white/90 font-semibold block mb-1">לדוגמה:</span>
                   <p>{pillar.example}</p>
                 </div>
 
-                {/* Work Steps (1-2-3) */}
-                <div className="flex-1 flex flex-col justify-start space-y-3.5 mb-6">
+                {/* Work Steps (1-2-3) - flex-grow flex-col justify-between for even step rhythm */}
+                <div className="flex-grow flex flex-col justify-between space-y-4 mb-6">
                   <p className="text-sm font-medium text-neutral-200 tracking-wide pb-2 border-b border-white/10">
                     איך עובדים
                   </p>
-                  <ul className="space-y-3 flex-1">
+                  <ul className="flex-grow flex flex-col justify-between space-y-3.5">
                     {pillar.steps.map((step) => (
                       <li key={step.num} className="flex items-start gap-2.5 text-right">
                         <span className="font-mono text-xs text-logoIce/90 font-bold shrink-0 mt-0.5">
@@ -149,7 +152,7 @@ export default function WhoItsFor() {
                 </div>
               </div>
 
-              {/* In-Card Bottom CTA */}
+              {/* In-Card Bottom CTA - Locked to identical bottom baseline */}
               <div className="pt-6 border-t border-white/[0.08] mt-auto">
                 <a
                   href="#performance-list"
