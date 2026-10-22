@@ -2,7 +2,7 @@ interface ServicePillar {
   title: string;
   lead: string;
   example: string;
-  methodology: {
+  steps: {
     num: string;
     title: string;
     desc: string;
@@ -15,7 +15,7 @@ const pillars: ServicePillar[] = [
     title: "כאב ופציעה",
     lead: "כשכאב או מגבלה תנועתית עוצרים אותך באימון, בעבודה או בשגרה.",
     example: "כאב בכתף בעומס, מגבלה בצוואר ובגב משעות ישיבה, עומס מפרקי או פציעה שמקשה לחזור לפעילות.",
-    methodology: [
+    steps: [
       {
         num: "01",
         title: "בודקים ומאתרים את שורש הבעיה",
@@ -38,7 +38,7 @@ const pillars: ServicePillar[] = [
     title: "תחזוקה והתאוששות",
     lead: "כשאין פציעה נקודתית, אבל העומס המצטבר מהשגרה ומהאימונים מתחיל להכביד על הגוף.",
     example: "נוקשות בגב ובצוואר מישיבה ממושכת, תחושת שחיקה ועייפות שרירית בין אימונים, או גוף שמרגיש \"כבד\" ומוגבל.",
-    methodology: [
+    steps: [
       {
         num: "01",
         title: "מיפוי עומסים ונקודות תקיעות",
@@ -61,7 +61,7 @@ const pillars: ServicePillar[] = [
     title: "שיפור תנועה, יציבה וחוסן גופני",
     lead: "לבנות גוף עמיד, חזק ומשוחרר יותר — שעומד בדרישות של שגרה אינטנסיבית, מונע פציעות עתידיות ומחזיק לאורך שנים.",
     example: "שיפור טווחי תנועה ויציבה שנשחקים בשעות עבודה ממושכות, חיזוק נקודות תורפה לפני שהן מתפתחות לפציעה, ושדרוג הגמישות והעוצמה באימונים.",
-    methodology: [
+    steps: [
       {
         num: "01",
         title: "אבחון תנועה, יציבה ועומסים",
@@ -109,9 +109,9 @@ export default function WhoItsFor() {
           {pillars.map((pillar) => (
             <article
               key={pillar.title}
-              className="card-steel rounded-2xl p-6 sm:p-8 relative flex flex-col justify-between border border-white/[0.08] hover:border-white/20 transition-all shadow-xl"
+              className="card-steel rounded-2xl p-6 sm:p-8 relative flex flex-col justify-between h-full border border-white/[0.08] hover:border-white/20 transition-all shadow-xl"
             >
-              <div>
+              <div className="flex-1 flex flex-col">
                 {/* Title */}
                 <h3 className="text-xl sm:text-2xl font-black text-white mb-2.5">
                   {pillar.title}
@@ -128,19 +128,19 @@ export default function WhoItsFor() {
                   <p>{pillar.example}</p>
                 </div>
 
-                {/* Methodology (1-2-3) */}
-                <div className="space-y-3.5 mb-6">
-                  <p className="text-[11px] font-mono tracking-widest uppercase text-silverDark pb-1.5 border-b border-white/[0.06]">
-                    איך עובדים (מתודולוגיה)
+                {/* Work Steps (1-2-3) */}
+                <div className="flex-1 flex flex-col justify-start space-y-3.5 mb-6">
+                  <p className="text-sm font-medium text-neutral-200 tracking-wide pb-2 border-b border-white/10">
+                    איך עובדים
                   </p>
-                  <ul className="space-y-3">
-                    {pillar.methodology.map((step) => (
+                  <ul className="space-y-3 flex-1">
+                    {pillar.steps.map((step) => (
                       <li key={step.num} className="flex items-start gap-2.5 text-right">
-                        <span className="font-mono text-xs text-neutral-500 font-semibold shrink-0 mt-0.5">
+                        <span className="font-mono text-xs text-logoIce/90 font-bold shrink-0 mt-0.5">
                           {step.num}
                         </span>
                         <span className="text-silverDark text-xs select-none">|</span>
-                        <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                        <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed">
                           <strong className="text-white font-medium">{step.title}</strong> — {step.desc}
                         </p>
                       </li>
@@ -150,7 +150,7 @@ export default function WhoItsFor() {
               </div>
 
               {/* In-Card Bottom CTA */}
-              <div className="pt-4 border-t border-white/[0.08] mt-auto">
+              <div className="pt-6 border-t border-white/[0.08] mt-auto">
                 <a
                   href="#performance-list"
                   className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-logoIce hover:text-white transition-colors group min-h-[44px]"
