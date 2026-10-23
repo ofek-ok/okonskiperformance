@@ -111,19 +111,19 @@ export default function CookieBanner() {
             <div className="flex flex-wrap items-center gap-2.5 pt-1">
               <button
                 onClick={handleAcceptAll}
-                className="btn-logo-metallic text-white font-bold py-2.5 px-5 rounded-full text-xs cursor-pointer"
+                className="bg-white text-black font-semibold hover:bg-neutral-200 transition-colors py-2 px-4 rounded-lg text-xs cursor-pointer"
               >
                 אישור
               </button>
               <button
                 onClick={handleRejectNonEssential}
-                className="bg-steelBase hover:bg-steelElevated text-silverOff font-bold py-2.5 px-4 rounded-full border border-white/10 text-xs transition-colors cursor-pointer"
+                className="bg-transparent text-neutral-300 border border-neutral-700/60 hover:text-white hover:border-neutral-500 font-medium py-2 px-3.5 rounded-lg text-xs transition-colors cursor-pointer"
               >
                 דחיית לא חיוניים
               </button>
               <button
                 onClick={() => setShowSettings(true)}
-                className="text-silverDark hover:text-silverOff text-xs py-2 px-2 underline transition-colors mr-auto"
+                className="text-neutral-400 hover:text-white text-xs py-2 px-2 underline transition-colors mr-auto"
               >
                 ניהול העדפות
               </button>
@@ -194,13 +194,13 @@ export default function CookieBanner() {
             <div className="flex flex-col sm:flex-row gap-3 justify-start pt-2">
               <button
                 onClick={handleSaveSettings}
-                className="bg-brand text-white font-bold py-3 px-8 rounded-full hover:bg-brand-bright transition-colors text-sm focus:outline-none focus:ring-2 focus:ring-white/50"
+                className="bg-white text-black font-semibold hover:bg-neutral-200 transition-colors py-2.5 px-6 rounded-lg text-sm"
               >
                 שמור העדפות
               </button>
               <button
                 onClick={() => setShowSettings(false)}
-                className="text-silver/60 hover:text-white text-sm px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand rounded"
+                className="text-neutral-400 hover:text-white text-sm px-4 py-2.5 transition-colors"
               >
                 חזור
               </button>

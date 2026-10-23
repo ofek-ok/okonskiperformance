@@ -87,7 +87,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2 sm:gap-4">
             <a
               href="/#performance-list"
-              className="btn-logo-metallic text-white text-[10.5px] xs:text-[11.5px] sm:text-[13px] font-bold py-2 px-2.5 xs:px-3 sm:px-6 rounded-full tracking-wide shadow-lg whitespace-nowrap inline-flex items-center justify-center min-h-[38px] sm:min-h-[42px]"
+              className="bg-white text-black hover:bg-neutral-200 transition-colors text-[10.5px] xs:text-[11.5px] sm:text-[13px] font-medium py-2 px-3 sm:px-5 rounded-lg tracking-wide whitespace-nowrap inline-flex items-center justify-center min-h-[38px] sm:min-h-[40px]"
             >
               הבטחת מקום בפתיחה
             </a>
@@ -95,7 +95,7 @@ export default function Navbar() {
             {/* Mobile Menu Button - 44x44px min touch target */}
             <button
               type="button"
-              className="lg:hidden text-silverOff min-w-[44px] min-h-[44px] p-2.5 rounded-xl border border-white/15 bg-steelBase hover:border-white/30 flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-logoIce transition-colors"
+              className="lg:hidden text-silverOff min-w-[44px] min-h-[44px] p-2.5 rounded-lg border border-neutral-800 bg-neutral-900/60 hover:border-neutral-700 flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400 transition-colors"
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
               aria-label={menuOpen ? "סגור תפריט" : "פתח תפריט"}
@@ -120,14 +120,14 @@ export default function Navbar() {
           <nav
             id="mobile-navigation"
             aria-label="ניווט מובייל"
-            className="lg:hidden bg-charcoalDark/98 border-t border-white/10 px-5 py-6 flex flex-col gap-2 text-white animate-fade-up shadow-2xl max-h-[calc(100svh-65px)] overflow-y-auto"
+            className="lg:hidden bg-charcoalDark/98 border-t border-neutral-800 px-5 py-6 flex flex-col gap-2 text-white animate-fade-up shadow-2xl max-h-[calc(100svh-65px)] overflow-y-auto"
           >
             {navLinks.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-base font-semibold text-silverOff hover:text-white py-3.5 px-3 rounded-xl hover:bg-white/[0.04] active:bg-white/[0.08] transition-colors border-b border-white/5 flex items-center justify-between"
+                className="text-base font-semibold text-silverOff hover:text-white py-3.5 px-3 rounded-lg hover:bg-white/[0.04] active:bg-white/[0.08] transition-colors border-b border-white/5 flex items-center justify-between"
               >
                 <span>{item.label}</span>
                 <svg className="w-4 h-4 text-silverDark rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -139,7 +139,7 @@ export default function Navbar() {
               <a
                 href="/#performance-list"
                 onClick={() => setMenuOpen(false)}
-                className="btn-logo-metallic text-center text-white font-bold py-3.5 px-6 rounded-full text-sm block w-full min-h-[48px] flex items-center justify-center shadow-lg"
+                className="bg-white text-black font-medium hover:bg-neutral-200 transition-colors text-center py-3.5 px-6 rounded-lg text-sm block w-full min-h-[48px] flex items-center justify-center"
               >
                 הבטחת מקום בפתיחה
               </a>

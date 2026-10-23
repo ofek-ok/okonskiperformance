@@ -16,7 +16,7 @@ export default function AboutOfek() {
           
           {/* Professional Studio Portrait */}
           <div className="lg:col-span-5 relative order-first">
-            <div className="relative w-full max-w-[320px] sm:max-w-[370px] mx-auto aspect-[4/5] rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-steelDark">
+            <div className="relative w-full max-w-[320px] sm:max-w-[370px] mx-auto aspect-[4/5] rounded-2xl overflow-hidden border border-neutral-800/60 shadow-xl bg-neutral-900">
               <Image
                 src="/about-portrait.jpg"
                 alt="אופק אוקונסקי, מייסד Okonski Performance"
@@ -27,9 +27,9 @@ export default function AboutOfek() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoalDark via-transparent to-transparent opacity-80" />
               
-              <div className="absolute bottom-4 sm:bottom-5 right-4 sm:right-5 left-4 sm:left-5 p-3.5 sm:p-4 rounded-xl bg-steelBase/90 backdrop-blur-md border border-white/10 text-right">
-                <p className="text-white font-bold text-sm">אופק אוקונסקי</p>
-                <p className="text-[11px] sm:text-xs text-silverMuted">מייסד Okonski Performance • חגורה שחורה BJJ</p>
+              <div className="absolute bottom-4 sm:bottom-5 right-4 sm:right-5 left-4 sm:left-5 p-3.5 sm:p-4 rounded-xl bg-neutral-950/80 backdrop-blur-md border border-neutral-800/60 text-right">
+                <p className="text-white font-medium text-sm">אופק אוקונסקי</p>
+                <p className="text-[11px] sm:text-xs text-neutral-400">מייסד Okonski Performance • חגורה שחורה BJJ</p>
               </div>
             </div>
           </div>
@@ -44,15 +44,15 @@ export default function AboutOfek() {
 
             {/* Dual Worlds Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 mb-6 sm:mb-8">
-              <div className="p-4 sm:p-5 rounded-xl bg-steelBase border border-white/10">
-                <span className="text-sm font-bold text-white block mb-1">ספורט תובעני</span>
-                <p className="text-xs text-silverMuted leading-relaxed">
+              <div className="p-4 sm:p-5 rounded-xl border border-neutral-800/40 bg-neutral-900/20">
+                <span className="text-sm font-medium text-white block mb-1">ספורט תובעני</span>
+                <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
                   15 שנות אומנויות לחימה, חגורה שחורה ב-BJJ ומנהל פריינטה אקדמי בכפר סבא.
                 </p>
               </div>
-              <div className="p-4 sm:p-5 rounded-xl bg-steelBase border border-white/10">
-                <span className="text-sm font-bold text-white block mb-1">קריירה אינטנסיבית</span>
-                <p className="text-xs text-silverMuted leading-relaxed">
+              <div className="p-4 sm:p-5 rounded-xl border border-neutral-800/40 bg-neutral-900/20">
+                <span className="text-sm font-medium text-white block mb-1">קריירה אינטנסיבית</span>
+                <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
                   מנהל פרויקטים בכיר עם 7 שנות ניסיון בהובלת תהליכים טכנולוגיים מורכבים.
                 </p>
               </div>

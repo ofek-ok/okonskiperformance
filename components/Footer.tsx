@@ -38,7 +38,7 @@ export default function Footer() {
           
           {/* Brand */}
           <div className="flex flex-col items-center md:items-start text-white">
-            <div className="w-10 h-10 rounded-full bg-steelBase border border-white/15 p-1 shadow-md mb-3 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg bg-neutral-900 border border-neutral-800 p-1 mb-3 flex items-center justify-center">
               <Image src="/logo-official.png" alt="Okonski Performance Logo" width={36} height={36} className="object-contain" />
             </div>
             <div className="font-jakarta tracking-[0.16em] uppercase text-lg leading-none" dir="ltr">

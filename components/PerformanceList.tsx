@@ -105,19 +105,19 @@ export default function PerformanceList() {
 
         {/* ── SUCCESS STATE ── */}
         {status === "success" ? (
-          <div className="card-steel rounded-2xl p-6 sm:p-12 text-center" role="status" aria-live="polite" aria-atomic="true">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-steelBase border border-logoIce/30 text-logoIce flex items-center justify-center mx-auto mb-5 sm:mb-6 shadow-lg">
+          <div className="border border-neutral-800/60 bg-neutral-900/30 rounded-2xl p-6 sm:p-12 text-center" role="status" aria-live="polite" aria-atomic="true">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-neutral-800/50 border border-neutral-700/60 text-white flex items-center justify-center mx-auto mb-5 sm:mb-6">
               <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
               </svg>
             </div>
             <h3 className="text-xl sm:text-3xl font-black text-white mb-3 sm:mb-4">
               ברוכים הבאים ל־Performance List.
             </h3>
-            <p className="text-silverOff text-sm sm:text-base leading-relaxed max-w-lg mx-auto mb-5 sm:mb-6">
+            <p className="text-neutral-300 text-sm sm:text-base leading-relaxed max-w-lg mx-auto mb-5 sm:mb-6">
               נעדכן אתכם לקראת פתיחת Okonski Performance בינואר 2027 ונשלח הודעה כשהיומן ייפתח לקביעת טיפולים.
             </p>
-            <p className="text-logoIce font-semibold text-xs sm:text-sm">
+            <p className="text-white font-medium text-xs sm:text-sm">
               שמחים שהצטרפת.
             </p>
           </div>
@@ -132,7 +132,7 @@ export default function PerformanceList() {
             </h2>
 
             {/* Body */}
-            <div className="text-silverMuted text-sm sm:text-base lg:text-lg leading-relaxed space-y-2 mb-8 sm:mb-10 max-w-lg mx-auto">
+            <div className="text-neutral-400 text-sm sm:text-base lg:text-lg leading-relaxed space-y-2 mb-8 sm:mb-10 max-w-lg mx-auto">
               <p>
                 הטיפולים של Okonski Performance צפויים להיפתח ב־24 בינואר 2027.
               </p>
@@ -145,7 +145,7 @@ export default function PerformanceList() {
             <form
               onSubmit={handleSubmit}
               noValidate
-              className="card-steel rounded-2xl p-5 sm:p-8 text-right space-y-4 shadow-2xl"
+              className="border border-neutral-800/60 bg-neutral-900/30 rounded-2xl p-5 sm:p-8 text-right space-y-4 shadow-xl"
               aria-label="טופס הצטרפות ל-Performance List"
             >
               {/* Name */}
@@ -287,7 +287,7 @@ export default function PerformanceList() {
                   type="submit"
                   disabled={status === "loading" || hasSubmitted}
                   aria-busy={status === "loading"}
-                  className="btn-logo-metallic w-full text-white font-bold py-4 px-8 rounded-xl text-base tracking-wide flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed min-h-[52px] shadow-lg active:scale-[0.99]"
+                  className="w-full bg-white text-black font-semibold hover:bg-neutral-200 transition-colors py-3.5 px-6 rounded-lg text-sm sm:text-base tracking-wide flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed min-h-[48px] active:scale-[0.99] relative"
                 >
                   <span className={`transition-opacity ${status === "loading" ? "opacity-0" : "opacity-100"}`}>
                     הצטרפו ל־Performance List
@@ -295,7 +295,7 @@ export default function PerformanceList() {
                   {status === "loading" && (
                     <div className="absolute inset-0 flex items-center justify-center" aria-label="שולח...">
                       <svg
-                        className="animate-spin h-5 w-5 text-white"
+                        className="animate-spin h-5 w-5 text-black"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -312,7 +312,7 @@ export default function PerformanceList() {
                   )}
                   {status !== "loading" && (
                     <svg className="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   )}
                 </button>

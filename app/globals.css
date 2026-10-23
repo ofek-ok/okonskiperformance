@@ -36,91 +36,72 @@
   /* ── Buttons ───────────────────────────── */
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2
-           bg-brand text-white font-bold px-8 py-4
-           text-sm tracking-widest uppercase rounded-full
-           hover:bg-brand-bright active:bg-brand-dim
-           transition-all duration-200 cursor-pointer
-           border border-brand hover:border-brand-bright
-           font-barlow;
+           bg-white text-black font-semibold px-6 py-3
+           text-sm tracking-wide rounded-lg
+           hover:bg-neutral-200 active:scale-[0.99]
+           transition-colors duration-200 cursor-pointer;
   }
 
   .btn-ghost {
     @apply inline-flex items-center justify-center gap-2
-           bg-transparent text-silver font-bold px-8 py-4
-           text-sm tracking-wide uppercase rounded-full
-           border border-silver/20
-           hover:border-brand hover:text-brand
-           transition-all duration-200 cursor-pointer;
+           bg-transparent text-neutral-300 font-medium px-6 py-3
+           text-sm tracking-wide rounded-lg
+           border border-neutral-700/60
+           hover:border-neutral-500 hover:text-white
+           transition-colors duration-200 cursor-pointer;
   }
 
   .btn-ghost-blue {
     @apply inline-flex items-center justify-center gap-2
-           bg-transparent text-brand font-bold px-8 py-4
-           text-sm tracking-wide uppercase rounded-full
-           border border-brand/40
-           hover:border-brand hover:bg-brand/10
-           transition-all duration-200 cursor-pointer;
+           bg-transparent text-neutral-200 font-medium px-6 py-3
+           text-sm tracking-wide rounded-lg
+           border border-neutral-700/60
+           hover:border-neutral-500 hover:text-white
+           transition-colors duration-200 cursor-pointer;
   }
 
   /* ── Labels ────────────────────────────── */
   .eyebrow {
-    @apply text-brand text-[10px] font-bold tracking-[0.35em] uppercase mb-4 block;
+    @apply text-neutral-400 text-xs font-mono tracking-wider uppercase mb-3 block;
   }
 
   .section-rule {
-    @apply w-12 h-px bg-brand mb-6 block;
+    @apply w-12 h-px bg-neutral-800 mb-6 block;
   }
 
   /* ── Cards ─────────────────────────────── */
   .card-dark {
-    @apply bg-steel border border-white/5;
+    @apply bg-neutral-900/30 border border-neutral-800/40 rounded-xl;
   }
 
   /* ── Inputs ────────────────────────────── */
   .input-dark {
-    @apply w-full bg-steel border border-white/10 text-silver placeholder-silver/25
-           px-5 py-4 text-sm
-           focus:outline-none focus:border-brand
+    @apply w-full bg-neutral-950/60 border border-neutral-800 text-white placeholder-neutral-500
+           px-4 py-3 text-sm rounded-lg
+           focus:outline-none focus:border-neutral-400
            transition-colors duration-200;
   }
 
-  /* ── Master Craft: Sculpted Steel & Sapphire Components ───────────────────────────── */
+  /* ── Solid Structural Components ───────────────────────────── */
   .btn-logo-metallic {
-    background: linear-gradient(135deg, #5398D9 0%, #3E6FA8 40%, #1E4E8C 100%);
-    box-shadow: 
-      0 1px 0 rgba(255, 255, 255, 0.35) inset,
-      0 -1px 0 rgba(0, 0, 0, 0.4) inset,
-      0 10px 28px -6px rgba(46, 110, 175, 0.5);
-    border: 1px solid rgba(115, 180, 230, 0.4);
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .btn-logo-metallic:hover {
-    background: linear-gradient(135deg, #73B4E6 0%, #4D87C4 45%, #255DA5 100%);
-    box-shadow: 
-      0 1px 0 rgba(255, 255, 255, 0.5) inset,
-      0 14px 36px -4px rgba(62, 111, 168, 0.65);
-    transform: translateY(-1.5px);
+    @apply inline-flex items-center justify-center gap-2
+           bg-white text-black font-semibold px-6 py-3
+           text-sm tracking-wide rounded-lg
+           hover:bg-neutral-200 active:scale-[0.99]
+           transition-colors duration-200 cursor-pointer shadow-sm;
   }
 
   .card-steel {
-    background: linear-gradient(180deg, #1A1F26 0%, #13171D 100%);
-    border: 1px solid rgba(226, 232, 240, 0.1);
-    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.05) inset;
-    transition: all 0.3s ease;
-  }
-  .card-steel:hover {
-    border-color: rgba(115, 180, 230, 0.35);
-    box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.8), 0 0 24px -4px rgba(62, 111, 168, 0.25);
-    transform: translateY(-2px);
+    @apply bg-neutral-900/30 border border-neutral-800/60 rounded-2xl
+           transition-colors duration-200;
   }
 
   .ambient-glow {
-    background: radial-gradient(circle at 50% 18%, rgba(62, 111, 168, 0.24) 0%, rgba(10, 11, 13, 0) 65%);
+    background: transparent;
   }
 
   .brushed-panel {
-    background: linear-gradient(135deg, #1E2229 0%, #15181E 100%);
-    border: 1px solid rgba(226, 232, 240, 0.08);
+    @apply bg-neutral-900/30 border border-neutral-800/50 rounded-2xl;
   }
 }
 

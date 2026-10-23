@@ -143,10 +143,9 @@ export default function WhoItsFor() {
                         key={step.num}
                         className="flex items-start gap-2.5 text-right lg:min-h-[76px] xl:min-h-[58px]"
                       >
-                        <span className="text-neutral-500 font-mono text-xs tracking-wider shrink-0 mt-0.5">
-                          {step.num}
+                        <span className="font-mono text-neutral-500 text-sm tracking-wider shrink-0 mt-0.5">
+                          {step.num}.
                         </span>
-                        <span className="text-neutral-700 text-xs select-none">|</span>
                         <p className="text-xs md:text-sm text-neutral-400 leading-normal">
                           <strong className="text-white font-medium text-sm">{step.title}</strong> — {step.desc}
                         </p>
@@ -177,11 +176,11 @@ export default function WhoItsFor() {
           </p>
           <a
             href="#performance-list"
-            className="bg-white text-black hover:bg-neutral-200 font-semibold px-7 py-3 rounded-xl transition-all shadow-md active:scale-[0.99] inline-flex items-center justify-center gap-2.5 text-sm sm:text-base tracking-wide"
+            className="bg-white text-black hover:bg-neutral-200 font-medium px-6 py-3 rounded-lg transition-colors inline-flex items-center justify-center gap-2.5 text-sm sm:text-base tracking-wide"
           >
             <span>הבטחת מקום בפתיחה</span>
             <svg className="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </a>
         </div>
