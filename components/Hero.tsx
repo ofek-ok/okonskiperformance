@@ -1,51 +1,76 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
-    <section id="top" className="relative min-h-[min(760px,100svh)] pt-28 pb-12 sm:pt-36 sm:pb-14 lg:pt-40 flex items-center justify-center overflow-hidden border-b border-neutral-800/60" aria-label="Okonski Performance">
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 text-center flex flex-col items-center">
+    <section
+      id="top"
+      className="relative min-h-[100svh] pt-20 pb-8 sm:pt-24 sm:pb-12 flex items-center justify-center border-b border-neutral-800/60 bg-[#0A0B0D]"
+      aria-label="Okonski Performance"
+    >
+      <div className="w-full max-w-5xl mx-auto px-4 sm:px-8">
         
-        {/* Headline */}
-        <h1 className="text-[clamp(2.15rem,7vw,5.2rem)] font-black text-white leading-[1.08] tracking-tight mb-5 text-balance max-w-4xl">
-          הגוף שלך צריך<br />
-          <span>
-            לעמוד בקצב שלך.
-          </span>
-        </h1>
+        {/* Visual Centerpiece / Media Container */}
+        <div className="relative overflow-hidden rounded-2xl bg-neutral-900/40 border border-neutral-800/50 p-6 sm:p-10 lg:p-12 text-center flex flex-col items-center">
+          
+          {/* Subtle Background Layer Reserved for Brand Media / Animation */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.05)_0%,_transparent_70%)]"
+            aria-hidden="true"
+          />
 
-        {/* Lead Body Paragraph 1: Definition */}
-        <p className="text-base sm:text-[clamp(1.15rem,2vw,1.4rem)] text-neutral-300 leading-relaxed max-w-3xl mx-auto mb-3 font-medium">
-          ספורטתרפיה, שיקום מפציעות והתאוששות מתקדמת לספורטאים ואנשים עם שגרה תובענית.
-        </p>
+          {/* 1. Brand & Header Top Area */}
+          <div className="relative z-10 flex items-center justify-center gap-2.5 mb-4 sm:mb-6">
+            <Image
+              src="/logo-official.png"
+              alt="Okonski Performance"
+              width={24}
+              height={24}
+              className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
+              priority
+            />
+            <span className="text-[11px] sm:text-xs font-mono font-bold tracking-[0.25em] text-neutral-400 uppercase">
+              OKONSKI PERFORMANCE
+            </span>
+          </div>
 
-        {/* Lead Body Paragraph 2: Scannable 3-Pillar Copy */}
-        <p className="mt-4 text-sm sm:text-base md:text-lg leading-relaxed text-neutral-400 max-w-3xl mx-auto mb-6 sm:mb-8 text-right sm:text-center">
-          <strong className="text-white font-medium">פציעה או כאב?</strong> נחזיר אותך לשגרה ולביצועים גבוהים.<br className="hidden md:inline" />{" "}
-          <strong className="text-white font-medium">דורש מעצמך הרבה?</strong> הגוף שלך חייב תחזוקה ושימור שוטף.<br className="hidden md:inline" />{" "}
-          <strong className="text-white font-medium">רוצה יותר?</strong> נבנה מעטפת טיפולית שתיקח את היכולת הגופנית שלך לשלב הבא.
-        </p>
+          {/* 2. Main Headline & Subheadline */}
+          <h1 className="relative z-10 text-2xl xs:text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.14] mb-3 sm:mb-4 max-w-3xl text-balance">
+            הגוף שלך חייב לעמוד בקצב שלך.
+          </h1>
 
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center gap-3 w-full max-w-sm sm:max-w-xl justify-center">
-          <a
-            href="#performance-list"
-            className="w-full sm:w-auto min-h-[48px] bg-white text-black font-medium hover:bg-neutral-200 transition-colors px-6 py-3 rounded-lg text-sm sm:text-base tracking-wide whitespace-nowrap flex items-center justify-center gap-2.5 shadow-sm active:scale-[0.99]"
-          >
-            <span>הבטחת מקום בפתיחה</span>
-            <svg className="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </a>
-          <a
-            href="#who-its-for"
-            className="w-full sm:w-auto min-h-[48px] px-6 py-3 rounded-lg bg-transparent text-neutral-300 border border-neutral-700/60 hover:text-white hover:border-neutral-500 text-sm font-medium transition-colors text-center flex items-center justify-center active:scale-[0.99]"
-          >
-            גלה את תחומי הטיפול
-          </a>
+          <p className="relative z-10 text-xs sm:text-base lg:text-lg text-neutral-300 max-w-2xl mx-auto leading-relaxed mb-6 sm:mb-8 font-normal">
+            ספורטתרפיה, שיקום מפציעות והתאוששות מתקדמת לספורטאים ואנשים עם שגרה תובענית.
+          </p>
+
+          {/* 3. 3-Needs Micro-Copy Block */}
+          <div className="relative z-10 w-full max-w-4xl border-y border-neutral-800/60 py-4 sm:py-5 mb-6 sm:mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6 text-right sm:text-center">
+              <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                <strong className="text-white font-medium">פציעה או כאב?</strong> נחזיר אותך לשגרה ולביצועים גבוהים.
+              </p>
+              <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                <strong className="text-white font-medium">דורש מעצמך הרבה?</strong> הגוף שלך חייב תחזוקה ושימור שוטף.
+              </p>
+              <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                <strong className="text-white font-medium">רוצה יותר?</strong> נבנה מעטפת טיפולית שתיקח את היכולת הגופנית שלך לשלב הבא.
+              </p>
+            </div>
+          </div>
+
+          {/* 4. Primary CTA & Location Indicator */}
+          <div className="relative z-10 flex flex-col items-center w-full max-w-xs sm:max-w-md">
+            <a
+              href="#performance-list"
+              className="inline-flex items-center justify-center gap-2 bg-white text-black font-semibold px-8 py-3.5 rounded-lg hover:bg-neutral-200 transition-colors shadow-sm active:scale-[0.99] w-full sm:w-auto text-sm sm:text-base tracking-wide"
+            >
+              <span>הבטחת מקום בפתיחה ←</span>
+            </a>
+            <p className="text-xs text-neutral-400 font-medium tracking-wide mt-3">
+              קליניקת בוטיק בשרון | מעטפת פרימיום עד הבית
+            </p>
+          </div>
+
         </div>
-
-        {/* Status / Micro-copy */}
-        <p className="mt-5 text-xs sm:text-sm text-neutral-500 font-mono tracking-wide">
-          פתיחת יומן רשמית: ינואר 2027 • עדיפות בתורים למי שברשימה
-        </p>
 
       </div>
     </section>
