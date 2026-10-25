@@ -55,7 +55,7 @@ export default function Navbar() {
           
           {/* Brand & Official Logo */}
           <Link
-            href="/#top"
+            href="/#hero"
             className="flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-logoIce rounded-lg shrink-0"
             aria-label="Okonski Performance — עמוד הבית"
           >
