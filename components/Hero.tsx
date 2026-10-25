@@ -1,10 +1,8 @@
-import Image from "next/image";
-
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden border-b border-neutral-800/60 bg-[#0A0B0D] pt-24 pb-16 sm:pt-28 sm:pb-20"
+      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden border-b border-neutral-800/60 bg-[#0A0B0D] pt-32 pb-16 sm:pt-36 sm:pb-20"
       aria-label="Okonski Performance"
     >
       {/* Anchor for top of page */}
@@ -34,30 +32,31 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      {/* Content Container: Logos + H1 + CTA Architecture */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-8 text-center flex flex-col items-center animate-fade-up">
-        {/* Prominent Centerpiece Brand Logo with Entry Animation */}
-        <div className="flex items-center justify-center">
-          <Image
-            src="/okonski-logo-updated.svg"
-            alt="Okonski Performance"
-            width={450}
-            height={346}
-            className="w-44 xs:w-52 sm:w-64 md:w-72 lg:w-80 h-auto object-contain mx-auto drop-shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
-            priority
-          />
-        </div>
-
-        {/* Refined Single H1 Headline */}
-        <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white tracking-tighter mt-8 mb-10 leading-[1.1] max-w-4xl mx-auto text-balance">
+      {/* Clean Un-boxed Typography Directly on Dark Video Overlay */}
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-8 text-center flex flex-col items-center">
+        {/* Main H1 Headline */}
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6 max-w-4xl mx-auto text-balance">
           הגוף שלך חייב לעמוד בקצב שלך.
         </h1>
 
-        {/* Single Confident CTA Button */}
+        {/* 3 Needs Text Stack (Pure text with bold highlights — NO boxes, NO pills) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-10 text-xs md:text-sm text-neutral-300 font-medium text-center">
+          <p className="leading-relaxed">
+            <strong className="text-white font-bold">פציעה או כאב?</strong> נחזיר אותך לשגרה ולביצועים גבוהים.
+          </p>
+          <p className="leading-relaxed">
+            <strong className="text-white font-bold">דורש מעצמך הרבה?</strong> הגוף שלך חייב תחזוקה ושימור שוטף.
+          </p>
+          <p className="leading-relaxed">
+            <strong className="text-white font-bold">רוצה יותר?</strong> נבנה מעטפת טיפולית שתיקח את היכולת הגופנית שלך לשלב הבא.
+          </p>
+        </div>
+
+        {/* Primary CTA Button */}
         <div className="flex justify-center">
           <a
             href="#performance-list"
-            className="bg-white text-black font-semibold text-base px-9 py-4 rounded-lg hover:bg-neutral-200 transition-all shadow-xl inline-flex items-center justify-center active:scale-[0.99]"
+            className="bg-white text-black font-semibold px-8 py-3.5 rounded-lg hover:bg-neutral-200 transition-all shadow-lg inline-flex items-center justify-center active:scale-[0.99] text-sm sm:text-base tracking-wide"
           >
             הבטחת מקום בפתיחה ←
           </a>

@@ -7,16 +7,7 @@ import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const pathname = usePathname();
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   // Lock body scroll and handle Escape key when mobile menu is open
   useEffect(() => {
@@ -45,32 +36,28 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-[#0A0B0D]/95 backdrop-blur-xl border-b border-white/[0.08] py-3 shadow-2xl"
-            : "bg-[#0A0B0D]/85 backdrop-blur-md border-b border-white/[0.05] py-3.5 sm:py-4"
-        }`}
+        className="fixed top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-5xl z-50 rounded-2xl bg-neutral-900/80 backdrop-blur-md border border-white/10 shadow-2xl px-6 py-3 transition-all duration-300"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
+        <div className="flex items-center justify-between">
           
-          {/* Brand & Official Logo */}
+          {/* Logo on the right (RTL) */}
           <Link
             href="/#hero"
-            className="flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-logoIce rounded-lg shrink-0"
+            className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-logoIce rounded-lg shrink-0"
             aria-label="Okonski Performance — עמוד הבית"
           >
             <Image
               src="/okonski-logo-updated.svg"
-              alt="Okonski Performance — ספורטתרפיה וטיפול בכאב ובפציעות ספורט, שיקום תנועתי והגעה עד הבית לספורטאים בשרון"
+              alt="Okonski Performance — ספורטתרפיה ושיקום תנועתי"
               width={450}
               height={346}
-              className="w-[90px] xs:w-[102px] sm:w-[116px] h-auto object-contain"
+              className="h-8 w-auto object-contain"
               priority
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav aria-label="ניווט ראשי" className="hidden lg:flex items-center gap-4 xl:gap-7 text-[13px] font-semibold text-silverMuted">
+          {/* Navigation links in the center */}
+          <nav aria-label="ניווט ראשי" className="hidden md:flex items-center gap-6 lg:gap-8 text-xs lg:text-[13px] font-semibold text-neutral-300">
             {navLinks.map((item) => (
               <Link
                 key={item.href}
@@ -83,19 +70,19 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Action Button */}
-          <div className="flex items-center gap-2 sm:gap-4">
+          {/* CTA button on the left (RTL) */}
+          <div className="flex items-center gap-2 sm:gap-3">
             <a
               href="/#performance-list"
-              className="bg-white text-black hover:bg-neutral-200 transition-colors text-[10.5px] xs:text-[11.5px] sm:text-[13px] font-medium py-2 px-3 sm:px-5 rounded-lg tracking-wide whitespace-nowrap inline-flex items-center justify-center min-h-[38px] sm:min-h-[40px]"
+              className="bg-white text-black hover:bg-neutral-200 transition-colors text-xs sm:text-[13px] font-medium py-2 px-3.5 sm:px-5 rounded-lg tracking-wide whitespace-nowrap inline-flex items-center justify-center min-h-[36px]"
             >
               הבטחת מקום בפתיחה
             </a>
 
-            {/* Mobile Menu Button - 44x44px min touch target */}
+            {/* Mobile Menu Button */}
             <button
               type="button"
-              className="lg:hidden text-silverOff min-w-[44px] min-h-[44px] p-2.5 rounded-lg border border-neutral-800 bg-neutral-900/60 hover:border-neutral-700 flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400 transition-colors"
+              className="md:hidden text-neutral-300 min-w-[38px] min-h-[38px] p-2 rounded-lg border border-neutral-700/60 bg-neutral-800/60 hover:border-neutral-600 flex items-center justify-center focus:outline-none transition-colors"
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
               aria-label={menuOpen ? "סגור תפריט" : "פתח תפריט"}
@@ -115,35 +102,26 @@ export default function Navbar() {
 
         </div>
 
-        {/* Mobile Drawer */}
+        {/* Mobile Drawer inside floating container */}
         {menuOpen && (
           <nav
             id="mobile-navigation"
             aria-label="ניווט מובייל"
-            className="lg:hidden bg-charcoalDark/98 border-t border-neutral-800 px-5 py-6 flex flex-col gap-2 text-white animate-fade-up shadow-2xl max-h-[calc(100svh-65px)] overflow-y-auto"
+            className="md:hidden mt-3 pt-3 border-t border-neutral-800/80 flex flex-col gap-1 text-white animate-fade-up"
           >
             {navLinks.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-base font-semibold text-silverOff hover:text-white py-3.5 px-3 rounded-lg hover:bg-white/[0.04] active:bg-white/[0.08] transition-colors border-b border-white/5 flex items-center justify-between"
+                className="text-sm font-semibold text-neutral-300 hover:text-white py-2.5 px-3 rounded-lg hover:bg-white/[0.06] active:bg-white/[0.1] transition-colors flex items-center justify-between"
               >
                 <span>{item.label}</span>
-                <svg className="w-4 h-4 text-silverDark rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-neutral-500 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
             ))}
-            <div className="pt-3">
-              <a
-                href="/#performance-list"
-                onClick={() => setMenuOpen(false)}
-                className="bg-white text-black font-medium hover:bg-neutral-200 transition-colors text-center py-3.5 px-6 rounded-lg text-sm block w-full min-h-[48px] flex items-center justify-center"
-              >
-                הבטחת מקום בפתיחה
-              </a>
-            </div>
           </nav>
         )}
       </header>
@@ -151,7 +129,7 @@ export default function Navbar() {
       {/* Backdrop overlay for mobile menu */}
       {menuOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black/60 backdrop-blur-xs lg:hidden"
+          className="fixed inset-0 z-40 bg-black/60 backdrop-blur-xs md:hidden"
           onClick={() => setMenuOpen(false)}
           aria-hidden="true"
         />
