@@ -1,8 +1,10 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden border-b border-white/[0.06] bg-[#0A0B0D] pt-32 pb-16 sm:pt-36 sm:pb-20"
+      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden border-b border-white/[0.06] bg-[#0A0B0D] pt-28 pb-16 sm:pt-32 sm:pb-20"
       aria-label="Okonski Performance"
     >
       {/* Anchor for top of page */}
@@ -28,20 +30,32 @@ export default function Hero() {
         aria-hidden="true"
       />
       <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(14,42,82,0.2)_0%,_transparent_75%)] pointer-events-none"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(14,42,82,0.22)_0%,_transparent_75%)] pointer-events-none"
         aria-hidden="true"
       />
 
-      {/* Clean Un-boxed Typography Directly on Dark Video Overlay */}
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-8 text-center flex flex-col items-center">
+      {/* Clean Un-boxed Typography & Centerpiece Logo Directly on Dark Video Overlay */}
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-8 text-center flex flex-col items-center animate-fade-up">
+        {/* Prominent Centerpiece Brand Logo (Inspired by Adir Asher Hero Emblem) */}
+        <div className="mb-6 sm:mb-8 flex items-center justify-center">
+          <Image
+            src="/okonski-logo-updated.svg"
+            alt="Okonski Performance"
+            width={450}
+            height={346}
+            className="w-44 xs:w-52 sm:w-64 md:w-72 lg:w-80 h-auto object-contain mx-auto drop-shadow-[0_14px_30px_rgba(0,0,0,0.65)] transition-transform duration-500 hover:scale-[1.02]"
+            priority
+          />
+        </div>
+
         {/* Main H1 Headline with Subtle Split-Tone Hierarchy */}
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12] mb-7 sm:mb-8 max-w-4xl mx-auto text-balance">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12] mb-6 sm:mb-8 max-w-4xl mx-auto text-balance">
           הגוף שלך חייב{" "}
           <span className="text-silverOff">לעמוד בקצב שלך.</span>
         </h1>
 
         {/* 3 Needs Text Stack (Pure text with bold highlights — NO boxes, NO pills) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-0 max-w-3xl mx-auto mb-10 text-xs md:text-sm text-neutral-300 font-medium text-center md:divide-x md:divide-x-reverse md:divide-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-0 max-w-3xl mx-auto mb-9 sm:mb-10 text-xs md:text-sm text-neutral-300 font-medium text-center md:divide-x md:divide-x-reverse md:divide-white/10">
           <p className="leading-relaxed md:px-5">
             <strong className="text-white font-bold">פציעה או כאב?</strong> נחזיר אותך לשגרה ולביצועים גבוהים.
           </p>
