@@ -64,7 +64,7 @@ export default function Treatment() {
               <div className="absolute inset-0 bg-gradient-to-t from-charcoalDark/75 via-transparent to-transparent" />
               <div className="absolute bottom-3 right-3 left-3 sm:bottom-4 sm:right-4 sm:left-4 px-3.5 sm:px-4 py-2.5 rounded-2xl bg-[#0A0B0D]/85 backdrop-blur-md border border-white/[0.08] flex flex-wrap items-center justify-between gap-1 text-xs text-silverOff">
                 <span className="font-semibold text-white">מפגש ראשון מקיף</span>
-                <span className="text-neutral-300 text-[11.5px] sm:text-xs">60 דקות • אבחון וטיפול</span>
+                <span className="text-neutral-300 text-[11.5px] sm:text-xs">אבחון וטיפול מותאם אישית</span>
               </div>
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function Treatment() {
           <div className="border border-white/[0.08] bg-neutral-900/35 rounded-3xl p-5 sm:p-8">
             <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">ומה קורה לאחר המפגש הראשון?</h3>
             <p className="text-[13.5px] sm:text-sm text-neutral-300 leading-relaxed mb-3 sm:mb-4">
-              מפגשי המשך נמשכים 45 דקות ויכולים לכלול טיפול גופני, תרגול, הנחיות לבית, התאמות עומס ומעקב אחר ההתקדמות.
+              מפגשי המשך יכולים לכלול טיפול גופני, תרגול, הנחיות לבית, התאמות עומס ומעקב אחר ההתקדמות.
             </p>
             <p className="text-[13px] sm:text-xs text-neutral-400 leading-relaxed">
               אפשר להמשיך במפגשים בודדים או לבחון מסלול טיפולי מתאים. ההמלצה נקבעת לפי הצורך — לא כל אדם זקוק לאותו מספר מפגשים.
