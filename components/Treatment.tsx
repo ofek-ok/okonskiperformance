@@ -3,22 +3,22 @@ import Image from "next/image";
 const stages = [
   {
     num: "01.",
-    title: "היכרות ותשאול",
+    title: "מקשיבים",
     body: "נבין מה הביא אותך לטיפול, מה מפריע לך, מהי שגרת האימונים או העבודה שלך ומה אתה רוצה להשיג.",
   },
   {
     num: "02.",
-    title: "הערכה גופנית",
+    title: "בודקים",
     body: "בהתאם לצורך, נבחן תנועה, טווחי תנועה, מגבלות ואזורים רלוונטיים למטרת הטיפול.",
   },
   {
     num: "03.",
-    title: "טיפול ראשון",
+    title: "מטפלים",
     body: "נבצע טיפול גופני המותאם לממצאים, למצב שלך ולמטרת המפגש.",
   },
   {
     num: "04.",
-    title: "סיכום והמלצה",
+    title: "מסבירים",
     body: "בסיום נסביר מה עלה במפגש, מה אפשר לעשות באופן עצמאי ומה עשוי להתאים להמשך, במידת הצורך.",
   },
 ];
@@ -41,8 +41,8 @@ export default function Treatment() {
               </span>
             </div>
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-4 sm:mb-5">
-              טיפול אישי שמתחיל{" "}
-              <span className="text-silverOff">בהבנת הגוף שלך.</span>
+              לא מטפלים בכתף.{" "}
+              <span className="text-silverOff">מטפלים בך.</span>
             </h2>
             <p className="text-neutral-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-3 font-medium">
               אין שני אנשים שמגיעים עם אותו עומס, אותה מגבלה או אותה מטרה.
@@ -79,20 +79,25 @@ export default function Treatment() {
             <span className="text-xs text-neutral-400 font-mono">מבנה עבודה מוגדר</span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+          {/* Mobile: compact vertical timeline · sm+: card grid */}
+          <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 sm:gap-5 border-r border-logoIce/25 sm:border-r-0 mr-1.5 sm:mr-0">
             {stages.map((stage) => (
-              <div
+              <li
                 key={stage.num}
-                className="p-5 sm:p-6 rounded-3xl border border-white/[0.08] hover:border-white/[0.15] bg-neutral-900/35 transition-colors text-right flex flex-col"
+                className="relative pr-5 pb-6 last:pb-0 sm:p-6 sm:rounded-3xl sm:border sm:border-white/[0.08] sm:hover:border-white/[0.15] sm:bg-neutral-900/35 transition-colors text-right flex flex-col"
               >
-                <span className="font-mono text-logoIce/80 text-xs sm:text-sm font-semibold tracking-wider block mb-2">
+                <span
+                  className="sm:hidden absolute -right-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-logoIce shadow-[0_0_10px_rgba(125,184,232,0.6)]"
+                  aria-hidden="true"
+                />
+                <span className="font-mono text-logoIce/80 text-xs sm:text-sm font-semibold tracking-wider block mb-1 sm:mb-2">
                   {stage.num}
                 </span>
-                <h4 className="text-base sm:text-lg font-bold text-white mb-2">{stage.title}</h4>
+                <h4 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">{stage.title}</h4>
                 <p className="text-[13.5px] sm:text-sm text-neutral-400 leading-relaxed">{stage.body}</p>
-              </div>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
 
         {/* Detail Cards */}

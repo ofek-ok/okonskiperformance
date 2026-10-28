@@ -118,26 +118,29 @@ export default function Hero() {
         </h1>
 
         {/* 3 Needs Text Stack (Mobile scannable with subtle dividers) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 max-w-md md:max-w-3xl w-full mx-auto mb-8 sm:mb-10 text-[13.5px] sm:text-sm text-neutral-100 font-medium text-center divide-y divide-white/10 md:divide-y-0 md:divide-x md:divide-x-reverse md:divide-white/15 drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)]">
-          <p className="leading-relaxed py-2.5 md:py-0 md:px-5">
-            <strong className="text-white font-bold">פציעה או כאב?</strong> נחזיר אותך לשגרה ולביצועים גבוהים.
+        <div className="hidden md:grid grid-cols-3 gap-0 max-w-3xl w-full mx-auto mb-10 text-sm text-neutral-100 font-medium text-center divide-x divide-x-reverse divide-white/15 drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)]">
+          <p className="leading-relaxed px-5">
+            <strong className="text-white font-bold">פציעה או כאב?</strong> נמצא את המקור, לא רק את הנקודה שכואבת.
           </p>
-          <p className="leading-relaxed py-2.5 md:py-0 md:px-5">
-            <strong className="text-white font-bold">דורש מעצמך הרבה?</strong> הגוף שלך חייב תחזוקה ושימור שוטף.
+          <p className="leading-relaxed px-5">
+            <strong className="text-white font-bold">דורש מעצמך הרבה?</strong> הגוף שלך צריך תחזוקה, לא רק מנוחה.
           </p>
-          <p className="leading-relaxed py-2.5 md:py-0 md:px-5">
+          <p className="leading-relaxed px-5">
             <strong className="text-white font-bold">רוצה יותר?</strong> נבנה מעטפת טיפולית שתיקח את היכולת הגופנית שלך לשלב הבא.
           </p>
         </div>
 
         {/* Primary CTA Button — Full Capsule matching Navbar */}
-        <div className="flex justify-center w-full sm:w-auto px-2 sm:px-0">
+        <div className="flex flex-col items-center justify-center w-full sm:w-auto px-2 sm:px-0 gap-3">
           <a
             href="#performance-list"
             className="w-full sm:w-auto max-w-xs sm:max-w-none bg-white text-black font-semibold px-8 py-3.5 min-h-[48px] rounded-full hover:bg-neutral-100 transition-all duration-200 shadow-[0_10px_35px_-5px_rgba(0,0,0,0.6),0_0_25px_rgba(255,255,255,0.25)] inline-flex items-center justify-center active:scale-[0.98] text-[15px] sm:text-base tracking-wide"
           >
-            הבטחת מקום בפתיחה ←
+            שריון קדימות בתורים ←
           </a>
+          <p className="text-xs sm:text-[13px] text-neutral-200 drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]">
+            ללא התחייבות · קדימות בתורים ומחיר ייחודי למצטרפים מוקדמים
+          </p>
         </div>
       </div>
     </section>

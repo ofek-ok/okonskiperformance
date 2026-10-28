@@ -101,26 +101,6 @@ const LATE_AND_ARRIVAL_RULES = [
       </svg>
     ),
   },
-  {
-    title: "ביטול ביוזמת הקליניקה",
-    description:
-      "אם אנחנו נאלצים לבטל או להזיז טיפול – אין שום חיוב, ונתאם איתכם מועד חלופי בעדיפות עליונה ובהקדם.",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-      </svg>
-    ),
-  },
-  {
-    title: "איך מבטלים או מזיזים",
-    description:
-      "בהודעת וואטסאפ או בשיחה ישירה ל־055-5172571 מול אופק. מועד ההודעה נחשב לפי השעה שבה התקבלה.",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
-      </svg>
-    ),
-  },
 ];
 
 export default function VisionAndPolicyPage() {
@@ -261,9 +241,6 @@ export default function VisionAndPolicyPage() {
           <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
             {/* Policy Header */}
             <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
-              <p className="text-xs sm:text-sm font-bold tracking-wider text-logoIce uppercase mb-2.5 sm:mb-3">
-                מדיניות הקליניקה
-              </p>
               <h2
                 id="policy-heading"
                 className="text-2xl sm:text-4xl font-extrabold text-white leading-tight mb-3.5 sm:mb-4"
@@ -338,13 +315,11 @@ export default function VisionAndPolicyPage() {
                 איחורים ונהלי הגעה
               </h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
-                {LATE_AND_ARRIVAL_RULES.map((rule, idx) => (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
+                {LATE_AND_ARRIVAL_RULES.map((rule) => (
                   <div
                     key={rule.title}
-                    className={`rounded-2xl bg-steelDark/80 border border-white/[0.08] p-5 sm:p-6 flex items-start gap-4 ${
-                      idx === 4 ? "md:col-span-2" : ""
-                    }`}
+                    className="rounded-2xl bg-steelDark/80 border border-white/[0.08] p-5 sm:p-6 flex items-start gap-4"
                   >
                     <div className="w-10 h-10 rounded-xl bg-white/[0.06] border border-white/10 text-logoIce flex items-center justify-center shrink-0 mt-0.5">
                       {rule.icon}
@@ -360,16 +335,6 @@ export default function VisionAndPolicyPage() {
                   </div>
                 ))}
               </div>
-            </div>
-
-            {/* Empathy Note Card */}
-            <div className="rounded-2xl bg-logoIce/10 border border-logoIce/25 p-5 sm:p-6 text-center mb-6">
-              <p className="text-sm sm:text-base text-white font-medium leading-relaxed">
-                <span className="text-logoIce font-bold ml-1.5" aria-hidden="true">
-                  ♡
-                </span>
-                <strong>קורה לכולם.</strong> מקרים חריגים באמת – מחלה פתאומית, מקרה חירום או מילואים – נשקלים בהבנה מלאה, לפי שיקול דעת הקליניקה. פשוט דברו איתנו.
-              </p>
             </div>
 
             <p className="text-xs text-silver/60 text-center">
@@ -394,7 +359,7 @@ export default function VisionAndPolicyPage() {
                 href="/#performance-list"
                 className="w-full sm:w-auto bg-white text-black hover:bg-neutral-100 font-semibold text-sm sm:text-base px-8 py-3.5 rounded-full transition-all duration-200 shadow-[0_10px_30px_-5px_rgba(255,255,255,0.2)] inline-flex items-center justify-center active:scale-[0.98]"
               >
-                הבטחת מקום בפתיחה ←
+                שריון קדימות בתורים ←
               </Link>
               <a
                 href="https://wa.me/972555172571"

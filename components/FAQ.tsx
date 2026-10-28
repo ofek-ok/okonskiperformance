@@ -20,12 +20,16 @@ const questions = [
     "המפגש הראשון נמשך 60 דקות. מפגשי המשך נמשכים 45 דקות."
   ],
   [
-    "מתי אפשר להתחיל להגיע?",
-    "הפיילוט צפוי להיפתח ב־24 בינואר 2027. עד אז ניתן להצטרף ל־Performance List כדי לקבל עדכון כשהפעילות תיפתח."
+    "מה נותנת ההצטרפות ל־Performance List?",
+    "מי שנרשם לפני הפתיחה מקבל קדימות בקביעת התורים הראשונים עם פתיחת היומן, וכן מחיר ייחודי למצטרפים מוקדמים."
+  ],
+  [
+    "האם ההרשמה מחייבת אותי למשהו?",
+    "לא. משאירים פרטים, אני חוזר אליך אישית לקראת פתיחת היומן, ואתה מחליט אם ומתי לתאם."
   ],
   [
     "איך קובעים מפגש?",
-    "לאחר פתיחת הפעילות ניתן יהיה לפנות ישירות בוואטסאפ. נתחיל בהיכרות קצרה ובבדיקת התאמה, ורק לאחר מכן נתאם מפגש."
+    "משאירים פרטים ב־Performance List או פונים בוואטסאפ. מתחילים בהיכרות קצרה ובבדיקת התאמה, ולאחר מכן מתאמים מפגש."
   ]
 ];
 
@@ -81,7 +85,7 @@ export default function FAQ() {
             href="#performance-list"
             className="bg-white text-black font-semibold hover:bg-neutral-100 transition-all duration-200 py-3.5 px-7 rounded-full text-sm w-full sm:w-auto min-h-[46px] inline-flex items-center justify-center gap-2 shadow-sm active:scale-[0.98]"
           >
-            <span>הצטרפות לרשימת המתעניינים</span>
+            <span>הצטרפות ל־Performance List</span>
             <span>←</span>
           </a>
         </div>

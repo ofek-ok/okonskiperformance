@@ -65,7 +65,7 @@ export default function AboutOfek() {
               <div className="p-5 rounded-2xl border border-white/[0.08] bg-neutral-900/35">
                 <span className="text-sm font-bold text-white block mb-1.5">ספורט תובעני</span>
                 <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
-                  15 שנות אומנויות לחימה, חגורה שחורה ב-BJJ ומנהל פריינטה אקדמי בכפר סבא.
+                  15 שנות אומנויות לחימה, חגורה שחורה ומאמן בג&apos;יו־ג&apos;יטסו ברזילאי (BJJ).
                 </p>
               </div>
               <div className="p-5 rounded-2xl border border-white/[0.08] bg-neutral-900/35">
@@ -79,19 +79,10 @@ export default function AboutOfek() {
             {/* Narrative Body */}
             <div className="space-y-3.5 sm:space-y-4 text-silverMuted text-sm sm:text-base lg:text-lg leading-relaxed">
               <p className="font-bold text-silverOff">
-                אני מכיר מקרוב את שני העולמות שעבורם הקמתי את Okonski Performance: ספורט תובעני וקריירה אינטנסיבית.
-              </p>
-              <p>
-                אני עוסק באמנויות לחימה כבר כ־15 שנים, חגורה שחורה בג&apos;יו־ג&apos;יטסו ברזילאי, מאמן ומנהל את פריינטה אקדמי בכפר סבא.
-              </p>
-              <p>
-                במקביל, אני מנהל פרויקטים בכיר עם כשבע שנות ניסיון בניהול פרויקטים טכנולוגיים, הובלת תהליכים ועבודה בסביבות מורכבות ותובעניות.
-              </p>
-              <p>
-                השילוב בין שני העולמות האלה לימד אותי עד כמה אנחנו דורשים מהגוף שלנו — באימונים, בעבודה ובחיי היומיום — ועד כמה חשוב לתת לו את תשומת הלב המתאימה.
+                15 שנה על המזרן. 7 שנים מול דדליינים. אני מכיר מקרוב את שני העולמות שעבורם הקמתי את Okonski Performance.
               </p>
 
-              {/* Editorial Pull-Quote Highlight */}
+              {/* Editorial Pull-Quote Highlight (Always visible) */}
               <div className="my-5 pr-4 border-r-2 border-logoIce/70 space-y-2.5">
                 <p className="font-bold text-white">
                   מתוך החיבור הזה הקמתי את Okonski Performance.
@@ -101,12 +92,40 @@ export default function AboutOfek() {
                 </p>
               </div>
 
-              <p>
-                את החשיבה התהליכית מעולם הניהול אני מביא גם לגישה שלי לטיפול: להבין את נקודת המוצא, להגדיר מטרה, לעבוד בצורה מסודרת ולבחון את ההתקדמות.
-              </p>
-              <p>
-                מבחינתי, טיפול טוב צריך לשלב עבודה גופנית מקצועית, הסברים ברורים ויחס אישי.
-              </p>
+              {/* Desktop full paragraphs */}
+              <div className="hidden lg:block space-y-4">
+                <p>
+                  אני עוסק באמנויות לחימה כבר כ־15 שנים, חגורה שחורה ומאמן בג&apos;יו־ג&apos;יטסו ברזילאי. במקביל, אני מנהל פרויקטים בכיר עם כשבע שנות ניסיון בניהול פרויקטים טכנולוגיים, הובלת תהליכים ועבודה בסביבות מורכבות ותובעניות.
+                </p>
+                <p>
+                  השילוב בין שני העולמות האלה לימד אותי עד כמה אנחנו דורשים מהגוף שלנו — באימונים, בעבודה ובחיי היומיום — ועד כמה חשוב לתת לו את תשומת הלב המתאימה.
+                </p>
+                <p>
+                  את החשיבה התהליכית מעולם הניהול אני מביא גם לגישה שלי לטיפול: להבין את נקודת המוצא, להגדיר מטרה, לעבוד בצורה מסודרת ולבחון את ההתקדמות. מבחינתי, טיפול טוב צריך לשלב עבודה גופנית מקצועית, הסברים ברורים ויחס אישי.
+                </p>
+              </div>
+
+              {/* Mobile expandable story */}
+              <details className="lg:hidden group pt-1">
+                <summary className="list-none cursor-pointer inline-flex items-center gap-2 text-[13.5px] font-semibold text-logoIce min-h-[44px] focus:outline-none focus-visible:ring-1 focus-visible:ring-logoIce rounded">
+                  <span className="group-open:hidden">לסיפור המלא</span>
+                  <span className="hidden group-open:inline">הסתר סיפור מלא</span>
+                  <svg className="w-3.5 h-3.5 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="mt-3 space-y-3.5 text-sm text-silverMuted leading-relaxed">
+                  <p>
+                    אני עוסק באמנויות לחימה כבר כ־15 שנים, חגורה שחורה ומאמן בג&apos;יו־ג&apos;יטסו ברזילאי. במקביל, אני מנהל פרויקטים בכיר עם כשבע שנות ניסיון בניהול פרויקטים טכנולוגיים, הובלת תהליכים ועבודה בסביבות מורכבות ותובעניות.
+                  </p>
+                  <p>
+                    השילוב בין שני העולמות האלה לימד אותי עד כמה אנחנו דורשים מהגוף שלנו — באימונים, בעבודה ובחיי היומיום — ועד כמה חשוב לתת לו את תשומת הלב המתאימה.
+                  </p>
+                  <p>
+                    את החשיבה התהליכית מעולם הניהול אני מביא גם לגישה שלי לטיפול: להבין את נקודת המוצא, להגדיר מטרה, לעבוד בצורה מסודרת ולבחון את ההתקדמות. מבחינתי, טיפול טוב צריך לשלב עבודה גופנית מקצועית, הסברים ברורים ויחס אישי.
+                  </p>
+                </div>
+              </details>
             </div>
 
           </div>

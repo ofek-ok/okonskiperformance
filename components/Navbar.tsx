@@ -101,7 +101,8 @@ export default function Navbar() {
               href="/#performance-list"
               className="bg-white text-black hover:bg-neutral-100 transition-all duration-200 text-[11.5px] sm:text-[13px] font-semibold py-2 px-3 sm:px-5 rounded-full tracking-wide whitespace-nowrap inline-flex items-center justify-center min-h-[40px] sm:min-h-[38px] shadow-sm active:scale-[0.98]"
             >
-              הבטחת מקום בפתיחה
+              <span className="sm:hidden">שריון מקום</span>
+              <span className="hidden sm:inline">שריון קדימות בתורים</span>
             </a>
 
             {/* Mobile Toggle Button (44x44px touch target) */}
@@ -161,7 +162,7 @@ export default function Navbar() {
                 onClick={() => setMenuOpen(false)}
                 className="w-full bg-white text-black font-semibold text-center py-3.5 px-6 rounded-full text-sm min-h-[48px] flex items-center justify-center hover:bg-neutral-100 active:scale-[0.99] transition-all shadow-sm"
               >
-                הבטחת מקום בפתיחה ←
+                שריון קדימות בתורים ←
               </a>
             </div>
           </nav>

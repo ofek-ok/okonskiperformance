@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
 interface UtmData {
@@ -66,6 +66,17 @@ export default function PerformanceList() {
   });
   const [selectedTopic, setSelectedTopic] = useState<string>("פציעת ספורט");
   const [painLevel, setPainLevel] = useState<number | null>(null);
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const customEvent = e as CustomEvent<string>;
+      if (customEvent.detail) {
+        setSelectedTopic(customEvent.detail);
+      }
+    };
+    window.addEventListener("okonski:select-topic", handler);
+    return () => window.removeEventListener("okonski:select-topic", handler);
+  }, []);
   const [marketingConsent, setMarketingConsent] = useState(false);
   const [errors, setErrors] = useState<{ name?: string; phone?: string; email?: string }>({});
   const [hasSubmitted, setHasSubmitted] = useState(false);
@@ -169,7 +180,7 @@ export default function PerformanceList() {
           </h2>
 
           <p className="text-neutral-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto">
-            ספרו לנו בקצרה מה מביא אתכם אלינו והשאירו פרטים – הפנייה נכנסת ישירות למערכת ה־CRM שלנו, ונחזור אליכם לבניית הצעד הראשון ולשריון עדיפות עם פתיחת היומן.
+            ספרו בקצרה מה מביא אתכם. <strong className="text-white">אני קורא כל פנייה בעצמי</strong>, וחוזר אליכם אישית לקראת פתיחת היומן עם קדימות בתורים ומחיר ייחודי למצטרפים מוקדמים.
           </p>
         </div>
 
@@ -191,10 +202,10 @@ export default function PerformanceList() {
                   </svg>
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-black text-white mb-3">
-                  הפרטים נקלטו בהצלחה!
+                  אתה ברשימה. 🙌
                 </h3>
                 <p className="text-neutral-300 text-sm sm:text-base leading-relaxed max-w-md mx-auto mb-6">
-                  הפנייה שלך נשמרה במערכת של Okonski Performance. נחזור אליך בהקדם כדי להבין את הצורך המדויק ולתאם את הצעד הראשון.
+                  אחזור אליך אישית לקראת פתיחת היומן, עוד לפני שהוא נפתח לכולם. בינתיים, אם יש משהו דחוף, אפשר לכתוב לי בוואטסאפ.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                   <a

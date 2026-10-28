@@ -2,7 +2,7 @@ const steps = [
   {
     num: "01.",
     title: "יצירת קשר",
-    body: "כשהפעילות תיפתח, תוכל לפנות אליי בוואטסאפ ולספר בקצרה מה הסיבה לפנייה ומה המטרה שלך.",
+    body: "השאר פרטים עכשיו, ותהיה בין הראשונים שאחזור אליהם כשהיומן נפתח.",
   },
   {
     num: "02.",
@@ -62,19 +62,19 @@ export default function HowToStart() {
         {/* Status Callout */}
         <div className="rounded-3xl p-6 sm:p-10 border border-white/[0.08] bg-neutral-900/40 shadow-[0_12px_36px_-16px_rgba(0,0,0,0.5)] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="max-w-2xl">
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3">עדיין לא פתחנו את היומן.</h3>
-            <p className="text-neutral-300 text-[13.5px] sm:text-sm leading-relaxed mb-1.5 sm:mb-2">
-              הפעילות צפויה להתחיל ב־24 בינואר 2027.
-            </p>
-            <p className="text-neutral-400 text-[13.5px] sm:text-sm leading-relaxed">
-              עד אז, אפשר להצטרף ל־Performance List ולקבל עדכון כשהאפשרות לפנות לתיאום מפגש תיפתח.
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3">
+              היומן נפתח בקרוב.{" "}
+              <span className="text-logoIce">ההרשמה לזכאות לקביעת התורים הראשונים בעיצומה.</span>
+            </h3>
+            <p className="text-neutral-300 text-[13.5px] sm:text-sm leading-relaxed">
+              מי שמצטרף ל־Performance List מקבל <strong className="text-white">קדימות בקביעת התורים הראשונים</strong> ו<strong className="text-white">מחיר ייחודי</strong> למצטרפים מוקדמים.
             </p>
           </div>
           <a
             href="#performance-list"
             className="bg-white text-black font-semibold hover:bg-neutral-100 transition-all duration-200 px-7 py-3.5 rounded-full text-sm shrink-0 whitespace-nowrap w-full md:w-auto text-center flex items-center justify-center min-h-[48px] shadow-sm active:scale-[0.98]"
           >
-            עדכנו אותי כשהטיפולים נפתחים ←
+            הצטרפות ל־Performance List ←
           </a>
         </div>
 
