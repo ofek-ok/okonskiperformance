@@ -20,10 +20,19 @@ export async function POST(request: Request) {
     const fullName = String(body.full_name || "").trim();
     const email = String(body.email || "").trim();
     const phone = String(body.phone || "").trim();
+    const topic = String(body.topic || "").trim();
+    const painLevel = body.pain_level ? Number(body.pain_level) : null;
+    const note = String(body.note || "").trim();
 
-    if (!fullName || !email || body.marketing_consent !== true) {
+    if (!fullName || !phone || body.marketing_consent !== true) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
+
+    const sourceParts = ["אתר"];
+    if (topic) sourceParts.push(topic);
+    if (painLevel && !Number.isNaN(painLevel)) sourceParts.push(`עומס ${painLevel}/10`);
+    const sourceSummary = sourceParts.join(" • ");
+    const displayFullName = note ? `${fullName} (${note})` : fullName;
 
     // 1. Insert lead directly into Clinify CRM `leads` table (Leads Pipeline -> "ליד חדש")
     const clinifyLeadResponse = await fetch(`${CLINIFY_SUPABASE_URL}/rest/v1/leads`, {
@@ -35,10 +44,10 @@ export async function POST(request: Request) {
         Prefer: "return=representation",
       },
       body: JSON.stringify({
-        full_name: fullName,
-        email: email,
-        phone: phone || "-",
-        source: "Website",
+        full_name: displayFullName,
+        email: email || null,
+        phone: phone,
+        source: sourceSummary,
         status: "new",
       }),
     });
