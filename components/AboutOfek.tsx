@@ -26,21 +26,15 @@ export default function AboutOfek() {
           
           {/* Professional Studio Portrait */}
           <div className="lg:col-span-5 relative order-first">
-            <div className="relative w-full max-w-[330px] sm:max-w-[380px] mx-auto aspect-[4/5] rounded-3xl overflow-hidden border border-white/[0.08] shadow-[0_18px_48px_-14px_rgba(0,0,0,0.65)] bg-neutral-900">
+            <div className="relative w-full max-w-[300px] sm:max-w-[360px] mx-auto aspect-square rounded-3xl overflow-hidden border border-white/[0.08] shadow-[0_18px_48px_-14px_rgba(0,0,0,0.65)] bg-neutral-900">
               <Image
-                src="/about-portrait.jpg"
+                src="/ofek-portrait-hd.jpg"
                 alt="אופק אוקונסקי, מייסד Okonski Performance"
                 fill
-                className="object-cover object-top"
-                sizes="(max-width: 640px) 330px, (max-width: 1024px) 380px, 33vw"
+                className="object-cover object-center"
+                sizes="(max-width: 640px) 300px, (max-width: 1024px) 360px, 33vw"
                 priority={false}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoalDark via-transparent to-transparent opacity-80" />
-              
-              <div className="absolute bottom-4 sm:bottom-5 right-4 sm:right-5 left-4 sm:left-5 p-4 rounded-2xl bg-[#0A0B0D]/80 backdrop-blur-md border border-white/[0.08] text-right">
-                <p className="text-white font-semibold text-sm">אופק אוקונסקי</p>
-                <p className="text-[11px] sm:text-xs text-silverMuted mt-0.5">מייסד Okonski Performance • חגורה שחורה BJJ</p>
-              </div>
             </div>
           </div>
 
