@@ -41,6 +41,7 @@ export default function Navbar() {
     { href: "/#treatment", label: "תהליך הטיפול" },
     { href: "/#about", label: "מי אני" },
     { href: "/#faq", label: "שאלות נפוצות" },
+    { href: "/vision", label: "חזון ומדיניות" },
   ];
 
   return (

@@ -130,6 +130,8 @@ export default function Footer() {
         <div className="flex flex-col-reverse md:flex-row justify-between items-center pt-8 border-t border-white/5 text-sm text-silver/60 gap-8 md:gap-4">
           <p className="text-center md:text-right">&copy; {new Date().getFullYear()} Okonski Performance. All rights reserved.</p>
           <nav aria-label="קישורי תחתית ומשפטי" className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-center">
+            <Link href="/vision" className="hover:text-white transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-brand rounded">חזון ומדיניות</Link>
+            <Link href="/vision#policy" className="hover:text-white transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-brand rounded">מדיניות ביטול</Link>
             <Link href="/privacy" className="hover:text-white transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-brand rounded">מדיניות פרטיות</Link>
             <Link href="/terms" className="hover:text-white transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-brand rounded">תנאי שימוש</Link>
             <Link href="/cookies" className="hover:text-white transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-brand rounded">מדיניות Cookies</Link>

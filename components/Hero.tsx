@@ -6,15 +6,23 @@ import Image from "next/image";
 const HERO_VIDEOS = [
   {
     src: "/hero-pain.mp4",
-    label: "כאב ופציעות ספורט",
+    label: "מתאמנים וכאבי ספורט",
   },
   {
-    src: "/hero-therapy.mp4",
-    label: "טיפול מנואלי ופיזיותרפיה",
+    src: "/hero-office.mp4",
+    label: "עבודה משרדית ועומס יומיומי",
   },
   {
-    src: "/hero-video.mp4",
-    label: "אימון וביצועים גופניים",
+    src: "/hero-cupping.mp4",
+    label: "טיפול כוסות רוח",
+  },
+  {
+    src: "/hero-needling.mp4",
+    label: "דיקור יבש ושחרור ממוקד",
+  },
+  {
+    src: "/hero-strength.mp4",
+    label: "חיזוק ושיפור ביצועים",
   },
 ];
 
@@ -40,7 +48,7 @@ export default function Hero() {
         }
         return next;
       });
-    }, 5500);
+    }, 4200);
 
     return () => clearInterval(interval);
   }, []);
