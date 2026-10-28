@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const stages = [
   {
     num: "01.",
@@ -23,36 +25,70 @@ const stages = [
 
 export default function Treatment() {
   return (
-    <section id="treatment" className="py-16 sm:py-24 lg:py-32 bg-charcoalDark relative border-b border-neutral-800/60 scroll-mt-20 sm:scroll-mt-24">
+    <section
+      id="treatment"
+      className="py-16 sm:py-24 lg:py-32 bg-charcoalDark relative border-b border-white/[0.06] scroll-mt-20 sm:scroll-mt-24"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-8">
         
-        {/* Section Header */}
-        <div className="max-w-3xl mb-12 sm:mb-16 text-right">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-4 sm:mb-5">
-            טיפול אישי שמתחיל בהבנת הגוף שלך.
-          </h2>
-          <p className="text-neutral-400 text-sm sm:text-base lg:text-lg leading-relaxed mb-3">
-            אין שני אנשים שמגיעים עם אותו עומס, אותה מגבלה או אותה מטרה.
-          </p>
-          <p className="text-neutral-300 text-xs sm:text-sm lg:text-base leading-relaxed">
-            לכן, הטיפול ב־Okonski Performance אינו מבוסס על סדר פעולות זהה לכל לקוח. הוא מתחיל בהבנת המצב שלך ומותאם למה שעולה בתשאול ובהערכה.
-          </p>
+        {/* Top Split: Section Header + Clinical Atmosphere Image */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-14 sm:mb-20">
+          <div className="lg:col-span-7 text-right">
+            <div className="inline-flex items-center gap-3 mb-3.5">
+              <span className="w-8 h-[2px] rounded-full bg-logoIce/70" aria-hidden="true" />
+              <span className="text-xs sm:text-sm font-medium text-silverOff tracking-wide">
+                תהליך הטיפול
+              </span>
+            </div>
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-4 sm:mb-5">
+              טיפול אישי שמתחיל{" "}
+              <span className="text-silverOff">בהבנת הגוף שלך.</span>
+            </h2>
+            <p className="text-neutral-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-3 font-medium">
+              אין שני אנשים שמגיעים עם אותו עומס, אותה מגבלה או אותה מטרה.
+            </p>
+            <p className="text-neutral-400 text-xs sm:text-sm lg:text-base leading-relaxed">
+              לכן, הטיפול ב־Okonski Performance אינו מבוסס על סדר פעולות זהה לכל לקוח. הוא מתחיל בהבנת המצב שלך ומותאם למה שעולה בתשאול ובהערכה.
+            </p>
+          </div>
+
+          <div className="lg:col-span-5">
+            <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] lg:aspect-[4/3] rounded-3xl overflow-hidden border border-white/[0.08] shadow-[0_14px_40px_-14px_rgba(0,0,0,0.6)] bg-neutral-900">
+              <Image
+                src="/method-treatment.jpg"
+                alt="תהליך הטיפול האישי ב־Okonski Performance"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoalDark/75 via-transparent to-transparent" />
+              <div className="absolute bottom-3.5 right-3.5 left-3.5 sm:bottom-4 sm:right-4 sm:left-4 px-4 py-2.5 rounded-2xl bg-[#0A0B0D]/80 backdrop-blur-md border border-white/[0.08] flex items-center justify-between text-xs text-silverOff">
+                <span className="font-semibold text-white">מפגש ראשון מקיף</span>
+                <span className="text-neutral-400">60 דקות • אבחון וטיפול</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* First Session Workflow — 4 Linear Steps */}
         <div className="mb-12 sm:mb-16 text-right">
-          <div className="flex flex-wrap items-center justify-between gap-3 mb-6 sm:mb-8 pb-4 border-b border-neutral-800/60">
+          <div className="flex flex-wrap items-center justify-between gap-3 mb-6 sm:mb-8 pb-4 border-b border-white/[0.07]">
             <h3 className="text-lg sm:text-2xl font-black text-white">
               המפגש הראשון
             </h3>
-            <span className="text-xs text-neutral-500 font-mono">מבנה עבודה מוגדר</span>
+            <span className="text-xs text-neutral-400 font-mono">מבנה עבודה מוגדר</span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {stages.map((stage) => (
-              <div key={stage.num} className="p-5 sm:p-6 rounded-xl border border-neutral-800/40 bg-neutral-900/20 text-right">
-                <span className="font-mono text-neutral-500 text-sm tracking-wider block mb-2">{stage.num}</span>
-                <h4 className="text-base sm:text-lg font-medium text-white mb-2">{stage.title}</h4>
+              <div
+                key={stage.num}
+                className="p-6 rounded-3xl border border-white/[0.08] hover:border-white/[0.15] bg-neutral-900/35 transition-colors text-right flex flex-col"
+              >
+                <span className="font-mono text-logoIce/80 text-xs sm:text-sm font-semibold tracking-wider block mb-2.5">
+                  {stage.num}
+                </span>
+                <h4 className="text-base sm:text-lg font-bold text-white mb-2">{stage.title}</h4>
                 <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">{stage.body}</p>
               </div>
             ))}
@@ -61,7 +97,7 @@ export default function Treatment() {
 
         {/* Detail Cards */}
         <div className="grid md:grid-cols-2 gap-5 sm:gap-8 text-right">
-          <div className="border border-neutral-800/40 bg-neutral-900/20 rounded-2xl p-6 sm:p-8">
+          <div className="border border-white/[0.08] bg-neutral-900/35 rounded-3xl p-6 sm:p-8">
             <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">מה עשוי להשתלב במפגש?</h3>
             <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed mb-3 sm:mb-4">
               בהתאם לצורך, המפגש יכול לכלול עבודה ידנית על רקמות רכות ושרירים, עבודה על טווחי תנועה, מתיחות ותרגילים מותאמים.
@@ -74,7 +110,7 @@ export default function Treatment() {
             </p>
           </div>
 
-          <div className="border border-neutral-800/40 bg-neutral-900/20 rounded-2xl p-6 sm:p-8">
+          <div className="border border-white/[0.08] bg-neutral-900/35 rounded-3xl p-6 sm:p-8">
             <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">ומה קורה לאחר המפגש הראשון?</h3>
             <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed mb-3 sm:mb-4">
               מפגשי המשך נמשכים 45 דקות ויכולים לכלול טיפול גופני, תרגול, הנחיות לבית, התאמות עומס ומעקב אחר ההתקדמות.
@@ -88,12 +124,10 @@ export default function Treatment() {
         <div className="mt-10 sm:mt-12 text-right">
           <a
             href="#how-it-works"
-            className="inline-flex items-center gap-2 text-neutral-300 hover:text-white text-sm font-medium transition-colors min-h-[44px]"
+            className="inline-flex items-center gap-2 text-silverOff hover:text-white text-sm font-medium transition-colors min-h-[44px] group"
           >
             <span>איך מתחילים?</span>
-            <svg className="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-            </svg>
+            <span className="transition-transform duration-200 group-hover:-translate-x-1 text-logoIce">←</span>
           </a>
         </div>
 

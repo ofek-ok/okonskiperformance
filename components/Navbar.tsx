@@ -8,6 +8,16 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Lock body scroll and handle Escape key when mobile menu is open
   useEffect(() => {
@@ -40,6 +50,8 @@ export default function Navbar() {
         className={`fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-24px)] sm:w-[calc(100%-48px)] max-w-6xl xl:max-w-7xl transition-all duration-300 ${
           menuOpen
             ? "rounded-[28px] bg-[#0E131A]/95 backdrop-blur-2xl border border-white/20 shadow-2xl p-4 sm:p-5"
+            : scrolled
+            ? "rounded-full bg-[#161D26]/85 backdrop-blur-2xl border border-white/20 shadow-[0_16px_44px_-10px_rgba(0,0,0,0.65)] px-4 sm:px-8 py-2.5 sm:py-3"
             : "rounded-full bg-white/[0.15] sm:bg-white/[0.16] backdrop-blur-2xl border border-white/25 shadow-[0_14px_40px_-10px_rgba(0,0,0,0.5),_0_2px_12px_rgba(255,255,255,0.06)] px-4 sm:px-8 py-2.5 sm:py-3"
         }`}
       >
@@ -53,7 +65,7 @@ export default function Navbar() {
           >
             <Image
               src="/okonski-logo-updated.svg"
-              alt="Okonski Performance — ספורטתרפיה ושיקום תנועתי"
+              alt="Okonski Performance — ספורטתרפיה וטיפול בכאב ובפציעות ספורט, שיקום תנועתי והגעה עד הבית לספורטאים בשרון"
               width={450}
               height={346}
               className="h-7 sm:h-8 w-auto object-contain"

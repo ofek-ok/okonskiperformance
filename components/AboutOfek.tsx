@@ -2,13 +2,23 @@ import Image from "next/image";
 
 export default function AboutOfek() {
   return (
-    <section id="about" className="py-16 sm:py-24 lg:py-36 bg-charcoalDark relative border-b border-white/[0.06] scroll-mt-20 sm:scroll-mt-24" aria-labelledby="about-heading">
+    <section
+      id="about"
+      className="py-16 sm:py-24 lg:py-36 bg-charcoalDark relative border-b border-white/[0.06] scroll-mt-20 sm:scroll-mt-24"
+      aria-labelledby="about-heading"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Mobile Header (visible only on mobile) */}
         <div className="lg:hidden text-right mb-8">
+          <div className="inline-flex items-center gap-3 mb-3">
+            <span className="w-8 h-[2px] rounded-full bg-logoIce/70" aria-hidden="true" />
+            <span className="text-xs font-medium text-silverOff tracking-wide">
+              מי אני
+            </span>
+          </div>
           <h2 id="about-heading" className="text-2xl sm:text-4xl font-black text-white leading-tight">
-            נעים להכיר, אני אופק אוקונסקי.
+            נעים להכיר, <span className="text-silverOff">אני אופק אוקונסקי.</span>
           </h2>
         </div>
 
@@ -16,20 +26,20 @@ export default function AboutOfek() {
           
           {/* Professional Studio Portrait */}
           <div className="lg:col-span-5 relative order-first">
-            <div className="relative w-full max-w-[320px] sm:max-w-[370px] mx-auto aspect-[4/5] rounded-2xl overflow-hidden border border-neutral-800/60 shadow-xl bg-neutral-900">
+            <div className="relative w-full max-w-[330px] sm:max-w-[380px] mx-auto aspect-[4/5] rounded-3xl overflow-hidden border border-white/[0.08] shadow-[0_18px_48px_-14px_rgba(0,0,0,0.65)] bg-neutral-900">
               <Image
                 src="/about-portrait.jpg"
                 alt="אופק אוקונסקי, מייסד Okonski Performance"
                 fill
                 className="object-cover object-top"
-                sizes="(max-width: 640px) 320px, (max-width: 1024px) 370px, 33vw"
+                sizes="(max-width: 640px) 330px, (max-width: 1024px) 380px, 33vw"
                 priority={false}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoalDark via-transparent to-transparent opacity-80" />
               
-              <div className="absolute bottom-4 sm:bottom-5 right-4 sm:right-5 left-4 sm:left-5 p-3.5 sm:p-4 rounded-xl bg-neutral-950/80 backdrop-blur-md border border-neutral-800/60 text-right">
-                <p className="text-white font-medium text-sm">אופק אוקונסקי</p>
-                <p className="text-[11px] sm:text-xs text-neutral-400">מייסד Okonski Performance • חגורה שחורה BJJ</p>
+              <div className="absolute bottom-4 sm:bottom-5 right-4 sm:right-5 left-4 sm:left-5 p-4 rounded-2xl bg-[#0A0B0D]/80 backdrop-blur-md border border-white/[0.08] text-right">
+                <p className="text-white font-semibold text-sm">אופק אוקונסקי</p>
+                <p className="text-[11px] sm:text-xs text-silverMuted mt-0.5">מייסד Okonski Performance • חגורה שחורה BJJ</p>
               </div>
             </div>
           </div>
@@ -38,20 +48,28 @@ export default function AboutOfek() {
           <div className="lg:col-span-7 text-right">
             
             {/* Desktop Header (hidden on mobile) */}
-            <h2 className="hidden lg:block text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-8">
-              נעים להכיר, אני אופק אוקונסקי.
-            </h2>
+            <div className="hidden lg:block mb-8">
+              <div className="inline-flex items-center gap-3 mb-3.5">
+                <span className="w-8 h-[2px] rounded-full bg-logoIce/70" aria-hidden="true" />
+                <span className="text-sm font-medium text-silverOff tracking-wide">
+                  מי אני
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
+                נעים להכיר, <span className="text-silverOff">אני אופק אוקונסקי.</span>
+              </h2>
+            </div>
 
             {/* Dual Worlds Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 mb-6 sm:mb-8">
-              <div className="p-4 sm:p-5 rounded-xl border border-neutral-800/40 bg-neutral-900/20">
-                <span className="text-sm font-medium text-white block mb-1">ספורט תובעני</span>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-7 sm:mb-8">
+              <div className="p-5 rounded-2xl border border-white/[0.08] bg-neutral-900/35">
+                <span className="text-sm font-bold text-white block mb-1.5">ספורט תובעני</span>
                 <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
                   15 שנות אומנויות לחימה, חגורה שחורה ב-BJJ ומנהל פריינטה אקדמי בכפר סבא.
                 </p>
               </div>
-              <div className="p-4 sm:p-5 rounded-xl border border-neutral-800/40 bg-neutral-900/20">
-                <span className="text-sm font-medium text-white block mb-1">קריירה אינטנסיבית</span>
+              <div className="p-5 rounded-2xl border border-white/[0.08] bg-neutral-900/35">
+                <span className="text-sm font-bold text-white block mb-1.5">קריירה אינטנסיבית</span>
                 <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
                   מנהל פרויקטים בכיר עם 7 שנות ניסיון בהובלת תהליכים טכנולוגיים מורכבים.
                 </p>
@@ -72,12 +90,17 @@ export default function AboutOfek() {
               <p>
                 השילוב בין שני העולמות האלה לימד אותי עד כמה אנחנו דורשים מהגוף שלנו — באימונים, בעבודה ובחיי היומיום — ועד כמה חשוב לתת לו את תשומת הלב המתאימה.
               </p>
-              <p className="font-bold text-silverOff">
-                מתוך החיבור הזה הקמתי את Okonski Performance.
-              </p>
-              <p>
-                המטרה שלי היא להציע טיפול גופני אישי שלא מסתכל רק על האזור שכואב או מפריע, אלא גם על האדם שמאחוריו: איך הוא מתאמן, איך נראית השגרה שלו, אילו עומסים הוא חווה ומה הוא רוצה להיות מסוגל לעשות.
-              </p>
+
+              {/* Editorial Pull-Quote Highlight */}
+              <div className="my-5 pr-4 border-r-2 border-logoIce/70 space-y-2.5">
+                <p className="font-bold text-white">
+                  מתוך החיבור הזה הקמתי את Okonski Performance.
+                </p>
+                <p className="text-silverOff">
+                  המטרה שלי היא להציע טיפול גופני אישי שלא מסתכל רק על האזור שכואב או מפריע, אלא גם על האדם שמאחוריו: איך הוא מתאמן, איך נראית השגרה שלו, אילו עומסים הוא חווה ומה הוא רוצה להיות מסוגל לעשות.
+                </p>
+              </div>
+
               <p>
                 את החשיבה התהליכית מעולם הניהול אני מביא גם לגישה שלי לטיפול: להבין את נקודת המוצא, להגדיר מטרה, לעבוד בצורה מסודרת ולבחון את ההתקדמות.
               </p>

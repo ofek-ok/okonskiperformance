@@ -105,8 +105,8 @@ export default function PerformanceList() {
 
         {/* ── SUCCESS STATE ── */}
         {status === "success" ? (
-          <div className="border border-neutral-800/60 bg-neutral-900/30 rounded-2xl p-6 sm:p-12 text-center" role="status" aria-live="polite" aria-atomic="true">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-neutral-800/50 border border-neutral-700/60 text-white flex items-center justify-center mx-auto mb-5 sm:mb-6">
+          <div className="border border-white/[0.1] bg-neutral-900/40 backdrop-blur-md rounded-3xl p-7 sm:p-12 text-center shadow-2xl" role="status" aria-live="polite" aria-atomic="true">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/[0.08] border border-white/15 text-white flex items-center justify-center mx-auto mb-5 sm:mb-6">
               <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
               </svg>
@@ -126,9 +126,16 @@ export default function PerformanceList() {
           /* ── FORM STATE ── */
           <div className="text-center">
 
+            <div className="inline-flex items-center gap-3 mb-3.5">
+              <span className="w-8 h-[2px] rounded-full bg-logoIce/70" aria-hidden="true" />
+              <span className="text-xs sm:text-sm font-medium text-silverOff tracking-wide">
+                עדיפות בפתיחת היומן
+              </span>
+            </div>
+
             {/* Headline */}
-            <h2 className="text-[clamp(1.95rem,6.8vw,4.5rem)] font-black text-white tracking-tight leading-[1.1] mb-4 sm:mb-6 text-balance">
-              הצטרפו ל־<span dir="ltr" className="inline-block whitespace-nowrap">Performance List</span>
+            <h2 className="text-[clamp(1.95rem,6.8vw,4.2rem)] font-black text-white tracking-tight leading-[1.1] mb-4 sm:mb-6 text-balance">
+              הצטרפו ל־<span dir="ltr" className="inline-block whitespace-nowrap text-silverOff">Performance List</span>
             </h2>
 
             {/* Body */}
@@ -145,7 +152,7 @@ export default function PerformanceList() {
             <form
               onSubmit={handleSubmit}
               noValidate
-              className="border border-neutral-800/60 bg-neutral-900/30 rounded-2xl p-5 sm:p-8 text-right space-y-4 shadow-xl"
+              className="border border-white/[0.1] bg-neutral-900/40 backdrop-blur-md rounded-3xl p-6 sm:p-9 text-right space-y-4 shadow-[0_18px_48px_-14px_rgba(0,0,0,0.6)]"
               aria-label="טופס הצטרפות ל-Performance List"
             >
               {/* Name */}
@@ -167,7 +174,7 @@ export default function PerformanceList() {
                   aria-required="true"
                   aria-describedby={errors.name ? "err-name" : undefined}
                   aria-invalid={errors.name ? "true" : "false"}
-                  className={`w-full bg-charcoalDark border rounded-xl px-4 py-3.5 text-white placeholder-silverDark text-base sm:text-sm focus:outline-none focus:border-logoIce focus:ring-1 focus:ring-logoIce transition-all disabled:opacity-50 cursor-text ${
+                  className={`w-full bg-charcoalDark/90 border rounded-2xl px-4 py-3.5 text-white placeholder-silverDark text-base sm:text-sm focus:outline-none focus:border-logoIce focus:ring-1 focus:ring-logoIce transition-all disabled:opacity-50 cursor-text ${
                     errors.name
                       ? "border-red-500/70 focus:ring-red-500/40"
                       : "border-white/15"
@@ -200,7 +207,7 @@ export default function PerformanceList() {
                   aria-required="false"
                   aria-describedby={errors.phone ? "err-phone" : undefined}
                   aria-invalid={errors.phone ? "true" : "false"}
-                  className={`w-full bg-charcoalDark border rounded-xl px-4 py-3.5 text-white placeholder-silverDark text-base sm:text-sm focus:outline-none focus:border-logoIce focus:ring-1 focus:ring-logoIce transition-all disabled:opacity-50 text-right cursor-text ${
+                  className={`w-full bg-charcoalDark/90 border rounded-2xl px-4 py-3.5 text-white placeholder-silverDark text-base sm:text-sm focus:outline-none focus:border-logoIce focus:ring-1 focus:ring-logoIce transition-all disabled:opacity-50 text-right cursor-text ${
                     errors.phone
                       ? "border-red-500/70 focus:ring-red-500/40"
                       : "border-white/15"
@@ -234,7 +241,7 @@ export default function PerformanceList() {
                   aria-required="true"
                   aria-describedby={errors.email ? "err-email" : undefined}
                   aria-invalid={errors.email ? "true" : "false"}
-                  className={`w-full bg-charcoalDark border rounded-xl px-4 py-3.5 text-white placeholder-silverDark text-base sm:text-sm focus:outline-none focus:border-logoIce focus:ring-1 focus:ring-logoIce transition-all disabled:opacity-50 cursor-text text-right ${
+                  className={`w-full bg-charcoalDark/90 border rounded-2xl px-4 py-3.5 text-white placeholder-silverDark text-base sm:text-sm focus:outline-none focus:border-logoIce focus:ring-1 focus:ring-logoIce transition-all disabled:opacity-50 cursor-text text-right ${
                     errors.email
                       ? "border-red-500/70 focus:ring-red-500/40"
                       : "border-white/15"
@@ -281,16 +288,16 @@ export default function PerformanceList() {
                 </p>
               )}
 
-              {/* Submit Button */}
+              {/* Submit Button — Full Capsule */}
               <div className="pt-2">
                 <button
                   type="submit"
                   disabled={status === "loading" || hasSubmitted}
                   aria-busy={status === "loading"}
-                  className="w-full bg-white text-black font-semibold hover:bg-neutral-200 transition-colors py-3.5 px-6 rounded-lg text-sm sm:text-base tracking-wide flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed min-h-[48px] active:scale-[0.99] relative"
+                  className="w-full bg-white text-black font-semibold hover:bg-neutral-100 transition-all duration-200 py-3.5 px-6 rounded-full text-sm sm:text-base tracking-wide flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed min-h-[48px] active:scale-[0.98] relative shadow-sm"
                 >
                   <span className={`transition-opacity ${status === "loading" ? "opacity-0" : "opacity-100"}`}>
-                    הצטרפו ל־Performance List
+                    הצטרפו ל־Performance List ←
                   </span>
                   {status === "loading" && (
                     <div className="absolute inset-0 flex items-center justify-center" aria-label="שולח...">
@@ -309,11 +316,6 @@ export default function PerformanceList() {
                         />
                       </svg>
                     </div>
-                  )}
-                  {status !== "loading" && (
-                    <svg className="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
                   )}
                 </button>
               </div>
