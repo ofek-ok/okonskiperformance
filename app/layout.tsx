@@ -12,7 +12,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Okonski Performance | טיפול ספורטיבי והתאוששות באזור השרון",
+  title: "Okonski Performance | טיפול ספורטיבי, שיקום והתאוששות",
   description:
     "Okonski Performance מציעה טיפול גופני אישי לספורטאים, למתאמנים ולאנשי קריירה. כאב ופציעה, התאוששות ושיפור יכולת. הצטרפו לרשימת העדכונים.",
   icons: {
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Okonski Performance | טיפול ספורטיבי והתאוששות באזור השרון",
-    description: "טיפול גופני אישי לספורטאים, למתאמנים ולאנשי קריירה באזור השרון.",
+    title: "Okonski Performance | טיפול ספורטיבי, שיקום והתאוששות",
+    description: "טיפול גופני אישי לספורטאים, למתאמנים ולאנשי קריירה.",
   },
 };
 

@@ -14,7 +14,6 @@ const structuredData = [
     "@type": "Organization",
     name: "Okonski Performance",
     description: "טיפול גופני אישי לספורטאים, למתאמנים ולאנשי קריירה עם שגרה תובענית.",
-    areaServed: { "@type": "AdministrativeArea", name: "אזור השרון" },
   },
   {
     "@context": "https://schema.org",
@@ -52,4 +51,3 @@ export default function Home() {
     </>
   );
 }
-
