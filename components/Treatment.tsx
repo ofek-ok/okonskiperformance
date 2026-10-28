@@ -62,9 +62,9 @@ export default function Treatment() {
                 sizes="(max-width: 1024px) 100vw, 42vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoalDark/75 via-transparent to-transparent" />
-              <div className="absolute bottom-3.5 right-3.5 left-3.5 sm:bottom-4 sm:right-4 sm:left-4 px-4 py-2.5 rounded-2xl bg-[#0A0B0D]/80 backdrop-blur-md border border-white/[0.08] flex items-center justify-between text-xs text-silverOff">
+              <div className="absolute bottom-3 right-3 left-3 sm:bottom-4 sm:right-4 sm:left-4 px-3.5 sm:px-4 py-2.5 rounded-2xl bg-[#0A0B0D]/85 backdrop-blur-md border border-white/[0.08] flex flex-wrap items-center justify-between gap-1 text-xs text-silverOff">
                 <span className="font-semibold text-white">מפגש ראשון מקיף</span>
-                <span className="text-neutral-400">60 דקות • אבחון וטיפול</span>
+                <span className="text-neutral-300 text-[11.5px] sm:text-xs">60 דקות • אבחון וטיפול</span>
               </div>
             </div>
           </div>
@@ -83,13 +83,13 @@ export default function Treatment() {
             {stages.map((stage) => (
               <div
                 key={stage.num}
-                className="p-6 rounded-3xl border border-white/[0.08] hover:border-white/[0.15] bg-neutral-900/35 transition-colors text-right flex flex-col"
+                className="p-5 sm:p-6 rounded-3xl border border-white/[0.08] hover:border-white/[0.15] bg-neutral-900/35 transition-colors text-right flex flex-col"
               >
-                <span className="font-mono text-logoIce/80 text-xs sm:text-sm font-semibold tracking-wider block mb-2.5">
+                <span className="font-mono text-logoIce/80 text-xs sm:text-sm font-semibold tracking-wider block mb-2">
                   {stage.num}
                 </span>
                 <h4 className="text-base sm:text-lg font-bold text-white mb-2">{stage.title}</h4>
-                <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">{stage.body}</p>
+                <p className="text-[13.5px] sm:text-sm text-neutral-400 leading-relaxed">{stage.body}</p>
               </div>
             ))}
           </div>
@@ -97,25 +97,25 @@ export default function Treatment() {
 
         {/* Detail Cards */}
         <div className="grid md:grid-cols-2 gap-5 sm:gap-8 text-right">
-          <div className="border border-white/[0.08] bg-neutral-900/35 rounded-3xl p-6 sm:p-8">
+          <div className="border border-white/[0.08] bg-neutral-900/35 rounded-3xl p-5 sm:p-8">
             <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">מה עשוי להשתלב במפגש?</h3>
-            <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed mb-3 sm:mb-4">
+            <p className="text-[13.5px] sm:text-sm text-neutral-300 leading-relaxed mb-3 sm:mb-4">
               בהתאם לצורך, המפגש יכול לכלול עבודה ידנית על רקמות רכות ושרירים, עבודה על טווחי תנועה, מתיחות ותרגילים מותאמים.
             </p>
-            <p className="text-xs text-neutral-400 leading-relaxed mb-3 sm:mb-4">
+            <p className="text-[13px] sm:text-xs text-neutral-400 leading-relaxed mb-3 sm:mb-4">
               לדוגמה, אם אתה מגיע עם נוקשות בכתף שמפריעה לך באימון, נוכל לבחון את התנועה, לעבוד על האזורים הרלוונטיים ולשלב תרגול שמתאים למצבך.
             </p>
-            <p className="text-[11px] sm:text-xs text-neutral-500 italic">
+            <p className="text-xs text-neutral-500 italic">
               * לא כל אדם זקוק לאותן טכניקות, ולא כל מפגש יכלול את כל המרכיבים.
             </p>
           </div>
 
-          <div className="border border-white/[0.08] bg-neutral-900/35 rounded-3xl p-6 sm:p-8">
+          <div className="border border-white/[0.08] bg-neutral-900/35 rounded-3xl p-5 sm:p-8">
             <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">ומה קורה לאחר המפגש הראשון?</h3>
-            <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed mb-3 sm:mb-4">
+            <p className="text-[13.5px] sm:text-sm text-neutral-300 leading-relaxed mb-3 sm:mb-4">
               מפגשי המשך נמשכים 45 דקות ויכולים לכלול טיפול גופני, תרגול, הנחיות לבית, התאמות עומס ומעקב אחר ההתקדמות.
             </p>
-            <p className="text-xs text-neutral-400 leading-relaxed">
+            <p className="text-[13px] sm:text-xs text-neutral-400 leading-relaxed">
               אפשר להמשיך במפגשים בודדים או לבחון מסלול טיפולי מתאים. ההמלצה נקבעת לפי הצורך — לא כל אדם זקוק לאותו מספר מפגשים.
             </p>
           </div>

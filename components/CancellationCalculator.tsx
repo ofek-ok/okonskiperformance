@@ -48,19 +48,19 @@ export default function CancellationCalculator() {
       : `${hoursBefore} שעות לפני הטיפול`;
 
   return (
-    <div className="rounded-3xl bg-charcoalDark/90 border border-white/[0.09] p-6 sm:p-8 shadow-[0_14px_40px_-10px_rgba(0,0,0,0.5)]">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
+    <div className="rounded-3xl bg-charcoalDark/90 border border-white/[0.09] p-5 sm:p-8 shadow-[0_14px_40px_-10px_rgba(0,0,0,0.5)]">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3.5 mb-5 sm:mb-6">
         <div>
-          <h3 className="text-lg sm:text-xl font-bold text-white">
+          <h3 className="text-base sm:text-xl font-bold text-white leading-snug">
             בדקו בעצמכם: כמה זמן לפני הטיפול אתם מודיעים?
           </h3>
-          <p className="text-xs sm:text-sm text-silver mt-1">
-            הזיזו את הנקודה על הציר כדי לראות את מדיניות החיוב בזמן אמת.
+          <p className="text-[13px] sm:text-sm text-silver mt-1">
+            הזיזו את הנקודה על הציר או לחצו על השעות לבדיקת מדיניות החיוב.
           </p>
         </div>
 
-        {/* Quick Preset Pills */}
-        <div className="flex flex-wrap items-center gap-2">
+        {/* Quick Preset Pills (40px+ mobile touch height) */}
+        <div className="grid grid-cols-3 sm:flex items-center gap-2">
           {[
             { label: "30 שעות", val: 30 },
             { label: "18 שעות", val: 18 },
@@ -70,10 +70,10 @@ export default function CancellationCalculator() {
               key={preset.val}
               type="button"
               onClick={() => setHoursBefore(preset.val)}
-              className={`text-xs font-semibold px-3 py-1.5 rounded-full border transition-all duration-200 cursor-pointer ${
+              className={`text-xs font-semibold px-3 py-2 min-h-[38px] rounded-full border transition-all duration-200 cursor-pointer text-center ${
                 hoursBefore === preset.val
                   ? "bg-logoIce/20 text-white border-logoIce/50 shadow-sm"
-                  : "bg-white/[0.04] text-silver hover:text-white border-white/10 hover:bg-white/[0.08]"
+                  : "bg-white/[0.04] text-silver hover:text-white border-white/10 hover:bg-white/[0.08] active:bg-white/[0.15]"
               }`}
             >
               {preset.label}
@@ -83,8 +83,8 @@ export default function CancellationCalculator() {
       </div>
 
       {/* Slider Control (RTL-friendly layout: 48+ on right, 0 on left) */}
-      <div className="mb-6">
-        <div className="relative pt-2 pb-1">
+      <div className="mb-5 sm:mb-6">
+        <div className="relative py-3">
           <input
             type="range"
             min={0}
@@ -93,37 +93,37 @@ export default function CancellationCalculator() {
             value={hoursBefore}
             onChange={(e) => setHoursBefore(Number(e.target.value))}
             aria-label="מספר שעות לפני הטיפול"
-            className="w-full h-2.5 rounded-full appearance-none cursor-pointer bg-gradient-to-l from-emerald-500/50 via-amber-500/50 to-rose-500/50 accent-white focus:outline-none focus-visible:ring-2 focus-visible:ring-logoIce"
+            className="w-full h-3 rounded-full appearance-none cursor-pointer touch-pan-y bg-gradient-to-l from-emerald-500/55 via-amber-500/55 to-rose-500/55 accent-white focus:outline-none focus-visible:ring-2 focus-visible:ring-logoIce [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_2px_10px_rgba(0,0,0,0.65)] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-logoIce"
           />
         </div>
 
-        {/* Axis Labels */}
-        <div className="flex justify-between items-center text-[11px] sm:text-xs font-medium text-silver/80 mt-2.5 px-1">
+        {/* Axis Labels (Tappable on Mobile) */}
+        <div className="grid grid-cols-4 gap-1.5 text-[11px] sm:text-xs font-medium text-silver/85 mt-1">
           <button
             type="button"
             onClick={() => setHoursBefore(48)}
-            className="hover:text-white transition-colors cursor-pointer"
+            className="min-h-[36px] py-1.5 px-1 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] active:bg-white/[0.14] hover:text-white transition-colors cursor-pointer text-center"
           >
-            48+ שעות לפני
+            48+ שעות
           </button>
           <button
             type="button"
             onClick={() => setHoursBefore(24)}
-            className="hover:text-white transition-colors cursor-pointer"
+            className="min-h-[36px] py-1.5 px-1 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] active:bg-white/[0.14] hover:text-white transition-colors cursor-pointer text-center"
           >
             24 שעות
           </button>
           <button
             type="button"
             onClick={() => setHoursBefore(15)}
-            className="hover:text-white transition-colors cursor-pointer"
+            className="min-h-[36px] py-1.5 px-1 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] active:bg-white/[0.14] hover:text-white transition-colors cursor-pointer text-center"
           >
             15 שעות
           </button>
           <button
             type="button"
             onClick={() => setHoursBefore(0)}
-            className="hover:text-white transition-colors cursor-pointer"
+            className="min-h-[36px] py-1.5 px-1 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] active:bg-white/[0.14] hover:text-white transition-colors cursor-pointer text-center"
           >
             מועד הטיפול
           </button>
@@ -132,10 +132,10 @@ export default function CancellationCalculator() {
 
       {/* Dynamic Output Card */}
       <div
-        className={`rounded-2xl border p-5 sm:p-6 transition-all duration-300 ${state.accentBorder} ${state.accentBg} ${state.glow}`}
+        className={`rounded-2xl border p-4 sm:p-6 transition-all duration-300 ${state.accentBorder} ${state.accentBg} ${state.glow}`}
       >
-        <div className="flex flex-wrap items-center justify-between gap-3 mb-2.5">
-          <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center justify-between gap-2.5 mb-2.5">
+          <div className="flex flex-wrap items-center gap-2.5">
             <span
               className={`inline-flex items-center px-3.5 py-1 rounded-full text-xs sm:text-sm font-bold border ${state.badgeBg}`}
             >
@@ -149,7 +149,7 @@ export default function CancellationCalculator() {
             {state.feeText}
           </span>
         </div>
-        <p className="text-sm sm:text-[15px] text-silverOff leading-relaxed">
+        <p className="text-[13.5px] sm:text-[15px] text-silverOff leading-relaxed">
           {state.message}
         </p>
       </div>

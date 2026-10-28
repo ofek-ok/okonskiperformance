@@ -132,37 +132,37 @@ export default function VisionAndPolicyPage() {
         {/* =====================================================
             HERO HEADER
            ===================================================== */}
-        <section className="relative pt-32 pb-16 sm:pt-40 sm:pb-20 overflow-hidden border-b border-white/[0.06] bg-gradient-to-b from-[#0E1520] via-charcoalDark to-charcoalDark">
+        <section className="relative pt-28 pb-12 sm:pt-40 sm:pb-20 overflow-hidden border-b border-white/[0.06] bg-gradient-to-b from-[#0E1520] via-charcoalDark to-charcoalDark">
           <div
             className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(125,184,232,0.12)_0%,_transparent_70%)] pointer-events-none"
             aria-hidden="true"
           />
 
           <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10 text-center">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.06] border border-white/15 text-logoIce text-xs sm:text-sm font-semibold tracking-wide mb-6">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.06] border border-white/15 text-logoIce text-xs sm:text-sm font-semibold tracking-wide mb-5 sm:mb-6">
               חזון ומדיניות
             </span>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12] mb-5 text-balance">
+            <h1 className="text-[28px] xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.14] mb-4 sm:mb-5 text-balance">
               הבית לטיפול בכאב,{" "}
               <span className="text-logoIce">שיקום וביצועים</span>
             </h1>
 
-            <p className="text-base sm:text-lg text-silver max-w-2xl mx-auto leading-relaxed mb-8">
+            <p className="text-sm sm:text-lg text-silver max-w-2xl mx-auto leading-relaxed mb-7 sm:mb-8">
               מה מנחה אותנו ב־Okonski Performance בכל טיפול – ומה חשוב לדעת לפני שמגיעים.
             </p>
 
             {/* Quick-Jump Section Pills */}
-            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+            <div className="grid grid-cols-2 sm:flex items-center justify-center gap-2.5 sm:gap-4 max-w-sm sm:max-w-none mx-auto">
               <a
                 href="#vision"
-                className="bg-white text-black hover:bg-neutral-100 font-semibold text-xs sm:text-sm px-6 py-3 rounded-full transition-all duration-200 shadow-sm active:scale-[0.98]"
+                className="bg-white text-black hover:bg-neutral-100 font-semibold text-xs sm:text-sm px-4 sm:px-6 py-3 min-h-[44px] rounded-full transition-all duration-200 shadow-sm active:scale-[0.98] inline-flex items-center justify-center"
               >
                 החזון שלנו
               </a>
               <a
                 href="#policy"
-                className="bg-white/[0.07] hover:bg-white/[0.14] text-white border border-white/15 font-semibold text-xs sm:text-sm px-6 py-3 rounded-full transition-all duration-200 active:scale-[0.98]"
+                className="bg-white/[0.07] hover:bg-white/[0.14] text-white border border-white/15 font-semibold text-xs sm:text-sm px-4 sm:px-6 py-3 min-h-[44px] rounded-full transition-all duration-200 active:scale-[0.98] inline-flex items-center justify-center"
               >
                 מדיניות ביטול והגעה
               </a>
@@ -175,47 +175,47 @@ export default function VisionAndPolicyPage() {
            ===================================================== */}
         <section
           id="vision"
-          className="py-16 sm:py-24 border-b border-white/[0.06] scroll-mt-24"
+          className="py-12 sm:py-24 border-b border-white/[0.06] scroll-mt-20 sm:scroll-mt-24"
           aria-labelledby="vision-heading"
         >
           <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
             {/* Vision Intro */}
-            <div className="max-w-3xl mx-auto text-center mb-14 sm:mb-16">
-              <p className="text-xs sm:text-sm font-bold tracking-wider text-logoIce uppercase mb-3">
+            <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-16">
+              <p className="text-xs sm:text-sm font-bold tracking-wider text-logoIce uppercase mb-2.5 sm:mb-3">
                 החזון שלנו
               </p>
               <h2
                 id="vision-heading"
-                className="text-2xl sm:text-4xl font-extrabold text-white leading-tight text-balance"
+                className="text-xl sm:text-4xl font-extrabold text-white leading-snug sm:leading-tight text-balance"
               >
                 טיפול איכותי מתחיל בהבנה מעמיקה של האדם שמולנו – ולא רק של האזור הכואב.
               </h2>
             </div>
 
             {/* 5 Principles Header */}
-            <div className="mb-8 text-center">
-              <h3 className="text-lg sm:text-xl font-bold text-silverOff">
+            <div className="mb-6 sm:mb-8 text-center">
+              <h3 className="text-base sm:text-xl font-bold text-silverOff">
                 חמישה עקרונות שמלווים כל טיפול
               </h3>
             </div>
 
             {/* 5 Principles Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mb-14 sm:mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-16">
               {VISION_PRINCIPLES.map((principle, idx) => (
                 <div
                   key={principle.title}
-                  className={`rounded-3xl bg-steelDark/90 border border-white/[0.08] p-6 sm:p-7 shadow-[0_14px_34px_-10px_rgba(0,0,0,0.45)] hover:border-logoIce/30 transition-all duration-300 flex flex-col justify-between ${
+                  className={`rounded-3xl bg-steelDark/90 border border-white/[0.08] p-5 sm:p-7 shadow-[0_14px_34px_-10px_rgba(0,0,0,0.45)] hover:border-logoIce/30 transition-all duration-300 flex flex-col justify-between ${
                     idx === 4 ? "md:col-span-2 lg:col-span-1" : ""
                   }`}
                 >
                   <div>
-                    <div className="w-12 h-12 rounded-2xl bg-logoIce/12 border border-logoIce/25 text-logoIce flex items-center justify-center mb-5">
+                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-logoIce/12 border border-logoIce/25 text-logoIce flex items-center justify-center mb-4 sm:mb-5">
                       {principle.icon}
                     </div>
-                    <h4 className="text-lg sm:text-xl font-bold text-white mb-2.5">
+                    <h4 className="text-lg sm:text-xl font-bold text-white mb-2">
                       {principle.title}
                     </h4>
-                    <p className="text-sm sm:text-[15px] text-silver leading-relaxed">
+                    <p className="text-[13.5px] sm:text-[15px] text-silver leading-relaxed">
                       {principle.description}
                     </p>
                   </div>
@@ -224,25 +224,25 @@ export default function VisionAndPolicyPage() {
             </div>
 
             {/* Accompaniment & Mission Block */}
-            <div className="rounded-3xl bg-gradient-to-br from-[#131C28] via-steelDark to-[#0E131B] border border-white/[0.1] p-7 sm:p-10 lg:p-12 shadow-[0_18px_45px_-12px_rgba(0,0,0,0.6)]">
+            <div className="rounded-3xl bg-gradient-to-br from-[#131C28] via-steelDark to-[#0E131B] border border-white/[0.1] p-5 sm:p-10 lg:p-12 shadow-[0_18px_45px_-12px_rgba(0,0,0,0.6)]">
               <div className="max-w-3xl mx-auto text-center">
-                <h3 className="text-xl sm:text-2xl font-extrabold text-white mb-5">
+                <h3 className="text-lg sm:text-2xl font-extrabold text-white mb-4 sm:mb-5">
                   אנחנו מלווים אתכם לאורך כל הדרך
                 </h3>
 
                 {/* Condition / Goal Pills */}
-                <div className="flex flex-wrap items-center justify-center gap-2.5 mb-7">
+                <div className="flex flex-wrap items-center justify-center gap-2 mb-6 sm:mb-7">
                   {ACCOMPANIMENT_TAGS.map((tag) => (
                     <span
                       key={tag}
-                      className="px-4 py-1.5 rounded-full bg-white/[0.06] border border-white/12 text-xs sm:text-sm font-medium text-silverOff"
+                      className="px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/12 text-xs sm:text-sm font-medium text-silverOff"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <p className="text-sm sm:text-base text-silver leading-relaxed">
+                <p className="text-[13.5px] sm:text-base text-silver leading-relaxed">
                   במהלך הדרך ליווינו מתאמנים, ספורטאים ואנשי קריירה בהפחתת הכאב, בשיפור התנועה ובחזרה לאימונים, לעבודה ולשגרה – ובעיקר לתחושת ביטחון מלאה בגוף. זו השליחות שמובילה אותנו בכל יום: טיפול מקצועי, מדויק ואישי, מתוך מחויבות אמיתית לבריאות, ליכולת הגופנית ולאיכות החיים של כל מי שפונה אלינו.
                 </p>
               </div>
@@ -255,68 +255,68 @@ export default function VisionAndPolicyPage() {
            ===================================================== */}
         <section
           id="policy"
-          className="py-16 sm:py-24 border-b border-white/[0.06] bg-[#090B0E] scroll-mt-24"
+          className="py-12 sm:py-24 border-b border-white/[0.06] bg-[#090B0E] scroll-mt-20 sm:scroll-mt-24"
           aria-labelledby="policy-heading"
         >
           <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
             {/* Policy Header */}
-            <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-14">
-              <p className="text-xs sm:text-sm font-bold tracking-wider text-logoIce uppercase mb-3">
+            <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
+              <p className="text-xs sm:text-sm font-bold tracking-wider text-logoIce uppercase mb-2.5 sm:mb-3">
                 מדיניות הקליניקה
               </p>
               <h2
                 id="policy-heading"
-                className="text-2xl sm:text-4xl font-extrabold text-white leading-tight mb-4"
+                className="text-2xl sm:text-4xl font-extrabold text-white leading-tight mb-3.5 sm:mb-4"
               >
                 מדיניות ביטול והגעה לטיפולים
               </h2>
-              <p className="text-sm sm:text-base text-silver leading-relaxed">
+              <p className="text-[13.5px] sm:text-base text-silver leading-relaxed">
                 הזמן שנקבע לכם שמור עבורכם בלבד. כשתור מתבטל ברגע האחרון, מטופל אחר שחיכה לו כבר לא יכול להגיע. לכן קבענו כללים פשוטים וברורים:
               </p>
             </div>
 
             {/* 3 Cancellation Tier Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 mb-5">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-5">
               {/* Tier 1: Free */}
-              <div className="rounded-3xl bg-steelDark/90 border border-emerald-400/25 p-6 sm:p-7 text-center flex flex-col justify-between shadow-lg">
+              <div className="rounded-3xl bg-steelDark/90 border border-emerald-400/25 p-5 sm:p-7 text-center flex flex-col justify-between shadow-lg">
                 <div>
-                  <span className="inline-block text-2xl sm:text-3xl font-extrabold text-emerald-300 mb-2">
+                  <span className="inline-block text-2xl sm:text-3xl font-extrabold text-emerald-300 mb-1.5 sm:mb-2">
                     ללא עלות
                   </span>
-                  <p className="text-sm sm:text-base font-bold text-white mb-2">
+                  <p className="text-sm sm:text-base font-bold text-white mb-1.5">
                     24 שעות ויותר לפני הטיפול
                   </p>
-                  <p className="text-xs sm:text-sm text-silver leading-relaxed">
+                  <p className="text-[13px] sm:text-sm text-silver leading-relaxed">
                     ביטול או שינוי מועד בלי חיוב.
                   </p>
                 </div>
               </div>
 
               {/* Tier 2: 50% */}
-              <div className="rounded-3xl bg-steelDark/90 border border-amber-400/25 p-6 sm:p-7 text-center flex flex-col justify-between shadow-lg">
+              <div className="rounded-3xl bg-steelDark/90 border border-amber-400/25 p-5 sm:p-7 text-center flex flex-col justify-between shadow-lg">
                 <div>
-                  <span className="inline-block text-2xl sm:text-3xl font-extrabold text-amber-300 mb-2">
+                  <span className="inline-block text-2xl sm:text-3xl font-extrabold text-amber-300 mb-1.5 sm:mb-2">
                     50%
                   </span>
-                  <p className="text-sm sm:text-base font-bold text-white mb-2">
+                  <p className="text-sm sm:text-base font-bold text-white mb-1.5">
                     בין 24 ל־15 שעות לפני הטיפול
                   </p>
-                  <p className="text-xs sm:text-sm text-silver leading-relaxed">
+                  <p className="text-[13px] sm:text-sm text-silver leading-relaxed">
                     חיוב של חצי ממחיר הטיפול.
                   </p>
                 </div>
               </div>
 
               {/* Tier 3: 100% */}
-              <div className="rounded-3xl bg-steelDark/90 border border-rose-400/25 p-6 sm:p-7 text-center flex flex-col justify-between shadow-lg">
+              <div className="rounded-3xl bg-steelDark/90 border border-rose-400/25 p-5 sm:p-7 text-center flex flex-col justify-between shadow-lg">
                 <div>
-                  <span className="inline-block text-2xl sm:text-3xl font-extrabold text-rose-300 mb-2">
+                  <span className="inline-block text-2xl sm:text-3xl font-extrabold text-rose-300 mb-1.5 sm:mb-2">
                     100%
                   </span>
-                  <p className="text-sm sm:text-base font-bold text-white mb-2">
+                  <p className="text-sm sm:text-base font-bold text-white mb-1.5">
                     פחות מ־15 שעות, או אי־הגעה
                   </p>
-                  <p className="text-xs sm:text-sm text-silver leading-relaxed">
+                  <p className="text-[13px] sm:text-sm text-silver leading-relaxed">
                     חיוב מלא של מחיר הטיפול.
                   </p>
                 </div>

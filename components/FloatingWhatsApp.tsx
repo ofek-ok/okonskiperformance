@@ -8,7 +8,7 @@ export default function FloatingWhatsApp() {
       href="https://wa.me/972555172571"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-5 left-4 sm:left-5 z-40 flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#20BA56]/85 hover:bg-[#20BA56] text-white shadow-lg backdrop-blur-sm transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#20BA56] focus-visible:ring-offset-2 focus-visible:ring-offset-primary cursor-pointer border border-white/15"
+      className="fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] left-4 sm:left-5 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-[#20BA56]/90 hover:bg-[#20BA56] text-white shadow-lg backdrop-blur-sm transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#20BA56] focus-visible:ring-offset-2 focus-visible:ring-offset-primary cursor-pointer border border-white/15"
       aria-label="פנייה בוואטסאפ אל Okonski Performance (נפתח בלשונית חדשה)"
     >
       <svg

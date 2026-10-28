@@ -62,10 +62,10 @@ export default function FAQ() {
           {questions.map(([q, a]) => (
             <details
               key={q}
-              className="group rounded-2xl border border-white/[0.08] bg-neutral-900/35 open:bg-neutral-900/65 open:border-white/[0.16] px-5 sm:px-7 py-4 sm:py-5 transition-all duration-200"
+              className="group rounded-2xl border border-white/[0.08] bg-neutral-900/35 open:bg-neutral-900/65 open:border-white/[0.16] px-4 sm:px-7 py-3.5 sm:py-5 transition-all duration-200"
             >
-              <summary className="cursor-pointer text-white font-semibold text-sm sm:text-base flex items-center justify-between gap-4 list-none focus:outline-none focus-visible:ring-1 focus-visible:ring-logoIce rounded min-h-[36px]">
-                <span>{q}</span>
+              <summary className="cursor-pointer text-white font-semibold text-[14.5px] sm:text-base flex items-center justify-between gap-3.5 list-none focus:outline-none focus-visible:ring-1 focus-visible:ring-logoIce rounded min-h-[44px]">
+                <span className="leading-snug">{q}</span>
                 <span className="w-8 h-8 rounded-full border border-white/15 bg-white/[0.04] group-hover:bg-white/[0.1] flex items-center justify-center shrink-0 text-silverOff group-hover:text-white transition-all duration-200">
                   <svg
                     className="w-3.5 h-3.5 transition-transform duration-200 group-open:rotate-180"
@@ -77,7 +77,7 @@ export default function FAQ() {
                   </svg>
                 </span>
               </summary>
-              <p className="text-neutral-300 text-xs sm:text-sm leading-relaxed pt-3.5 sm:pt-4 mt-3.5 border-t border-white/[0.06] pl-2">
+              <p className="text-neutral-300 text-[13.5px] sm:text-sm leading-relaxed pt-3.5 sm:pt-4 mt-3 border-t border-white/[0.06] pl-1">
                 {a}
               </p>
             </details>
