@@ -3,6 +3,7 @@ import "./globals.css";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import FloatingAccessibility from "@/components/FloatingAccessibility";
 import CookieBanner from "@/components/CookieBanner";
+import { Analytics } from "@vercel/analytics/next";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -52,6 +53,7 @@ export default function RootLayout({
         <FloatingWhatsApp />
         <FloatingAccessibility />
         <CookieBanner />
+        <Analytics />
       </body>
     </html>
   );
