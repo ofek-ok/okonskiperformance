@@ -4,11 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const SOCIAL_LINKS = {
-  instagram: "https://instagram.com",
-  facebook: "https://facebook.com",
-  linkedin: "https://linkedin.com",
-  tiktok: "https://tiktok.com",
-  maps: "https://maps.google.com",
+  instagram: "https://www.instagram.com/okonski.performance/",
+  facebook: "https://www.facebook.com/share/18Pc4EghgP/?mibextid=wwXIfr",
+  linkedin: "https://www.linkedin.com/company/okonski-preformance",
+  tiktok: "https://www.tiktok.com/@okonskiperformanc",
+  whatsapp: "https://wa.me/972555172571",
+  email: "okonski.preformance@gmail.com",
 };
 
 export default function Footer() {
@@ -33,21 +34,30 @@ export default function Footer() {
             <p className="text-xs text-[#A8B0B7] font-mono tracking-wide mt-1">
               טיפול גופני, התאוששות ושיפור יכולת
             </p>
-            <div className="mt-4 pt-4 border-t border-white/10 flex flex-col gap-1 text-xs text-[#A8B0B7]">
+            <div className="mt-5 pt-4 border-t border-white/10 flex flex-col gap-2 text-xs text-[#A8B0B7]">
               <span>קליניקה פרטית · תל אביב והסביבה</span>
-              <a
-                href="https://wa.me/972555172571"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#F5F5F2] hover:text-white underline font-mono inline-flex items-center gap-1.5 mt-1"
-              >
-                <span>וואטסאפ ישיר: 055-5172571</span>
-                <span>←</span>
-              </a>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 mt-1 font-mono">
+                <a
+                  href={SOCIAL_LINKS.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#F5F5F2] hover:text-white underline inline-flex items-center gap-1.5 transition-colors"
+                >
+                  <span>WhatsApp: 055-5172571</span>
+                  <span>←</span>
+                </a>
+                <a
+                  href={`mailto:${SOCIAL_LINKS.email}`}
+                  className="text-[#F5F5F2] hover:text-white underline inline-flex items-center gap-1.5 transition-colors"
+                >
+                  <span>Email: {SOCIAL_LINKS.email}</span>
+                  <span>←</span>
+                </a>
+              </div>
             </div>
           </div>
 
-          {/* Social Links & Directory */}
+          {/* Social Links */}
           <div className="flex flex-col items-start md:items-end gap-3 w-full md:w-auto">
             <p className="font-mono text-xs uppercase tracking-wider text-[#A8B0B7]" dir="ltr">
               FOLLOW OP
@@ -108,21 +118,6 @@ export default function Footer() {
               >
                 <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.47 6.27 6.27 0 0 0 1.95-4.52V8.09a8.28 8.28 0 0 0 4.82 1.54v-3.5a4.8 4.8 0 0 1-1-.44z" />
-                </svg>
-              </a>
-
-              {/* Google Maps */}
-              <a
-                href={SOCIAL_LINKS.maps}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="ניווט ב-Google Maps"
-                title="Google Maps"
-                className="w-10 h-10 rounded-sm bg-white/[0.05] border border-white/15 text-[#A8B0B7] hover:text-white hover:border-white/40 flex items-center justify-center transition-colors cursor-pointer"
-              >
-                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M12 21s-7-6.58-7-12a7 7 0 1 1 14 0c0 5.42-7 12-7 12z" />
-                  <circle cx="12" cy="9" r="2.5" />
                 </svg>
               </a>
             </div>

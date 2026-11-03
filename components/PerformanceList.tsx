@@ -533,8 +533,8 @@ export default function PerformanceList() {
               </a>
             </div>
 
-            {/* Quick Contact Card */}
-            <div className="grid grid-cols-1">
+            {/* Quick Contact Cards */}
+            <div className="grid grid-cols-1 gap-3">
               <a
                 href="https://wa.me/972555172571"
                 target="_blank"
@@ -543,9 +543,20 @@ export default function PerformanceList() {
               >
                 <div>
                   <p className="font-mono text-xs text-[#49677F] tracking-wide mb-1">וואטסאפ ישיר</p>
-                  <p className="text-base font-bold text-[#22272C]">055-5172571</p>
+                  <p className="text-base font-bold text-[#22272C]" dir="ltr">055-5172571</p>
                 </div>
                 <span className="text-xs font-semibold text-[#142333]">שליחת הודעה ←</span>
+              </a>
+
+              <a
+                href="mailto:okonski.preformance@gmail.com"
+                className="rounded-sm bg-[#FFFFFF] border border-[#A8B0B7]/35 hover:border-[#142333]/50 p-5 flex items-center justify-between transition-colors shadow-sm"
+              >
+                <div>
+                  <p className="font-mono text-xs text-[#49677F] tracking-wide mb-1">דוא״ל ישיר</p>
+                  <p className="text-sm font-semibold text-[#22272C]" dir="ltr">okonski.preformance@gmail.com</p>
+                </div>
+                <span className="text-xs font-semibold text-[#142333]">שליחת מייל ←</span>
               </a>
             </div>
           </div>

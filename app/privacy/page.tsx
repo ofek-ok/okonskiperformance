@@ -15,8 +15,8 @@ export default function PrivacyPage() {
         <p>Okonski Performance (&ldquo;OP&rdquo;, &ldquo;אנחנו&rdquo; או &ldquo;העסק&rdquo;) מכבדת את פרטיות המשתמשים באתר ופועלת לשמירה על המידע האישי הנמסר לה והשימוש הנעשה בו.</p>
         <p>מדיניות פרטיות זו מסבירה איזה מידע עשוי להיאסף במסגרת השימוש באתר, כיצד אנו משתמשים בו, עם מי הוא עשוי להיות משותף, כיצד הוא נשמר ומהן האפשרויות העומדות לרשות המשתמשים ביחס למידע שלהם.</p>
         <p>השימוש באתר ומסירת מידע באמצעותו כפופים למדיניות זו.</p>
-        <p>בעל השליטה במידע: <strong>[BUSINESS LEGAL NAME]</strong></p>
-        <p>פרטי התקשרות בענייני פרטיות: <strong>[PRIVACY EMAIL]</strong> | <strong>[BUSINESS PHONE — IF APPLICABLE]</strong></p>
+        <p>בעל השליטה במידע: <strong>Okonski Performance</strong></p>
+        <p>פרטי התקשרות בענייני פרטיות: <a href="mailto:okonski.preformance@gmail.com" className="underline">okonski.preformance@gmail.com</a> | <strong>055-5172571</strong></p>
       </section>
 
       <section aria-labelledby="priv-2">
@@ -137,7 +137,7 @@ export default function PrivacyPage() {
       <section aria-labelledby="priv-14">
         <h2 id="priv-14">14. יצירת קשר</h2>
         <p>לשאלות בנושא פרטיות ומידע אישי:</p>
-        <p><strong>[BUSINESS LEGAL NAME]</strong><br /><strong>[PRIVACY EMAIL]</strong></p>
+        <p><strong>Okonski Performance</strong><br /><a href="mailto:okonski.preformance@gmail.com" className="underline">okonski.preformance@gmail.com</a> | <strong>055-5172571</strong></p>
       </section>
 
     </LegalPageLayout>

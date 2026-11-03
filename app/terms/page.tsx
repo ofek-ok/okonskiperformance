@@ -88,7 +88,7 @@ export default function TermsPage() {
 
       <section aria-labelledby="terms-13">
         <h2 id="terms-13">13. יצירת קשר</h2>
-        <p><strong>[BUSINESS LEGAL NAME]</strong><br /><strong>[BUSINESS EMAIL]</strong></p>
+        <p><strong>Okonski Performance</strong><br /><a href="mailto:okonski.preformance@gmail.com" className="underline">okonski.preformance@gmail.com</a> | <strong>055-5172571</strong></p>
       </section>
 
     </LegalPageLayout>

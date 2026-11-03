@@ -166,6 +166,12 @@ export default function Navbar() {
               שיחה ישירה בוואטסאפ
             </a>
             <a
+              href="mailto:okonski.preformance@gmail.com"
+              className="text-center py-1.5 text-xs font-mono text-[#22272C]/75 hover:text-[#142333]"
+            >
+              okonski.preformance@gmail.com
+            </a>
+            <a
               href="/#performance-list"
               onClick={() => setMenuOpen(false)}
               className="bg-[#142333] text-[#F5F5F2] text-center font-medium py-3 rounded-sm text-sm"
