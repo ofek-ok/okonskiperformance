@@ -9,27 +9,27 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#F5F5F2",
+  themeColor: "#0A0B0D",
 };
 
 export const metadata: Metadata = {
-  title: "Okonski Performance | טיפול ספורטיבי, שיקום והתאוששות",
+  title: "Okonski Performance | ספורטתרפיה, התאוששות ושיפור יכולת",
   description:
-    "Okonski Performance מציעה טיפול גופני אישי לספורטאים, למתאמנים ולאנשי קריירה. כאב ופציעה, התאוששות ושיפור יכולת. הצטרפו לרשימת העדכונים.",
+    "Okonski Performance — טיפול גופני אישי, התאוששות ושיפור יכולת לספורטאים, למתאמנים ולאנשי קריירה תובעניים. הצטרפות לרשימת המתעניינים.",
   icons: {
-    icon: '/logo-official.png',
-    apple: '/logo-official.png',
+    icon: "/logo-official.png",
+    apple: "/logo-official.png",
   },
   openGraph: {
     title: "Okonski Performance",
-    description: "הגוף שלך צריך לעמוד בקצב שלך.",
+    description: "הגוף שלך חייב לעמוד בקצב שלך.",
     locale: "he_IL",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Okonski Performance | טיפול ספורטיבי, שיקום והתאוששות",
-    description: "טיפול גופני אישי לספורטאים, למתאמנים ולאנשי קריירה.",
+    title: "Okonski Performance | ספורטתרפיה, התאוששות ושיפור יכולת",
+    description: "הגוף שלך חייב לעמוד בקצב שלך.",
   },
 };
 
@@ -44,11 +44,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=DM+Sans:wght@500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="font-heebo bg-[#F5F5F2] text-[#22272C] antialiased">
+      <body className="font-heebo bg-[#0A0B0D] text-[#E2E8F0] antialiased">
         {children}
         <FloatingAccessibility />
         <CookieBanner />

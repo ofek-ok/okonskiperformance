@@ -37,7 +37,7 @@ export default function Home() {
           __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
         }}
       />
-      <main className="bg-[#F5F5F2] text-[#22272C] selection:bg-[#142333] selection:text-[#F5F5F2]">
+      <main className="bg-[#0A0B0D] text-[#E2E8F0] selection:bg-[#3E6FA8] selection:text-white">
         <Navbar />
         <Hero />
         <WhoItsFor />

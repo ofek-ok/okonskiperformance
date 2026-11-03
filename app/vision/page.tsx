@@ -341,26 +341,26 @@ export default function VisionAndPolicyPage() {
         {/* =====================================================
             BOTTOM CTA SECTION
            ===================================================== */}
-        <section className="py-16 sm:py-20 bg-[#142333] text-[#F5F5F2]">
+        <section className="py-16 sm:py-20 bg-[#0A0B0D] text-[#E2E8F0] border-t border-white/10">
           <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
-            <h2 className="text-2xl sm:text-4xl font-bold text-[#F5F5F2] mb-4">
+            <h2 className="text-2xl sm:text-4xl font-bold text-white mb-4">
               מוכנים להתחיל?
             </h2>
-            <p className="text-sm sm:text-base text-[#A8B0B7] mb-8 max-w-xl mx-auto">
-              הבטיחו את מקומכם לקראת הפתיחה או שלחו לנו הודעה ישירה בוואטסאפ לכל שאלה והתייעצות.
+            <p className="text-sm sm:text-base text-[#94A3B8] mb-8 max-w-xl mx-auto">
+              הפעילות נמצאת בהקמה. הצטרפו לרשימת המתעניינים לקבלת עדכון אישי עם הפתיחה או שלחו הודעה ישירה בוואטסאפ.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4">
               <Link
                 href="/#performance-list"
-                className="w-full sm:w-auto bg-[#F5F5F2] text-[#142333] hover:bg-white font-semibold text-sm px-8 py-3.5 rounded-sm transition-colors inline-flex items-center justify-center min-h-[46px]"
+                className="w-full sm:w-auto bg-[#3E6FA8] hover:bg-[#1E4E8C] text-white font-semibold text-sm px-8 py-3.5 rounded-sm transition-colors inline-flex items-center justify-center min-h-[46px]"
               >
-                שריון קדימות בתורים ←
+                הצטרפות לרשימת המתעניינים ←
               </Link>
               <a
                 href="https://wa.me/972555172571"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto bg-transparent hover:bg-white/10 text-[#F5F5F2] border border-white/20 font-semibold text-sm px-8 py-3.5 rounded-sm transition-colors inline-flex items-center justify-center min-h-[46px]"
+                className="w-full sm:w-auto bg-transparent hover:bg-white/10 text-white border border-white/25 font-semibold text-sm px-8 py-3.5 rounded-sm transition-colors inline-flex items-center justify-center min-h-[46px]"
               >
                 שאלה? כתבו לנו בוואטסאפ
               </a>

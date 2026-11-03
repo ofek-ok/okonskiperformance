@@ -20,7 +20,7 @@ export default function LegalPageLayout({ title, label, lastUpdated = "2026", ch
         </a>
 
         {/* Hero Strip */}
-        <div className="bg-[#FFFFFF] border-b border-[#A8B0B7]/30 pt-32 pb-12 sm:pb-16 relative">
+        <div className="bg-[#FFFFFF] border-b border-[#A8B0B7]/30 pt-16 pb-12 sm:pb-16 relative">
           <div className="container mx-auto px-4 sm:px-8 max-w-4xl relative z-10 text-right">
             <p className="font-mono text-[#49677F] font-semibold tracking-wider uppercase text-xs mb-3">{label}</p>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22272C] leading-tight mb-4">{title}</h1>

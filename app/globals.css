@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=DM+Sans:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,109 +9,37 @@
     direction: rtl;
     font-family: 'Heebo', sans-serif;
     scroll-behavior: smooth;
-    background-color: #F5F5F2;
-    color: #22272C;
+    background-color: #0A0B0D;
+    color: #E2E8F0;
   }
 
   body {
-    background-color: #F5F5F2;
-    color: #22272C;
+    background-color: #0A0B0D;
+    color: #E2E8F0;
     @apply antialiased font-heebo;
   }
 
-  * {
-    box-sizing: border-box;
-  }
+  * { box-sizing: border-box; }
 
-  ::selection {
-    background-color: #142333;
-    color: #F5F5F2;
-  }
+  ::selection { background-color: #3E6FA8; color: #FFFFFF; }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold tracking-tight text-[#22272C];
-  }
+  h1, h2, h3, h4, h5, h6 { @apply font-bold tracking-tight; }
 }
 
 @layer components {
-  /* ── Swiss Editorial Buttons ───────────────────────────── */
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2
-           bg-[#142333] text-[#F5F5F2] font-medium px-6 py-3.5
-           text-sm tracking-wide rounded-sm
-           hover:bg-[#22272C] active:scale-[0.99]
-           transition-colors duration-200 cursor-pointer;
+           bg-[#3E6FA8] text-white font-semibold px-7 py-3.5
+           text-sm sm:text-base rounded-sm
+           hover:bg-[#1E4E8C] transition-colors duration-200 cursor-pointer;
   }
-
-  .btn-secondary {
+  .btn-outline-light {
     @apply inline-flex items-center justify-center gap-2
-           bg-transparent text-[#142333] font-medium px-6 py-3.5
-           text-sm tracking-wide rounded-sm
-           border border-[#142333]
-           hover:bg-[#142333] hover:text-[#F5F5F2] active:scale-[0.99]
-           transition-colors duration-200 cursor-pointer;
+           border border-white/30 text-white font-medium px-7 py-3.5
+           text-sm rounded-sm hover:border-white transition-colors cursor-pointer;
   }
-
-  .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2
-           bg-transparent text-[#22272C] font-medium px-6 py-3.5
-           text-sm tracking-wide rounded-sm
-           border border-[#A8B0B7]/40
-           hover:border-[#142333] hover:text-[#142333]
-           transition-colors duration-200 cursor-pointer;
-  }
-
-  .btn-logo-metallic {
-    @apply inline-flex items-center justify-center gap-2
-           bg-[#142333] text-[#F5F5F2] font-medium px-6 py-3.5
-           text-sm tracking-wide rounded-sm
-           hover:bg-[#22272C] active:scale-[0.99]
-           transition-colors duration-200 cursor-pointer;
-  }
-
-  /* ── Labels & Hairlines ────────────────────────────── */
   .eyebrow {
-    @apply text-[#49677F] text-xs font-mono tracking-wider uppercase mb-2 block font-medium;
-  }
-
-  .section-rule {
-    @apply w-12 h-px bg-[#A8B0B7]/40 mb-6 block;
-  }
-
-  /* ── Surfaces & Cards ─────────────────────────────── */
-  .card-editorial {
-    @apply bg-white border border-[#A8B0B7]/30 rounded-sm p-6 sm:p-8;
-  }
-
-  .card-steel {
-    @apply bg-white border border-[#A8B0B7]/30 rounded-sm transition-colors duration-200;
-  }
-
-  .card-dark {
-    @apply bg-[#142333] text-[#F5F5F2] border border-white/10 rounded-sm;
-  }
-
-  /* ── Inputs ────────────────────────────── */
-  .input-editorial {
-    @apply w-full bg-white border border-[#A8B0B7]/50 text-[#22272C] placeholder-[#A8B0B7]
-           px-4 py-3 text-sm rounded-sm
-           focus:outline-none focus:border-[#142333] focus:ring-1 focus:ring-[#142333]
-           transition-colors duration-200;
-  }
-
-  .input-dark {
-    @apply w-full bg-[#142333] border border-white/20 text-[#F5F5F2] placeholder-[#A8B0B7]
-           px-4 py-3 text-sm rounded-sm
-           focus:outline-none focus:border-white
-           transition-colors duration-200;
-  }
-
-  .ambient-glow {
-    background: transparent;
-  }
-
-  .brushed-panel {
-    @apply bg-white border border-[#A8B0B7]/30 rounded-sm;
+    @apply text-[#94A3B8] text-xs font-medium tracking-[0.2em] uppercase mb-4 block;
   }
 }
 

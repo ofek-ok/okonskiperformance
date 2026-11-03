@@ -7,63 +7,55 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Refined Swiss / Editorial Brand Color Palette
-        deepNavy: "#142333",   // Primary brand anchor (15-25% dark sections)
-        charcoal: "#22272C",   // Headlines, primary body ink
-        offWhite: "#F5F5F2",   // Main canvas background (65-75% light)
-        steelBlue: "#49677F",  // Secondary accents & interactive elements
-        coolGrey: "#A8B0B7",   // Secondary text, hairline dividers
-        pureWhite: "#FFFFFF",  // Clean card / slab backgrounds
+        charcoalDark: "#0A0B0D", // Brand Charcoal Black - מתוך brand.png
+        steelDark: "#14181F",    // משטחי בסיס עשירים
+        steelBase: "#1E2229",    // Brand Dark Steel Grey - מתוך brand.png
+        steelElevated: "#252C36",// משטחים מוגבהים
+        steelBorder: "rgba(226, 232, 240, 0.12)",
+        steelBorderHover: "rgba(115, 180, 230, 0.35)",
 
-        // Functional / Semantic Aliases
-        canvasLight: "#F5F5F2",
-        canvasDark: "#142333",
-        textPrimary: "#22272C",
-        textSecondary: "#49677F",
-        textMuted: "#6B7280",
-        borderHairline: "rgba(168, 176, 183, 0.35)",
-
-        // Compatibility Mappings mapped to new palette
-        charcoalDark: "#F5F5F2", // Legacy dark mappings redirected to light canvas
-        steelDark: "#FFFFFF",
-        steelBase: "#F5F5F2",
-        steelElevated: "#FFFFFF",
-        steelBorder: "rgba(168, 176, 183, 0.35)",
-        steelBorderHover: "#49677F",
-
-        logoIce: "#49677F",      // Replaced cyan with Steel Blue
-        logoBlue: "#142333",     // Replaced bright blue with Deep Navy
-        logoDeep: "#142333",
-        logoMidnight: "#0E1824",
+        // צבעי גרדיאנט מטאליים שנלקחו ישירות מסמל ה-Ø הרשמי
+        logoIce: "#73B4E6",      // הברק העליון בלוגו
+        logoBlue: "#3E6FA8",     // כחול המותג הרשמי - Premium Steel Blue
+        logoDeep: "#1E4E8C",     // גוף הסמל בלוגו
+        logoMidnight: "#0E2A52", // צל הלוגו העמוק
 
         silverPure: "#FFFFFF",
-        silverOff: "#22272C",    // Mapped to Charcoal for high readability
-        silverMuted: "#49677F",
-        silverDark: "#6B7280",
+        silverOff: "#E2E8F0",    // Brand Off-White / Silver - מתוך brand.png
+        silverMuted: "#94A3B8",  // טקסט גוף קריא ונינוח
+        silverDark: "#64748B",   // תוויות משניות ומטא
 
-        primary: "#142333",
-        elevated: "#FFFFFF",
-        brand: "#142333",
-        "brand-bright": "#49677F",
-        "brand-dim": "#142333",
-        silver: "#22272C",
-        "primary-text": "#22272C",
-        "secondary-text": "#6B7280",
+        // Backward compatibility mappings
+        primary: "#0A0B0D",
+        charcoal: "#14181F",
+        elevated: "#1E2229",
+        brand: "#3E6FA8",
+        "brand-bright": "#73B4E6",
+        "brand-dim": "#1E4E8C",
+        silver: "#E2E8F0",
+        "primary-text": "#111317",
+        "secondary-text": "#94A3B8",
       },
       fontFamily: {
         heebo: ["Heebo", "sans-serif"],
-        sans: ["Heebo", "Inter", "sans-serif"],
+        jakarta: ["Plus Jakarta Sans", "sans-serif"],
+        barlow: ["Barlow Condensed", "sans-serif"],
         manrope: ["Manrope", "sans-serif"],
+        sans: ["Heebo", "Inter", "sans-serif"],
         mono: ["ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
       },
-      borderRadius: {
-        sm: "3px",
-        DEFAULT: "4px",
-        md: "6px",
-        lg: "8px",
-      },
       backgroundImage: {
-        "gradient-editorial": "linear-gradient(180deg, #F5F5F2 0%, #FFFFFF 100%)",
+        "gradient-dark": "linear-gradient(135deg, #0A0B0D 0%, #14181F 100%)",
+        "gradient-card": "linear-gradient(135deg, #1A1F26 0%, #13171D 100%)",
+      },
+      animation: {
+        "fade-up": "fadeUp 0.6s ease-out forwards",
+      },
+      keyframes: {
+        fadeUp: {
+          "0%": { opacity: 0, transform: "translateY(20px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
       },
     },
   },

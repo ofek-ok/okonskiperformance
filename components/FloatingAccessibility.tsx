@@ -77,7 +77,7 @@ export default function FloatingAccessibility() {
         aria-label="פתיחת תפריט נגישות"
         aria-expanded={isOpen}
         aria-controls="a11y-modal"
-        className="fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] right-4 sm:right-5 z-40 flex h-11 w-11 items-center justify-center rounded-sm bg-[#142333] hover:bg-[#22272C] text-[#F5F5F2] shadow-md transition-colors cursor-pointer border border-white/20"
+        className="fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] right-4 sm:right-5 z-40 flex h-10 w-10 items-center justify-center rounded-sm bg-[#14181F] hover:bg-[#1E2229] text-[#E2E8F0] transition-colors cursor-pointer border border-white/15"
       >
         {/* Universal Accessibility Icon */}
         <svg
