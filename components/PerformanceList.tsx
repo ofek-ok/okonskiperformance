@@ -64,7 +64,7 @@ export default function PerformanceList() {
     email: "",
     note: "",
   });
-  const [selectedTopic, setSelectedTopic] = useState<string>("פציעת ספורט");
+  const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
   const [painLevel, setPainLevel] = useState<number | null>(null);
 
   useEffect(() => {
@@ -90,7 +90,9 @@ export default function PerformanceList() {
     } else if (!/^[\d\s\-+()\u200f]{9,}$/.test(formData.phone.trim())) {
       e.phone = "מספר טלפון אינו תקין";
     }
-    if (formData.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
+    if (!formData.email.trim()) {
+      e.email = "כתובת אימייל נדרשת ליצירת קשר";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
       e.email = "כתובת אימייל אינה תקינה";
     }
     return e;
@@ -230,99 +232,8 @@ export default function PerformanceList() {
                 className="border border-white/[0.1] bg-neutral-900/50 backdrop-blur-md rounded-3xl p-5 sm:p-8 lg:p-9 text-right space-y-6 shadow-[0_20px_50px_-14px_rgba(0,0,0,0.65)]"
                 aria-label="טופס השארת פרטים לטיפול והתייעצות"
               >
-                {/* 1. Topic / Goal Selector Pills */}
-                <div>
-                  <label className="text-xs sm:text-sm font-bold text-white block mb-3">
-                    1. מה הסיבה המרכזית לפנייה שלך?
-                  </label>
-                  <div className="flex flex-wrap gap-2">
-                    {TOPIC_OPTIONS.map((topic) => {
-                      const active = selectedTopic === topic.id;
-                      return (
-                        <button
-                          key={topic.id}
-                          type="button"
-                          onClick={() => setSelectedTopic(topic.id)}
-                          className={`text-xs sm:text-[13px] font-semibold px-3.5 py-2.5 min-h-[40px] rounded-2xl border transition-all duration-200 cursor-pointer ${
-                            active
-                              ? "bg-logoIce/20 text-white border-logoIce/60 shadow-[0_0_20px_-5px_rgba(125,184,232,0.35)]"
-                              : "bg-charcoalDark/70 text-silver hover:text-white border-white/10 hover:border-white/25"
-                          }`}
-                        >
-                          {topic.label}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                {/* 2. Interactive 1-10 Pain / Load Scale (Inspired by Adir Asher's סרגל הכאב) */}
-                <div className="pt-2 border-t border-white/[0.07]">
-                  <div className="flex flex-wrap items-center justify-between gap-2 mb-2.5">
-                    <label className="text-xs sm:text-sm font-bold text-white">
-                      2. כמה כואב או מורגש העומס בסרגל 1–10?
-                    </label>
-                    <span className="text-[11px] text-silverDark">(בחירה מהירה – לא חובה)</span>
-                  </div>
-
-                  <div
-                    role="radiogroup"
-                    aria-label="דרגת הכאב או העומס מ-1 עד 10"
-                    className="grid grid-cols-5 sm:grid-cols-10 gap-1.5 sm:gap-2"
-                  >
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => {
-                      const isSelected = painLevel === num;
-                      const colorTone =
-                        num <= 3
-                          ? isSelected
-                            ? "bg-emerald-500 text-black border-emerald-300 font-extrabold shadow-[0_0_15px_rgba(16,185,129,0.4)]"
-                            : "border-emerald-500/30 text-emerald-200/90 hover:bg-emerald-500/15"
-                          : num <= 6
-                          ? isSelected
-                            ? "bg-amber-400 text-black border-amber-200 font-extrabold shadow-[0_0_15px_rgba(245,158,11,0.4)]"
-                            : "border-amber-500/30 text-amber-200/90 hover:bg-amber-500/15"
-                          : isSelected
-                          ? "bg-rose-500 text-white border-rose-300 font-extrabold shadow-[0_0_15px_rgba(244,63,94,0.45)]"
-                          : "border-rose-500/30 text-rose-200/90 hover:bg-rose-500/15";
-
-                      return (
-                        <button
-                          key={num}
-                          type="button"
-                          role="radio"
-                          aria-checked={isSelected}
-                          onClick={() => setPainLevel(isSelected ? null : num)}
-                          className={`min-h-[42px] rounded-xl border bg-charcoalDark/80 text-sm transition-all duration-150 flex items-center justify-center cursor-pointer active:scale-95 ${colorTone}`}
-                        >
-                          {num}
-                        </button>
-                      );
-                    })}
-                  </div>
-
-                  <div className="flex justify-between text-[11px] text-silverDark mt-1.5 px-1">
-                    <span>1 — עומס קל / תחזוקה</span>
-                    <span>10 — כאב חד ומגביל</span>
-                  </div>
-
-                  {painFeedback && (
-                    <div className="mt-3 p-3.5 rounded-2xl bg-charcoalDark/90 border border-white/10 animate-fade-in">
-                      <span
-                        className={`inline-block text-[11px] font-bold px-2.5 py-0.5 rounded-full border mb-1 ${painFeedback.badgeClass}`}
-                      >
-                        {painFeedback.label}
-                      </span>
-                      <p className="text-xs text-silverOff leading-relaxed">{painFeedback.desc}</p>
-                    </div>
-                  )}
-                </div>
-
-                {/* 3. Personal Contact Details */}
-                <div className="pt-2 border-t border-white/[0.07] space-y-4">
-                  <p className="text-xs sm:text-sm font-bold text-white">
-                    3. פרטי התקשרות לחזרה מהירה:
-                  </p>
-
+                {/* 1. Personal Contact Details (Required) */}
+                <div className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {/* Name */}
                     <div className="flex flex-col gap-1.5">
@@ -355,7 +266,7 @@ export default function PerformanceList() {
                       )}
                     </div>
 
-                    {/* Phone (Required for CRM & WhatsApp return) */}
+                    {/* Phone */}
                     <div className="flex flex-col gap-1.5">
                       <label htmlFor="pl-phone" className="text-xs font-semibold text-silverOff flex items-center justify-between">
                         <span>טלפון נייד</span>
@@ -388,11 +299,11 @@ export default function PerformanceList() {
                     </div>
                   </div>
 
-                  {/* Email */}
+                  {/* Email (Required) */}
                   <div className="flex flex-col gap-1.5">
                     <label htmlFor="pl-email" className="text-xs font-semibold text-silverOff flex items-center justify-between">
                       <span>כתובת אימייל</span>
-                      <span className="text-silverDark text-[11px]">(לא חובה)</span>
+                      <span aria-hidden="true" className="text-logoIce">*</span>
                     </label>
                     <input
                       id="pl-email"
@@ -401,11 +312,14 @@ export default function PerformanceList() {
                       placeholder="name@example.com"
                       autoComplete="email"
                       inputMode="email"
+                      required
                       value={formData.email}
                       onChange={handleChange}
                       disabled={status === "loading"}
+                      aria-required="true"
+                      aria-describedby={errors.email ? "err-email" : undefined}
                       aria-invalid={errors.email ? "true" : "false"}
-                      className={`w-full bg-charcoalDark/90 border rounded-2xl px-4 py-3 text-white placeholder-silverDark text-base sm:text-sm focus:outline-none focus:border-logoIce focus:ring-1 focus:ring-logoIce transition-all disabled:opacity-50 text-right ${
+                      className={`w-full bg-charcoalDark/90 border rounded-2xl px-4 py-3.5 text-white placeholder-silverDark text-base sm:text-sm focus:outline-none focus:border-logoIce focus:ring-1 focus:ring-logoIce transition-all disabled:opacity-50 text-right ${
                         errors.email ? "border-red-500/70" : "border-white/15"
                       }`}
                       dir="ltr"
@@ -417,23 +331,128 @@ export default function PerformanceList() {
                     )}
                   </div>
 
-                  {/* Short Optional Note */}
+                  {/* Optional Note underneath email */}
                   <div className="flex flex-col gap-1.5">
                     <label htmlFor="pl-note" className="text-xs font-semibold text-silverOff flex items-center justify-between">
-                      <span>בקצרה – איפה כואב או מה המטרה שלך?</span>
+                      <span>בקצרה – במה נוכל לעזור?</span>
                       <span className="text-silverDark text-[11px]">(לא חובה)</span>
                     </label>
                     <input
                       id="pl-note"
                       name="note"
                       type="text"
-                      placeholder="למשל: כאב בכתף ימין באימונים בשבועיים האחרונים..."
+                      placeholder="למשל: כאב בכתף ימין באימונים, שיפור תנועה, התאוששות..."
                       value={formData.note}
                       onChange={handleChange}
                       disabled={status === "loading"}
                       className="w-full bg-charcoalDark/90 border border-white/15 rounded-2xl px-4 py-3 text-white placeholder-silverDark text-base sm:text-sm focus:outline-none focus:border-logoIce focus:ring-1 focus:ring-logoIce transition-all disabled:opacity-50"
                       dir="rtl"
                     />
+                  </div>
+                </div>
+
+                {/* 2. Optional Quick Context (Pills & Pain Scale) */}
+                <div className="pt-4 border-t border-white/[0.08] space-y-4">
+                  <div className="flex items-center justify-between gap-2">
+                    <p className="text-xs sm:text-sm font-bold text-white">
+                      כדי שנגיע מוכנים לשיחה:
+                    </p>
+                    <span className="text-[11px] text-silverDark">(בחירה מהירה – לא חובה)</span>
+                  </div>
+
+                  {/* Topic / Goal Selector Pills */}
+                  <div>
+                    <label className="text-xs text-silverOff block mb-2 font-medium">
+                      מה הסיבה המרכזית לפנייה שלך?
+                    </label>
+                    <div className="flex flex-wrap gap-2">
+                      {TOPIC_OPTIONS.map((topic) => {
+                        const active = selectedTopic === topic.id;
+                        return (
+                          <button
+                            key={topic.id}
+                            type="button"
+                            onClick={() => setSelectedTopic(active ? null : topic.id)}
+                            className={`text-xs sm:text-[13px] font-semibold px-3.5 py-2.5 min-h-[40px] rounded-2xl border transition-all duration-200 cursor-pointer ${
+                              active
+                                ? "bg-logoIce/20 text-white border-logoIce/60 shadow-[0_0_20px_-5px_rgba(125,184,232,0.35)]"
+                                : "bg-charcoalDark/70 text-silver hover:text-white border-white/10 hover:border-white/25"
+                            }`}
+                          >
+                            {topic.label}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {/* Interactive 1-10 Pain / Load Scale */}
+                  <div className="pt-3 border-t border-white/[0.06]">
+                    <div className="flex items-center justify-between gap-2 mb-2">
+                      <label className="text-xs text-silverOff font-medium">
+                        כמה כואב או מורגש העומס בסרגל 1–10?
+                      </label>
+                      {painLevel && (
+                        <button
+                          type="button"
+                          onClick={() => setPainLevel(null)}
+                          className="text-[11px] text-silverDark hover:text-white underline transition-colors"
+                        >
+                          איפוס
+                        </button>
+                      )}
+                    </div>
+
+                    <div
+                      role="radiogroup"
+                      aria-label="דרגת הכאב או העומס מ-1 עד 10"
+                      className="grid grid-cols-5 sm:grid-cols-10 gap-1.5 sm:gap-2"
+                    >
+                      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => {
+                        const isSelected = painLevel === num;
+                        const colorTone =
+                          num <= 3
+                            ? isSelected
+                              ? "bg-emerald-500 text-black border-emerald-300 font-extrabold shadow-[0_0_15px_rgba(16,185,129,0.4)]"
+                              : "border-emerald-500/30 text-emerald-200/90 hover:bg-emerald-500/15"
+                            : num <= 6
+                            ? isSelected
+                              ? "bg-amber-400 text-black border-amber-200 font-extrabold shadow-[0_0_15px_rgba(245,158,11,0.4)]"
+                              : "border-amber-500/30 text-amber-200/90 hover:bg-amber-500/15"
+                            : isSelected
+                            ? "bg-rose-500 text-white border-rose-300 font-extrabold shadow-[0_0_15px_rgba(244,63,94,0.45)]"
+                            : "border-rose-500/30 text-rose-200/90 hover:bg-rose-500/15";
+
+                        return (
+                          <button
+                            key={num}
+                            type="button"
+                            role="radio"
+                            aria-checked={isSelected}
+                            onClick={() => setPainLevel(isSelected ? null : num)}
+                            className={`min-h-[42px] rounded-xl border bg-charcoalDark/80 text-sm transition-all duration-150 flex items-center justify-center cursor-pointer active:scale-95 ${colorTone}`}
+                          >
+                            {num}
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    <div className="flex justify-between text-[11px] text-silverDark mt-1.5 px-1">
+                      <span>1 — עומס קל / תחזוקה</span>
+                      <span>10 — כאב חד ומגביל</span>
+                    </div>
+
+                    {painFeedback && (
+                      <div className="mt-3 p-3.5 rounded-2xl bg-charcoalDark/90 border border-white/10 animate-fade-in">
+                        <span
+                          className={`inline-block text-[11px] font-bold px-2.5 py-0.5 rounded-full border mb-1 ${painFeedback.badgeClass}`}
+                        >
+                          {painFeedback.label}
+                        </span>
+                        <p className="text-xs text-silverOff leading-relaxed">{painFeedback.desc}</p>
+                      </div>
+                    )}
                   </div>
                 </div>
 
