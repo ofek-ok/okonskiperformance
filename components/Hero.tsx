@@ -31,7 +31,6 @@ export default function Hero() {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   useEffect(() => {
-    // Play active video and pause inactive ones to save mobile battery & bandwidth
     videoRefs.current.forEach((video, idx) => {
       if (!video) return;
       if (idx === activeIndex) {
@@ -46,7 +45,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % HERO_VIDEOS.length);
-    }, 4200);
+    }, 4500);
 
     return () => clearInterval(interval);
   }, []);
@@ -54,13 +53,12 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden border-b border-white/[0.06] bg-[#0A0B0D] pt-24 pb-14 sm:pt-32 sm:pb-20"
+      className="relative min-h-[90vh] lg:min-h-[92vh] flex items-center justify-center overflow-hidden border-b border-[#A8B0B7]/25 bg-[#142333] pt-20 pb-14 sm:pt-28 sm:pb-20"
       aria-label="Okonski Performance"
     >
-      {/* Anchor for top of page */}
-      <div id="top" className="absolute -top-24" aria-hidden="true" />
+      <div id="top" className="absolute -top-20" aria-hidden="true" />
 
-      {/* Bright, High-Visibility 5-Scene Ambient Video Sequence (Men-Only, No Therapist Face) */}
+      {/* Authentic Clinical & Movement Video Sequence */}
       <div className="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true">
         {HERO_VIDEOS.map((clip, idx) => {
           const isActive = idx === activeIndex;
@@ -77,8 +75,8 @@ export default function Hero() {
               playsInline
               preload={isActive || isNext ? "auto" : "metadata"}
               poster={idx === 0 ? "/hero-bg.jpg" : undefined}
-              className={`absolute inset-0 w-full h-full object-cover object-center sm:scale-105 transition-opacity duration-1000 ease-in-out filter brightness-[1.06] contrast-[1.08] saturate-[1.05] ${
-                isActive ? "opacity-75 sm:opacity-80" : "opacity-0"
+              className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ease-in-out ${
+                isActive ? "opacity-60" : "opacity-0"
               }`}
             >
               <source src={clip.src} type="video/mp4" />
@@ -87,61 +85,59 @@ export default function Hero() {
         })}
       </div>
 
-      {/* Balanced Overlays: Clear & Bright Center with Smooth Top/Bottom Vignette for Text Contrast */}
+      {/* Restrained Editorial Overlay (Deep Navy Vignette) */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-[#0A0B0D]/70 via-[#0A0B0D]/30 to-[#0A0B0D] pointer-events-none"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(10,11,13,0.45)_0%,_rgba(14,42,82,0.18)_55%,_transparent_80%)] pointer-events-none"
+        className="absolute inset-0 bg-gradient-to-b from-[#142333]/85 via-[#142333]/55 to-[#142333]/90 pointer-events-none"
         aria-hidden="true"
       />
 
-      {/* Clean Un-boxed Typography & Centerpiece Logo Directly on Bright Video Overlay */}
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-8 text-center flex flex-col items-center animate-fade-up">
-        {/* Prominent Centerpiece Brand Logo */}
-        <div className="mb-5 sm:mb-8 flex items-center justify-center">
+      {/* Editorial Content Container */}
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-8 text-center flex flex-col items-center">
+        
+        {/* Brand Emblem */}
+        <div className="mb-6 sm:mb-8 flex items-center justify-center">
           <Image
             src="/okonski-logo-updated.svg"
             alt="Okonski Performance"
             width={450}
             height={346}
-            className="w-40 xs:w-48 sm:w-64 md:w-72 lg:w-80 h-auto object-contain mx-auto drop-shadow-[0_14px_34px_rgba(0,0,0,0.85)] transition-transform duration-500 hover:scale-[1.02]"
+            className="w-36 xs:w-44 sm:w-56 md:w-64 h-auto object-contain mx-auto"
             priority
           />
         </div>
 
-        {/* Main H1 Headline with Subtle Split-Tone Hierarchy */}
-        <h1 className="text-[28px] xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.14] mb-5 sm:mb-8 max-w-4xl mx-auto text-balance drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]">
+        {/* Headline */}
+        <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-bold text-[#F5F5F2] tracking-tight leading-[1.15] mb-6 sm:mb-8 max-w-3xl mx-auto text-balance">
           הגוף שלך חייב{" "}
-          <span className="text-silverOff">לעמוד בקצב שלך.</span>
+          <span className="text-[#A8B0B7]">לעמוד בקצב שלך.</span>
         </h1>
 
-        {/* 3 Needs Text Stack (Mobile scannable with subtle dividers) */}
-        <div className="hidden md:grid grid-cols-3 gap-0 max-w-3xl w-full mx-auto mb-10 text-sm text-neutral-100 font-medium text-center divide-x divide-x-reverse divide-white/15 drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)]">
+        {/* 3 Needs Text Stack (Editorial Dividers) */}
+        <div className="hidden md:grid grid-cols-3 gap-0 max-w-3xl w-full mx-auto mb-10 text-sm text-[#F5F5F2] font-normal text-center divide-x divide-x-reverse divide-white/20">
           <p className="leading-relaxed px-5">
-            <strong className="text-white font-bold">פציעה או כאב?</strong> נמצא את המקור, לא רק את הנקודה שכואבת.
+            <strong className="text-white font-medium">פציעה או כאב?</strong> נמצא את המקור, לא רק את הנקודה שכואבת.
           </p>
           <p className="leading-relaxed px-5">
-            <strong className="text-white font-bold">דורש מעצמך הרבה?</strong> הגוף שלך צריך תחזוקה, לא רק מנוחה.
+            <strong className="text-white font-medium">דורש מעצמך הרבה?</strong> הגוף שלך צריך תחזוקה, לא רק מנוחה.
           </p>
           <p className="leading-relaxed px-5">
-            <strong className="text-white font-bold">רוצה יותר?</strong> נבנה מעטפת טיפולית שתיקח את היכולת הגופנית שלך לשלב הבא.
+            <strong className="text-white font-medium">רוצה יותר?</strong> נבנה מעטפת טיפולית שתיקח את היכולת הגופנית שלך לשלב הבא.
           </p>
         </div>
 
-        {/* Primary CTA Button — Full Capsule matching Navbar */}
+        {/* Primary CTA Button — Architectural, Minimalist */}
         <div className="flex flex-col items-center justify-center w-full sm:w-auto px-2 sm:px-0 gap-3">
           <a
             href="#performance-list"
-            className="w-full sm:w-auto max-w-xs sm:max-w-none bg-white text-black font-semibold px-8 py-3.5 min-h-[48px] rounded-full hover:bg-neutral-100 transition-all duration-200 shadow-[0_10px_35px_-5px_rgba(0,0,0,0.6),0_0_25px_rgba(255,255,255,0.25)] inline-flex items-center justify-center active:scale-[0.98] text-[15px] sm:text-base tracking-wide"
+            className="w-full sm:w-auto bg-[#F5F5F2] text-[#142333] hover:bg-white font-medium px-8 py-3.5 rounded-sm transition-colors text-sm sm:text-base tracking-wide inline-flex items-center justify-center active:scale-[0.99]"
           >
             שריון קדימות בתורים ←
           </a>
-          <p className="text-xs sm:text-[13px] text-neutral-200 drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]">
+          <p className="text-xs text-[#A8B0B7] tracking-normal">
             ללא התחייבות · קדימות בתורים ומחיר ייחודי למצטרפים מוקדמים
           </p>
         </div>
+
       </div>
     </section>
   );

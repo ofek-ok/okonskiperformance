@@ -33,53 +33,46 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="bg-steelDark py-16 sm:py-24 lg:py-32 relative border-b border-white/[0.06] scroll-mt-20 sm:scroll-mt-24"
+      className="bg-[#F5F5F2] text-[#22272C] py-20 sm:py-28 lg:py-32 border-b border-[#A8B0B7]/30 scroll-mt-20 sm:scroll-mt-24"
       aria-labelledby="faq-heading"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-8 text-right">
         
-        <div className="mb-8 sm:mb-12">
-          <div className="inline-flex items-center gap-3 mb-3.5">
-            <span className="w-8 h-[2px] rounded-full bg-logoIce/70" aria-hidden="true" />
-            <span className="text-xs sm:text-sm font-medium text-silverOff tracking-wide">
+        <div className="mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 mb-3">
+            <span className="font-mono text-xs text-[#49677F] uppercase tracking-wider font-semibold">
               כל מה שחשוב לדעת
             </span>
           </div>
-          <h2 id="faq-heading" className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
-            שאלות <span className="text-silverOff">נפוצות</span>
+          <h2 id="faq-heading" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22272C] leading-tight tracking-tight">
+            שאלות <span className="text-[#49677F]">נפוצות</span>
           </h2>
         </div>
 
-        <div className="space-y-3 sm:space-y-3.5">
+        {/* Swiss Ruled Accordion */}
+        <div className="border-t border-[#A8B0B7]/30 divide-y divide-[#A8B0B7]/30">
           {questions.map(([q, a]) => (
             <details
               key={q}
-              className="group rounded-2xl border border-white/[0.08] bg-neutral-900/35 open:bg-neutral-900/65 open:border-white/[0.16] px-4 sm:px-7 py-3.5 sm:py-5 transition-all duration-200"
+              className="group py-5 sm:py-6 transition-colors"
             >
-              <summary className="cursor-pointer text-white font-semibold text-[14.5px] sm:text-base flex items-center justify-between gap-3.5 list-none focus:outline-none focus-visible:ring-1 focus-visible:ring-logoIce rounded min-h-[44px]">
+              <summary className="cursor-pointer text-[#22272C] font-semibold text-base sm:text-lg flex items-center justify-between gap-4 list-none focus:outline-none min-h-[44px]">
                 <span className="leading-snug">{q}</span>
-                <span className="w-8 h-8 rounded-full border border-white/15 bg-white/[0.04] group-hover:bg-white/[0.1] flex items-center justify-center shrink-0 text-silverOff group-hover:text-white transition-all duration-200">
-                  <svg
-                    className="w-3.5 h-3.5 transition-transform duration-200 group-open:rotate-180"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                  </svg>
+                <span className="w-7 h-7 flex items-center justify-center shrink-0 font-mono text-base text-[#49677F] transition-transform duration-200 group-open:rotate-45">
+                  +
                 </span>
               </summary>
-              <p className="text-neutral-300 text-[13.5px] sm:text-sm leading-relaxed pt-3.5 sm:pt-4 mt-3 border-t border-white/[0.06] pl-1">
+              <p className="text-[#22272C]/75 text-sm sm:text-base leading-relaxed pt-3 pr-1">
                 {a}
               </p>
             </details>
           ))}
         </div>
 
-        <div className="mt-10 sm:mt-12 text-center sm:text-right">
+        <div className="mt-12 sm:mt-16 text-right">
           <a
             href="#performance-list"
-            className="bg-white text-black font-semibold hover:bg-neutral-100 transition-all duration-200 py-3.5 px-7 rounded-full text-sm w-full sm:w-auto min-h-[46px] inline-flex items-center justify-center gap-2 shadow-sm active:scale-[0.98]"
+            className="bg-[#142333] text-[#F5F5F2] hover:bg-[#22272C] transition-colors py-3.5 px-8 rounded-sm text-sm font-semibold inline-flex items-center justify-center gap-2 min-h-[46px]"
           >
             <span>הצטרפות ל־Performance List</span>
             <span>←</span>

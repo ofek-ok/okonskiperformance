@@ -91,17 +91,17 @@ export default function CookieBanner() {
       role="dialog"
       aria-modal="true"
       aria-label="הגדרות פרטיות ו-Cookies"
-      className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 sm:max-w-lg z-50 card-steel rounded-2xl border border-white/15 shadow-2xl p-5 sm:p-6 backdrop-blur-xl"
+      className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 sm:max-w-lg z-50 bg-[#FFFFFF] text-[#22272C] rounded-sm border border-[#A8B0B7]/40 shadow-xl p-5 sm:p-6"
     >
       <div>
 
         {!showSettings ? (
           <div className="flex flex-col gap-4 text-right">
             <div>
-              <h2 className="text-white font-bold text-base mb-1.5">הפרטיות שלך חשובה לנו</h2>
-              <p className="text-silverMuted text-xs sm:text-sm leading-relaxed">
+              <h2 className="text-[#22272C] font-bold text-base mb-1.5">הפרטיות שלך חשובה לנו</h2>
+              <p className="text-[#22272C]/75 text-xs sm:text-sm leading-relaxed">
                 אנחנו משתמשים בטכנולוגיות הנדרשות להפעלת האתר, ובכפוף לבחירתך עשויים להשתמש גם בכלי מדידה כדי לשפר את השירות.{" "}
-                <Link href="/cookies" className="text-logoIce hover:text-white underline text-xs">
+                <Link href="/cookies" className="text-[#142333] hover:text-[#49677F] underline text-xs">
                   מידע נוסף
                 </Link>
               </p>
@@ -111,19 +111,19 @@ export default function CookieBanner() {
             <div className="flex flex-wrap items-center gap-2.5 pt-1">
               <button
                 onClick={handleAcceptAll}
-                className="bg-white text-black font-semibold hover:bg-neutral-200 transition-colors py-2 px-4 rounded-lg text-xs cursor-pointer"
+                className="bg-[#142333] text-[#F5F5F2] font-semibold hover:bg-[#22272C] transition-colors py-2 px-4 rounded-sm text-xs cursor-pointer"
               >
                 אישור
               </button>
               <button
                 onClick={handleRejectNonEssential}
-                className="bg-transparent text-neutral-300 border border-neutral-700/60 hover:text-white hover:border-neutral-500 font-medium py-2 px-3.5 rounded-lg text-xs transition-colors cursor-pointer"
+                className="bg-transparent text-[#22272C] border border-[#A8B0B7]/60 hover:bg-[#F5F5F2] font-medium py-2 px-3.5 rounded-sm text-xs transition-colors cursor-pointer"
               >
                 דחיית לא חיוניים
               </button>
               <button
                 onClick={() => setShowSettings(true)}
-                className="text-neutral-400 hover:text-white text-xs py-2 px-2 underline transition-colors mr-auto"
+                className="text-[#22272C]/70 hover:text-[#142333] text-xs py-2 px-2 underline transition-colors mr-auto"
               >
                 ניהול העדפות
               </button>
@@ -131,15 +131,15 @@ export default function CookieBanner() {
           </div>
         ) : (
           <div className="flex flex-col gap-6 text-right">
-            <h2 className="text-xl font-bold text-white">ניהול העדפות Cookies</h2>
-            <p className="text-silver/60 text-sm">
+            <h2 className="text-xl font-bold text-[#22272C]">ניהול העדפות Cookies</h2>
+            <p className="text-[#22272C]/70 text-sm">
               בחרו אילו סוגי Cookies לאפשר. Cookies חיוניים נדרשים תמיד לתפעול האתר.{" "}
-              <Link href="/cookies" className="text-brand hover:text-brand-bright underline">
+              <Link href="/cookies" className="text-[#142333] hover:text-[#49677F] underline">
                 מדיניות Cookies מלאה
               </Link>
             </p>
 
-            <div className="space-y-5" role="group" aria-label="סוגי Cookies">
+            <div className="space-y-4" role="group" aria-label="סוגי Cookies">
 
               <div className="flex items-start gap-4">
                 <input
@@ -148,13 +148,13 @@ export default function CookieBanner() {
                   checked={true}
                   disabled
                   aria-disabled="true"
-                  className="mt-1 w-4 h-4 accent-brand"
+                  className="mt-1 w-4 h-4 accent-[#142333]"
                 />
                 <div className="flex-1">
-                  <label htmlFor="cookie-essential" className="font-bold text-white block mb-0.5">
+                  <label htmlFor="cookie-essential" className="font-bold text-[#22272C] block mb-0.5">
                     חיוניים (Essential)
                   </label>
-                  <p className="text-sm text-silver/50">עוגיות הכרחיות לתפעול האתר. לא ניתן לכבות אותן.</p>
+                  <p className="text-xs sm:text-sm text-[#22272C]/60">עוגיות הכרחיות לתפעול האתר. לא ניתן לכבות אותן.</p>
                 </div>
               </div>
 
@@ -164,13 +164,13 @@ export default function CookieBanner() {
                   id="cookie-analytics"
                   checked={preferences.analytics}
                   onChange={(e) => setPreferences({ ...preferences, analytics: e.target.checked })}
-                  className="mt-1 w-4 h-4 accent-brand cursor-pointer focus:ring-2 focus:ring-brand"
+                  className="mt-1 w-4 h-4 accent-[#142333] cursor-pointer"
                 />
                 <div className="flex-1">
-                  <label htmlFor="cookie-analytics" className="font-bold text-white block mb-0.5 cursor-pointer">
+                  <label htmlFor="cookie-analytics" className="font-bold text-[#22272C] block mb-0.5 cursor-pointer">
                     אנליטיקה (Analytics)
                   </label>
-                  <p className="text-sm text-silver/50">מסייעות לנו להבין כיצד מבקרים משתמשים באתר ולשפר את החוויה.</p>
+                  <p className="text-xs sm:text-sm text-[#22272C]/60">מסייעות לנו להבין כיצד מבקרים משתמשים באתר ולשפר את החוויה.</p>
                 </div>
               </div>
 
@@ -180,27 +180,27 @@ export default function CookieBanner() {
                   id="cookie-marketing"
                   checked={preferences.marketing}
                   onChange={(e) => setPreferences({ ...preferences, marketing: e.target.checked })}
-                  className="mt-1 w-4 h-4 accent-brand cursor-pointer focus:ring-2 focus:ring-brand"
+                  className="mt-1 w-4 h-4 accent-[#142333] cursor-pointer"
                 />
                 <div className="flex-1">
-                  <label htmlFor="cookie-marketing" className="font-bold text-white block mb-0.5 cursor-pointer">
+                  <label htmlFor="cookie-marketing" className="font-bold text-[#22272C] block mb-0.5 cursor-pointer">
                     שיווק (Marketing)
                   </label>
-                  <p className="text-sm text-silver/50">משמשות למדידת קמפיינים ולהצגת פרסום רלוונטי.</p>
+                  <p className="text-xs sm:text-sm text-[#22272C]/60">משמשות למדידת קמפיינים ולהצגת פרסום רלוונטי.</p>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 justify-start pt-2">
+            <div className="flex flex-col sm:flex-row gap-3 justify-start pt-2 border-t border-[#A8B0B7]/20">
               <button
                 onClick={handleSaveSettings}
-                className="bg-white text-black font-semibold hover:bg-neutral-200 transition-colors py-2.5 px-6 rounded-lg text-sm"
+                className="bg-[#142333] text-[#F5F5F2] font-semibold hover:bg-[#22272C] transition-colors py-2.5 px-6 rounded-sm text-sm"
               >
                 שמור העדפות
               </button>
               <button
                 onClick={() => setShowSettings(false)}
-                className="text-neutral-400 hover:text-white text-sm px-4 py-2.5 transition-colors"
+                className="text-[#22272C]/70 hover:text-[#142333] text-sm px-4 py-2.5 transition-colors"
               >
                 חזור
               </button>

@@ -12,14 +12,13 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      setScrolled(window.scrollY > 20);
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Lock body scroll and handle Escape key when mobile menu is open
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden";
@@ -45,138 +44,137 @@ export default function Navbar() {
   ];
 
   return (
-    <>
-      {/* Floating Elongated Capsule Navbar - Inspired by Adir Asher layout */}
-      <header
-        className={`fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-24px)] sm:w-[calc(100%-48px)] max-w-6xl xl:max-w-7xl transition-all duration-300 ${
-          menuOpen
-            ? "rounded-[28px] bg-[#0E131A]/95 backdrop-blur-2xl border border-white/20 shadow-2xl p-4 sm:p-5"
-            : scrolled
-            ? "rounded-full bg-[#161D26]/85 backdrop-blur-2xl border border-white/20 shadow-[0_16px_44px_-10px_rgba(0,0,0,0.65)] px-4 sm:px-8 py-2.5 sm:py-3"
-            : "rounded-full bg-white/[0.15] sm:bg-white/[0.16] backdrop-blur-2xl border border-white/25 shadow-[0_14px_40px_-10px_rgba(0,0,0,0.5),_0_2px_12px_rgba(255,255,255,0.06)] px-4 sm:px-8 py-2.5 sm:py-3"
-        }`}
-      >
-        <div className="flex items-center justify-between w-full">
+    <header
+      className={`sticky top-0 z-50 w-full transition-colors duration-200 border-b ${
+        scrolled
+          ? "bg-[#F5F5F2]/95 backdrop-blur-md border-[#A8B0B7]/35 shadow-[0_2px_12px_rgba(20,35,51,0.04)]"
+          : "bg-[#F5F5F2] border-[#A8B0B7]/25"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between">
+        
+        {/* Right (RTL): Brand Logo */}
+        <Link
+          href="/#top"
+          className="flex items-center focus:outline-none focus-visible:ring-1 focus-visible:ring-[#142333] shrink-0"
+          aria-label="Okonski Performance — עמוד הבית"
+        >
+          <Image
+            src="/okonski-logo-updated.svg"
+            alt="Okonski Performance"
+            width={450}
+            height={346}
+            className="h-8 sm:h-9 w-auto object-contain"
+            priority
+          />
+        </Link>
+
+        {/* Center: Editorial Nav Links */}
+        <nav aria-label="ניווט ראשי" className="hidden lg:flex items-center gap-6 xl:gap-8">
+          {navLinks.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={isActive ? "page" : undefined}
+                className={`text-sm tracking-wide transition-colors duration-150 ${
+                  isActive
+                    ? "text-[#142333] font-semibold"
+                    : "text-[#22272C]/80 hover:text-[#142333] font-medium"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
+        </nav>
+
+        {/* Left (RTL): Discreet WhatsApp + Primary CTA */}
+        <div className="flex items-center gap-3 sm:gap-4 shrink-0">
           
-          {/* Right (RTL): Official Brand Logo */}
-          <Link
-            href="/#hero"
-            className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-logoIce rounded-full shrink-0"
-            aria-label="Okonski Performance — עמוד הבית"
+          {/* Discreet WhatsApp Link */}
+          <a
+            href="https://wa.me/972555172571"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="פנייה דיסקרטית בוואטסאפ"
+            className="hidden sm:inline-flex items-center gap-1.5 text-xs text-[#49677F] hover:text-[#142333] font-medium transition-colors py-2 px-2.5 rounded-sm"
           >
-            <Image
-              src="/okonski-logo-updated.svg"
-              alt="Okonski Performance — ספורטתרפיה, טיפול בכאב ובפציעות ספורט ושיקום תנועתי"
-              width={450}
-              height={346}
-              className="h-7 sm:h-8 w-auto object-contain"
-              priority
-            />
-          </Link>
+            <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+            </svg>
+            <span>WhatsApp</span>
+          </a>
 
-          {/* Center: Navigation links spaced evenly with breathing room */}
-          <nav aria-label="ניווט ראשי" className="hidden lg:flex items-center justify-center flex-1 gap-1.5 xl:gap-4 px-3">
-            {navLinks.map((item) => {
-              const isActive = pathname === item.href;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  aria-current={isActive ? "page" : undefined}
-                  className={`text-[13.5px] xl:text-[14px] font-medium px-3.5 py-1.5 rounded-full transition-all duration-200 whitespace-nowrap ${
-                    isActive
-                      ? "bg-white/[0.16] text-white font-semibold"
-                      : "text-white/90 hover:text-white hover:bg-white/[0.12]"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
-          </nav>
+          {/* Primary Action Button — Architectural, not a pill */}
+          <a
+            href="/#performance-list"
+            className="bg-[#142333] hover:bg-[#22272C] text-[#F5F5F2] text-xs sm:text-sm font-medium py-2 px-3.5 sm:px-5 rounded-sm transition-colors tracking-wide whitespace-nowrap active:scale-[0.99]"
+          >
+            <span>שריון קדימות</span>
+          </a>
 
-          {/* Left (RTL): CTA Button & Mobile Menu Toggle */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-            <a
-              href="/#performance-list"
-              className="bg-white text-black hover:bg-neutral-100 transition-all duration-200 text-[11.5px] sm:text-[13px] font-semibold py-2 px-3 sm:px-5 rounded-full tracking-wide whitespace-nowrap inline-flex items-center justify-center min-h-[40px] sm:min-h-[38px] shadow-sm active:scale-[0.98]"
-            >
-              <span className="sm:hidden">שריון מקום</span>
-              <span className="hidden sm:inline">שריון קדימות בתורים</span>
-            </a>
-
-            {/* Mobile Toggle Button (44x44px touch target) */}
-            <button
-              type="button"
-              className="lg:hidden text-white/95 min-w-[42px] min-h-[42px] p-2.5 rounded-full border border-white/20 bg-white/[0.08] hover:bg-white/[0.16] active:bg-white/[0.24] flex items-center justify-center focus:outline-none transition-colors"
-              aria-expanded={menuOpen}
-              aria-controls="mobile-navigation"
-              aria-label={menuOpen ? "סגור תפריט" : "פתח תפריט"}
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              {menuOpen ? (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
-            </button>
-          </div>
-
+          {/* Mobile Toggle Button */}
+          <button
+            type="button"
+            className="lg:hidden text-[#22272C] p-2 rounded-sm border border-[#A8B0B7]/40 hover:bg-black/5 focus:outline-none"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
+            aria-label={menuOpen ? "סגור תפריט" : "פתח תפריט"}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? (
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M4 7h16M4 17h16" />
+              </svg>
+            )}
+          </button>
         </div>
 
-        {/* Mobile Expanded Drawer inside curved panel */}
-        {menuOpen && (
-          <nav
-            id="mobile-navigation"
-            aria-label="ניווט מובייל"
-            className="lg:hidden mt-3.5 pt-3.5 border-t border-white/15 flex flex-col gap-1 text-white animate-fade-up"
-          >
-            {navLinks.map((item) => {
-              const isActive = pathname === item.href;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setMenuOpen(false)}
-                  aria-current={isActive ? "page" : undefined}
-                  className={`text-[15px] font-medium py-3.5 px-4 rounded-2xl transition-colors flex items-center justify-between min-h-[48px] ${
-                    isActive
-                      ? "bg-white/[0.14] text-white font-semibold"
-                      : "text-white/95 hover:text-white hover:bg-white/[0.1] active:bg-white/[0.18]"
-                  }`}
-                >
-                  <span>{item.label}</span>
-                  <svg className="w-4 h-4 text-white/60 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              );
-            })}
-            <div className="pt-2.5">
-              <a
-                href="/#performance-list"
-                onClick={() => setMenuOpen(false)}
-                className="w-full bg-white text-black font-semibold text-center py-3.5 px-6 rounded-full text-sm min-h-[48px] flex items-center justify-center hover:bg-neutral-100 active:scale-[0.99] transition-all shadow-sm"
-              >
-                שריון קדימות בתורים ←
-              </a>
-            </div>
-          </nav>
-        )}
-      </header>
+      </div>
 
-      {/* Backdrop overlay for mobile menu */}
+      {/* Mobile Drawer */}
       {menuOpen && (
-        <div
-          className="fixed inset-0 z-40 bg-black/60 backdrop-blur-xs lg:hidden"
-          onClick={() => setMenuOpen(false)}
-          aria-hidden="true"
-        />
+        <nav
+          id="mobile-navigation"
+          aria-label="ניווט מובייל"
+          className="lg:hidden border-t border-[#A8B0B7]/30 bg-[#F5F5F2] px-6 py-5 flex flex-col gap-3 shadow-lg"
+        >
+          {navLinks.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={() => setMenuOpen(false)}
+              className="text-base font-medium text-[#22272C] py-2 border-b border-[#A8B0B7]/20 flex items-center justify-between"
+            >
+              <span>{item.label}</span>
+              <span className="text-[#A8B0B7] text-xs">←</span>
+            </Link>
+          ))}
+          <div className="pt-2 flex flex-col gap-2">
+            <a
+              href="https://wa.me/972555172571"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-center py-2.5 text-sm font-medium text-[#49677F] border border-[#A8B0B7]/40 rounded-sm"
+            >
+              שיחה ישירה בוואטסאפ
+            </a>
+            <a
+              href="/#performance-list"
+              onClick={() => setMenuOpen(false)}
+              className="bg-[#142333] text-[#F5F5F2] text-center font-medium py-3 rounded-sm text-sm"
+            >
+              שריון קדימות בתורים
+            </a>
+          </div>
+        </nav>
       )}
-    </>
+    </header>
   );
 }

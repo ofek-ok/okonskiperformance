@@ -84,7 +84,6 @@ const pillars: ServicePillar[] = [
   },
 ];
 
-// Pre-selects the matching topic in the lead form (PerformanceList listens for this event)
 function selectTopic(topicId: string) {
   window.dispatchEvent(new CustomEvent("okonski:select-topic", { detail: topicId }));
 }
@@ -93,28 +92,28 @@ function PillarDetails({ pillar }: { pillar: ServicePillar }) {
   return (
     <>
       {/* Field Examples Box */}
-      <div className="bg-neutral-950/60 p-4 sm:p-5 rounded-2xl border border-white/[0.06] text-neutral-300 text-sm leading-relaxed lg:min-h-[150px] xl:min-h-[125px] flex flex-col justify-center">
-        <span className="text-silverOff font-semibold block mb-1 text-xs sm:text-sm">לדוגמה:</span>
-        <p className="text-[13px] sm:text-sm text-neutral-400 leading-relaxed">{pillar.example}</p>
+      <div className="bg-[#F5F5F2] p-4 sm:p-5 rounded-sm border border-[#A8B0B7]/25 text-[#22272C] text-sm leading-relaxed lg:min-h-[140px] xl:min-h-[120px] flex flex-col justify-center">
+        <span className="text-[#142333] font-semibold block mb-1 text-xs sm:text-sm">לדוגמה:</span>
+        <p className="text-[13px] sm:text-sm text-[#49677F] leading-relaxed">{pillar.example}</p>
       </div>
 
       {/* "איך עובדים" Section */}
-      <div className="flex-grow flex flex-col justify-between mt-5 sm:mt-6 pt-5 sm:pt-6 border-t border-white/[0.07]">
-        <h4 className="text-silverOff text-xs sm:text-sm font-semibold tracking-wide mb-3.5 sm:mb-4">
+      <div className="flex-grow flex flex-col justify-between mt-5 sm:mt-6 pt-5 sm:pt-6 border-t border-[#A8B0B7]/25">
+        <h4 className="text-[#142333] text-xs sm:text-sm font-semibold tracking-wide mb-3 sm:mb-4">
           איך עובדים
         </h4>
 
-        <ul className="space-y-3.5 sm:space-y-4 flex-grow mb-5 sm:mb-6 border-r border-white/[0.08] pr-3.5">
+        <ul className="space-y-3.5 sm:space-y-4 flex-grow mb-5 sm:mb-6 border-r border-[#A8B0B7]/30 pr-3.5">
           {pillar.steps.map((step) => (
             <li
               key={step.num}
-              className="flex items-start gap-2.5 text-right lg:min-h-[74px] xl:min-h-[58px]"
+              className="flex items-start gap-2.5 text-right lg:min-h-[70px] xl:min-h-[56px]"
             >
-              <span className="font-mono text-logoIce/80 text-xs sm:text-sm tracking-wider shrink-0 mt-0.5 font-semibold">
+              <span className="font-mono text-[#49677F] text-xs sm:text-sm tracking-wider shrink-0 mt-0.5 font-semibold">
                 {step.num}.
               </span>
-              <p className="text-[13px] sm:text-sm text-neutral-400 leading-relaxed">
-                <strong className="text-white font-semibold text-[13.5px] sm:text-sm">{step.title}</strong> — {step.desc}
+              <p className="text-[13px] sm:text-sm text-[#6B7280] leading-relaxed">
+                <strong className="text-[#22272C] font-semibold text-[13.5px] sm:text-sm">{step.title}</strong> — {step.desc}
               </p>
             </li>
           ))}
@@ -128,44 +127,39 @@ export default function WhoItsFor() {
   return (
     <section
       id="who-its-for"
-      className="py-16 sm:py-24 lg:py-32 bg-steelDark relative border-b border-white/[0.06] scroll-mt-20 sm:scroll-mt-24"
+      className="py-16 sm:py-24 lg:py-28 bg-[#F5F5F2] relative border-b border-[#A8B0B7]/25 scroll-mt-16"
       aria-labelledby="who-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
-        {/* Section Header with Editorial Eyebrow */}
+        {/* Section Header */}
         <div className="max-w-3xl mb-12 sm:mb-16 text-right">
-          <div className="inline-flex items-center gap-3 mb-3.5">
-            <span className="w-8 h-[2px] rounded-full bg-logoIce/70" aria-hidden="true" />
-            <span className="text-xs sm:text-sm font-medium text-silverOff tracking-wide">
-              תחומי טיפול
-            </span>
-          </div>
+          <span className="eyebrow">תחומי טיפול</span>
           <h2
             id="who-heading"
-            className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-4 sm:mb-5"
+            className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#22272C] leading-tight mb-4 sm:mb-5 tracking-tight"
           >
-            מה הגוף שלך <span className="text-silverOff">צריך כרגע?</span>
+            מה הגוף שלך <span className="text-[#49677F]">צריך כרגע?</span>
           </h2>
-          <p className="text-neutral-400 text-sm sm:text-base lg:text-lg leading-relaxed">
+          <p className="text-[#49677F] text-sm sm:text-base lg:text-lg leading-relaxed">
             אין פרוטוקול אחד לכולם. ספורטאי עם כתף תפוסה ומנהל עם גב נעול צריכים דברים שונים, ולכן כל טיפול מתחיל ממך.
           </p>
         </div>
 
         {/* 3-Column Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 text-right items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 text-right items-stretch">
           {pillars.map((pillar) => (
             <article
               key={pillar.title}
-              className="h-full flex flex-col justify-between p-5 sm:p-7 lg:p-8 rounded-3xl bg-neutral-900/45 backdrop-blur-sm border border-white/[0.08] hover:border-white/[0.16] shadow-[0_12px_36px_-16px_rgba(0,0,0,0.5)] transition-all duration-300 relative"
+              className="h-full flex flex-col justify-between p-6 sm:p-7 lg:p-8 rounded-sm bg-white border border-[#A8B0B7]/30 shadow-[0_2px_12px_rgba(20,35,51,0.03)] hover:border-[#142333]/50 transition-colors duration-200"
             >
               <div className="flex-1 flex flex-col">
                 {/* Card Header (Title + Sub-line) */}
-                <div className="lg:min-h-[150px] xl:min-h-[130px] flex flex-col justify-start">
-                  <h3 className="text-xl sm:text-2xl font-black text-white mb-2">
+                <div className="lg:min-h-[140px] xl:min-h-[120px] flex flex-col justify-start">
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#22272C] mb-2 tracking-tight">
                     {pillar.title}
                   </h3>
-                  <p className="text-[13.5px] sm:text-sm font-medium text-neutral-300 leading-relaxed">
+                  <p className="text-[13.5px] sm:text-sm text-[#49677F] leading-relaxed">
                     {pillar.lead}
                   </p>
                 </div>
@@ -177,7 +171,7 @@ export default function WhoItsFor() {
 
                 {/* Mobile / Tablet: details collapsed in an accordion */}
                 <details className="lg:hidden group mt-4">
-                  <summary className="list-none cursor-pointer inline-flex items-center gap-2 text-[13.5px] font-semibold text-logoIce min-h-[44px] focus:outline-none focus-visible:ring-1 focus-visible:ring-logoIce rounded">
+                  <summary className="list-none cursor-pointer inline-flex items-center gap-2 text-[13.5px] font-semibold text-[#142333] min-h-[44px] focus:outline-none">
                     <span className="group-open:hidden">ראה איך זה עובד</span>
                     <span className="hidden group-open:inline">הסתר פירוט</span>
                     <svg className="w-3.5 h-3.5 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -191,28 +185,28 @@ export default function WhoItsFor() {
               </div>
 
               {/* In-Card Bottom CTA */}
-              <div className="mt-auto pt-4 sm:pt-5 border-t border-white/[0.07]">
+              <div className="mt-auto pt-4 sm:pt-5 border-t border-[#A8B0B7]/25">
                 <a
                   href="#performance-list"
                   onClick={() => selectTopic(pillar.topicId)}
-                  className="text-silverOff hover:text-white transition-colors text-[13.5px] sm:text-sm font-medium inline-flex items-center justify-between sm:justify-start w-full sm:w-auto gap-2 group min-h-[46px] px-4 py-2.5 sm:p-0 rounded-xl bg-white/[0.04] sm:bg-transparent active:bg-white/[0.08]"
+                  className="text-[#142333] hover:text-[#49677F] text-[13.5px] sm:text-sm font-medium inline-flex items-center justify-between sm:justify-start w-full sm:w-auto gap-2 group transition-colors"
                 >
                   <span>זה אני, שריינו לי מקום</span>
-                  <span className="transition-transform duration-200 group-hover:-translate-x-1 text-logoIce group-hover:text-white shrink-0">←</span>
+                  <span className="transition-transform duration-200 group-hover:-translate-x-1 shrink-0">←</span>
                 </a>
               </div>
             </article>
           ))}
         </div>
 
-        {/* Section Closing CTA (Bottom Summary Capsule Panel) */}
-        <div className="mt-12 sm:mt-14 p-7 sm:p-10 rounded-3xl bg-neutral-900/40 border border-white/[0.08] shadow-[0_12px_36px_-16px_rgba(0,0,0,0.5)] text-center md:text-right max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-neutral-300 text-sm sm:text-base leading-relaxed max-w-xl">
-            <strong className="text-white font-bold">לא בטוח לאיזה מסלול אתה שייך?</strong> בדיוק בשביל זה יש מפגש ראשון: קודם אבחון, ורק אחר כך תוכנית.
+        {/* Section Closing CTA */}
+        <div className="mt-12 sm:mt-14 p-6 sm:p-8 rounded-sm bg-white border border-[#A8B0B7]/30 shadow-[0_2px_12px_rgba(20,35,51,0.03)] text-right max-w-4xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <p className="text-[#49677F] text-sm sm:text-base leading-relaxed max-w-xl">
+            <strong className="text-[#22272C] font-semibold">לא בטוח לאיזה מסלול אתה שייך?</strong> בדיוק בשביל זה יש מפגש ראשון: קודם אבחון, ורק אחר כך תוכנית.
           </p>
           <a
             href="#performance-list"
-            className="bg-white text-black hover:bg-neutral-100 font-semibold px-7 py-3.5 rounded-full transition-all duration-200 inline-flex items-center justify-center gap-2 text-sm sm:text-base tracking-wide shrink-0 w-full md:w-auto shadow-sm active:scale-[0.98]"
+            className="bg-[#142333] hover:bg-[#22272C] text-[#F5F5F2] font-medium px-6 py-3 rounded-sm transition-colors inline-flex items-center justify-center gap-2 text-sm tracking-wide shrink-0 w-full md:w-auto"
           >
             <span>שריון קדימות בתורים</span>
             <span>←</span>

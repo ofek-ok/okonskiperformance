@@ -157,68 +157,60 @@ export default function PerformanceList() {
   return (
     <section
       id="performance-list"
-      className="py-16 sm:py-24 lg:py-32 bg-charcoalDark relative overflow-hidden scroll-mt-20 sm:scroll-mt-24 border-b border-white/[0.06]"
+      className="py-20 sm:py-28 lg:py-32 bg-[#FFFFFF] text-[#22272C] relative overflow-hidden scroll-mt-20 sm:scroll-mt-24 border-b border-[#A8B0B7]/30"
       aria-label="הצעד הראשון — השארת פרטים ותיאום"
     >
-      <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_65%_55%_at_50%_35%,rgba(30,45,68,0.35)_0%,rgba(10,11,13,1)_100%)] pointer-events-none"
-        aria-hidden="true"
-      />
-
       <div className="max-w-6xl mx-auto px-4 sm:px-8 relative z-10">
-        {/* Section Header inspired by Adir Asher's "הצעד הראשון" */}
-        <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-3 mb-3.5">
-            <span className="w-8 h-[2px] rounded-full bg-logoIce/70" aria-hidden="true" />
-            <span className="text-xs sm:text-sm font-medium text-silverOff tracking-wide">
-              הצעד הראשון
-            </span>
-            <span className="w-8 h-[2px] rounded-full bg-logoIce/70" aria-hidden="true" />
-          </div>
+        
+        {/* Section Header */}
+        <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+          <span className="font-mono text-xs text-[#49677F] uppercase tracking-wider font-semibold block mb-3">
+            הצעד הראשון
+          </span>
 
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] mb-4 sm:mb-5 text-balance">
+          <h2 className="text-3xl sm:text-5xl lg:text-5xl font-bold text-[#22272C] tracking-tight leading-tight mb-4 text-balance">
             מוכנים להפסיק לחיות{" "}
-            <span className="text-logoIce">עם הכאב והעומס?</span>
+            <span className="text-[#49677F]">עם הכאב והעומס?</span>
           </h2>
 
-          <p className="text-neutral-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto">
-            ספרו בקצרה מה מביא אתכם. <strong className="text-white">אני קורא כל פנייה בעצמי</strong>, וחוזר אליכם אישית לקראת פתיחת היומן עם קדימות בתורים ומחיר ייחודי למצטרפים מוקדמים.
+          <p className="text-[#22272C]/75 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+            ספרו בקצרה מה מביא אתכם. <strong className="text-[#22272C] font-semibold">אני קורא כל פנייה בעצמי</strong>, וחוזר אליכם אישית לקראת פתיחת היומן עם קדימות בתורים ומחיר ייחודי למצטרפים מוקדמים.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* =====================================================
               MAIN LEAD CAPTURE CARD (7 Cols on Desktop)
              ===================================================== */}
           <div className="lg:col-span-7">
             {status === "success" ? (
               <div
-                className="border border-emerald-400/30 bg-neutral-900/60 backdrop-blur-md rounded-3xl p-7 sm:p-12 text-center shadow-2xl animate-fade-up"
+                className="border border-[#A8B0B7]/30 bg-[#F5F5F2] rounded-sm p-8 sm:p-12 text-center shadow-sm"
                 role="status"
                 aria-live="polite"
                 aria-atomic="true"
               >
-                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 flex items-center justify-center mx-auto mb-5 sm:mb-6">
-                  <svg className="w-7 h-7 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-14 h-14 rounded-full bg-[#142333] text-[#F5F5F2] flex items-center justify-center mx-auto mb-5">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-black text-white mb-3">
-                  אתה ברשימה. 🙌
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#22272C] mb-3">
+                  אתה ברשימה.
                 </h3>
-                <p className="text-neutral-300 text-sm sm:text-base leading-relaxed max-w-md mx-auto mb-6">
+                <p className="text-[#22272C]/75 text-sm sm:text-base leading-relaxed max-w-md mx-auto mb-6">
                   אחזור אליך אישית לקראת פתיחת היומן, עוד לפני שהוא נפתח לכולם. בינתיים, אם יש משהו דחוף, אפשר לכתוב לי בוואטסאפ.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                   <a
                     href={`https://wa.me/972555172571?text=${encodeURIComponent(
-                      `היי אופק, השארתי פרטים באתר לגבי ${selectedTopic}${
+                      `היי אופק, השארתי פרטים באתר לגבי ${selectedTopic || "טיפול"}${
                         painLevel ? ` (רמת כאב/עומס ${painLevel}/10)` : ""
                       }. אשמח לשוחח!`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto bg-[#20BA56] hover:bg-[#1da84d] text-white font-semibold text-sm px-6 py-3.5 min-h-[46px] rounded-full inline-flex items-center justify-center gap-2 transition-all shadow-md"
+                    className="w-full sm:w-auto bg-[#142333] hover:bg-[#22272C] text-[#F5F5F2] font-semibold text-sm px-7 py-3.5 min-h-[46px] rounded-sm inline-flex items-center justify-center gap-2 transition-colors"
                   >
                     <span>שלחו הודעה מהירה בוואטסאפ</span>
                     <span>←</span>
@@ -229,7 +221,7 @@ export default function PerformanceList() {
               <form
                 onSubmit={handleSubmit}
                 noValidate
-                className="border border-white/[0.1] bg-neutral-900/50 backdrop-blur-md rounded-3xl p-5 sm:p-8 lg:p-9 text-right space-y-6 shadow-[0_20px_50px_-14px_rgba(0,0,0,0.65)]"
+                className="border border-[#A8B0B7]/35 bg-[#FFFFFF] rounded-sm p-6 sm:p-8 lg:p-10 text-right space-y-6 shadow-sm"
                 aria-label="טופס השארת פרטים לטיפול והתייעצות"
               >
                 {/* 1. Personal Contact Details (Required) */}
@@ -237,9 +229,9 @@ export default function PerformanceList() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {/* Name */}
                     <div className="flex flex-col gap-1.5">
-                      <label htmlFor="pl-name" className="text-xs font-semibold text-silverOff flex items-center justify-between">
+                      <label htmlFor="pl-name" className="text-xs font-semibold text-[#22272C] flex items-center justify-between">
                         <span>שם מלא</span>
-                        <span aria-hidden="true" className="text-logoIce">*</span>
+                        <span aria-hidden="true" className="text-[#49677F]">*</span>
                       </label>
                       <input
                         id="pl-name"
@@ -254,13 +246,13 @@ export default function PerformanceList() {
                         aria-required="true"
                         aria-describedby={errors.name ? "err-name" : undefined}
                         aria-invalid={errors.name ? "true" : "false"}
-                        className={`w-full bg-charcoalDark/90 border rounded-2xl px-4 py-3.5 text-white placeholder-silverDark text-base sm:text-sm focus:outline-none focus:border-logoIce focus:ring-1 focus:ring-logoIce transition-all disabled:opacity-50 ${
-                          errors.name ? "border-red-500/70" : "border-white/15"
+                        className={`w-full bg-[#FFFFFF] border rounded-sm px-4 py-3.5 text-[#22272C] placeholder-[#A8B0B7] text-sm focus:outline-none focus:border-[#142333] focus:ring-1 focus:ring-[#142333] transition-colors disabled:opacity-50 ${
+                          errors.name ? "border-red-500" : "border-[#A8B0B7]/40"
                         }`}
                         dir="rtl"
                       />
                       {errors.name && (
-                        <p id="err-name" role="alert" className="text-red-400 text-xs font-medium">
+                        <p id="err-name" role="alert" className="text-red-500 text-xs font-medium">
                           {errors.name}
                         </p>
                       )}
@@ -268,9 +260,9 @@ export default function PerformanceList() {
 
                     {/* Phone */}
                     <div className="flex flex-col gap-1.5">
-                      <label htmlFor="pl-phone" className="text-xs font-semibold text-silverOff flex items-center justify-between">
+                      <label htmlFor="pl-phone" className="text-xs font-semibold text-[#22272C] flex items-center justify-between">
                         <span>טלפון נייד</span>
-                        <span aria-hidden="true" className="text-logoIce">*</span>
+                        <span aria-hidden="true" className="text-[#49677F]">*</span>
                       </label>
                       <input
                         id="pl-phone"
@@ -286,13 +278,13 @@ export default function PerformanceList() {
                         aria-required="true"
                         aria-describedby={errors.phone ? "err-phone" : undefined}
                         aria-invalid={errors.phone ? "true" : "false"}
-                        className={`w-full bg-charcoalDark/90 border rounded-2xl px-4 py-3.5 text-white placeholder-silverDark text-base sm:text-sm focus:outline-none focus:border-logoIce focus:ring-1 focus:ring-logoIce transition-all disabled:opacity-50 text-right ${
-                          errors.phone ? "border-red-500/70" : "border-white/15"
+                        className={`w-full bg-[#FFFFFF] border rounded-sm px-4 py-3.5 text-[#22272C] placeholder-[#A8B0B7] text-sm focus:outline-none focus:border-[#142333] focus:ring-1 focus:ring-[#142333] transition-colors disabled:opacity-50 text-right ${
+                          errors.phone ? "border-red-500" : "border-[#A8B0B7]/40"
                         }`}
                         dir="rtl"
                       />
                       {errors.phone && (
-                        <p id="err-phone" role="alert" className="text-red-400 text-xs font-medium">
+                        <p id="err-phone" role="alert" className="text-red-500 text-xs font-medium">
                           {errors.phone}
                         </p>
                       )}
@@ -301,9 +293,9 @@ export default function PerformanceList() {
 
                   {/* Email (Required) */}
                   <div className="flex flex-col gap-1.5">
-                    <label htmlFor="pl-email" className="text-xs font-semibold text-silverOff flex items-center justify-between">
+                    <label htmlFor="pl-email" className="text-xs font-semibold text-[#22272C] flex items-center justify-between">
                       <span>כתובת אימייל</span>
-                      <span aria-hidden="true" className="text-logoIce">*</span>
+                      <span aria-hidden="true" className="text-[#49677F]">*</span>
                     </label>
                     <input
                       id="pl-email"
@@ -319,13 +311,13 @@ export default function PerformanceList() {
                       aria-required="true"
                       aria-describedby={errors.email ? "err-email" : undefined}
                       aria-invalid={errors.email ? "true" : "false"}
-                      className={`w-full bg-charcoalDark/90 border rounded-2xl px-4 py-3.5 text-white placeholder-silverDark text-base sm:text-sm focus:outline-none focus:border-logoIce focus:ring-1 focus:ring-logoIce transition-all disabled:opacity-50 text-right ${
-                        errors.email ? "border-red-500/70" : "border-white/15"
+                      className={`w-full bg-[#FFFFFF] border rounded-sm px-4 py-3.5 text-[#22272C] placeholder-[#A8B0B7] text-sm focus:outline-none focus:border-[#142333] focus:ring-1 focus:ring-[#142333] transition-colors disabled:opacity-50 text-right ${
+                        errors.email ? "border-red-500" : "border-[#A8B0B7]/40"
                       }`}
                       dir="ltr"
                     />
                     {errors.email && (
-                      <p id="err-email" role="alert" className="text-red-400 text-xs font-medium">
+                      <p id="err-email" role="alert" className="text-red-500 text-xs font-medium">
                         {errors.email}
                       </p>
                     )}
@@ -333,9 +325,9 @@ export default function PerformanceList() {
 
                   {/* Optional Note underneath email */}
                   <div className="flex flex-col gap-1.5">
-                    <label htmlFor="pl-note" className="text-xs font-semibold text-silverOff flex items-center justify-between">
+                    <label htmlFor="pl-note" className="text-xs font-semibold text-[#22272C] flex items-center justify-between">
                       <span>בקצרה – במה נוכל לעזור?</span>
-                      <span className="text-silverDark text-[11px]">(לא חובה)</span>
+                      <span className="text-[#A8B0B7] text-[11px]">(לא חובה)</span>
                     </label>
                     <input
                       id="pl-note"
@@ -345,24 +337,24 @@ export default function PerformanceList() {
                       value={formData.note}
                       onChange={handleChange}
                       disabled={status === "loading"}
-                      className="w-full bg-charcoalDark/90 border border-white/15 rounded-2xl px-4 py-3 text-white placeholder-silverDark text-base sm:text-sm focus:outline-none focus:border-logoIce focus:ring-1 focus:ring-logoIce transition-all disabled:opacity-50"
+                      className="w-full bg-[#FFFFFF] border border-[#A8B0B7]/40 rounded-sm px-4 py-3 text-[#22272C] placeholder-[#A8B0B7] text-sm focus:outline-none focus:border-[#142333] focus:ring-1 focus:ring-[#142333] transition-colors disabled:opacity-50"
                       dir="rtl"
                     />
                   </div>
                 </div>
 
                 {/* 2. Optional Quick Context (Pills & Pain Scale) */}
-                <div className="pt-4 border-t border-white/[0.08] space-y-4">
+                <div className="pt-5 border-t border-[#A8B0B7]/30 space-y-4">
                   <div className="flex items-center justify-between gap-2">
-                    <p className="text-xs sm:text-sm font-bold text-white">
+                    <p className="text-xs sm:text-sm font-bold text-[#22272C]">
                       כדי שנגיע מוכנים לשיחה:
                     </p>
-                    <span className="text-[11px] text-silverDark">(בחירה מהירה – לא חובה)</span>
+                    <span className="text-[11px] text-[#A8B0B7]">(בחירה מהירה – לא חובה)</span>
                   </div>
 
                   {/* Topic / Goal Selector Pills */}
                   <div>
-                    <label className="text-xs text-silverOff block mb-2 font-medium">
+                    <label className="text-xs text-[#22272C]/75 block mb-2 font-medium">
                       מה הסיבה המרכזית לפנייה שלך?
                     </label>
                     <div className="flex flex-wrap gap-2">
@@ -373,10 +365,10 @@ export default function PerformanceList() {
                             key={topic.id}
                             type="button"
                             onClick={() => setSelectedTopic(active ? null : topic.id)}
-                            className={`text-xs sm:text-[13px] font-semibold px-3.5 py-2.5 min-h-[40px] rounded-2xl border transition-all duration-200 cursor-pointer ${
+                            className={`text-xs sm:text-[13px] font-medium px-3.5 py-2 min-h-[38px] rounded-sm border transition-colors cursor-pointer ${
                               active
-                                ? "bg-logoIce/20 text-white border-logoIce/60 shadow-[0_0_20px_-5px_rgba(125,184,232,0.35)]"
-                                : "bg-charcoalDark/70 text-silver hover:text-white border-white/10 hover:border-white/25"
+                                ? "bg-[#142333] text-[#F5F5F2] border-[#142333]"
+                                : "bg-[#F5F5F2] text-[#22272C] border-[#A8B0B7]/35 hover:border-[#142333]/50"
                             }`}
                           >
                             {topic.label}
@@ -387,16 +379,16 @@ export default function PerformanceList() {
                   </div>
 
                   {/* Interactive 1-10 Pain / Load Scale */}
-                  <div className="pt-3 border-t border-white/[0.06]">
+                  <div className="pt-3 border-t border-[#A8B0B7]/20">
                     <div className="flex items-center justify-between gap-2 mb-2">
-                      <label className="text-xs text-silverOff font-medium">
+                      <label className="text-xs text-[#22272C]/75 font-medium">
                         כמה כואב או מורגש העומס בסרגל 1–10?
                       </label>
                       {painLevel && (
                         <button
                           type="button"
                           onClick={() => setPainLevel(null)}
-                          className="text-[11px] text-silverDark hover:text-white underline transition-colors"
+                          className="text-[11px] text-[#49677F] hover:text-[#142333] underline transition-colors"
                         >
                           איפוס
                         </button>
@@ -406,23 +398,10 @@ export default function PerformanceList() {
                     <div
                       role="radiogroup"
                       aria-label="דרגת הכאב או העומס מ-1 עד 10"
-                      className="grid grid-cols-5 sm:grid-cols-10 gap-1.5 sm:gap-2"
+                      className="grid grid-cols-5 sm:grid-cols-10 gap-1.5"
                     >
                       {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => {
                         const isSelected = painLevel === num;
-                        const colorTone =
-                          num <= 3
-                            ? isSelected
-                              ? "bg-emerald-500 text-black border-emerald-300 font-extrabold shadow-[0_0_15px_rgba(16,185,129,0.4)]"
-                              : "border-emerald-500/30 text-emerald-200/90 hover:bg-emerald-500/15"
-                            : num <= 6
-                            ? isSelected
-                              ? "bg-amber-400 text-black border-amber-200 font-extrabold shadow-[0_0_15px_rgba(245,158,11,0.4)]"
-                              : "border-amber-500/30 text-amber-200/90 hover:bg-amber-500/15"
-                            : isSelected
-                            ? "bg-rose-500 text-white border-rose-300 font-extrabold shadow-[0_0_15px_rgba(244,63,94,0.45)]"
-                            : "border-rose-500/30 text-rose-200/90 hover:bg-rose-500/15";
-
                         return (
                           <button
                             key={num}
@@ -430,7 +409,11 @@ export default function PerformanceList() {
                             role="radio"
                             aria-checked={isSelected}
                             onClick={() => setPainLevel(isSelected ? null : num)}
-                            className={`min-h-[42px] rounded-xl border bg-charcoalDark/80 text-sm transition-all duration-150 flex items-center justify-center cursor-pointer active:scale-95 ${colorTone}`}
+                            className={`min-h-[40px] rounded-sm border text-sm font-mono transition-colors flex items-center justify-center cursor-pointer ${
+                              isSelected
+                                ? "bg-[#142333] text-[#F5F5F2] border-[#142333] font-bold"
+                                : "border-[#A8B0B7]/35 bg-[#FFFFFF] text-[#22272C] hover:border-[#142333]/60"
+                            }`}
                           >
                             {num}
                           </button>
@@ -438,42 +421,40 @@ export default function PerformanceList() {
                       })}
                     </div>
 
-                    <div className="flex justify-between text-[11px] text-silverDark mt-1.5 px-1">
+                    <div className="flex justify-between text-[11px] text-[#A8B0B7] mt-1.5 px-0.5 font-mono">
                       <span>1 — עומס קל / תחזוקה</span>
                       <span>10 — כאב חד ומגביל</span>
                     </div>
 
                     {painFeedback && (
-                      <div className="mt-3 p-3.5 rounded-2xl bg-charcoalDark/90 border border-white/10 animate-fade-in">
-                        <span
-                          className={`inline-block text-[11px] font-bold px-2.5 py-0.5 rounded-full border mb-1 ${painFeedback.badgeClass}`}
-                        >
+                      <div className="mt-3 p-4 rounded-sm bg-[#F5F5F2] border border-[#A8B0B7]/30">
+                        <span className="inline-block text-xs font-bold text-[#142333] mb-1">
                           {painFeedback.label}
                         </span>
-                        <p className="text-xs text-silverOff leading-relaxed">{painFeedback.desc}</p>
+                        <p className="text-xs text-[#22272C]/75 leading-relaxed">{painFeedback.desc}</p>
                       </div>
                     )}
                   </div>
                 </div>
 
                 {/* Consent Checkbox */}
-                <div className="flex items-start gap-3 pt-2 border-t border-white/[0.08]">
+                <div className="flex items-start gap-3 pt-3 border-t border-[#A8B0B7]/30">
                   <input
                     id="marketing-consent"
                     type="checkbox"
                     checked={marketingConsent}
                     onChange={(e) => setMarketingConsent(e.target.checked)}
                     disabled={status === "loading"}
-                    className="w-5 h-5 mt-0.5 rounded bg-charcoalDark border-white/20 text-logoBlue focus:ring-logoBlue shrink-0 cursor-pointer"
+                    className="w-4 h-4 mt-1 rounded-sm border-[#A8B0B7] text-[#142333] focus:ring-[#142333] shrink-0 cursor-pointer"
                   />
                   <label
                     htmlFor="marketing-consent"
-                    className="text-xs text-silverMuted text-right leading-relaxed cursor-pointer select-none"
+                    className="text-xs text-[#22272C]/70 text-right leading-relaxed cursor-pointer select-none"
                   >
                     אני מאשר/ת שמירת הפרטים ליצירת קשר וקבלת עדכונים מ־Okonski Performance בהתאם ל
                     <Link
                       href="/privacy"
-                      className="text-logoIce underline mx-0.5"
+                      className="text-[#142333] font-medium underline mx-1 hover:text-[#49677F]"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -484,7 +465,7 @@ export default function PerformanceList() {
                 </div>
 
                 {submitError && (
-                  <p role="alert" className="text-red-400 text-xs font-medium text-right">
+                  <p role="alert" className="text-red-500 text-xs font-medium text-right">
                     {submitError}
                   </p>
                 )}
@@ -495,7 +476,7 @@ export default function PerformanceList() {
                     type="submit"
                     disabled={status === "loading" || hasSubmitted}
                     aria-busy={status === "loading"}
-                    className="w-full bg-white text-black font-bold hover:bg-neutral-100 transition-all duration-200 py-4 px-6 rounded-full text-sm sm:text-base tracking-wide flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed min-h-[52px] active:scale-[0.98] relative shadow-[0_10px_30px_-5px_rgba(255,255,255,0.2)]"
+                    className="w-full bg-[#142333] text-[#F5F5F2] font-semibold hover:bg-[#22272C] transition-colors py-4 px-6 rounded-sm text-sm tracking-wide flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed min-h-[50px] relative"
                   >
                     <span className={`transition-opacity ${status === "loading" ? "opacity-0" : "opacity-100"}`}>
                       שליחת פרטים והבטחת עדיפות ←
@@ -503,7 +484,7 @@ export default function PerformanceList() {
                     {status === "loading" && (
                       <div className="absolute inset-0 flex items-center justify-center" aria-label="שולח...">
                         <svg
-                          className="animate-spin h-5 w-5 text-black"
+                          className="animate-spin h-5 w-5 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -526,18 +507,17 @@ export default function PerformanceList() {
 
           {/* =====================================================
               SIDEBAR: DIRECT CONTACT & WHAT HAPPENS NEXT (5 Cols)
-              Inspired by Adir Asher's "הצעד הראשון" Action Cards
              ===================================================== */}
-          <div className="lg:col-span-5 flex flex-col gap-4 sm:gap-5 text-right">
-            {/* Reassurance Card: "לא בטוחים אם המקרה שלכם מתאים?" */}
-            <div className="rounded-3xl bg-steelDark/90 border border-white/[0.08] p-6 sm:p-7 shadow-lg">
-              <div className="w-10 h-10 rounded-2xl bg-logoIce/15 border border-logoIce/30 text-logoIce flex items-center justify-center font-bold text-lg mb-4">
-                ?
-              </div>
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
+          <div className="lg:col-span-5 flex flex-col gap-6 text-right">
+            {/* Reassurance Card */}
+            <div className="rounded-sm bg-[#FFFFFF] border border-[#A8B0B7]/35 p-6 sm:p-8 shadow-sm">
+              <span className="font-mono text-xs text-[#49677F] uppercase tracking-wider block mb-2 font-semibold">
+                ייעוץ מקדים
+              </span>
+              <h3 className="text-xl font-bold text-[#22272C] mb-3">
                 לא בטוחים אם המקרה שלכם מתאים?
               </h3>
-              <p className="text-[13.5px] sm:text-sm text-silver leading-relaxed mb-5">
+              <p className="text-sm text-[#22272C]/75 leading-relaxed mb-6">
                 לא חייבים לדעת מראש מה מקור הכאב או איזה טיפול בדיוק אתם צריכים. מתחילים בשיחת היכרות קצרה, תשאול והערכה – ומשם מבינים יחד מה הצעד הנכון עבורכם.
               </p>
 
@@ -546,33 +526,26 @@ export default function PerformanceList() {
                 href="https://wa.me/972555172571?text=%D7%94%D7%99%D7%99%20%D7%90%D7%95%D7%A4%D7%A7%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%AA%D7%99%D7%99%D7%A2%D7%A5%20%D7%9C%D7%92%D7%91%D7%99%20%D7%98%D7%99%D7%A4%D7%95%D7%9C"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full bg-[#20BA56]/15 hover:bg-[#20BA56]/25 text-white border border-[#20BA56]/40 font-semibold text-xs sm:text-sm px-5 py-3.5 min-h-[48px] rounded-2xl inline-flex items-center justify-between transition-all duration-200 group"
+                className="w-full bg-[#F5F5F2] hover:bg-[#FFFFFF] text-[#142333] border border-[#A8B0B7]/40 font-semibold text-sm px-5 py-3.5 min-h-[46px] rounded-sm inline-flex items-center justify-between transition-colors group"
               >
-                <span className="flex items-center gap-2.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#20BA56] animate-pulse" />
-                  <span>לא בטוחים? דברו איתי בוואטסאפ</span>
-                </span>
-                <span className="text-[#20BA56] group-hover:-translate-x-1 transition-transform">←</span>
+                <span>לא בטוחים? דברו איתי בוואטסאפ</span>
+                <span className="text-[#49677F] group-hover:-translate-x-1 transition-transform">←</span>
               </a>
             </div>
 
-            {/* Quick Contact Card (Direct WhatsApp Only — Phone & Address removed per request) */}
-            <div className="grid grid-cols-1 gap-3.5">
+            {/* Quick Contact Card */}
+            <div className="grid grid-cols-1">
               <a
                 href="https://wa.me/972555172571"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-2xl bg-neutral-900/45 border border-white/[0.08] hover:border-white/20 p-4 sm:p-5 flex items-center gap-4 transition-all"
+                className="rounded-sm bg-[#FFFFFF] border border-[#A8B0B7]/35 hover:border-[#142333]/50 p-5 flex items-center justify-between transition-colors shadow-sm"
               >
-                <div className="w-11 h-11 rounded-xl bg-white/[0.06] border border-white/10 text-logoIce flex items-center justify-center shrink-0">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
-                  </svg>
-                </div>
                 <div>
-                  <p className="text-xs text-silver">וואטסאפ ישיר</p>
-                  <p className="text-sm sm:text-base font-bold text-white">שלחו הודעה עכשיו</p>
+                  <p className="font-mono text-xs text-[#49677F] tracking-wide mb-1">וואטסאפ ישיר</p>
+                  <p className="text-base font-bold text-[#22272C]">055-5172571</p>
                 </div>
+                <span className="text-xs font-semibold text-[#142333]">שליחת הודעה ←</span>
               </a>
             </div>
           </div>

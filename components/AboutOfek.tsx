@@ -4,84 +4,91 @@ export default function AboutOfek() {
   return (
     <section
       id="about"
-      className="py-16 sm:py-24 lg:py-36 bg-charcoalDark relative border-b border-white/[0.06] scroll-mt-20 sm:scroll-mt-24"
+      className="py-20 sm:py-28 lg:py-36 bg-[#F5F5F2] text-[#22272C] border-b border-[#A8B0B7]/30 scroll-mt-20 sm:scroll-mt-24"
       aria-labelledby="about-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
-        {/* Mobile Header (visible only on mobile) */}
+        {/* Mobile Header */}
         <div className="lg:hidden text-right mb-8">
-          <div className="inline-flex items-center gap-3 mb-3">
-            <span className="w-8 h-[2px] rounded-full bg-logoIce/70" aria-hidden="true" />
-            <span className="text-xs font-medium text-silverOff tracking-wide">
+          <div className="inline-flex items-center gap-2 mb-3">
+            <span className="font-mono text-xs text-[#49677F] uppercase tracking-wider font-semibold">
               מי אני
             </span>
           </div>
-          <h2 id="about-heading" className="text-2xl sm:text-4xl font-black text-white leading-tight">
-            נעים להכיר, <span className="text-silverOff">אני אופק אוקונסקי.</span>
+          <h2 id="about-heading" className="text-2xl sm:text-4xl font-bold text-[#22272C] leading-tight">
+            נעים להכיר, <span className="text-[#49677F]">אני אופק אוקונסקי.</span>
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           
-          {/* Professional Studio Portrait */}
+          {/* Studio Portrait Framed */}
           <div className="lg:col-span-5 relative order-first">
-            <div className="relative w-full max-w-[300px] sm:max-w-[360px] mx-auto aspect-square rounded-3xl overflow-hidden border border-white/[0.08] shadow-[0_18px_48px_-14px_rgba(0,0,0,0.65)] bg-neutral-900">
+            <div className="relative w-full max-w-[320px] sm:max-w-[380px] mx-auto aspect-square rounded-sm overflow-hidden border border-[#A8B0B7]/40 shadow-sm bg-[#FFFFFF]">
               <Image
                 src="/ofek-portrait-hd.jpg"
                 alt="אופק אוקונסקי, מייסד Okonski Performance"
                 fill
                 className="object-cover object-center"
-                sizes="(max-width: 640px) 300px, (max-width: 1024px) 360px, 33vw"
+                sizes="(max-width: 640px) 320px, (max-width: 1024px) 380px, 33vw"
                 priority={false}
               />
             </div>
+            <p className="mt-3 text-center sm:text-right font-mono text-[11px] text-[#49677F] tracking-wide">
+              אופק אוקונסקי — מייסד ומטפל
+            </p>
           </div>
 
           {/* Founder Story Right-Aligned */}
           <div className="lg:col-span-7 text-right">
             
-            {/* Desktop Header (hidden on mobile) */}
+            {/* Desktop Header */}
             <div className="hidden lg:block mb-8">
-              <div className="inline-flex items-center gap-3 mb-3.5">
-                <span className="w-8 h-[2px] rounded-full bg-logoIce/70" aria-hidden="true" />
-                <span className="text-sm font-medium text-silverOff tracking-wide">
+              <div className="inline-flex items-center gap-2 mb-3">
+                <span className="font-mono text-xs text-[#49677F] uppercase tracking-wider font-semibold">
                   מי אני
                 </span>
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
-                נעים להכיר, <span className="text-silverOff">אני אופק אוקונסקי.</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22272C] leading-tight tracking-tight">
+                נעים להכיר, <span className="text-[#49677F]">אני אופק אוקונסקי.</span>
               </h2>
             </div>
 
             {/* Dual Worlds Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-7 sm:mb-8">
-              <div className="p-5 rounded-2xl border border-white/[0.08] bg-neutral-900/35">
-                <span className="text-sm font-bold text-white block mb-1.5">ספורט תובעני</span>
-                <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              <div className="p-5 sm:p-6 rounded-sm border border-[#A8B0B7]/30 bg-[#FFFFFF]">
+                <span className="font-mono text-xs text-[#49677F] uppercase tracking-wider block mb-1">
+                  ספורט תחרותי
+                </span>
+                <span className="text-base font-bold text-[#22272C] block mb-1.5">ספורט תובעני</span>
+                <p className="text-xs sm:text-sm text-[#22272C]/75 leading-relaxed">
                   15 שנות אומנויות לחימה, חגורה שחורה ומאמן בג&apos;יו־ג&apos;יטסו ברזילאי (BJJ).
                 </p>
               </div>
-              <div className="p-5 rounded-2xl border border-white/[0.08] bg-neutral-900/35">
-                <span className="text-sm font-bold text-white block mb-1.5">קריירה אינטנסיבית</span>
-                <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+              <div className="p-5 sm:p-6 rounded-sm border border-[#A8B0B7]/30 bg-[#FFFFFF]">
+                <span className="font-mono text-xs text-[#49677F] uppercase tracking-wider block mb-1">
+                  ניהול ותהליכים
+                </span>
+                <span className="text-base font-bold text-[#22272C] block mb-1.5">קריירה אינטנסיבית</span>
+                <p className="text-xs sm:text-sm text-[#22272C]/75 leading-relaxed">
                   מנהל פרויקטים בכיר עם 7 שנות ניסיון בהובלת תהליכים טכנולוגיים מורכבים.
                 </p>
               </div>
             </div>
 
             {/* Narrative Body */}
-            <div className="space-y-3.5 sm:space-y-4 text-silverMuted text-sm sm:text-base lg:text-lg leading-relaxed">
-              <p className="font-bold text-silverOff">
+            <div className="space-y-4 text-[#22272C]/80 text-sm sm:text-base leading-relaxed">
+              <p className="font-semibold text-[#22272C] text-base sm:text-lg">
                 15 שנה על המזרן. 7 שנים מול דדליינים. אני מכיר מקרוב את שני העולמות שעבורם הקמתי את Okonski Performance.
               </p>
 
-              {/* Editorial Pull-Quote Highlight (Always visible) */}
-              <div className="my-5 pr-4 border-r-2 border-logoIce/70 space-y-2.5">
-                <p className="font-bold text-white">
+              {/* Editorial Pull-Quote Highlight */}
+              <div className="my-6 pr-5 border-r-2 border-[#142333] space-y-2">
+                <p className="font-bold text-[#22272C] text-base sm:text-lg">
                   מתוך החיבור הזה הקמתי את Okonski Performance.
                 </p>
-                <p className="text-silverOff">
+                <p className="text-[#22272C]/85 text-sm sm:text-base leading-relaxed">
                   המטרה שלי היא להציע טיפול גופני אישי שלא מסתכל רק על האזור שכואב או מפריע, אלא גם על האדם שמאחוריו: איך הוא מתאמן, איך נראית השגרה שלו, אילו עומסים הוא חווה ומה הוא רוצה להיות מסוגל לעשות.
                 </p>
               </div>
@@ -100,15 +107,12 @@ export default function AboutOfek() {
               </div>
 
               {/* Mobile expandable story */}
-              <details className="lg:hidden group pt-1">
-                <summary className="list-none cursor-pointer inline-flex items-center gap-2 text-[13.5px] font-semibold text-logoIce min-h-[44px] focus:outline-none focus-visible:ring-1 focus-visible:ring-logoIce rounded">
-                  <span className="group-open:hidden">לסיפור המלא</span>
+              <details className="lg:hidden group pt-2">
+                <summary className="list-none cursor-pointer inline-flex items-center gap-2 text-sm font-semibold text-[#142333] min-h-[44px] focus:outline-none">
+                  <span className="group-open:hidden">קרא את הסיפור המלא ←</span>
                   <span className="hidden group-open:inline">הסתר סיפור מלא</span>
-                  <svg className="w-3.5 h-3.5 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                  </svg>
                 </summary>
-                <div className="mt-3 space-y-3.5 text-sm text-silverMuted leading-relaxed">
+                <div className="mt-3 space-y-3.5 text-sm text-[#22272C]/80 leading-relaxed border-t border-[#A8B0B7]/30 pt-3">
                   <p>
                     אני עוסק באמנויות לחימה כבר כ־15 שנים, חגורה שחורה ומאמן בג&apos;יו־ג&apos;יטסו ברזילאי. במקביל, אני מנהל פרויקטים בכיר עם כשבע שנות ניסיון בניהול פרויקטים טכנולוגיים, הובלת תהליכים ועבודה בסביבות מורכבות ותובעניות.
                   </p>
