@@ -4,83 +4,128 @@ export default function AboutOfek() {
   return (
     <section
       id="about"
-      className="py-20 sm:py-28 lg:py-32 bg-[#14181F] text-white border-b border-white/10 scroll-mt-20"
+      className="py-16 sm:py-24 lg:py-36 bg-charcoalDark relative border-b border-white/[0.06] scroll-mt-20 sm:scroll-mt-24"
       aria-labelledby="about-heading"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
-        {/* Studio Portrait */}
-        <div className="lg:col-span-5">
-          <div className="relative w-full max-w-[400px] mx-auto lg:mx-0 aspect-[4/5] overflow-hidden border border-white/15 bg-[#1E2229]">
-            <Image
-              src="/ofek-portrait-hd.jpg"
-              alt="אופק אוקונסקי, מייסד Okonski Performance"
-              fill
-              className="object-cover object-center"
-              sizes="(max-width: 1024px) 400px, 40vw"
-            />
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
+        
+        {/* Mobile Header (visible only on mobile) */}
+        <div className="lg:hidden text-right mb-8">
+          <div className="inline-flex items-center gap-3 mb-3">
+            <span className="w-8 h-[2px] rounded-full bg-logoIce/70" aria-hidden="true" />
+            <span className="text-xs font-medium text-silverOff tracking-wide">
+              מי אני
+            </span>
           </div>
-          <p className="mt-3 text-center lg:text-right font-mono text-xs text-[#94A3B8]">
-            אופק אוקונסקי — מייסד Okonski Performance
-          </p>
+          <h2 id="about-heading" className="text-2xl sm:text-4xl font-black text-white leading-tight">
+            נעים להכיר, <span className="text-silverOff">אני אופק אוקונסקי.</span>
+          </h2>
         </div>
 
-        {/* Editorial Biography & Verified Credentials */}
-        <div className="lg:col-span-7 text-right">
-          <span className="eyebrow">מי אני</span>
-          <h2
-            id="about-heading"
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6"
-          >
-            אופק אוקונסקי
-          </h2>
-
-          <p className="text-xl sm:text-2xl font-semibold text-white leading-snug mb-6">
-            15 שנה על המזרן. 7 שנים מול דדליינים. אני מכיר מקרוב את שני העולמות שעבורם הקמתי את Okonski Performance.
-          </p>
-
-          <div className="space-y-4 text-[#E2E8F0]/80 text-base sm:text-lg leading-relaxed mb-12">
-            <p>
-              אני עוסק באמנויות לחימה כ־15 שנים, חגורה שחורה ומאמן בג&apos;יו־ג&apos;יטסו ברזילאי (BJJ). במקביל, אני מנהל פרויקטים בכיר עם כשבע שנות ניסיון בהובלת פרויקטים טכנולוגיים ותהליכים בסביבות עבודה מורכבות ותובעניות.
-            </p>
-            <p>
-              מתוך החיבור הזה הקמתי את Okonski Performance — גישה שמסתכלת לא רק על האזור שכואב או מוגבל, אלא על האדם שמאחוריו: איך הוא מתאמן, איך נראית השגרה שלו, אילו עומסים הוא חווה ומה הוא שואף להיות מסוגל לעשות.
-            </p>
-            <p>
-              את החשיבה התהליכית מעולם הניהול אני מביא לעבודה הגופנית: להבין את נקודת המוצא, להגדיר מטרה ברורה, לעבוד בצורה מסודרת ולבחון את ההתקדמות לאורך הדרך.
-            </p>
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+          
+          {/* Professional Studio Portrait */}
+          <div className="lg:col-span-5 relative order-first">
+            <div className="relative w-full max-w-[300px] sm:max-w-[360px] mx-auto aspect-square rounded-3xl overflow-hidden border border-white/[0.08] shadow-[0_18px_48px_-14px_rgba(0,0,0,0.65)] bg-neutral-900">
+              <Image
+                src="/ofek-portrait-hd.jpg"
+                alt="אופק אוקונסקי, מייסד Okonski Performance"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 640px) 300px, (max-width: 1024px) 360px, 33vw"
+                priority={false}
+              />
+            </div>
           </div>
 
-          {/* Clear Qualification Distinction: Completed vs. In-Progress */}
-          <div className="grid sm:grid-cols-2 gap-8 sm:gap-10 border-t border-white/15 pt-8">
-            <div>
-              <span className="font-mono text-xs uppercase tracking-wider text-[#3E6FA8] font-semibold block mb-2">
-                הסמכות וניסיון מוכח
-              </span>
-              <h3 className="text-base font-bold text-white mb-3">ניסיון ספורטיבי ומקצועי</h3>
-              <ul className="space-y-3 text-sm sm:text-base text-[#94A3B8] leading-relaxed">
-                <li className="border-t border-white/10 pt-3">
-                  חגורה שחורה ומאמן מוסמך בג&apos;יו־ג&apos;יטסו ברזילאי (BJJ) — כ־15 שנות ניסיון באמנויות לחימה
-                </li>
-                <li className="border-t border-white/10 pt-3">
-                  מנהל פרויקטים בכיר — כ־7 שנות ניסיון בהובלת תהליכים ופרויקטים טכנולוגיים
-                </li>
-              </ul>
+          {/* Founder Story Right-Aligned */}
+          <div className="lg:col-span-7 text-right">
+            
+            {/* Desktop Header (hidden on mobile) */}
+            <div className="hidden lg:block mb-8">
+              <div className="inline-flex items-center gap-3 mb-3.5">
+                <span className="w-8 h-[2px] rounded-full bg-logoIce/70" aria-hidden="true" />
+                <span className="text-sm font-medium text-silverOff tracking-wide">
+                  מי אני
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
+                נעים להכיר, <span className="text-silverOff">אני אופק אוקונסקי.</span>
+              </h2>
             </div>
 
-            <div>
-              <span className="font-mono text-xs uppercase tracking-wider text-[#94A3B8] font-semibold block mb-2">
-                הכשרה פעילה (בלימודים)
-              </span>
-              <h3 className="text-base font-bold text-white mb-3">השכלה והכשרה מקצועית</h3>
-              <div className="border-t border-white/10 pt-3 text-sm sm:text-base text-[#94A3B8] leading-relaxed">
-                <p>
-                  לימודי ספורטתרפיה ושיקום תנועתי{" "}
-                  <span className="text-white font-medium">(בשלבי הכשרה פעילים — טרם הושלמו)</span>.
+            {/* Dual Worlds Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-7 sm:mb-8">
+              <div className="p-5 rounded-2xl border border-white/[0.08] bg-neutral-900/35">
+                <span className="text-sm font-bold text-white block mb-1.5">ספורט תובעני</span>
+                <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                  15 שנות אומנויות לחימה, חגורה שחורה ומאמן בג&apos;יו־ג&apos;יטסו ברזילאי (BJJ).
+                </p>
+              </div>
+              <div className="p-5 rounded-2xl border border-white/[0.08] bg-neutral-900/35">
+                <span className="text-sm font-bold text-white block mb-1.5">קריירה אינטנסיבית</span>
+                <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                  מנהל פרויקטים בכיר עם 7 שנות ניסיון בהובלת תהליכים טכנולוגיים מורכבים.
                 </p>
               </div>
             </div>
+
+            {/* Narrative Body */}
+            <div className="space-y-3.5 sm:space-y-4 text-silverMuted text-sm sm:text-base lg:text-lg leading-relaxed">
+              <p className="font-bold text-silverOff">
+                15 שנה על המזרן. 7 שנים מול דדליינים. אני מכיר מקרוב את שני העולמות שעבורם הקמתי את Okonski Performance.
+              </p>
+
+              {/* Editorial Pull-Quote Highlight (Always visible) */}
+              <div className="my-5 pr-4 border-r-2 border-logoIce/70 space-y-2.5">
+                <p className="font-bold text-white">
+                  מתוך החיבור הזה הקמתי את Okonski Performance.
+                </p>
+                <p className="text-silverOff">
+                  המטרה שלי היא להציע טיפול גופני אישי שלא מסתכל רק על האזור שכואב או מפריע, אלא גם על האדם שמאחוריו: איך הוא מתאמן, איך נראית השגרה שלו, אילו עומסים הוא חווה ומה הוא רוצה להיות מסוגל לעשות.
+                </p>
+              </div>
+
+              {/* Desktop full paragraphs */}
+              <div className="hidden lg:block space-y-4">
+                <p>
+                  אני עוסק באמנויות לחימה כבר כ־15 שנים, חגורה שחורה ומאמן בג&apos;יו־ג&apos;יטסו ברזילאי. במקביל, אני מנהל פרויקטים בכיר עם כשבע שנות ניסיון בניהול פרויקטים טכנולוגיים, הובלת תהליכים ועבודה בסביבות מורכבות ותובעניות.
+                </p>
+                <p>
+                  השילוב בין שני העולמות האלה לימד אותי עד כמה אנחנו דורשים מהגוף שלנו — באימונים, בעבודה ובחיי היומיום — ועד כמה חשוב לתת לו את תשומת הלב המתאימה.
+                </p>
+                <p>
+                  את החשיבה התהליכית מעולם הניהול אני מביא גם לגישה שלי לטיפול: להבין את נקודת המוצא, להגדיר מטרה, לעבוד בצורה מסודרת ולבחון את ההתקדמות. מבחינתי, טיפול טוב צריך לשלב עבודה גופנית מקצועית, הסברים ברורים ויחס אישי.
+                </p>
+              </div>
+
+              {/* Mobile expandable story */}
+              <details className="lg:hidden group pt-1">
+                <summary className="list-none cursor-pointer inline-flex items-center gap-2 text-[13.5px] font-semibold text-logoIce min-h-[44px] focus:outline-none focus-visible:ring-1 focus-visible:ring-logoIce rounded">
+                  <span className="group-open:hidden">לסיפור המלא</span>
+                  <span className="hidden group-open:inline">הסתר סיפור מלא</span>
+                  <svg className="w-3.5 h-3.5 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="mt-3 space-y-3.5 text-sm text-silverMuted leading-relaxed">
+                  <p>
+                    אני עוסק באמנויות לחימה כבר כ־15 שנים, חגורה שחורה ומאמן בג&apos;יו־ג&apos;יטסו ברזילאי. במקביל, אני מנהל פרויקטים בכיר עם כשבע שנות ניסיון בניהול פרויקטים טכנולוגיים, הובלת תהליכים ועבודה בסביבות מורכבות ותובעניות.
+                  </p>
+                  <p>
+                    השילוב בין שני העולמות האלה לימד אותי עד כמה אנחנו דורשים מהגוף שלנו — באימונים, בעבודה ובחיי היומיום — ועד כמה חשוב לתת לו את תשומת הלב המתאימה.
+                  </p>
+                  <p>
+                    את החשיבה התהליכית מעולם הניהול אני מביא גם לגישה שלי לטיפול: להבין את נקודת המוצא, להגדיר מטרה, לעבוד בצורה מסודרת ולבחון את ההתקדמות. מבחינתי, טיפול טוב צריך לשלב עבודה גופנית מקצועית, הסברים ברורים ויחס אישי.
+                  </p>
+                </div>
+              </details>
+            </div>
+
           </div>
+
         </div>
+
       </div>
     </section>
   );

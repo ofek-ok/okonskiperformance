@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import FloatingAccessibility from "@/components/FloatingAccessibility";
 import CookieBanner from "@/components/CookieBanner";
 import { Analytics } from "@vercel/analytics/next";
@@ -13,23 +14,23 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Okonski Performance | ספורטתרפיה, התאוששות ושיפור יכולת",
+  title: "Okonski Performance | טיפול ספורטיבי, שיקום והתאוששות",
   description:
-    "Okonski Performance — טיפול גופני אישי, התאוששות ושיפור יכולת לספורטאים, למתאמנים ולאנשי קריירה תובעניים. הצטרפות לרשימת המתעניינים.",
+    "Okonski Performance מציעה טיפול גופני אישי לספורטאים, למתאמנים ולאנשי קריירה. כאב ופציעה, התאוששות ושיפור יכולת. הצטרפו לרשימת העדכונים.",
   icons: {
-    icon: "/logo-official.png",
-    apple: "/logo-official.png",
+    icon: '/logo-official.png',
+    apple: '/logo-official.png',
   },
   openGraph: {
     title: "Okonski Performance",
-    description: "הגוף שלך חייב לעמוד בקצב שלך.",
+    description: "הגוף שלך צריך לעמוד בקצב שלך.",
     locale: "he_IL",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Okonski Performance | ספורטתרפיה, התאוששות ושיפור יכולת",
-    description: "הגוף שלך חייב לעמוד בקצב שלך.",
+    title: "Okonski Performance | טיפול ספורטיבי, שיקום והתאוששות",
+    description: "טיפול גופני אישי לספורטאים, למתאמנים ולאנשי קריירה.",
   },
 };
 
@@ -44,12 +45,13 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800;900&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="font-heebo bg-[#0A0B0D] text-[#E2E8F0] antialiased">
+      <body className="font-heebo bg-charcoalDark text-silverOff antialiased">
         {children}
+        <FloatingWhatsApp />
         <FloatingAccessibility />
         <CookieBanner />
         <Analytics />

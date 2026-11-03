@@ -2,24 +2,24 @@ import Image from "next/image";
 
 const stages = [
   {
-    num: "01",
+    num: "01.",
     title: "מקשיבים",
-    body: "מבינים מה הביא אותך לטיפול, מה מפריע לך, מהי שגרת האימונים או העבודה שלך ומה אתה רוצה להשיג.",
+    body: "נבין מה הביא אותך לטיפול, מה מפריע לך, מהי שגרת האימונים או העבודה שלך ומה אתה רוצה להשיג.",
   },
   {
-    num: "02",
+    num: "02.",
     title: "בודקים",
-    body: "בוחנים תנועה, טווחי תנועה, מגבלות ואזורים רלוונטיים למטרת הטיפול.",
+    body: "בהתאם לצורך, נבחן תנועה, טווחי תנועה, מגבלות ואזורים רלוונטיים למטרת הטיפול.",
   },
   {
-    num: "03",
+    num: "03.",
     title: "מטפלים",
-    body: "מבצעים טיפול גופני המותאם לממצאים, למצב שלך ולמטרת המפגש.",
+    body: "נבצע טיפול גופני המותאם לממצאים, למצב שלך ולמטרת המפגש.",
   },
   {
-    num: "04",
+    num: "04.",
     title: "מסבירים",
-    body: "מסכמים מה עלה במפגש, מה אפשר לעשות באופן עצמאי ומה עשוי להתאים להמשך.",
+    body: "בסיום נסביר מה עלה במפגש, מה אפשר לעשות באופן עצמאי ומה עשוי להתאים להמשך, במידת הצורך.",
   },
 ];
 
@@ -27,80 +27,115 @@ export default function Treatment() {
   return (
     <section
       id="treatment"
-      className="py-20 sm:py-28 lg:py-32 bg-[#F5F5F2] text-[#0A0B0D] border-b border-[#0A0B0D]/10 scroll-mt-20"
+      className="py-16 sm:py-24 lg:py-32 bg-charcoalDark relative border-b border-white/[0.06] scroll-mt-20 sm:scroll-mt-24"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-8">
-        {/* Top Editorial Split */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center mb-16 sm:mb-24">
-          <div className="lg:col-span-6 text-right">
-            <span className="block text-xs font-semibold tracking-[0.2em] uppercase text-[#3E6FA8] mb-4">
-              תהליך הטיפול
-            </span>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-[#0A0B0D] mb-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-8">
+        
+        {/* Top Split: Section Header + Clinical Atmosphere Image */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-14 sm:mb-20">
+          <div className="lg:col-span-7 text-right">
+            <div className="inline-flex items-center gap-3 mb-3.5">
+              <span className="w-8 h-[2px] rounded-full bg-logoIce/70" aria-hidden="true" />
+              <span className="text-xs sm:text-sm font-medium text-silverOff tracking-wide">
+                תהליך הטיפול
+              </span>
+            </div>
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-4 sm:mb-5">
               לא מטפלים בכתף.{" "}
-              <span className="text-[#3E6FA8]">מטפלים בך.</span>
+              <span className="text-silverOff">מטפלים בך.</span>
             </h2>
-            <p className="text-[#0A0B0D] text-base sm:text-lg font-medium leading-relaxed mb-4">
+            <p className="text-neutral-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-3 font-medium">
               אין שני אנשים שמגיעים עם אותו עומס, אותה מגבלה או אותה מטרה.
             </p>
-            <p className="text-[#1E2229]/80 text-base leading-relaxed">
-              הטיפול ב־Okonski Performance אינו מבוסס על פרוטוקול קבוע מראש. הוא מתחיל בהבנת המצב שלך ומותאם למה שעולה בתשאול ובהערכה.
+            <p className="text-neutral-400 text-xs sm:text-sm lg:text-base leading-relaxed">
+              לכן, הטיפול ב־Okonski Performance אינו מבוסס על סדר פעולות זהה לכל לקוח. הוא מתחיל בהבנת המצב שלך ומותאם למה שעולה בתשאול ובהערכה.
             </p>
           </div>
 
-          <div className="lg:col-span-6">
-            <div className="relative w-full aspect-[4/3] overflow-hidden border border-[#0A0B0D]/15 bg-[#FFFFFF]">
+          <div className="lg:col-span-5">
+            <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] lg:aspect-[4/3] rounded-3xl overflow-hidden border border-white/[0.08] shadow-[0_14px_40px_-14px_rgba(0,0,0,0.6)] bg-neutral-900">
               <Image
                 src="/method-treatment.jpg"
                 alt="תהליך הטיפול האישי ב־Okonski Performance"
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 42vw"
               />
-            </div>
-            <p className="mt-2.5 text-right font-mono text-xs text-[#1E2229]/65">
-              אבחון והערכת תנועה אישית
-            </p>
-          </div>
-        </div>
-
-        {/* 4 Linear Architectural Steps */}
-        <div className="text-right mb-14 sm:mb-16">
-          <div className="flex items-end justify-between pb-4 mb-8 border-b border-[#0A0B0D]/15">
-            <h3 className="text-2xl sm:text-3xl font-bold text-[#0A0B0D]">המפגש הראשון</h3>
-            <span className="font-mono text-xs text-[#1E2229]/60">01 — 04</span>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-[#0A0B0D]/15 divide-y sm:divide-y-0 sm:divide-x sm:divide-x-reverse divide-[#0A0B0D]/15 bg-[#FFFFFF]">
-            {stages.map((s) => (
-              <div key={s.num} className="p-6 sm:p-8 flex flex-col justify-between">
-                <div>
-                  <span className="font-mono text-xs font-semibold text-[#3E6FA8] tracking-wider block mb-3">
-                    {s.num}
-                  </span>
-                  <h4 className="text-xl font-bold text-[#0A0B0D] mb-2.5">{s.title}</h4>
-                  <p className="text-sm sm:text-base text-[#1E2229]/80 leading-relaxed">{s.body}</p>
-                </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoalDark/75 via-transparent to-transparent" />
+              <div className="absolute bottom-3 right-3 left-3 sm:bottom-4 sm:right-4 sm:left-4 px-3.5 sm:px-4 py-2.5 rounded-2xl bg-[#0A0B0D]/85 backdrop-blur-md border border-white/[0.08] flex flex-wrap items-center justify-between gap-1 text-xs text-silverOff">
+                <span className="font-semibold text-white">מפגש ראשון מקיף</span>
+                <span className="text-neutral-300 text-[11.5px] sm:text-xs">אבחון וטיפול מותאם אישית</span>
               </div>
-            ))}
+            </div>
           </div>
         </div>
 
-        {/* Editorial Two-Column Notes */}
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 pt-8 border-t border-[#0A0B0D]/15 text-right">
-          <div>
-            <h3 className="text-lg sm:text-xl font-bold text-[#0A0B0D] mb-2.5">מה עשוי להשתלב במפגש?</h3>
-            <p className="text-sm sm:text-base text-[#1E2229]/80 leading-relaxed">
-              בהתאם לצורך, המפגש יכול לכלול עבודה ידנית על רקמות רכות ושרירים, שיפור טווחי תנועה ותרגילים מותאמים. לא כל אדם זקוק לאותן טכניקות, ולא כל מפגש יכלול את כל המרכיבים.
+        {/* First Session Workflow — 4 Linear Steps */}
+        <div className="mb-12 sm:mb-16 text-right">
+          <div className="flex flex-wrap items-center justify-between gap-3 mb-6 sm:mb-8 pb-4 border-b border-white/[0.07]">
+            <h3 className="text-lg sm:text-2xl font-black text-white">
+              המפגש הראשון
+            </h3>
+            <span className="text-xs text-neutral-400 font-mono">מבנה עבודה מוגדר</span>
+          </div>
+
+          {/* Mobile: compact vertical timeline · sm+: card grid */}
+          <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 sm:gap-5 border-r border-logoIce/25 sm:border-r-0 mr-1.5 sm:mr-0">
+            {stages.map((stage) => (
+              <li
+                key={stage.num}
+                className="relative pr-5 pb-6 last:pb-0 sm:p-6 sm:rounded-3xl sm:border sm:border-white/[0.08] sm:hover:border-white/[0.15] sm:bg-neutral-900/35 transition-colors text-right flex flex-col"
+              >
+                <span
+                  className="sm:hidden absolute -right-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-logoIce shadow-[0_0_10px_rgba(125,184,232,0.6)]"
+                  aria-hidden="true"
+                />
+                <span className="font-mono text-logoIce/80 text-xs sm:text-sm font-semibold tracking-wider block mb-1 sm:mb-2">
+                  {stage.num}
+                </span>
+                <h4 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">{stage.title}</h4>
+                <p className="text-[13.5px] sm:text-sm text-neutral-400 leading-relaxed">{stage.body}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        {/* Detail Cards */}
+        <div className="grid md:grid-cols-2 gap-5 sm:gap-8 text-right">
+          <div className="border border-white/[0.08] bg-neutral-900/35 rounded-3xl p-5 sm:p-8">
+            <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">מה עשוי להשתלב במפגש?</h3>
+            <p className="text-[13.5px] sm:text-sm text-neutral-300 leading-relaxed mb-3 sm:mb-4">
+              בהתאם לצורך, המפגש יכול לכלול עבודה ידנית על רקמות רכות ושרירים, עבודה על טווחי תנועה, מתיחות ותרגילים מותאמים.
+            </p>
+            <p className="text-[13px] sm:text-xs text-neutral-400 leading-relaxed mb-3 sm:mb-4">
+              לדוגמה, אם אתה מגיע עם נוקשות בכתף שמפריעה לך באימון, נוכל לבחון את התנועה, לעבוד על האזורים הרלוונטיים ולשלב תרגול שמתאים למצבך.
+            </p>
+            <p className="text-xs text-neutral-500 italic">
+              * לא כל אדם זקוק לאותן טכניקות, ולא כל מפגש יכלול את כל המרכיבים.
             </p>
           </div>
-          <div>
-            <h3 className="text-lg sm:text-xl font-bold text-[#0A0B0D] mb-2.5">ומה קורה לאחר המפגש הראשון?</h3>
-            <p className="text-sm sm:text-base text-[#1E2229]/80 leading-relaxed">
-              אפשר להמשיך במפגשים בודדים או במסגרת תהליכית הכוללת טיפול גופני, תרגול, התאמות עומס ומעקב. ההמלצה נקבעת לפי הצורך בפועל.
+
+          <div className="border border-white/[0.08] bg-neutral-900/35 rounded-3xl p-5 sm:p-8">
+            <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">ומה קורה לאחר המפגש הראשון?</h3>
+            <p className="text-[13.5px] sm:text-sm text-neutral-300 leading-relaxed mb-3 sm:mb-4">
+              מפגשי המשך יכולים לכלול טיפול גופני, תרגול, הנחיות לבית, התאמות עומס ומעקב אחר ההתקדמות.
+            </p>
+            <p className="text-[13px] sm:text-xs text-neutral-400 leading-relaxed">
+              אפשר להמשיך במפגשים בודדים או לבחון מסלול טיפולי מתאים. ההמלצה נקבעת לפי הצורך — לא כל אדם זקוק לאותו מספר מפגשים.
             </p>
           </div>
         </div>
+
+        <div className="mt-10 sm:mt-12 text-right">
+          <a
+            href="#how-it-works"
+            className="inline-flex items-center gap-2 text-silverOff hover:text-white text-sm font-medium transition-colors min-h-[44px] group"
+          >
+            <span>איך מתחילים?</span>
+            <span className="transition-transform duration-200 group-hover:-translate-x-1 text-logoIce">←</span>
+          </a>
+        </div>
+
       </div>
     </section>
   );

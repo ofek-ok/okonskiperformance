@@ -33,9 +33,9 @@ export default function AccessibilityPage() {
 
       <section aria-labelledby="a11y-contact">
         <h2 id="a11y-contact">יצירת קשר בנושא נגישות</h2>
-        <p>שם איש קשר: <strong>אופק אוקונסקי</strong></p>
-        <p>דוא&ldquo;ל: <a href="mailto:okonski.preformance@gmail.com" className="underline">okonski.preformance@gmail.com</a></p>
-        <p>טלפון / וואטסאפ: <strong>055-5172571</strong></p>
+        <p>שם איש קשר: <strong>[ACCESSIBILITY CONTACT]</strong></p>
+        <p>דוא&ldquo;ל: <strong>[ACCESSIBILITY EMAIL]</strong></p>
+        <p>טלפון: <strong>[ACCESSIBILITY PHONE]</strong></p>
         <p>אם נתקלתם בבעיית נגישות, מומלץ לציין בפנייה את העמוד שבו נתקלתם בבעיה, הפעולה שניסיתם לבצע, סוג המכשיר/דפדפן וטכנולוגיה מסייעת שבה השתמשתם, ככל שרלוונטי.</p>
       </section>
 

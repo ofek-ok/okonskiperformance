@@ -40,9 +40,6 @@ module.exports = {
         heebo: ["Heebo", "sans-serif"],
         jakarta: ["Plus Jakarta Sans", "sans-serif"],
         barlow: ["Barlow Condensed", "sans-serif"],
-        manrope: ["Manrope", "sans-serif"],
-        sans: ["Heebo", "Inter", "sans-serif"],
-        mono: ["ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
       },
       backgroundImage: {
         "gradient-dark": "linear-gradient(135deg, #0A0B0D 0%, #14181F 100%)",

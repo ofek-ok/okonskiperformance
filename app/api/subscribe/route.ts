@@ -29,8 +29,8 @@ export async function POST(request: Request) {
     const note = String(body.note || "").trim();
     const marketingConsent = body.marketing_consent === true;
 
-    if (!fullName || !phone || !topic || !marketingConsent) {
-      return NextResponse.json({ error: "Missing required fields: full_name, phone, topic, marketing_consent" }, { status: 400 });
+    if (!fullName || !phone || !marketingConsent) {
+      return NextResponse.json({ error: "Missing required fields: full_name, phone, marketing_consent" }, { status: 400 });
     }
 
     const payload = {

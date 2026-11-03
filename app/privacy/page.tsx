@@ -15,13 +15,13 @@ export default function PrivacyPage() {
         <p>Okonski Performance (&ldquo;OP&rdquo;, &ldquo;אנחנו&rdquo; או &ldquo;העסק&rdquo;) מכבדת את פרטיות המשתמשים באתר ופועלת לשמירה על המידע האישי הנמסר לה והשימוש הנעשה בו.</p>
         <p>מדיניות פרטיות זו מסבירה איזה מידע עשוי להיאסף במסגרת השימוש באתר, כיצד אנו משתמשים בו, עם מי הוא עשוי להיות משותף, כיצד הוא נשמר ומהן האפשרויות העומדות לרשות המשתמשים ביחס למידע שלהם.</p>
         <p>השימוש באתר ומסירת מידע באמצעותו כפופים למדיניות זו.</p>
-        <p>בעל השליטה במידע: <strong>Okonski Performance</strong></p>
-        <p>פרטי התקשרות בענייני פרטיות: <a href="mailto:okonski.preformance@gmail.com" className="underline">okonski.preformance@gmail.com</a> | <strong>055-5172571</strong></p>
+        <p>בעל השליטה במידע: <strong>[BUSINESS LEGAL NAME]</strong></p>
+        <p>פרטי התקשרות בענייני פרטיות: <strong>[PRIVACY EMAIL]</strong> | <strong>[BUSINESS PHONE — IF APPLICABLE]</strong></p>
       </section>
 
       <section aria-labelledby="priv-2">
         <h2 id="priv-2">2. איזה מידע אנחנו אוספים?</h2>
-        <p>בשלב ה-Pre-Launch, האתר מאפשר להצטרף ל-רשימת המתעניינים.</p>
+        <p>בשלב ה-Pre-Launch, האתר מאפשר להצטרף ל-Performance List.</p>
         <p>במסגרת ההרשמה אנו עשויים לאסוף:</p>
         <ul>
           <li>שם מלא;</li>
@@ -33,12 +33,12 @@ export default function PrivacyPage() {
           <li>מידע טכני הנוצר במהלך השימוש באתר, כגון סוג דפדפן, סוג מכשיר, כתובת IP ומידע טכני דומה, ככל שמידע זה נאסף על ידי מערכות האתר או ספקי השירות שלנו;</li>
           <li>מידע אודות אינטראקציה עם האתר, ככל שמופעלים כלי מדידה וניתוח.</li>
         </ul>
-        <p>איננו מבקשים במסגרת טופס ה-רשימת המתעניינים מידע רפואי, מידע על פציעות או מידע בריאותי. אנא אל תמסרו מידע מסוג זה באמצעות טופס ההרשמה.</p>
+        <p>איננו מבקשים במסגרת טופס ה-Performance List מידע רפואי, מידע על פציעות או מידע בריאותי. אנא אל תמסרו מידע מסוג זה באמצעות טופס ההרשמה.</p>
       </section>
 
       <section aria-labelledby="priv-3">
         <h2 id="priv-3">3. האם קיימת חובה למסור את המידע?</h2>
-        <p>מסירת הפרטים באמצעות טופס ה-רשימת המתעניינים נעשית מרצונכם.</p>
+        <p>מסירת הפרטים באמצעות טופס ה-Performance List נעשית מרצונכם.</p>
         <p>אינכם מחויבים למסור את המידע, אולם ללא מסירת הפרטים הנדרשים לא נוכל לצרף אתכם לרשימה או לספק באמצעותה את העדכונים והשירותים הקשורים בה.</p>
       </section>
 
@@ -46,7 +46,7 @@ export default function PrivacyPage() {
         <h2 id="priv-4">4. מטרות השימוש במידע</h2>
         <p>אנו עשויים להשתמש במידע לצורך:</p>
         <ul>
-          <li>ניהול ה-רשימת המתעניינים;</li>
+          <li>ניהול ה-Performance List;</li>
           <li>שליחת תוכן ועדכונים שביקשתם לקבל;</li>
           <li>עדכונים לקראת השקת Okonski Performance;</li>
           <li>הודעה על פתיחת האפשרות לקביעת טיפולים;</li>
@@ -65,8 +65,8 @@ export default function PrivacyPage() {
       </section>
 
       <section aria-labelledby="priv-5">
-        <h2 id="priv-5">5. רשימת המתעניינים ודיוור</h2>
-        <p>הצטרפות ל-רשימת המתעניינים מאפשרת ל-Okonski Performance לשלוח למשתמש, בהתאם להסכמתו ולהוראות הדין, תוכן, עדכונים, מידע על ההשקה, פתיחת היומן, שירותים והודעות נוספות הקשורות לפעילות OP.</p>
+        <h2 id="priv-5">5. Performance List ודיוור</h2>
+        <p>הצטרפות ל-Performance List מאפשרת ל-Okonski Performance לשלוח למשתמש, בהתאם להסכמתו ולהוראות הדין, תוכן, עדכונים, מידע על ההשקה, פתיחת היומן, שירותים והודעות נוספות הקשורות לפעילות OP.</p>
         <p>כאשר הודעה מהווה דבר פרסומת לפי הדין, שליחתה תיעשה בכפוף להסכמה הנדרשת לפי דין.</p>
         <p>ניתן לבקש להפסיק לקבל דיוור שיווקי בכל עת באמצעות מנגנון ההסרה שיופיע בהודעות הרלוונטיות או באמצעות פנייה אלינו.</p>
         <p>בקשת הסרה מדיוור שיווקי אינה מחייבת בהכרח מחיקה של כל מידע שהעסק רשאי או נדרש לשמור למטרות אחרות.</p>
@@ -123,7 +123,7 @@ export default function PrivacyPage() {
 
       <section aria-labelledby="priv-12">
         <h2 id="priv-12">12. קטינים</h2>
-        <p>האתר ו-רשימת המתעניינים אינם מיועדים לאיסוף מכוון של מידע אישי מילדים ללא ההסכמות הנדרשות לפי דין.</p>
+        <p>האתר ו-Performance List אינם מיועדים לאיסוף מכוון של מידע אישי מילדים ללא ההסכמות הנדרשות לפי דין.</p>
         <p>אם יתברר לנו כי נאסף מידע באופן שאינו תואם את הדין, נפעל לטיפול בו בהתאם לנסיבות.</p>
       </section>
 
@@ -137,7 +137,7 @@ export default function PrivacyPage() {
       <section aria-labelledby="priv-14">
         <h2 id="priv-14">14. יצירת קשר</h2>
         <p>לשאלות בנושא פרטיות ומידע אישי:</p>
-        <p><strong>Okonski Performance</strong><br /><a href="mailto:okonski.preformance@gmail.com" className="underline">okonski.preformance@gmail.com</a> | <strong>055-5172571</strong></p>
+        <p><strong>[BUSINESS LEGAL NAME]</strong><br /><strong>[PRIVACY EMAIL]</strong></p>
       </section>
 
     </LegalPageLayout>
