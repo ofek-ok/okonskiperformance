@@ -33,52 +33,40 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="bg-[#0B0B0F] py-16 sm:py-24 lg:py-32 relative border-b border-white/[0.08] scroll-mt-20 sm:scroll-mt-24"
+      className="bg-[#0B0B0F] py-16 sm:py-24 lg:py-28 border-b border-white/10 scroll-mt-16"
       aria-labelledby="faq-heading"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-8 text-right">
-        <div className="mb-8 sm:mb-12">
-          <div className="inline-flex items-center gap-3 mb-3.5">
-            <span className="w-8 h-[3px] rounded-full bg-[#2F5E9E]" aria-hidden="true" />
-            <span className="text-xs sm:text-sm font-semibold text-[#A7AAB4] tracking-wide">
-              כל מה שחשוב לדעת
-            </span>
-          </div>
-          <h2 id="faq-heading" className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
-            שאלות <span className="text-[#2F5E9E]">נפוצות</span>
+        <div className="mb-10 sm:mb-12">
+          <h2 id="faq-heading" className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            שאלות נפוצות
           </h2>
         </div>
 
-        <div className="space-y-3 sm:space-y-3.5">
+        {/* Clean Ruled List — No Boxed Accordion Cards */}
+        <div className="border-t border-white/12 divide-y divide-white/12">
           {questions.map(([q, a]) => (
             <details
               key={q}
-              className="group rounded-2xl border border-[#2F5E9E]/25 bg-[#11131A] open:bg-[#141824] open:border-[#2F5E9E]/60 px-4 sm:px-7 py-3.5 sm:py-5 transition-[background-color,border-color] duration-150"
+              className="group py-4 sm:py-5"
             >
-              <summary className="cursor-pointer text-white font-semibold text-[14.5px] sm:text-base flex items-center justify-between gap-3.5 list-none focus:outline-none focus-visible:ring-1 focus-visible:ring-[#2F5E9E] rounded min-h-[44px]">
+              <summary className="cursor-pointer text-white font-semibold text-base sm:text-lg flex items-center justify-between gap-4 list-none focus:outline-none min-h-[44px]">
                 <span className="leading-snug">{q}</span>
-                <span className="w-8 h-8 rounded-full border border-[#2F5E9E]/35 bg-[#2F5E9E]/15 group-open:bg-[#2F5E9E] flex items-center justify-center shrink-0 text-[#2F5E9E] group-open:text-white transition-[background-color,color] duration-150">
-                  <svg
-                    className="w-3.5 h-3.5 transition-transform duration-200 group-open:rotate-180"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="M19 9l-7 7-7-7" />
-                  </svg>
+                <span className="font-mono text-lg text-[#A7AAB4] transition-transform duration-150 group-open:rotate-45 shrink-0">
+                  +
                 </span>
               </summary>
-              <p className="text-[#A7AAB4] text-[13.5px] sm:text-sm leading-relaxed pt-3.5 sm:pt-4 mt-3 border-t border-white/[0.08] pl-1">
+              <p className="text-[#A7AAB4] text-sm sm:text-base leading-relaxed pt-3 pl-1">
                 {a}
               </p>
             </details>
           ))}
         </div>
 
-        <div className="mt-10 sm:mt-12 text-center sm:text-right">
+        <div className="mt-10 sm:mt-12 text-right">
           <a
             href="#performance-list"
-            className="m-btn bg-[#2F5E9E] hover:bg-[#386CB3] text-white border border-white/15 font-bold py-3.5 px-8 rounded-full text-sm w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center gap-2 shadow-[0_8px_24px_-4px_rgba(47,94,158,0.65)]"
+            className="m-btn bg-[#2F5E9E] hover:bg-[#264E86] text-white font-semibold py-3.5 px-7 rounded-lg text-sm w-full sm:w-auto min-h-[46px] inline-flex items-center justify-center gap-2"
           >
             <span>הצטרפות ל־Performance List</span>
             <span>←</span>
