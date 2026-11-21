@@ -122,7 +122,7 @@ export default function WhoItsFor() {
   return (
     <section
       id="who-its-for"
-      className="py-16 sm:py-24 lg:py-28 bg-[#0B0B0F] border-b border-white/10 scroll-mt-16"
+      className="py-16 sm:py-24 lg:py-28 bg-[#12151C] border-b border-white/10 scroll-mt-16"
       aria-labelledby="who-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
@@ -144,7 +144,7 @@ export default function WhoItsFor() {
           {pillars.map((pillar) => (
             <article
               key={pillar.title}
-              className="m-card h-full flex flex-col justify-between p-6 sm:p-8 rounded-xl bg-[#111216] border border-white/10"
+              className="m-card h-full flex flex-col justify-between p-6 sm:p-8 rounded-xl bg-[#191D26] border border-white/10"
             >
               <div className="flex-1 flex flex-col">
                 <div>

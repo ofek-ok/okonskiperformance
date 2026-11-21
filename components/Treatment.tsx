@@ -63,17 +63,17 @@ export default function Treatment() {
             המפגש הראשון
           </h3>
 
-          <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {stages.map((stage) => (
               <li
                 key={stage.num}
-                className="pt-4 border-t border-white/15 text-right flex flex-col"
+                className="m-card p-5 sm:p-6 rounded-xl bg-[#14171F] border border-white/10 text-right flex flex-col"
               >
-                <span className="font-mono tabular-nums text-[#A7AAB4] text-xs mb-2">
+                <span className="font-mono tabular-nums text-xs font-bold px-2 py-0.5 rounded bg-[#2F5E9E]/20 text-[#74A4EC] self-start mb-3">
                   {stage.num}
                 </span>
                 <h4 className="text-lg font-bold text-white mb-2">{stage.title}</h4>
-                <p className="text-sm text-[#A7AAB4] leading-relaxed">{stage.body}</p>
+                <p className="text-sm text-[#B0B7C3] leading-relaxed">{stage.body}</p>
               </li>
             ))}
           </ol>
