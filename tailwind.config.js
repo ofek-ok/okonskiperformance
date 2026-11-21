@@ -23,7 +23,7 @@ module.exports = {
 
         // White & Cool Gray (#FFFFFF · #A7AAB4)
         silverPure: "#FFFFFF",   // White — לוגו, כותרות
-        silverOff: "#FFFFFF",    // כותרות וטקסט ראשי
+        silverOff: "#EAECEF",    // טקסט משנה בהיר וחד
         silverMuted: "#A7AAB4",  // Cool Gray — טקסט משני, אלמנטים
         silverDark: "#7E828E",   // תוויות משניות ומטא
 

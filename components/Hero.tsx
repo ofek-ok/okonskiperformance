@@ -98,27 +98,27 @@ export default function Hero() {
       />
 
       {/* Clean Un-boxed Typography & Centerpiece Logo Directly on Bright Video Overlay */}
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-8 text-center flex flex-col items-center animate-fade-up">
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-8 text-center flex flex-col items-center">
         {/* Prominent Centerpiece Brand Logo */}
-        <div className="mb-5 sm:mb-8 flex items-center justify-center">
+        <div className="mb-5 sm:mb-8 flex items-center justify-center stagger-1">
           <Image
             src="/okonski-logo-updated.svg"
             alt="Okonski Performance"
             width={450}
             height={346}
-            className="w-40 xs:w-48 sm:w-64 md:w-72 lg:w-80 h-auto object-contain mx-auto drop-shadow-[0_14px_34px_rgba(0,0,0,0.85)] transition-transform duration-500 hover:scale-[1.02]"
+            className="w-40 xs:w-48 sm:w-64 md:w-72 lg:w-80 h-auto object-contain mx-auto drop-shadow-[0_14px_34px_rgba(0,0,0,0.85)]"
             priority
           />
         </div>
 
         {/* Main H1 Headline with Subtle Split-Tone Hierarchy */}
-        <h1 className="text-[28px] xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.14] mb-5 sm:mb-8 max-w-4xl mx-auto text-balance drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]">
+        <h1 className="stagger-2 text-[28px] xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.14] mb-5 sm:mb-8 max-w-4xl mx-auto text-balance drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]">
           הגוף שלך חייב{" "}
           <span className="text-silverOff">לעמוד בקצב שלך.</span>
         </h1>
 
         {/* 3 Needs Text Stack (Mobile scannable with subtle dividers) */}
-        <div className="hidden md:grid grid-cols-3 gap-0 max-w-3xl w-full mx-auto mb-10 text-sm text-neutral-100 font-medium text-center divide-x divide-x-reverse divide-white/15 drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)]">
+        <div className="stagger-3 hidden md:grid grid-cols-3 gap-0 max-w-3xl w-full mx-auto mb-10 text-sm text-neutral-100 font-medium text-center divide-x divide-x-reverse divide-white/15 drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)]">
           <p className="leading-relaxed px-5">
             <strong className="text-white font-bold">פציעה או כאב?</strong> נמצא את המקור, לא רק את הנקודה שכואבת.
           </p>
@@ -131,10 +131,10 @@ export default function Hero() {
         </div>
 
         {/* Primary CTA Button — Full Capsule matching Navbar */}
-        <div className="flex flex-col items-center justify-center w-full sm:w-auto px-2 sm:px-0 gap-3">
+        <div className="stagger-4 flex flex-col items-center justify-center w-full sm:w-auto px-2 sm:px-0 gap-3">
           <a
             href="#performance-list"
-            className="w-full sm:w-auto max-w-xs sm:max-w-none bg-white text-black font-semibold px-8 py-3.5 min-h-[48px] rounded-full hover:bg-neutral-100 transition-all duration-200 shadow-[0_10px_35px_-5px_rgba(0,0,0,0.6),0_0_25px_rgba(255,255,255,0.25)] inline-flex items-center justify-center active:scale-[0.98] text-[15px] sm:text-base tracking-wide"
+            className="m-btn w-full sm:w-auto max-w-xs sm:max-w-none bg-white text-black font-semibold px-8 py-3.5 min-h-[48px] rounded-full hover:bg-neutral-100 shadow-[0_10px_35px_-5px_rgba(0,0,0,0.6),0_0_25px_rgba(255,255,255,0.25)] inline-flex items-center justify-center text-[15px] sm:text-base tracking-wide"
           >
             שריון קדימות בתורים ←
           </a>

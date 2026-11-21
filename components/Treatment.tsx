@@ -53,7 +53,7 @@ export default function Treatment() {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] lg:aspect-[4/3] rounded-3xl overflow-hidden border border-white/[0.08] shadow-[0_14px_40px_-14px_rgba(0,0,0,0.6)] bg-neutral-900">
+            <div className="m-photo-frame relative w-full aspect-[16/10] sm:aspect-[16/9] lg:aspect-[4/3] rounded-3xl overflow-hidden border border-white/[0.08] shadow-[0_14px_40px_-14px_rgba(0,0,0,0.6)] bg-neutral-900">
               <Image
                 src="/method-treatment.jpg"
                 alt="תהליך הטיפול האישי ב־Okonski Performance"
@@ -84,13 +84,13 @@ export default function Treatment() {
             {stages.map((stage) => (
               <li
                 key={stage.num}
-                className="relative pr-5 pb-6 last:pb-0 sm:p-6 sm:rounded-3xl sm:border sm:border-white/[0.08] sm:hover:border-white/[0.15] sm:bg-neutral-900/35 transition-colors text-right flex flex-col"
+                className="m-card relative pr-5 pb-6 last:pb-0 sm:p-6 sm:rounded-3xl sm:border sm:border-white/[0.08] sm:bg-neutral-900/35 text-right flex flex-col"
               >
                 <span
                   className="sm:hidden absolute -right-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-logoIce shadow-[0_0_10px_rgba(47,94,158,0.6)]"
                   aria-hidden="true"
                 />
-                <span className="font-mono text-logoIce/80 text-xs sm:text-sm font-semibold tracking-wider block mb-1 sm:mb-2">
+                <span className="font-mono tabular-nums text-logoIce/80 text-xs sm:text-sm font-semibold tracking-wider block mb-1 sm:mb-2">
                   {stage.num}
                 </span>
                 <h4 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">{stage.title}</h4>

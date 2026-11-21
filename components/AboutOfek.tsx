@@ -26,7 +26,7 @@ export default function AboutOfek() {
           
           {/* Professional Studio Portrait */}
           <div className="lg:col-span-5 relative order-first">
-            <div className="relative w-full max-w-[300px] sm:max-w-[360px] mx-auto aspect-square rounded-3xl overflow-hidden border border-white/[0.08] shadow-[0_18px_48px_-14px_rgba(0,0,0,0.65)] bg-neutral-900">
+            <div className="m-photo-frame relative w-full max-w-[300px] sm:max-w-[360px] mx-auto aspect-square rounded-3xl overflow-hidden border border-white/[0.08] shadow-[0_18px_48px_-14px_rgba(0,0,0,0.65)] bg-neutral-900">
               <Image
                 src="/ofek-portrait-hd.jpg"
                 alt="אופק אוקונסקי, מייסד Okonski Performance"

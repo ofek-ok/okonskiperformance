@@ -48,7 +48,7 @@ export default function Navbar() {
     <>
       {/* Floating Elongated Capsule Navbar - Inspired by Adir Asher layout */}
       <header
-        className={`fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-24px)] sm:w-[calc(100%-48px)] max-w-6xl xl:max-w-7xl transition-all duration-300 ${
+        className={`fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-24px)] sm:w-[calc(100%-48px)] max-w-6xl xl:max-w-7xl transition-[background-color,border-color,box-shadow,border-radius] duration-200 [transition-timing-function:var(--ease-out)] ${
           menuOpen
             ? "rounded-[28px] bg-[#0B0B0F]/95 backdrop-blur-2xl border border-white/20 shadow-2xl p-4 sm:p-5"
             : scrolled
@@ -99,7 +99,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <a
               href="/#performance-list"
-              className="bg-white text-black hover:bg-neutral-100 transition-all duration-200 text-[11.5px] sm:text-[13px] font-semibold py-2 px-3 sm:px-5 rounded-full tracking-wide whitespace-nowrap inline-flex items-center justify-center min-h-[40px] sm:min-h-[38px] shadow-sm active:scale-[0.98]"
+              className="m-btn bg-white text-black hover:bg-neutral-100 text-[11.5px] sm:text-[13px] font-semibold py-2 px-3 sm:px-5 rounded-full tracking-wide whitespace-nowrap inline-flex items-center justify-center min-h-[40px] sm:min-h-[38px] shadow-sm"
             >
               <span className="sm:hidden">שריון מקום</span>
               <span className="hidden sm:inline">שריון קדימות בתורים</span>

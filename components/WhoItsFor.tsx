@@ -157,7 +157,7 @@ export default function WhoItsFor() {
           {pillars.map((pillar) => (
             <article
               key={pillar.title}
-              className="h-full flex flex-col justify-between p-5 sm:p-7 lg:p-8 rounded-3xl bg-neutral-900/45 backdrop-blur-sm border border-white/[0.08] hover:border-white/[0.16] shadow-[0_12px_36px_-16px_rgba(0,0,0,0.5)] transition-all duration-300 relative"
+              className="m-card h-full flex flex-col justify-between p-5 sm:p-7 lg:p-8 rounded-3xl bg-neutral-900/45 backdrop-blur-sm border border-white/[0.08] shadow-[0_12px_36px_-16px_rgba(0,0,0,0.5)] relative"
             >
               <div className="flex-1 flex flex-col">
                 {/* Card Header (Title + Sub-line) */}
@@ -212,7 +212,7 @@ export default function WhoItsFor() {
           </p>
           <a
             href="#performance-list"
-            className="bg-white text-black hover:bg-neutral-100 font-semibold px-7 py-3.5 rounded-full transition-all duration-200 inline-flex items-center justify-center gap-2 text-sm sm:text-base tracking-wide shrink-0 w-full md:w-auto shadow-sm active:scale-[0.98]"
+            className="m-btn bg-white text-black hover:bg-neutral-100 font-semibold px-7 py-3.5 rounded-full inline-flex items-center justify-center gap-2 text-sm sm:text-base tracking-wide shrink-0 w-full md:w-auto shadow-sm"
           >
             <span>שריון קדימות בתורים</span>
             <span>←</span>
