@@ -159,7 +159,7 @@ export default function PerformanceList() {
       aria-label="הצעד הראשון — השארת פרטים ותיאום"
     >
       <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_65%_55%_at_50%_35%,rgba(30,45,68,0.35)_0%,rgba(10,11,13,1)_100%)] pointer-events-none"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_65%_55%_at_50%_35%,rgba(47,94,158,0.22)_0%,rgba(11,11,15,1)_100%)] pointer-events-none"
         aria-hidden="true"
       />
 
@@ -167,19 +167,19 @@ export default function PerformanceList() {
         {/* Section Header inspired by Adir Asher's "הצעד הראשון" */}
         <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
           <div className="inline-flex items-center gap-3 mb-3.5">
-            <span className="w-8 h-[2px] rounded-full bg-logoIce/70" aria-hidden="true" />
-            <span className="text-xs sm:text-sm font-medium text-silverOff tracking-wide">
+            <span className="w-8 h-[3px] rounded-full bg-[#2F5E9E]" aria-hidden="true" />
+            <span className="text-xs sm:text-sm font-semibold text-[#A7AAB4] tracking-wide">
               הצעד הראשון
             </span>
-            <span className="w-8 h-[2px] rounded-full bg-logoIce/70" aria-hidden="true" />
+            <span className="w-8 h-[3px] rounded-full bg-[#2F5E9E]" aria-hidden="true" />
           </div>
 
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] mb-4 sm:mb-5 text-balance">
             מוכנים להפסיק לחיות{" "}
-            <span className="text-logoIce">עם הכאב והעומס?</span>
+            <span className="text-[#2F5E9E]">עם הכאב והעומס?</span>
           </h2>
 
-          <p className="text-neutral-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto">
+          <p className="text-[#A7AAB4] text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto">
             ספרו בקצרה מה מביא אתכם. <strong className="text-white">אני קורא כל פנייה בעצמי</strong>, וחוזר אליכם אישית לקראת פתיחת היומן עם קדימות בתורים ומחיר ייחודי למצטרפים מוקדמים.
           </p>
         </div>
@@ -227,7 +227,7 @@ export default function PerformanceList() {
               <form
                 onSubmit={handleSubmit}
                 noValidate
-                className="border border-white/[0.1] bg-neutral-900/50 backdrop-blur-md rounded-3xl p-5 sm:p-8 lg:p-9 text-right space-y-6 shadow-[0_20px_50px_-14px_rgba(0,0,0,0.65)]"
+                className="border border-[#2F5E9E]/35 bg-[#11131A] rounded-3xl p-5 sm:p-8 lg:p-9 text-right space-y-6 shadow-[0_24px_60px_-14px_rgba(0,0,0,0.85)]"
                 aria-label="טופס השארת פרטים לטיפול והתייעצות"
               >
                 {/* 1. Topic / Goal Selector Pills */}
@@ -243,10 +243,10 @@ export default function PerformanceList() {
                           key={topic.id}
                           type="button"
                           onClick={() => setSelectedTopic(topic.id)}
-                          className={`text-xs sm:text-[13px] font-semibold px-3.5 py-2.5 min-h-[40px] rounded-2xl border transition-all duration-200 cursor-pointer ${
+                          className={`m-btn text-xs sm:text-[13px] font-semibold px-3.5 py-2.5 min-h-[40px] rounded-2xl border cursor-pointer ${
                             active
-                              ? "bg-logoIce/20 text-white border-logoIce/60 shadow-[0_0_20px_-5px_rgba(47,94,158,0.4)]"
-                              : "bg-charcoalDark/70 text-silver hover:text-white border-white/10 hover:border-white/25"
+                              ? "bg-[#2F5E9E] text-white border-[#437ACA] shadow-[0_6px_20px_-4px_rgba(47,94,158,0.65)]"
+                              : "bg-[#0B0B0F] text-[#A7AAB4] hover:text-white border-white/12 hover:border-[#2F5E9E]/45"
                           }`}
                         >
                           {topic.label}
@@ -476,7 +476,7 @@ export default function PerformanceList() {
                     type="submit"
                     disabled={status === "loading" || hasSubmitted}
                     aria-busy={status === "loading"}
-                    className="w-full bg-white text-black font-bold hover:bg-neutral-100 transition-all duration-200 py-4 px-6 rounded-full text-sm sm:text-base tracking-wide flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed min-h-[52px] active:scale-[0.98] relative shadow-[0_10px_30px_-5px_rgba(255,255,255,0.2)]"
+                    className="m-btn w-full bg-[#2F5E9E] hover:bg-[#386CB3] text-white border border-white/15 font-bold py-4 px-6 rounded-full text-sm sm:text-base tracking-wide flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed min-h-[52px] relative shadow-[0_12px_34px_-5px_rgba(47,94,158,0.7)]"
                   >
                     <span className={`transition-opacity ${status === "loading" ? "opacity-0" : "opacity-100"}`}>
                       שליחת פרטים והבטחת עדיפות ←
@@ -484,7 +484,7 @@ export default function PerformanceList() {
                     {status === "loading" && (
                       <div className="absolute inset-0 flex items-center justify-center" aria-label="שולח...">
                         <svg
-                          className="animate-spin h-5 w-5 text-black"
+                          className="animate-spin h-5 w-5 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -511,14 +511,14 @@ export default function PerformanceList() {
              ===================================================== */}
           <div className="lg:col-span-5 flex flex-col gap-4 sm:gap-5 text-right">
             {/* Reassurance Card: "לא בטוחים אם המקרה שלכם מתאים?" */}
-            <div className="rounded-3xl bg-steelDark/90 border border-white/[0.08] p-6 sm:p-7 shadow-lg">
-              <div className="w-10 h-10 rounded-2xl bg-logoIce/15 border border-logoIce/30 text-logoIce flex items-center justify-center font-bold text-lg mb-4">
+            <div className="rounded-3xl bg-[#11131A] border border-[#2F5E9E]/30 p-6 sm:p-7 shadow-lg">
+              <div className="w-10 h-10 rounded-2xl bg-[#2F5E9E]/15 border border-[#2F5E9E]/35 text-[#2F5E9E] flex items-center justify-center font-bold text-lg mb-4">
                 ?
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
                 לא בטוחים אם המקרה שלכם מתאים?
               </h3>
-              <p className="text-[13.5px] sm:text-sm text-silver leading-relaxed mb-5">
+              <p className="text-[13.5px] sm:text-sm text-[#A7AAB4] leading-relaxed mb-5">
                 לא חייבים לדעת מראש מה מקור הכאב או איזה טיפול בדיוק אתם צריכים. מתחילים בשיחת היכרות קצרה, תשאול והערכה – ומשם מבינים יחד מה הצעד הנכון עבורכם.
               </p>
 

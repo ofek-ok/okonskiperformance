@@ -3,30 +3,22 @@
 import Link from "next/link";
 import Image from "next/image";
 
-// =========================================================================
-// SOCIAL LINKS CONFIGURATION
-// To display social links, provide your verified social media profile URLs:
-// If left empty or with placeholder brackets, the FOLLOW OP section will not display.
-// =========================================================================
 export const SOCIAL_LINKS = {
-  instagram: "https://instagram.com",
-  facebook: "https://facebook.com",
-  linkedin: "https://linkedin.com",
-  tiktok: "https://tiktok.com",
-  maps: "https://maps.google.com",
+  instagram: "https://www.instagram.com/okonski.performance/",
+  facebook: "https://www.facebook.com/share/18Pc4EghgP/?mibextid=wwXIfr",
+  linkedin: "https://www.linkedin.com/company/okonski-preformance",
+  tiktok: "https://www.tiktok.com/@okonskiperformanc",
 };
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoalDark border-t border-white/[0.08] pt-12 sm:pt-16 pb-24 sm:pb-12 relative overflow-hidden" aria-label="תחתית האתר">
+    <footer className="bg-[#0B0B0F] border-t border-[#2F5E9E]/25 pt-12 sm:pt-16 pb-24 sm:pb-12 relative overflow-hidden" aria-label="תחתית האתר">
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl relative z-10">
-
         {/* Top footer row: Brand info & Social links */}
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start mb-12 gap-8">
-          
           {/* Brand with Official Updated Logo */}
           <div className="flex flex-col items-center md:items-start text-white">
-            <Link href="/#hero" className="mb-3 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-logoIce rounded-lg">
+            <Link href="/#hero" className="mb-3 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2F5E9E] rounded-lg">
               <Image
                 src="/okonski-logo-updated.svg"
                 alt="Okonski Performance — ספורטתרפיה ושיקום תנועתי"
@@ -35,14 +27,14 @@ export default function Footer() {
                 className="h-9 sm:h-10 w-auto object-contain"
               />
             </Link>
-            <p className="text-xs text-silverDark font-medium tracking-normal mt-1">
+            <p className="text-xs text-[#A7AAB4] font-medium tracking-normal mt-1">
               טיפול גופני, התאוששות ושיפור יכולת
             </p>
           </div>
 
-          {/* Social Links — Instagram, Facebook, LinkedIn, TikTok, MAPS */}
+          {/* Official Social Links — Instagram, Facebook, LinkedIn, TikTok */}
           <div className="flex flex-col items-center md:items-end gap-3">
-            <p className="font-barlow text-xs font-bold tracking-[0.2em] uppercase text-silver/50" dir="ltr">
+            <p className="font-jakarta text-xs font-bold tracking-[0.2em] uppercase text-[#A7AAB4]" dir="ltr">
               FOLLOW OP
             </p>
             <div className="flex items-center gap-2.5 sm:gap-3">
@@ -53,7 +45,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 aria-label="עקבו אחרי Okonski Performance ב-Instagram"
                 title="Instagram"
-                className="w-11 h-11 rounded-full bg-charcoal/80 border border-white/10 text-silver/80 hover:text-white hover:border-logoIce/50 hover:bg-white/[0.06] flex items-center justify-center transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-logoIce cursor-pointer"
+                className="m-btn w-11 h-11 rounded-full bg-[#11131A] border border-[#2F5E9E]/35 text-[#A7AAB4] hover:text-white hover:border-[#2F5E9E] hover:bg-[#2F5E9E]/20 flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2F5E9E] cursor-pointer"
               >
                 <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -69,7 +61,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 aria-label="עקבו אחרי Okonski Performance ב-Facebook"
                 title="Facebook"
-                className="w-11 h-11 rounded-full bg-charcoal/80 border border-white/10 text-silver/80 hover:text-white hover:border-logoIce/50 hover:bg-white/[0.06] flex items-center justify-center transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-logoIce cursor-pointer"
+                className="m-btn w-11 h-11 rounded-full bg-[#11131A] border border-[#2F5E9E]/35 text-[#A7AAB4] hover:text-white hover:border-[#2F5E9E] hover:bg-[#2F5E9E]/20 flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2F5E9E] cursor-pointer"
               >
                 <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
@@ -83,7 +75,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 aria-label="עקבו אחרי Okonski Performance ב-LinkedIn"
                 title="LinkedIn"
-                className="w-11 h-11 rounded-full bg-charcoal/80 border border-white/10 text-silver/80 hover:text-white hover:border-logoIce/50 hover:bg-white/[0.06] flex items-center justify-center transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-logoIce cursor-pointer"
+                className="m-btn w-11 h-11 rounded-full bg-[#11131A] border border-[#2F5E9E]/35 text-[#A7AAB4] hover:text-white hover:border-[#2F5E9E] hover:bg-[#2F5E9E]/20 flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2F5E9E] cursor-pointer"
               >
                 <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -97,52 +89,35 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 aria-label="עקבו אחרי Okonski Performance ב-TikTok"
                 title="TikTok"
-                className="w-11 h-11 rounded-full bg-charcoal/80 border border-white/10 text-silver/80 hover:text-white hover:border-logoIce/50 hover:bg-white/[0.06] flex items-center justify-center transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-logoIce cursor-pointer"
+                className="m-btn w-11 h-11 rounded-full bg-[#11131A] border border-[#2F5E9E]/35 text-[#A7AAB4] hover:text-white hover:border-[#2F5E9E] hover:bg-[#2F5E9E]/20 flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2F5E9E] cursor-pointer"
               >
                 <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.47 6.27 6.27 0 0 0 1.95-4.52V8.09a8.28 8.28 0 0 0 4.82 1.54v-3.5a4.8 4.8 0 0 1-1-.44z" />
                 </svg>
               </a>
-
-              {/* Google Maps */}
-              <a
-                href={SOCIAL_LINKS.maps}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="ניווט ב-Google Maps"
-                title="Google Maps"
-                className="w-11 h-11 rounded-full bg-charcoal/80 border border-white/10 text-silver/80 hover:text-white hover:border-logoIce/50 hover:bg-white/[0.06] flex items-center justify-center transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-logoIce cursor-pointer"
-              >
-                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M12 21s-7-6.58-7-12a7 7 0 1 1 14 0c0 5.42-7 12-7 12z" />
-                  <circle cx="12" cy="9" r="2.5" />
-                </svg>
-              </a>
             </div>
           </div>
-
         </div>
 
         {/* Bottom footer row: Copyright & Legal links */}
-        <div className="flex flex-col-reverse md:flex-row justify-between items-center pt-8 border-t border-white/5 text-sm text-silver/60 gap-8 md:gap-4">
+        <div className="flex flex-col-reverse md:flex-row justify-between items-center pt-8 border-t border-white/[0.08] text-sm text-[#A7AAB4] gap-8 md:gap-4">
           <p className="text-center md:text-right">&copy; {new Date().getFullYear()} Okonski Performance. All rights reserved.</p>
           <nav aria-label="קישורי תחתית ומשפטי" className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-center">
-            <Link href="/vision" className="hover:text-white transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-brand rounded">חזון ומדיניות</Link>
-            <Link href="/vision#policy" className="hover:text-white transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-brand rounded">מדיניות ביטול</Link>
-            <Link href="/privacy" className="hover:text-white transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-brand rounded">מדיניות פרטיות</Link>
-            <Link href="/terms" className="hover:text-white transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-brand rounded">תנאי שימוש</Link>
-            <Link href="/cookies" className="hover:text-white transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-brand rounded">מדיניות Cookies</Link>
-            <Link href="/accessibility" className="hover:text-white transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-brand rounded">הצהרת נגישות</Link>
+            <Link href="/vision" className="hover:text-white transition-colors duration-150 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#2F5E9E] rounded">חזון ומדיניות</Link>
+            <Link href="/vision#policy" className="hover:text-white transition-colors duration-150 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#2F5E9E] rounded">מדיניות ביטול</Link>
+            <Link href="/privacy" className="hover:text-white transition-colors duration-150 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#2F5E9E] rounded">מדיניות פרטיות</Link>
+            <Link href="/terms" className="hover:text-white transition-colors duration-150 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#2F5E9E] rounded">תנאי שימוש</Link>
+            <Link href="/cookies" className="hover:text-white transition-colors duration-150 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#2F5E9E] rounded">מדיניות Cookies</Link>
+            <Link href="/accessibility" className="hover:text-white transition-colors duration-150 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#2F5E9E] rounded">הצהרת נגישות</Link>
             <button
               onClick={() => document.dispatchEvent(new CustomEvent("open-cookie-settings"))}
-              className="hover:text-white transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-brand rounded underline cursor-pointer"
+              className="hover:text-white transition-colors duration-150 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#2F5E9E] rounded underline cursor-pointer"
               aria-label="ניהול העדפות Cookies"
             >
               ניהול העדפות Cookies
             </button>
           </nav>
         </div>
-
       </div>
     </footer>
   );
