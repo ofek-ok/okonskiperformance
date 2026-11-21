@@ -7,43 +7,45 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        charcoalDark: "#0A0B0D", // Brand Charcoal Black - מתוך brand.png
-        steelDark: "#14181F",    // משטחי בסיס עשירים
-        steelBase: "#1E2229",    // Brand Dark Steel Grey - מתוך brand.png
-        steelElevated: "#252C36",// משטחים מוגבהים
-        steelBorder: "rgba(226, 232, 240, 0.12)",
-        steelBorderHover: "rgba(115, 180, 230, 0.35)",
+        // OP · Official Brand Colors Board (#0B0B0F · #FFFFFF · #2F5E9E · #A7AAB4)
+        charcoalDark: "#0B0B0F", // Black — רקע, בסיס
+        steelDark: "#111218",    // משטחי בסיס כהים
+        steelBase: "#16171F",    // משטחי כרטיסים
+        steelElevated: "#1D1E28",// משטחים מוגבהים
+        steelBorder: "rgba(167, 170, 180, 0.14)",
+        steelBorderHover: "rgba(47, 94, 158, 0.45)",
 
-        // צבעי גרדיאנט מטאליים שנלקחו ישירות מסמל ה-Ø הרשמי
-        logoIce: "#73B4E6",      // הברק העליון בלוגו
-        logoBlue: "#3E6FA8",     // כחול המותג הרשמי - Premium Steel Blue
-        logoDeep: "#1E4E8C",     // גוף הסמל בלוגו
-        logoMidnight: "#0E2A52", // צל הלוגו העמוק
+        // Performance Blue — צבע מותג, הדגשות (#2F5E9E)
+        logoIce: "#2F5E9E",      // הדגשות וכותרות משנה — Performance Blue
+        logoBlue: "#2F5E9E",     // כחול המותג הרשמי — Performance Blue
+        logoDeep: "#23487A",     // גוון עומק ללחיצה/ריחוף
+        logoMidnight: "#142A4A", // צל עמוק
 
-        silverPure: "#FFFFFF",
-        silverOff: "#E2E8F0",    // Brand Off-White / Silver - מתוך brand.png
-        silverMuted: "#94A3B8",  // טקסט גוף קריא ונינוח
-        silverDark: "#64748B",   // תוויות משניות ומטא
+        // White & Cool Gray (#FFFFFF · #A7AAB4)
+        silverPure: "#FFFFFF",   // White — לוגו, כותרות
+        silverOff: "#FFFFFF",    // כותרות וטקסט ראשי
+        silverMuted: "#A7AAB4",  // Cool Gray — טקסט משני, אלמנטים
+        silverDark: "#7E828E",   // תוויות משניות ומטא
 
         // Backward compatibility mappings
-        primary: "#0A0B0D",
-        charcoal: "#14181F",
-        elevated: "#1E2229",
-        brand: "#3E6FA8",
-        "brand-bright": "#73B4E6",
-        "brand-dim": "#1E4E8C",
-        silver: "#E2E8F0",
-        "primary-text": "#111317",
-        "secondary-text": "#94A3B8",
+        primary: "#0B0B0F",
+        charcoal: "#111218",
+        elevated: "#16171F",
+        brand: "#2F5E9E",
+        "brand-bright": "#2F5E9E",
+        "brand-dim": "#23487A",
+        silver: "#FFFFFF",
+        "primary-text": "#0B0B0F",
+        "secondary-text": "#A7AAB4",
       },
       fontFamily: {
         heebo: ["Heebo", "sans-serif"],
-        jakarta: ["Plus Jakarta Sans", "sans-serif"],
-        barlow: ["Barlow Condensed", "sans-serif"],
+        jakarta: ["Montserrat", "Plus Jakarta Sans", "sans-serif"],
+        barlow: ["Montserrat", "Barlow Condensed", "sans-serif"],
       },
       backgroundImage: {
-        "gradient-dark": "linear-gradient(135deg, #0A0B0D 0%, #14181F 100%)",
-        "gradient-card": "linear-gradient(135deg, #1A1F26 0%, #13171D 100%)",
+        "gradient-dark": "linear-gradient(135deg, #0B0B0F 0%, #111218 100%)",
+        "gradient-card": "linear-gradient(135deg, #16171F 0%, #101117 100%)",
       },
       animation: {
         "fade-up": "fadeUp 0.6s ease-out forwards",
@@ -58,4 +60,3 @@ module.exports = {
   },
   plugins: [],
 };
-

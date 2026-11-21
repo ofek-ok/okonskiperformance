@@ -245,7 +245,7 @@ export default function PerformanceList() {
                           onClick={() => setSelectedTopic(topic.id)}
                           className={`text-xs sm:text-[13px] font-semibold px-3.5 py-2.5 min-h-[40px] rounded-2xl border transition-all duration-200 cursor-pointer ${
                             active
-                              ? "bg-logoIce/20 text-white border-logoIce/60 shadow-[0_0_20px_-5px_rgba(125,184,232,0.35)]"
+                              ? "bg-logoIce/20 text-white border-logoIce/60 shadow-[0_0_20px_-5px_rgba(47,94,158,0.4)]"
                               : "bg-charcoalDark/70 text-silver hover:text-white border-white/10 hover:border-white/25"
                           }`}
                         >

@@ -21,7 +21,7 @@ export default function LegalPageLayout({ title, label, lastUpdated = "ספטמ�
 
         {/* Hero Strip */}
         <div className="bg-charcoalDark border-b border-white/5 pt-28 pb-12 sm:pb-16 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(62,111,168,0.06)_0%,_transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(47,94,158,0.08)_0%,_transparent_60%)]" />
           <div className="container mx-auto px-4 sm:px-6 max-w-4xl relative z-10">
             <p className="font-barlow text-logoIce font-bold tracking-[0.2em] sm:tracking-[0.25em] uppercase text-xs sm:text-sm mb-4 sm:mb-6">{label}</p>
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-4 sm:mb-6">{title}</h1>

@@ -62,7 +62,7 @@ export default function Treatment() {
                 sizes="(max-width: 1024px) 100vw, 42vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoalDark/75 via-transparent to-transparent" />
-              <div className="absolute bottom-3 right-3 left-3 sm:bottom-4 sm:right-4 sm:left-4 px-3.5 sm:px-4 py-2.5 rounded-2xl bg-[#0A0B0D]/85 backdrop-blur-md border border-white/[0.08] flex flex-wrap items-center justify-between gap-1 text-xs text-silverOff">
+              <div className="absolute bottom-3 right-3 left-3 sm:bottom-4 sm:right-4 sm:left-4 px-3.5 sm:px-4 py-2.5 rounded-2xl bg-[#0B0B0F]/85 backdrop-blur-md border border-white/[0.08] flex flex-wrap items-center justify-between gap-1 text-xs text-silverOff">
                 <span className="font-semibold text-white">מפגש ראשון מקיף</span>
                 <span className="text-neutral-300 text-[11.5px] sm:text-xs">אבחון וטיפול מותאם אישית</span>
               </div>
@@ -87,7 +87,7 @@ export default function Treatment() {
                 className="relative pr-5 pb-6 last:pb-0 sm:p-6 sm:rounded-3xl sm:border sm:border-white/[0.08] sm:hover:border-white/[0.15] sm:bg-neutral-900/35 transition-colors text-right flex flex-col"
               >
                 <span
-                  className="sm:hidden absolute -right-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-logoIce shadow-[0_0_10px_rgba(125,184,232,0.6)]"
+                  className="sm:hidden absolute -right-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-logoIce shadow-[0_0_10px_rgba(47,94,158,0.6)]"
                   aria-hidden="true"
                 />
                 <span className="font-mono text-logoIce/80 text-xs sm:text-sm font-semibold tracking-wider block mb-1 sm:mb-2">

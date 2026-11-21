@@ -112,9 +112,9 @@ export default function VisionAndPolicyPage() {
         {/* =====================================================
             HERO HEADER
            ===================================================== */}
-        <section className="relative pt-28 pb-12 sm:pt-40 sm:pb-20 overflow-hidden border-b border-white/[0.06] bg-gradient-to-b from-[#0E1520] via-charcoalDark to-charcoalDark">
+        <section className="relative pt-28 pb-12 sm:pt-40 sm:pb-20 overflow-hidden border-b border-white/[0.06] bg-gradient-to-b from-[#111218] via-charcoalDark to-charcoalDark">
           <div
-            className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(125,184,232,0.12)_0%,_transparent_70%)] pointer-events-none"
+            className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(47,94,158,0.14)_0%,_transparent_70%)] pointer-events-none"
             aria-hidden="true"
           />
 
@@ -204,7 +204,7 @@ export default function VisionAndPolicyPage() {
             </div>
 
             {/* Accompaniment & Mission Block */}
-            <div className="rounded-3xl bg-gradient-to-br from-[#131C28] via-steelDark to-[#0E131B] border border-white/[0.1] p-5 sm:p-10 lg:p-12 shadow-[0_18px_45px_-12px_rgba(0,0,0,0.6)]">
+            <div className="rounded-3xl bg-gradient-to-br from-[#16171F] via-steelDark to-[#0F1016] border border-white/[0.1] p-5 sm:p-10 lg:p-12 shadow-[0_18px_45px_-12px_rgba(0,0,0,0.6)]">
               <div className="max-w-3xl mx-auto text-center">
                 <h3 className="text-lg sm:text-2xl font-extrabold text-white mb-4 sm:mb-5">
                   אנחנו מלווים אתכם לאורך כל הדרך
@@ -235,7 +235,7 @@ export default function VisionAndPolicyPage() {
            ===================================================== */}
         <section
           id="policy"
-          className="py-12 sm:py-24 border-b border-white/[0.06] bg-[#090B0E] scroll-mt-20 sm:scroll-mt-24"
+          className="py-12 sm:py-24 border-b border-white/[0.06] bg-[#0B0B0F] scroll-mt-20 sm:scroll-mt-24"
           aria-labelledby="policy-heading"
         >
           <div className="container mx-auto px-4 sm:px-6 max-w-5xl">

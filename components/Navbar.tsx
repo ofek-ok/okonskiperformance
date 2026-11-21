@@ -50,9 +50,9 @@ export default function Navbar() {
       <header
         className={`fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-24px)] sm:w-[calc(100%-48px)] max-w-6xl xl:max-w-7xl transition-all duration-300 ${
           menuOpen
-            ? "rounded-[28px] bg-[#0E131A]/95 backdrop-blur-2xl border border-white/20 shadow-2xl p-4 sm:p-5"
+            ? "rounded-[28px] bg-[#0B0B0F]/95 backdrop-blur-2xl border border-white/20 shadow-2xl p-4 sm:p-5"
             : scrolled
-            ? "rounded-full bg-[#161D26]/85 backdrop-blur-2xl border border-white/20 shadow-[0_16px_44px_-10px_rgba(0,0,0,0.65)] px-4 sm:px-8 py-2.5 sm:py-3"
+            ? "rounded-full bg-[#111218]/85 backdrop-blur-2xl border border-white/20 shadow-[0_16px_44px_-10px_rgba(0,0,0,0.65)] px-4 sm:px-8 py-2.5 sm:py-3"
             : "rounded-full bg-white/[0.15] sm:bg-white/[0.16] backdrop-blur-2xl border border-white/25 shadow-[0_14px_40px_-10px_rgba(0,0,0,0.5),_0_2px_12px_rgba(255,255,255,0.06)] px-4 sm:px-8 py-2.5 sm:py-3"
         }`}
       >

@@ -54,7 +54,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden border-b border-white/[0.06] bg-[#0A0B0D] pt-24 pb-14 sm:pt-32 sm:pb-20"
+      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden border-b border-white/[0.06] bg-[#0B0B0F] pt-24 pb-14 sm:pt-32 sm:pb-20"
       aria-label="Okonski Performance"
     >
       {/* Anchor for top of page */}
@@ -89,11 +89,11 @@ export default function Hero() {
 
       {/* Balanced Overlays: Clear & Bright Center with Smooth Top/Bottom Vignette for Text Contrast */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-[#0A0B0D]/70 via-[#0A0B0D]/30 to-[#0A0B0D] pointer-events-none"
+        className="absolute inset-0 bg-gradient-to-b from-[#0B0B0F]/70 via-[#0B0B0F]/30 to-[#0B0B0F] pointer-events-none"
         aria-hidden="true"
       />
       <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(10,11,13,0.45)_0%,_rgba(14,42,82,0.18)_55%,_transparent_80%)] pointer-events-none"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(11,11,15,0.45)_0%,_rgba(47,94,158,0.18)_55%,_transparent_80%)] pointer-events-none"
         aria-hidden="true"
       />
 
