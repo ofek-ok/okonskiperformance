@@ -34,7 +34,7 @@ export default function Treatment() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center mb-16 sm:mb-20">
           <div className="lg:col-span-6 text-right">
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
-              לא מטפלים בכתף. מטפלים בך.
+              איך עובד תהליך הטיפול
             </h2>
             <p className="text-white text-base sm:text-lg leading-relaxed mb-3 font-medium">
               אין שני אנשים שמגיעים עם אותו עומס, אותה מגבלה או אותה מטרה.
