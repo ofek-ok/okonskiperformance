@@ -129,17 +129,17 @@ export default function PerformanceList() {
   return (
     <section
       id="performance-list"
-      className="py-16 sm:py-24 lg:py-28 bg-[#0B0B0F] scroll-mt-16 border-b border-white/10"
-      aria-label="הצעד הראשון — השארת פרטים ותיאום"
+      className="py-16 sm:py-24 bg-[#0E1116] scroll-mt-16 border-b border-white/[0.08]"
+      aria-label="השארת פרטים לתיאום מפגש"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-8">
-        {/* Section Header — No Eyebrow, No Radial Glow */}
-        <div className="max-w-3xl text-right mb-10 sm:mb-14">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight mb-4">
-            מוכנים להפסיק לחיות עם הכאב והעומס?
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
+        {/* Concrete Heading at Weight 500 */}
+        <div className="max-w-3xl text-right mb-12">
+          <h2 className="text-2xl sm:text-4xl font-medium text-[#F4F6F9] tracking-tight leading-tight mb-4">
+            השארת פרטים לתיאום מפגש ראשון
           </h2>
-          <p className="text-[#A7AAB4] text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl">
-            ספרו בקצרה מה מביא אתכם. <strong className="text-white font-semibold">אני קורא כל פנייה בעצמי</strong>, וחוזר אליכם אישית לקראת פתיחת היומן עם קדימות בתורים ומחיר ייחודי למצטרפים מוקדמים.
+          <p className="text-[#A7AAB4] text-sm sm:text-base leading-relaxed max-w-2xl">
+            ספרו בקצרה מה מביא אתכם. <strong className="text-[#F4F6F9] font-medium">אני קורא כל פנייה בעצמי</strong>, וחוזר אליכם אישית לקראת פתיחת היומן עם קדימות בתורים ומחיר ייחודי למצטרפים מוקדמים.
           </p>
         </div>
 
@@ -148,12 +148,12 @@ export default function PerformanceList() {
           <div className="lg:col-span-7">
             {status === "success" ? (
               <div
-                className="border border-white/15 bg-[#111216] rounded-xl p-7 sm:p-10 text-right"
+                className="border border-white/[0.08] bg-[#151A22] rounded-xl p-6 sm:p-8 text-right"
                 role="status"
                 aria-live="polite"
                 aria-atomic="true"
               >
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+                <h3 className="text-2xl font-medium text-[#F4F6F9] mb-3">
                   הפרטים נקלטו בהצלחה.
                 </h3>
                 <p className="text-[#A7AAB4] text-sm sm:text-base leading-relaxed mb-6">
@@ -161,11 +161,11 @@ export default function PerformanceList() {
                 </p>
                 <a
                   href={`https://wa.me/972555172571?text=${encodeURIComponent(
-                    `היי אופק, השארתי פרטים באתר לגבי ${selectedTopic}. אשמח לשוחח!`
+                    `היי אופק, השארתי פרטים באתר לגבי ${selectedTopic}. אשמח לשוחח.`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="m-btn bg-[#2F5E9E] hover:bg-[#264E86] text-white font-semibold text-sm px-6 py-3 rounded-lg inline-flex items-center justify-center gap-2"
+                  className="btn-primary"
                 >
                   <span>שליחת הודעה בוואטסאפ</span>
                   <span>←</span>
@@ -175,12 +175,12 @@ export default function PerformanceList() {
               <form
                 onSubmit={handleSubmit}
                 noValidate
-                className="border border-white/10 bg-[#111216] rounded-xl p-6 sm:p-8 text-right space-y-6"
+                className="border border-white/[0.08] bg-[#151A22] rounded-xl p-6 sm:p-8 text-right space-y-6"
                 aria-label="טופס השארת פרטים לטיפול והתייעצות"
               >
-                {/* Topic Selector — Minimalist Rectangular Options */}
+                {/* Topic Selector — Radius 8px (rounded-lg), Spacing 8px (gap-2) */}
                 <div>
-                  <label className="text-xs sm:text-sm font-semibold text-white block mb-3">
+                  <label className="text-xs sm:text-sm font-medium text-[#F4F6F9] block mb-3">
                     מה הסיבה המרכזית לפנייה שלך?
                   </label>
                   <div className="flex flex-wrap gap-2">
@@ -191,10 +191,10 @@ export default function PerformanceList() {
                           key={topic.id}
                           type="button"
                           onClick={() => setSelectedTopic(topic.id)}
-                          className={`text-xs sm:text-sm font-medium px-3.5 py-2 min-h-[40px] rounded-lg border transition-colors cursor-pointer ${
+                          className={`m-btn text-xs sm:text-sm font-normal px-4 py-2 rounded-lg border cursor-pointer ${
                             active
-                              ? "bg-white text-[#0B0B0F] border-white font-semibold"
-                              : "bg-[#0B0B0F] text-[#A7AAB4] hover:text-white border-white/12 hover:border-white/30"
+                              ? "bg-[#F4F6F9] text-[#0E1116] border-[#F4F6F9] font-medium"
+                              : "bg-[#0E1116] text-[#A7AAB4] hover:text-[#F4F6F9] border-white/[0.08] hover:border-white/[0.16]"
                           }`}
                         >
                           {topic.label}
@@ -205,11 +205,11 @@ export default function PerformanceList() {
                 </div>
 
                 {/* Personal Contact Details */}
-                <div className="pt-4 border-t border-white/10 space-y-4">
+                <div className="pt-4 border-t border-white/[0.08] space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {/* Name */}
-                    <div className="flex flex-col gap-1.5">
-                      <label htmlFor="pl-name" className="text-xs font-semibold text-white flex items-center justify-between">
+                    <div className="flex flex-col gap-2">
+                      <label htmlFor="pl-name" className="text-xs font-medium text-[#F4F6F9] flex items-center justify-between">
                         <span>שם מלא</span>
                         <span aria-hidden="true" className="text-[#A7AAB4]">*</span>
                       </label>
@@ -226,21 +226,21 @@ export default function PerformanceList() {
                         aria-required="true"
                         aria-describedby={errors.name ? "err-name" : undefined}
                         aria-invalid={errors.name ? "true" : "false"}
-                        className={`w-full bg-[#0B0B0F] border rounded-lg px-4 py-3 text-white text-base sm:text-sm focus:outline-none focus:border-[#2F5E9E] transition-colors disabled:opacity-50 ${
-                          errors.name ? "border-red-500/70" : "border-white/15"
+                        className={`input-dark ${
+                          errors.name ? "border-red-500/70" : "border-white/[0.08]"
                         }`}
                         dir="rtl"
                       />
                       {errors.name && (
-                        <p id="err-name" role="alert" className="text-red-400 text-xs font-medium">
+                        <p id="err-name" role="alert" className="text-red-400 text-xs">
                           {errors.name}
                         </p>
                       )}
                     </div>
 
                     {/* Phone */}
-                    <div className="flex flex-col gap-1.5">
-                      <label htmlFor="pl-phone" className="text-xs font-semibold text-white flex items-center justify-between">
+                    <div className="flex flex-col gap-2">
+                      <label htmlFor="pl-phone" className="text-xs font-medium text-[#F4F6F9] flex items-center justify-between">
                         <span>טלפון נייד</span>
                         <span aria-hidden="true" className="text-[#A7AAB4]">*</span>
                       </label>
@@ -258,13 +258,13 @@ export default function PerformanceList() {
                         aria-required="true"
                         aria-describedby={errors.phone ? "err-phone" : undefined}
                         aria-invalid={errors.phone ? "true" : "false"}
-                        className={`w-full bg-[#0B0B0F] border rounded-lg px-4 py-3 text-white text-base sm:text-sm focus:outline-none focus:border-[#2F5E9E] transition-colors disabled:opacity-50 text-right ${
-                          errors.phone ? "border-red-500/70" : "border-white/15"
+                        className={`input-dark text-right ${
+                          errors.phone ? "border-red-500/70" : "border-white/[0.08]"
                         }`}
                         dir="rtl"
                       />
                       {errors.phone && (
-                        <p id="err-phone" role="alert" className="text-red-400 text-xs font-medium">
+                        <p id="err-phone" role="alert" className="text-red-400 text-xs">
                           {errors.phone}
                         </p>
                       )}
@@ -272,10 +272,10 @@ export default function PerformanceList() {
                   </div>
 
                   {/* Email */}
-                  <div className="flex flex-col gap-1.5">
-                    <label htmlFor="pl-email" className="text-xs font-semibold text-white flex items-center justify-between">
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="pl-email" className="text-xs font-medium text-[#F4F6F9] flex items-center justify-between">
                       <span>כתובת אימייל</span>
-                      <span className="text-[#A7AAB4] text-[11px]">(לא חובה)</span>
+                      <span className="text-[#A7AAB4] text-xs">(לא חובה)</span>
                     </label>
                     <input
                       id="pl-email"
@@ -288,23 +288,23 @@ export default function PerformanceList() {
                       onChange={handleChange}
                       disabled={status === "loading"}
                       aria-invalid={errors.email ? "true" : "false"}
-                      className={`w-full bg-[#0B0B0F] border rounded-lg px-4 py-3 text-white text-base sm:text-sm focus:outline-none focus:border-[#2F5E9E] transition-colors disabled:opacity-50 text-right ${
-                        errors.email ? "border-red-500/70" : "border-white/15"
+                      className={`input-dark text-right ${
+                        errors.email ? "border-red-500/70" : "border-white/[0.08]"
                       }`}
                       dir="ltr"
                     />
                     {errors.email && (
-                      <p id="err-email" role="alert" className="text-red-400 text-xs font-medium">
+                      <p id="err-email" role="alert" className="text-red-400 text-xs">
                         {errors.email}
                       </p>
                     )}
                   </div>
 
                   {/* Short Optional Note */}
-                  <div className="flex flex-col gap-1.5">
-                    <label htmlFor="pl-note" className="text-xs font-semibold text-white flex items-center justify-between">
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="pl-note" className="text-xs font-medium text-[#F4F6F9] flex items-center justify-between">
                       <span>בקצרה – איפה כואב או מה המטרה שלך?</span>
-                      <span className="text-[#A7AAB4] text-[11px]">(לא חובה)</span>
+                      <span className="text-[#A7AAB4] text-xs">(לא חובה)</span>
                     </label>
                     <input
                       id="pl-note"
@@ -314,21 +314,21 @@ export default function PerformanceList() {
                       value={formData.note}
                       onChange={handleChange}
                       disabled={status === "loading"}
-                      className="w-full bg-[#0B0B0F] border border-white/15 rounded-lg px-4 py-3 text-white text-base sm:text-sm focus:outline-none focus:border-[#2F5E9E] transition-colors disabled:opacity-50"
+                      className="input-dark"
                       dir="rtl"
                     />
                   </div>
                 </div>
 
                 {/* Consent Checkbox */}
-                <div className="flex items-start gap-3 pt-2 border-t border-white/10">
+                <div className="flex items-start gap-3 pt-2 border-t border-white/[0.08]">
                   <input
                     id="marketing-consent"
                     type="checkbox"
                     checked={marketingConsent}
                     onChange={(e) => setMarketingConsent(e.target.checked)}
                     disabled={status === "loading"}
-                    className="w-4 h-4 mt-1 rounded bg-[#0B0B0F] border-white/25 accent-[#2F5E9E] shrink-0 cursor-pointer"
+                    className="w-4 h-4 mt-1 rounded bg-[#0E1116] border-white/20 accent-[#2F5E9E] shrink-0 cursor-pointer"
                   />
                   <label
                     htmlFor="marketing-consent"
@@ -337,7 +337,7 @@ export default function PerformanceList() {
                     אני מאשר/ת שמירת הפרטים ליצירת קשר וקבלת עדכונים מ־Okonski Performance בהתאם ל
                     <Link
                       href="/privacy"
-                      className="text-white underline mx-0.5"
+                      className="text-[#F4F6F9] underline mx-1"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -348,26 +348,26 @@ export default function PerformanceList() {
                 </div>
 
                 {submitError && (
-                  <p role="alert" className="text-red-400 text-xs font-medium text-right">
+                  <p role="alert" className="text-red-400 text-xs text-right">
                     {submitError}
                   </p>
                 )}
 
-                {/* Submit Button */}
+                {/* Primary Submit Button */}
                 <div>
                   <button
                     type="submit"
                     disabled={status === "loading" || hasSubmitted}
                     aria-busy={status === "loading"}
-                    className="m-btn w-full bg-[#2F5E9E] hover:bg-[#264E86] text-white font-semibold py-3.5 px-6 rounded-lg text-sm sm:text-base flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed min-h-[48px] relative"
+                    className="btn-primary w-full py-3 px-6 disabled:opacity-60 disabled:cursor-not-allowed relative"
                   >
                     <span className={`transition-opacity ${status === "loading" ? "opacity-0" : "opacity-100"}`}>
-                      שליחת פרטים והבטחת עדיפות ←
+                      שריון קדימות בתורים ←
                     </span>
                     {status === "loading" && (
                       <div className="absolute inset-0 flex items-center justify-center" aria-label="שולח...">
                         <svg
-                          className="animate-spin h-5 w-5 text-white"
+                          className="animate-spin h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -388,10 +388,10 @@ export default function PerformanceList() {
             )}
           </div>
 
-          {/* SIDEBAR: DIRECT CONTACT (5 Cols — No ? Icon Tile, No Pulsing Dot) */}
-          <div className="lg:col-span-5 flex flex-col gap-5 text-right">
-            <div className="rounded-xl bg-[#111216] border border-white/10 p-6 sm:p-8">
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-2.5">
+          {/* SIDEBAR: DIRECT CONTACT (5 Cols — Quiet Secondary Button) */}
+          <div className="lg:col-span-5 flex flex-col gap-6 text-right">
+            <div className="rounded-xl bg-[#151A22] border border-white/[0.08] p-6 sm:p-8">
+              <h3 className="text-lg sm:text-xl font-medium text-[#F4F6F9] mb-2">
                 לא בטוחים אם המקרה שלכם מתאים?
               </h3>
               <p className="text-sm text-[#A7AAB4] leading-relaxed mb-6">
@@ -402,10 +402,10 @@ export default function PerformanceList() {
                 href="https://wa.me/972555172571?text=%D7%94%D7%99%D7%99%20%D7%90%D7%95%D7%A4%D7%A7%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%AA%D7%99%D7%99%D7%A2%D7%A5%20%D7%9C%D7%92%D7%91%D7%99%20%D7%98%D7%99%D7%A4%D7%95%D7%9C"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full bg-[#0B0B0F] hover:bg-white/[0.04] text-white border border-white/15 font-semibold text-sm px-5 py-3.5 min-h-[46px] rounded-lg inline-flex items-center justify-between transition-colors group"
+                className="btn-secondary w-full justify-between"
               >
                 <span>שיחה ישירה בוואטסאפ</span>
-                <span className="text-[#A7AAB4] group-hover:-translate-x-1 transition-transform">←</span>
+                <span className="text-[#A7AAB4]">←</span>
               </a>
             </div>
           </div>

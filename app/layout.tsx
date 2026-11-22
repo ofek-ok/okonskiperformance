@@ -9,7 +9,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#0B0B0F",
+  themeColor: "#0E1116",
 };
 
 export const metadata: Metadata = {
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   description:
     "Okonski Performance מציעה טיפול גופני אישי לספורטאים, למתאמנים ולאנשי קריירה. כאב ופציעה, התאוששות ושיפור יכולת. הצטרפו לרשימת העדכונים.",
   icons: {
-    icon: '/logo-official.png',
-    apple: '/logo-official.png',
+    icon: "/logo-official.png",
+    apple: "/logo-official.png",
   },
   openGraph: {
     title: "Okonski Performance",
-    description: "הגוף שלך צריך לעמוד בקצב שלך.",
+    description: "הגוף שלך חייב לעמוד בקצב שלך.",
     locale: "he_IL",
     type: "website",
   },
@@ -44,11 +44,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="font-heebo bg-charcoalDark text-silverOff antialiased">
+      <body className="font-heebo bg-[#0E1116] text-[#F4F6F9] antialiased">
         {children}
         <FloatingAccessibility />
         <CookieBanner />

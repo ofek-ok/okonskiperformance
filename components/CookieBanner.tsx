@@ -91,39 +91,39 @@ export default function CookieBanner() {
       role="dialog"
       aria-modal="true"
       aria-label="הגדרות פרטיות ו-Cookies"
-      className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 sm:max-w-lg z-50 card-steel rounded-2xl border border-white/15 shadow-2xl p-5 sm:p-6 backdrop-blur-xl"
+      className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 sm:max-w-lg z-50 bg-[#151A22] rounded-xl border border-white/[0.08] p-6"
     >
       <div>
 
         {!showSettings ? (
           <div className="flex flex-col gap-4 text-right">
             <div>
-              <h2 className="text-white font-bold text-base mb-1.5">הפרטיות שלך חשובה לנו</h2>
-              <p className="text-silverMuted text-xs sm:text-sm leading-relaxed">
+              <h2 className="text-[#F4F6F9] font-medium text-base mb-2">הפרטיות שלך חשובה לנו</h2>
+              <p className="text-[#A7AAB4] text-xs sm:text-sm leading-relaxed">
                 אנחנו משתמשים בטכנולוגיות הנדרשות להפעלת האתר, ובכפוף לבחירתך עשויים להשתמש גם בכלי מדידה כדי לשפר את השירות.{" "}
-                <Link href="/cookies" className="text-logoIce hover:text-white underline text-xs">
+                <Link href="/cookies" className="text-[#F4F6F9] underline text-xs">
                   מידע נוסף
                 </Link>
               </p>
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-wrap items-center gap-2.5 pt-1">
+            <div className="flex flex-wrap items-center gap-2 pt-1">
               <button
                 onClick={handleAcceptAll}
-                className="bg-white text-black font-semibold hover:bg-neutral-200 transition-colors py-2 px-4 rounded-lg text-xs cursor-pointer"
+                className="btn-primary py-2 px-4 text-xs"
               >
                 אישור
               </button>
               <button
                 onClick={handleRejectNonEssential}
-                className="bg-transparent text-neutral-300 border border-neutral-700/60 hover:text-white hover:border-neutral-500 font-medium py-2 px-3.5 rounded-lg text-xs transition-colors cursor-pointer"
+                className="btn-secondary py-2 px-4 text-xs"
               >
                 דחיית לא חיוניים
               </button>
               <button
                 onClick={() => setShowSettings(true)}
-                className="text-neutral-400 hover:text-white text-xs py-2 px-2 underline transition-colors mr-auto"
+                className="text-[#A7AAB4] hover:text-[#F4F6F9] text-xs py-2 px-2 underline mr-auto"
               >
                 ניהול העדפות
               </button>

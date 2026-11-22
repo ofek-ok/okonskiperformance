@@ -23,53 +23,53 @@ export default function HowToStart() {
   return (
     <section
       id="how-it-works"
-      className="py-16 sm:py-24 lg:py-28 bg-[#12151C] border-b border-white/10 scroll-mt-16"
+      className="py-16 sm:py-24 bg-[#0E1116] border-b border-white/[0.08] scroll-mt-16"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-8 text-right">
-        {/* Direct, clear heading */}
-        <div className="max-w-3xl mb-10 sm:mb-14">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-3.5">
+        {/* Heading at Weight 500 */}
+        <div className="max-w-3xl mb-12">
+          <h2 className="text-2xl sm:text-4xl font-medium text-[#F4F6F9] leading-tight mb-3">
             איך מתאמים מפגש ראשון
           </h2>
-          <p className="text-[#B0B7C3] text-sm sm:text-base lg:text-lg leading-relaxed">
+          <p className="text-[#A7AAB4] text-sm sm:text-base leading-relaxed">
             תהליך פשוט ב־3 שלבים — משאירים פרטים, מוודאים התאמה בשיחה קצרה ומתאמים מועד.
           </p>
         </div>
 
-        {/* 3 Structured Cards on Soft Slate Ground (No floating text in pitch-black void) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 mb-10 sm:mb-12">
+        {/* 3-Step Ruled Timeline (Distinct from cards; No Icon/Number Tiles) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {steps.map((step) => (
             <article
               key={step.num}
-              className="m-card p-6 sm:p-7 rounded-xl bg-[#191D26] border border-white/10 flex flex-col justify-between"
+              className="pt-6 border-t border-white/[0.08] flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="font-mono tabular-nums text-xs font-bold px-2.5 py-1 rounded bg-[#2F5E9E]/20 text-[#74A4EC]">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="font-mono tabular-nums text-xs text-[#A7AAB4]">
                     {step.num}
                   </span>
                   <span className="text-xs text-[#A7AAB4]">{step.tag}</span>
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-2">{step.title}</h3>
-                <p className="text-sm text-[#B0B7C3] leading-relaxed">{step.body}</p>
+                <h3 className="text-lg sm:text-xl font-medium text-[#F4F6F9] mb-2">{step.title}</h3>
+                <p className="text-sm text-[#A7AAB4] leading-relaxed">{step.body}</p>
               </div>
             </article>
           ))}
         </div>
 
-        {/* Bottom Callout with Unified CTA Button */}
-        <div className="rounded-xl p-6 sm:p-8 border border-[#2F5E9E]/35 bg-[#191D26] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        {/* Bottom Callout with Quiet Secondary Button (Form below holds the Primary Button) */}
+        <div className="rounded-xl p-6 sm:p-8 border border-white/[0.08] bg-[#151A22] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="max-w-2xl">
-            <h3 className="text-lg sm:text-xl font-bold text-white mb-1.5">
+            <h3 className="text-lg sm:text-xl font-medium text-[#F4F6F9] mb-2">
               היומן נפתח בקרוב — ההרשמה המוקדמת פתוחה.
             </h3>
-            <p className="text-[#B0B7C3] text-sm leading-relaxed">
+            <p className="text-[#A7AAB4] text-sm leading-relaxed">
               הנרשמים עכשיו מקבלים קדימות בתיאום התורים הראשונים ומחיר ייחודי למצטרפים מוקדמים.
             </p>
           </div>
           <a
             href="#performance-list"
-            className="m-btn bg-[#2F5E9E] hover:bg-[#264E86] text-white font-semibold px-7 py-3.5 rounded-lg text-sm shrink-0 whitespace-nowrap w-full md:w-auto text-center flex items-center justify-center min-h-[46px] gap-2"
+            className="btn-secondary shrink-0 whitespace-nowrap w-full md:w-auto"
           >
             <span>שריון קדימות בתורים</span>
             <span>←</span>

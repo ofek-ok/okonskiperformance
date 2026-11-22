@@ -34,12 +34,12 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-[#0B0B0F]/95 backdrop-blur-md border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 h-16 sm:h-[68px] flex items-center justify-between">
+    <header className="fixed top-0 inset-x-0 z-50 bg-[#0E1116]/95 backdrop-blur-md border-b border-white/[0.08]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 h-16 flex items-center justify-between">
         {/* Right (RTL): Official Brand Logo */}
         <Link
           href="/#hero"
-          className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2F5E9E] rounded shrink-0"
+          className="flex items-center focus:outline-none rounded-lg shrink-0"
           aria-label="Okonski Performance — עמוד הבית"
         >
           <Image
@@ -47,12 +47,12 @@ export default function Navbar() {
             alt="Okonski Performance"
             width={450}
             height={346}
-            className="h-8 sm:h-9 w-auto object-contain"
+            className="h-8 w-auto object-contain"
             priority
           />
         </Link>
 
-        {/* Center: Clean Text Links */}
+        {/* Center: Clean Text Links (Spacing 32px = gap-8) */}
         <nav aria-label="ניווט ראשי" className="hidden lg:flex items-center gap-8">
           {navLinks.map((item) => {
             const isActive = pathname === item.href;
@@ -61,10 +61,10 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 aria-current={isActive ? "page" : undefined}
-                className={`text-sm transition-colors duration-150 ${
+                className={`text-sm ${
                   isActive
-                    ? "text-white font-semibold"
-                    : "text-[#A7AAB4] hover:text-white font-normal"
+                    ? "text-[#F4F6F9] font-medium"
+                    : "text-[#A7AAB4] hover:text-[#F4F6F9] font-normal"
                 }`}
               >
                 {item.label}
@@ -73,11 +73,11 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Left (RTL): Single Solid Action Button & Mobile Menu Toggle */}
+        {/* Left (RTL): Quiet Secondary Button (So Hero owns the single Primary Button on screen) */}
         <div className="flex items-center gap-3 shrink-0">
           <a
             href="/#performance-list"
-            className="m-btn bg-[#2F5E9E] hover:bg-[#264E86] text-white text-xs sm:text-sm font-semibold py-2.5 px-4 sm:px-5 rounded-lg whitespace-nowrap inline-flex items-center justify-center min-h-[40px]"
+            className="btn-secondary py-2 px-4 text-xs sm:text-sm whitespace-nowrap"
           >
             <span className="sm:hidden">שריון מקום</span>
             <span className="hidden sm:inline">שריון קדימות בתורים</span>
@@ -85,7 +85,7 @@ export default function Navbar() {
 
           <button
             type="button"
-            className="lg:hidden text-white min-w-[42px] min-h-[42px] p-2.5 rounded-lg border border-white/15 hover:border-white/30 flex items-center justify-center focus:outline-none transition-colors"
+            className="lg:hidden text-[#F4F6F9] w-12 h-12 p-3 rounded-lg border border-white/[0.08] hover:border-white/[0.16] flex items-center justify-center focus:outline-none"
             aria-expanded={menuOpen}
             aria-controls="mobile-navigation"
             aria-label={menuOpen ? "סגור תפריט" : "פתח תפריט"}
@@ -109,14 +109,14 @@ export default function Navbar() {
         <nav
           id="mobile-navigation"
           aria-label="ניווט מובייל"
-          className="lg:hidden bg-[#0B0B0F] border-t border-white/10 px-4 sm:px-8 py-5 flex flex-col divide-y divide-white/10"
+          className="lg:hidden bg-[#0E1116] border-t border-white/[0.08] px-4 sm:px-8 py-6 flex flex-col divide-y divide-white/[0.08]"
         >
           {navLinks.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               onClick={() => setMenuOpen(false)}
-              className="text-base text-[#A7AAB4] hover:text-white py-3.5 flex items-center justify-between"
+              className="text-base text-[#A7AAB4] hover:text-[#F4F6F9] py-3 flex items-center justify-between"
             >
               <span>{item.label}</span>
               <span className="text-xs text-[#A7AAB4]">←</span>
@@ -126,7 +126,7 @@ export default function Navbar() {
             <a
               href="/#performance-list"
               onClick={() => setMenuOpen(false)}
-              className="m-btn w-full bg-[#2F5E9E] hover:bg-[#264E86] text-white font-semibold py-3.5 rounded-lg text-center text-sm inline-flex items-center justify-center"
+              className="btn-primary w-full"
             >
               שריון קדימות בתורים
             </a>

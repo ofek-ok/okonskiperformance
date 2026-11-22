@@ -33,12 +33,12 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="bg-[#12151C] py-16 sm:py-24 lg:py-28 border-b border-white/10 scroll-mt-16"
+      className="bg-[#0E1116] py-16 sm:py-24 border-b border-white/[0.08] scroll-mt-16"
       aria-labelledby="faq-heading"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-8 text-right">
-        <div className="mb-10 sm:mb-12">
-          <h2 id="faq-heading" className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+        <div className="mb-12">
+          <h2 id="faq-heading" className="text-2xl sm:text-4xl font-medium text-[#F4F6F9] leading-tight">
             שאלות נפוצות
           </h2>
         </div>
@@ -47,25 +47,25 @@ export default function FAQ() {
           {questions.map(([q, a]) => (
             <details
               key={q}
-              className="group rounded-xl bg-[#191D26] border border-white/10 open:border-[#2F5E9E]/45 px-5 sm:px-6 py-4 transition-colors"
+              className="group rounded-xl bg-[#151A22] border border-white/[0.08] open:border-white/[0.16] px-6 py-4"
             >
-              <summary className="cursor-pointer text-white font-semibold text-base sm:text-lg flex items-center justify-between gap-4 list-none focus:outline-none min-h-[40px]">
+              <summary className="cursor-pointer text-[#F4F6F9] font-medium text-base sm:text-lg flex items-center justify-between gap-4 list-none focus:outline-none min-h-[40px]">
                 <span className="leading-snug">{q}</span>
                 <span className="font-mono text-lg text-[#A7AAB4] transition-transform duration-150 group-open:rotate-45 shrink-0">
                   +
                 </span>
               </summary>
-              <p className="text-[#B0B7C3] text-sm sm:text-base leading-relaxed pt-3 mt-3 border-t border-white/10 pl-1">
+              <p className="text-[#A7AAB4] text-sm sm:text-base leading-relaxed pt-3 mt-3 border-t border-white/[0.08] pl-1">
                 {a}
               </p>
             </details>
           ))}
         </div>
 
-        <div className="mt-10 sm:mt-12 text-right">
+        <div className="mt-12 text-right">
           <a
             href="#performance-list"
-            className="m-btn bg-[#2F5E9E] hover:bg-[#264E86] text-white font-semibold py-3.5 px-7 rounded-lg text-sm w-full sm:w-auto min-h-[46px] inline-flex items-center justify-center gap-2"
+            className="btn-secondary w-full sm:w-auto"
           >
             <span>שריון קדימות בתורים</span>
             <span>←</span>
