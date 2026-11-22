@@ -8,6 +8,16 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 16);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     if (menuOpen) {
@@ -33,8 +43,16 @@ export default function Navbar() {
     { href: "/vision", label: "חזון ומדיניות" },
   ];
 
+  const showSurface = isScrolled || menuOpen;
+
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-[#0E1116]/95 backdrop-blur-md border-b border-white/[0.08]">
+    <header
+      className={`fixed top-0 inset-x-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-150 ${
+        showSurface
+          ? "bg-[#0E1116]/95 backdrop-blur-md border-b border-white/[0.08]"
+          : "bg-transparent border-b border-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-8 h-16 flex items-center justify-between">
         {/* Right (RTL): Official Brand Logo */}
         <Link
