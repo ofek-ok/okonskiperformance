@@ -24,73 +24,44 @@ export default function AboutOfek() {
             </div>
           </div>
 
-          {/* Founder Story */}
+          {/* SECTION 5: ABOUT (השילוב הייחודי של אופק אוקונסקי) */}
           <div className="lg:col-span-7 text-right">
             <h2
               id="about-heading"
               className="text-2xl sm:text-4xl font-medium text-[#F4F6F9] leading-tight mb-6"
             >
-              נעים להכיר, אני אופק אוקונסקי.
+              להבין את הגוף של ספורטאי. להכיר את הלחץ של הייטקיסט.
             </h2>
 
-            {/* Two Ruled Columns (Spacing 24px = gap-6, py-6, mb-6) */}
+            {/* Two Ruled Columns */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 py-6 mb-6 border-y border-white/[0.08]">
               <div>
-                <span className="text-sm font-medium text-[#F4F6F9] block mb-1">ספורט תובעני</span>
+                <span className="text-sm font-medium text-[#F4F6F9] block mb-1">15 שנה על המזרן</span>
                 <p className="text-xs sm:text-sm text-[#A7AAB4] leading-relaxed">
-                  15 שנות אומנויות לחימה, חגורה שחורה ומאמן בג&apos;יו־ג&apos;יטסו ברזילאי (BJJ).
+                  מאמן וחגורה שחורה בג&apos;יו־ג&apos;יטסו ברזילאי (BJJ). היכרות ממקור ראשון עם פציעות, עומסי שיא וגבולות גוף.
                 </p>
               </div>
               <div>
-                <span className="text-sm font-medium text-[#F4F6F9] block mb-1">קריירה אינטנסיבית</span>
+                <span className="text-sm font-medium text-[#F4F6F9] block mb-1">7 שנים בהייטק</span>
                 <p className="text-xs sm:text-sm text-[#A7AAB4] leading-relaxed">
-                  מנהל פרויקטים בכיר עם 7 שנות ניסיון בהובלת תהליכים טכנולוגיים מורכבים.
+                  מנהל פרויקטים טכנולוגיים בכיר — שעות ארוכות מול מחשב, פגישות וניהול תחת סטרס גבוה.
                 </p>
               </div>
             </div>
 
-            {/* Narrative Body */}
-            <div className="space-y-4 text-[#A7AAB4] text-sm sm:text-base leading-relaxed">
-              <p className="font-medium text-[#F4F6F9] text-base sm:text-lg">
-                15 שנה על המזרן. 7 שנים מול דדליינים. אני מכיר מקרוב את שני העולמות שעבורם הקמתי את Okonski Performance.
+            {/* Bio Text */}
+            <div className="space-y-4 text-[#A7AAB4] text-base sm:text-lg leading-relaxed">
+              <p className="font-medium text-[#F4F6F9]">
+                נעים להכיר, אני אופק אוקונסקי.
+              </p>
+
+              <p>
+                מצד אחד – 15 שנה על המזרן, מאמן וחגורה שחורה בג&apos;יו־ג&apos;יטסו ברזילאי (BJJ). אני מכיר פציעות, עומסי שיא וגבולות גוף ממקור ראשון. מצד שני – 7 שנים כמנהל פרויקטים טכנולוגיים בכיר, שעות אינסופיות מול מחשב, פגישות וניהול תחת סטרס גבוה.
               </p>
 
               <p className="text-[#F4F6F9]/90">
-                מתוך החיבור הזה הקמתי את Okonski Performance. המטרה שלי היא להציע טיפול גופני אישי שלא מסתכל רק על האזור שכואב או מפריע, אלא גם על האדם שמאחוריו: איך הוא מתאמן, איך נראית השגרה שלו, אילו עומסים הוא חווה ומה הוא רוצה להיות מסוגל לעשות.
+                החיבור הזה הוליד את Okonski Performance: מקום שמבין את שפת הגוף שלך, לא מבזבז זמן על פתרונות שטחיים, ויודע בדיוק איך לבנות תוכנית שיקום והתאוששות שמשתלבת בחיים האמיתיים שלך.
               </p>
-
-              <div className="hidden lg:block space-y-4">
-                <p>
-                  אני עוסק באמנויות לחימה כבר כ־15 שנים, חגורה שחורה ומאמן בג&apos;יו־ג&apos;יטסו ברזילאי. במקביל, אני מנהל פרויקטים בכיר עם כשבע שנות ניסיון בניהול פרויקטים טכנולוגיים, הובלת תהליכים ועבודה בסביבות מורכבות ותובעניות.
-                </p>
-                <p>
-                  השילוב בין שני העולמות האלה לימד אותי עד כמה אנחנו דורשים מהגוף שלנו — באימונים, בעבודה ובחיי היומיום — ועד כמה חשוב לתת לו את תשומת הלב המתאימה.
-                </p>
-                <p>
-                  את החשיבה התהליכית מעולם הניהול אני מביא גם לגישה שלי לטיפול: להבין את נקודת המוצא, להגדיר מטרה, לעבוד בצורה מסודרת ולבחון את ההתקדמות. מבחינתי, טיפול טוב צריך לשלב עבודה גופנית מקצועית, הסברים ברורים ויחס אישי.
-                </p>
-              </div>
-
-              <details className="lg:hidden group pt-1">
-                <summary className="list-none cursor-pointer inline-flex items-center gap-2 text-sm font-medium text-[#F4F6F9] min-h-[44px] focus:outline-none">
-                  <span className="group-open:hidden">לסיפור המלא</span>
-                  <span className="hidden group-open:inline">הסתר סיפור מלא</span>
-                  <svg className="w-4 h-4 transition-transform duration-150 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="mt-3 space-y-3 text-sm text-[#A7AAB4] leading-relaxed">
-                  <p>
-                    אני עוסק באמנויות לחימה כבר כ־15 שנים, חגורה שחורה ומאמן בג&apos;יו־ג&apos;יטסו ברזילאי. במקביל, אני מנהל פרויקטים בכיר עם כשבע שנות ניסיון בניהול פרויקטים טכנולוגיים, הובלת תהליכים ועבודה בסביבות מורכבות ותובעניות.
-                  </p>
-                  <p>
-                    השילוב בין שני העולמות האלה לימד אותי עד כמה אנחנו דורשים מהגוף שלנו — באימונים, בעבודה ובחיי היומיום — ועד כמה חשוב לתת לו את תשומת הלב המתאימה.
-                  </p>
-                  <p>
-                    את החשיבה התהליכית מעולם הניהול אני מביא גם לגישה שלי לטיפול: להבין את נקודת המוצא, להגדיר מטרה, לעבוד בצורה מסודרת ולבחון את ההתקדמות. מבחינתי, טיפול טוב צריך לשלב עבודה גופנית מקצועית, הסברים ברורים ויחס אישי.
-                  </p>
-                </div>
-              </details>
             </div>
           </div>
         </div>

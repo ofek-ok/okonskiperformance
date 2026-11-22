@@ -51,31 +51,30 @@ const modalities = [
 const stages = [
   {
     num: "01",
-    title: "מקשיבים",
-    body: "נבין מה הביא אותך לטיפול, מה מפריע לך, מהי שגרת האימונים או העבודה שלך ומה אתה רוצה להשיג.",
+    title: "אבחון והקשבה מלאה",
+    body: "נבין את ההיסטוריה הגופנית, שגרת העבודה והיעדים שלך.",
   },
   {
     num: "02",
-    title: "בודקים",
-    body: "בהתאם לצורך, נבחן תנועה, טווחי תנועה, מגבלות ואזורים רלוונטיים למטרת הטיפול.",
+    title: "בדיקת תנועה מקיפה",
+    body: "נזהה חוסר איזון, פיצויים תנועתיים ומקורות עומס.",
   },
   {
     num: "03",
-    title: "מטפלים",
-    body: "נבצע טיפול גופני המותאם לממצאים, למצב שלך ולמטרת המפגש.",
+    title: "טיפול מותאם אישית",
+    body: "שילוב של טכניקות מנואליות, דיקור וכוסות רוח לפי הצורך המדויק.",
   },
   {
     num: "04",
-    title: "מסבירים",
-    body: "בסיום נסביר מה עלה במפגש, מה אפשר לעשות באופן עצמאי ומה עשוי להתאים להמשך, במידת הצורך.",
+    title: "ארגז כלים להמשך",
+    body: "תרגול קצר, דגשי תנועה והמלצות לשמירה על התוצאות בבית ובמשרד.",
   },
 ];
 
 /**
  * THE SINGLE BRIGHT PRODUCT MOMENT ON THE PAGE:
  * High-contrast light surface (#F4F6F9 / #FFFFFF) showcasing the actual hands-on clinical modalities
- * (needling, cupping, sports massage, stretching, strengthening, consultation — all with male patients)
- * and the 4-stage session structure.
+ * (faceless action-only shots with male patients) and the 4-stage session structure.
  */
 export default function Treatment() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -91,7 +90,7 @@ export default function Treatment() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-16">
           <div className="lg:col-span-5 text-right lg:pt-2">
             <h2 className="text-2xl sm:text-4xl font-medium text-[#0E1116] leading-tight mb-4">
-              איך עובד תהליך הטיפול
+              תהליך שקוף, מובנה ומדויק
             </h2>
             <p className="text-[#0E1116] text-base sm:text-lg leading-relaxed mb-3 font-medium">
               אין שני אנשים שמגיעים עם אותו עומס, אותה מגבלה או אותה מטרה.
@@ -100,7 +99,7 @@ export default function Treatment() {
               לכן, הטיפול ב־Okonski Performance אינו מבוסס על סדר פעולות זהה לכל לקוח. הוא מתחיל בהבנת המצב שלך ומשלב את הכלים הקליניים המתאימים למה שעולה בתשאול ובהערכה.
             </p>
 
-            {/* Interactive Modality Selector Tabs (Radius 8px = rounded-lg, 4px Grid Spacing) */}
+            {/* Interactive Modality Selector Tabs */}
             <div className="mb-2">
               <p className="text-xs font-medium text-[#4B5262] mb-3">
                 כלים שמשתלבים בטיפול לפי הצורך (לחץ לצפייה):
@@ -203,12 +202,8 @@ export default function Treatment() {
           </div>
         </div>
 
-        {/* First Session Workflow — Unified Architectural Table on Crisp White (No Icon/Number Tiles) */}
-        <div className="mb-12 text-right">
-          <h3 className="text-xl sm:text-2xl font-medium text-[#0E1116] mb-6">
-            המפגש הראשון
-          </h3>
-
+        {/* 4 Steps — Unified Architectural Table on Crisp White */}
+        <div className="text-right">
           <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 rounded-xl bg-white border border-[#0E1116]/[0.08] divide-y sm:divide-y-0 sm:divide-x sm:divide-x-reverse divide-[#0E1116]/[0.08] overflow-hidden">
             {stages.map((stage) => (
               <li
@@ -219,46 +214,12 @@ export default function Treatment() {
                   <span className="font-mono tabular-nums text-xs text-[#2F5E9E] block mb-2">
                     {stage.num}
                   </span>
-                  <h4 className="text-lg font-medium text-[#0E1116] mb-2">{stage.title}</h4>
+                  <h3 className="text-lg font-medium text-[#0E1116] mb-2">{stage.title}</h3>
                   <p className="text-sm text-[#4B5262] leading-relaxed">{stage.body}</p>
                 </div>
               </li>
             ))}
           </ol>
-        </div>
-
-        {/* Two Plain Editorial Columns */}
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 pt-8 border-t border-[#0E1116]/[0.08] text-right">
-          <div>
-            <h3 className="text-lg sm:text-xl font-medium text-[#0E1116] mb-3">מה עשוי להשתלב במפגש?</h3>
-            <p className="text-sm sm:text-base text-[#4B5262] leading-relaxed mb-3">
-              בהתאם לצורך, המפגש יכול לכלול עבודה ידנית על רקמות רכות ושרירים, דיקור מערבי, כוסות רוח, עבודה על טווחי תנועה, מתיחות ותרגילי חיזוק מותאמים.
-            </p>
-            <p className="text-sm text-[#4B5262] leading-relaxed">
-              לא כל אדם זקוק לאותן טכניקות, ולא כל מפגש יכלול את כל המרכיבים.
-            </p>
-          </div>
-
-          <div className="flex flex-col justify-between">
-            <div>
-              <h3 className="text-lg sm:text-xl font-medium text-[#0E1116] mb-3">ומה קורה לאחר המפגש הראשון?</h3>
-              <p className="text-sm sm:text-base text-[#4B5262] leading-relaxed mb-3">
-                מפגשי המשך יכולים לכלול טיפול גופני, תרגול, הנחיות לבית, התאמות עומס ומעקב אחר ההתקדמות.
-              </p>
-              <p className="text-sm text-[#4B5262] leading-relaxed">
-                אפשר להמשיך במפגשים בודדים או לבחון מסלול טיפולי מתאים. ההמלצה נקבעת לפי הצורך — לא כל אדם זקוק לאותו מספר מפגשים.
-              </p>
-            </div>
-            <div className="pt-4 mt-4">
-              <a
-                href="#how-it-works"
-                className="inline-flex items-center gap-2 text-[#0E1116] hover:text-[#2F5E9E] text-sm font-medium"
-              >
-                <span>איך מתחילים? קרא על השלבים</span>
-                <span className="text-[#2F5E9E]">←</span>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>

@@ -1,121 +1,61 @@
 "use client";
 
-interface ServicePillar {
+const problems = [
+  {
+    num: "01",
+    title: "כאב כרוני טורדני",
+    desc: "צוואר תפוס, גב תחתון, שכמות או ברכיים שלא נותנים לך שקט.",
+  },
+  {
+    num: "02",
+    title: "פציעות ספורט חוזרות",
+    desc: "תחושה שהגוף לא מחזיק את העומס באימונים וחוזר לאותה נקודת שבר.",
+  },
+  {
+    num: "03",
+    title: "שחיקה מנטלית וגופנית",
+    desc: "ישיבה ממושכת וימי עבודה תובעניים שמשאירים אותך כבד ונטול אנרגיה.",
+  },
+];
+
+interface TreatmentTrack {
   title: string;
+  subtitleEn: string;
   topicId: string;
-  lead: string;
-  example: string;
-  steps: {
-    num: string;
-    title: string;
-    desc: string;
-  }[];
+  audience: string;
+  goal: string;
+  outcome: string;
 }
 
-const pillars: ServicePillar[] = [
+const tracks: TreatmentTrack[] = [
   {
-    title: "כאב ופציעה",
-    topicId: "פציעת ספורט",
-    lead: "כשכאב או מגבלה תנועתית עוצרים אותך באימון, בעבודה או בשגרה.",
-    example: "כאב בכתף בעומס, מגבלה בצוואר ובגב משעות ישיבה, עומס מפרקי או פציעה שמקשה לחזור לפעילות.",
-    steps: [
-      {
-        num: "01",
-        title: "בודקים ומאתרים את שורש הבעיה",
-        desc: "הערכה תפקודית ותנועתית, ולא רק מבט על הנקודה שכואבת.",
-      },
-      {
-        num: "02",
-        title: "טיפול מותאם אישית",
-        desc: "שילוב טכניקות מנואליות וכלים מתקדמים בספורטתרפיה להפחתת כאב והורדת עומס.",
-      },
-      {
-        num: "03",
-        title: "שיקום אקטיבי",
-        desc: "בניית תנועה נכונה ותרגול מותאם כדי לחזור לפעילות מלאה ולמנוע הישנות.",
-      },
-    ],
+    title: "מסלול כאב ופציעה",
+    subtitleEn: "Pain & Rehabilitation",
+    topicId: "כאב ופציעה",
+    audience: "מתמודדים עם פציעה אקוטית, כאבים כרוניים או הגבלה בתנועה.",
+    goal: "איתור שורש הבעיה, הפחתת כאב מיידית והחזרת טווחי תנועה מלאים.",
+    outcome: "חזרה בטוחה ומהירה לשגרה ולאימונים בלי פחד מתנועה.",
   },
   {
-    title: "תחזוקה והתאוששות",
+    title: "מסלול תחזוקה והתאוששות",
+    subtitleEn: "Maintenance & Recovery",
     topicId: "תחזוקה והתאוששות",
-    lead: "כשאין פציעה נקודתית, אבל העומס המצטבר מהשגרה ומהאימונים מתחיל להכביד על הגוף.",
-    example: "נוקשות בגב ובצוואר מישיבה ממושכת, תחושת שחיקה ועייפות שרירית בין אימונים, או גוף שמרגיש \"כבד\" ומוגבל.",
-    steps: [
-      {
-        num: "01",
-        title: "מיפוי עומסים ונקודות תקיעות",
-        desc: "בדיקת תנועתיות מהירה לאיתור האזורים שסופגים את מירב העומס.",
-      },
-      {
-        num: "02",
-        title: "פריקת עומס ושיפור זרימה",
-        desc: "שילוב עבודה מנואלית עמוקה וטכניקות התאוששות בספורטתרפיה לשחרור רקמות ושרירים.",
-      },
-      {
-        num: "03",
-        title: "החזרה לאיפוס",
-        desc: "הכנת הגוף לאימון הבא והקניית הרגלי תנועה קלים לשמירה על תפקוד יומיומי גבוה.",
-      },
-    ],
+    audience: "ספורטאים, מתאמנים בעצימות גבוהה ואנשי קריירה תחת סטרס מתמיד.",
+    goal: "פינוק אקטיבי לגוף, שחרור הידבקויות שריריות והורדת עומסים מצטברים.",
+    outcome: "מניעת פציעות עתידיות, שיפור איכות השינה והתאוששות מהירה יותר בין אימונים.",
   },
   {
-    title: "שיפור תנועה, יציבה וחוסן גופני",
-    topicId: "שיפור תנועה",
-    lead: "לבנות גוף עמיד, חזק ומשוחרר יותר — שעומד בדרישות של שגרה אינטנסיבית, מונע פציעות עתידיות ומחזיק לאורך שנים.",
-    example: "שיפור טווחי תנועה ויציבה שנשחקים בשעות עבודה ממושכות, חיזוק נקודות תורפה לפני שהן מתפתחות לפציעה, ושדרוג הגמישות והעוצמה באימונים.",
-    steps: [
-      {
-        num: "01",
-        title: "אבחון תנועה, יציבה ועומסים",
-        desc: "זיהוי נקודות תורפה ודפוסי פיצוי שמייצרים עומס מפרקי ושחיקה מצטברת.",
-      },
-      {
-        num: "02",
-        title: "פתיחת טווחי תנועה ושחרור רקמות",
-        desc: "עבודה מנואלית מתקדמת להרחבת חופש התנועה והפחתת נוקשות בגב, בצוואר ובמפרקים.",
-      },
-      {
-        num: "03",
-        title: "הטמעה תנועתית ובניית עמידות",
-        desc: "תרגול מדויק לשליטה בטווחים החדשים, ששומר על הגוף לאורך זמן ומשתלב בקלות בשגרה עמוסה.",
-      },
-    ],
+    title: "מסלול תנועה ואריכות ימים",
+    subtitleEn: "Movement & Longevity",
+    topicId: "תנועה ויציבה",
+    audience: "מי שרוצה גוף חזק, גמיש ומתפקד לאורך שנים קדימה.",
+    goal: "שיפור יציבה, בניית חוסן מפרקי וארגונומיה נכונה בשעות העבודה.",
+    outcome: "תנועה חלקה וקלילה, יציבה זקופה ורמת אנרגיה גבוהה לאורך כל היום.",
   },
 ];
 
 function selectTopic(topicId: string) {
   window.dispatchEvent(new CustomEvent("okonski:select-topic", { detail: topicId }));
-}
-
-function PillarDetails({ pillar }: { pillar: ServicePillar }) {
-  return (
-    <>
-      <div className="pt-4 mt-4 border-t border-white/[0.08] text-sm leading-relaxed">
-        <span className="text-[#F4F6F9] font-medium block mb-1 text-xs sm:text-sm">לדוגמה:</span>
-        <p className="text-xs sm:text-sm text-[#A7AAB4] leading-relaxed">{pillar.example}</p>
-      </div>
-
-      <div className="flex-grow flex flex-col justify-between mt-6 pt-6 border-t border-white/[0.08]">
-        <h4 className="text-[#F4F6F9] text-xs sm:text-sm font-medium mb-3">
-          איך עובדים:
-        </h4>
-        <ul className="space-y-3 mb-6 flex-grow">
-          {pillar.steps.map((step) => (
-            <li key={step.num} className="flex items-baseline gap-3">
-              <span className="font-mono tabular-nums text-[#A7AAB4] text-xs shrink-0">
-                {step.num}
-              </span>
-              <div className="text-xs sm:text-sm leading-relaxed">
-                <strong className="text-[#F4F6F9] font-medium">{step.title} — </strong>
-                <span className="text-[#A7AAB4]">{step.desc}</span>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </>
-  );
 }
 
 export default function WhoItsFor() {
@@ -125,83 +65,127 @@ export default function WhoItsFor() {
       className="py-16 sm:py-24 bg-[#0E1116] border-b border-white/[0.08] scroll-mt-16"
       aria-labelledby="who-heading"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-8">
-        {/* Concrete Heading at Weight 500 */}
-        <div className="max-w-3xl mb-12 text-right">
-          <h2
-            id="who-heading"
-            className="text-2xl sm:text-4xl font-medium text-[#F4F6F9] leading-tight mb-4"
-          >
-            שלושה מסלולי טיפול לפי המצב והמטרה שלך
-          </h2>
-          <p className="text-[#A7AAB4] text-sm sm:text-base leading-relaxed">
-            אין פרוטוקול אחד לכולם. ספורטאי עם כתף תפוסה ומנהל עם גב נעול צריכים דברים שונים, ולכן כל טיפול מתחיל ממך.
-          </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 text-right">
+        {/* SECTION 2: THE PROBLEM (הכאב והתסכול) */}
+        <div className="pb-16 mb-16 border-b border-white/[0.08]">
+          <div className="max-w-3xl mb-12">
+            <h2 className="text-2xl sm:text-4xl font-medium text-[#F4F6F9] leading-tight mb-4">
+              הגוף מאותת לך, ואתה ממשיך ללחוץ על הגז?
+            </h2>
+            <p className="text-[#A7AAB4] text-sm sm:text-base leading-relaxed">
+              בין שעות ארוכות מול המסך, ישיבה שפוגעת ביציבה, ועומסים של אימונים אינטנסיביים – הגוף מתחיל לצבור עייפות, נוקשות ודלקות. רוב האנשים מחכים שהכאב ישבית אותם, או מסתפקים בטיפול רגעי שמשחרר לשעתיים בלבד.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {problems.map((problem) => (
+              <div
+                key={problem.num}
+                className="pt-6 border-t border-white/[0.08]"
+              >
+                <span className="font-mono tabular-nums text-xs text-[#2F5E9E] block mb-2">
+                  {problem.num}
+                </span>
+                <h3 className="text-lg sm:text-xl font-medium text-[#F4F6F9] mb-2">
+                  {problem.title}
+                </h3>
+                <p className="text-sm text-[#A7AAB4] leading-relaxed">
+                  {problem.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* 3 Columns — Radius 12px (rounded-xl), Spacing 24px (gap-6, p-6) */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 text-right items-stretch">
-          {pillars.map((pillar) => (
-            <article
-              key={pillar.title}
-              className="m-card h-full flex flex-col justify-between p-6 sm:p-8 rounded-xl bg-[#151A22] border border-white/[0.08]"
+        {/* SECTION 3: THE METHOD & TRACKS (מסלולי הטיפול) */}
+        <div>
+          <div className="max-w-3xl mb-12">
+            <h2
+              id="who-heading"
+              className="text-2xl sm:text-4xl font-medium text-[#F4F6F9] leading-tight mb-4"
             >
-              <div className="flex-1 flex flex-col">
+              3 מסלולים ממוקדים. יעד אחד ברור.
+            </h2>
+            <p className="text-[#A7AAB4] text-sm sm:text-base leading-relaxed">
+              טיפול מותאם אישית שמשלב דיקור מערבי (Dry Needling), שחרור מנואלי, כוסות רוח ותרגילי יציבה ותנועה.
+            </p>
+          </div>
+
+          {/* 3 Track Cards — Radius 12px (rounded-xl), Spacing 24px (gap-6, p-6) */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+            {tracks.map((track) => (
+              <article
+                key={track.title}
+                className="m-card h-full flex flex-col justify-between p-6 sm:p-8 rounded-xl bg-[#151A22] border border-white/[0.08]"
+              >
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-medium text-[#F4F6F9] mb-2">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-sm text-[#A7AAB4] leading-relaxed">
-                    {pillar.lead}
-                  </p>
-                </div>
-
-                {/* Desktop: details visible */}
-                <div className="hidden lg:flex flex-col flex-1">
-                  <PillarDetails pillar={pillar} />
-                </div>
-
-                {/* Mobile: collapsible */}
-                <details className="lg:hidden group mt-4">
-                  <summary className="list-none cursor-pointer inline-flex items-center gap-2 text-sm font-medium text-[#F4F6F9] min-h-[44px] focus:outline-none">
-                    <span className="group-open:hidden">ראה איך זה עובד</span>
-                    <span className="hidden group-open:inline">הסתר פירוט</span>
-                    <svg className="w-4 h-4 transition-transform duration-150 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </summary>
-                  <div>
-                    <PillarDetails pillar={pillar} />
+                  <div className="pb-6 mb-6 border-b border-white/[0.08]">
+                    <p className="text-xs font-mono text-[#A7AAB4] mb-1" dir="ltr">
+                      {track.subtitleEn}
+                    </p>
+                    <h3 className="text-xl sm:text-2xl font-medium text-[#F4F6F9]">
+                      {track.title}
+                    </h3>
                   </div>
-                </details>
-              </div>
 
-              <div className="mt-auto pt-4 border-t border-white/[0.08]">
-                <a
-                  href="#performance-list"
-                  onClick={() => selectTopic(pillar.topicId)}
-                  className="text-[#F4F6F9] hover:text-[#A7AAB4] text-sm font-medium inline-flex items-center justify-between w-full gap-2 group py-1"
-                >
-                  <span>זה אני, שריינו לי מקום</span>
-                  <span className="text-[#2F5E9E] shrink-0">←</span>
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
+                  <dl className="space-y-4">
+                    <div>
+                      <dt className="text-xs font-medium text-[#F4F6F9] mb-1">
+                        קהל יעד:
+                      </dt>
+                      <dd className="text-sm text-[#A7AAB4] leading-relaxed">
+                        {track.audience}
+                      </dd>
+                    </div>
 
-        {/* Closing Bar with Quiet Secondary Button */}
-        <div className="mt-12 pt-8 border-t border-white/[0.08] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-right">
-          <p className="text-[#A7AAB4] text-sm sm:text-base leading-relaxed max-w-xl">
-            <strong className="text-[#F4F6F9] font-medium">לא בטוח לאיזה מסלול אתה שייך?</strong> בדיוק בשביל זה יש מפגש ראשון: קודם אבחון, ורק אחר כך תוכנית.
-          </p>
-          <a
-            href="#performance-list"
-            className="btn-secondary shrink-0 w-full md:w-auto"
-          >
-            <span>שריון קדימות בתורים</span>
-            <span>←</span>
-          </a>
+                    <div className="pt-4 border-t border-white/[0.08]">
+                      <dt className="text-xs font-medium text-[#F4F6F9] mb-1">
+                        המטרה:
+                      </dt>
+                      <dd className="text-sm text-[#A7AAB4] leading-relaxed">
+                        {track.goal}
+                      </dd>
+                    </div>
+
+                    <div className="pt-4 border-t border-white/[0.08]">
+                      <dt className="text-xs font-medium text-[#F4F6F9] mb-1">
+                        התוצאה:
+                      </dt>
+                      <dd className="text-sm text-[#F4F6F9]/90 leading-relaxed">
+                        {track.outcome}
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-white/[0.08]">
+                  <a
+                    href="#performance-list"
+                    onClick={() => selectTopic(track.topicId)}
+                    className="text-[#F4F6F9] hover:text-[#A7AAB4] text-sm font-medium inline-flex items-center justify-between w-full gap-2 py-1"
+                  >
+                    <span>בחירת מסלול ושריון מקום</span>
+                    <span className="text-[#2F5E9E] shrink-0">←</span>
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          {/* Closing Bar with Quiet Secondary Button */}
+          <div className="mt-12 pt-8 border-t border-white/[0.08] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <p className="text-[#A7AAB4] text-sm sm:text-base leading-relaxed max-w-xl">
+              <strong className="text-[#F4F6F9] font-medium">עדיין לא בטוח לאיזה מסלול אתה שייך?</strong> מתחילים באבחון ושיחת תיאום קצרה כדי להתאים את המסלול המדויק עבורך.
+            </p>
+            <a
+              href="#performance-list"
+              onClick={() => selectTopic("עדיין לא בטוח")}
+              className="btn-secondary shrink-0 w-full md:w-auto"
+            >
+              <span>שריון קדימות בתורים</span>
+              <span>←</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
