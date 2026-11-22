@@ -1,11 +1,5 @@
 import Image from "next/image";
 
-const trustPoints = [
-  "15+ שנות ניסיון באומנויות לחימה ואימון",
-  "שילוב של טכניקות מנואליות, דיקור מערבי ותרגול תנועתי",
-  "התאמה אישית לפי עומסי שגרה ועבודה",
-];
-
 export default function Hero() {
   return (
     <section
@@ -36,8 +30,8 @@ export default function Hero() {
       {/* Natural RTL Right-Aligned Composition */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 text-right">
         <div className="max-w-3xl flex flex-col items-start">
-          {/* Brand Logo + Plain Editorial Line (No pill badge) */}
-          <div className="mb-6 flex flex-col items-start gap-3">
+          {/* Official Brand Logo (No eyebrow/caption under logo) */}
+          <div className="mb-6">
             <Image
               src="/okonski-logo-updated.svg"
               alt="Okonski Performance"
@@ -46,56 +40,62 @@ export default function Hero() {
               className="w-36 sm:w-44 h-auto object-contain"
               priority
             />
-            <p className="text-xs sm:text-sm text-[#A7AAB4] font-normal">
-              Okonski Performance | ספורטתרפיה ושיקום מתקדם
-            </p>
           </div>
 
           {/* Main Headline (H1) at weight 500 */}
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-medium text-[#F4F6F9] tracking-tight leading-[1.14] mb-4">
-            לחזור לביצועי שיא. בלי כאבים כרוניים, בלי פשרות.
+            אתה דורש מהגוף שלך הרבה. כאן דואגים שהוא יעמוד בזה.
           </h1>
 
           {/* Sub-headline */}
           <p className="text-base sm:text-lg text-[#A7AAB4] font-normal leading-relaxed max-w-2xl mb-8">
-            טיפול גופני, שיקום מפציעות והתאוששות מותאמת אישית לספורטאים, מתאמנים ואנשי הייטק. אנחנו לא שמים פלסטר על הסימפטום – אנחנו פותרים את שורש הבעיה.
+            ספורטתרפיה וטיפול גופני אישי לספורטאים, למתאמנים ולאנשי קריירה — משיקום פציעות וכאבים, דרך תחזוקה והתאוששות שוטפת, ועד לשיפור התנועה והביצועים.
           </p>
 
-          {/* Trust Elements — Right-Aligned Architectural Grid on 8% Hairlines */}
+          {/* 3 Pillars — Right-Aligned Architectural Grid on 8% Hairlines */}
           <div className="w-full border-y border-white/[0.08] py-6 mb-8">
-            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-right">
-              {trustPoints.map((point, index) => (
-                <li
-                  key={point}
-                  className={
-                    index > 0
-                      ? "sm:pr-6 sm:border-r sm:border-white/[0.08] flex items-start gap-2"
-                      : "flex items-start gap-2"
-                  }
-                >
-                  <span className="font-mono tabular-nums text-xs text-[#2F5E9E] mt-1 shrink-0">
-                    0{index + 1}
-                  </span>
-                  <span className="text-xs sm:text-sm text-[#F4F6F9] leading-relaxed">
-                    {point}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-right">
+              <div>
+                <strong className="text-[#F4F6F9] text-sm sm:text-base font-medium block mb-1">
+                  פציעה או כאב?
+                </strong>
+                <p className="text-xs sm:text-sm text-[#A7AAB4] leading-relaxed">
+                  נמצא את המקור, לא רק את הנקודה שכואבת.
+                </p>
+              </div>
+
+              <div className="sm:pr-6 sm:border-r sm:border-white/[0.08]">
+                <strong className="text-[#F4F6F9] text-sm sm:text-base font-medium block mb-1">
+                  דורש מעצמך הרבה?
+                </strong>
+                <p className="text-xs sm:text-sm text-[#A7AAB4] leading-relaxed">
+                  הגוף שלך צריך תחזוקה, לא רק מנוחה.
+                </p>
+              </div>
+
+              <div className="sm:pr-6 sm:border-r sm:border-white/[0.08]">
+                <strong className="text-[#F4F6F9] text-sm sm:text-base font-medium block mb-1">
+                  רוצה יותר?
+                </strong>
+                <p className="text-xs sm:text-sm text-[#A7AAB4] leading-relaxed">
+                  נבנה מעטפת טיפולית שתיקח אותך לשלב הבא.
+                </p>
+              </div>
+            </div>
           </div>
 
-          {/* Single Primary CTA Button + Quiet Secondary Button Pair */}
+          {/* Single Primary Button + Quiet Secondary Button Pair */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
             <a href="#performance-list" className="btn-primary">
-              <span>שריון קדימות בתורים + הטבת השקה</span>
+              <span>שריון קדימות בתורים</span>
               <span>←</span>
             </a>
             <a href="#treatment" className="btn-secondary">
-              <span>איך זה עובד?</span>
+              <span>איך עובד הטיפול</span>
             </a>
           </div>
           <p className="text-xs text-[#A7AAB4] mt-3">
-            נותרו מקומות מוגבלים לחודש הפתיחה | ללא התחייבות
+            ללא התחייבות · קדימות בתורים ומחיר ייחודי למצטרפים מוקדמים
           </p>
         </div>
       </div>
