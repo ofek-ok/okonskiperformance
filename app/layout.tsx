@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import FloatingAccessibility from "@/components/FloatingAccessibility";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import CookieBanner from "@/components/CookieBanner";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -51,6 +52,7 @@ export default function RootLayout({
       <body className="font-heebo bg-[#0E1116] text-[#F4F6F9] antialiased">
         {children}
         <FloatingAccessibility />
+        <FloatingWhatsApp />
         <CookieBanner />
         <Analytics />
         <SpeedInsights />
