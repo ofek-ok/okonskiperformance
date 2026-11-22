@@ -50,13 +50,15 @@ export default function Treatment() {
           </div>
 
           <div className="lg:col-span-6">
-            <div className="m-photo-frame relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-[#0E1116]/[0.08] bg-white">
+            <div className="m-photo-frame relative w-full rounded-xl overflow-hidden border border-[#0E1116]/[0.08] bg-[#151A22]">
               <Image
                 src="/method-treatment.jpg"
                 alt="תהליך הטיפול האישי ב־Okonski Performance"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                width={1376}
+                height={768}
+                className="w-full h-auto aspect-[4/3] object-cover block"
+                sizes="(max-width: 1024px) 100vw, 600px"
+                priority
               />
             </div>
           </div>

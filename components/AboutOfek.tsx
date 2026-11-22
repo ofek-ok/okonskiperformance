@@ -11,14 +11,15 @@ export default function AboutOfek() {
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           {/* Studio Portrait — Radius 12px (rounded-xl), 8% Hairline */}
           <div className="lg:col-span-5 order-first">
-            <div className="m-photo-frame relative w-full max-w-[360px] aspect-[4/5] rounded-xl overflow-hidden border border-white/[0.08] bg-[#151A22]">
+            <div className="m-photo-frame relative w-full max-w-[360px] rounded-xl overflow-hidden border border-white/[0.08] bg-[#151A22]">
               <Image
                 src="/ofek-portrait-hd.jpg"
                 alt="אופק אוקונסקי, מייסד Okonski Performance"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 640px) 340px, (max-width: 1024px) 360px, 35vw"
-                priority={false}
+                width={1024}
+                height={1024}
+                className="w-full h-auto aspect-[4/5] object-cover object-center block"
+                sizes="(max-width: 640px) 340px, 360px"
+                priority
               />
             </div>
           </div>
