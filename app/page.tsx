@@ -1,8 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import TheProblem from "@/components/TheProblem";
 import WhoItsFor from "@/components/WhoItsFor";
 import Treatment from "@/components/Treatment";
-import HowToStart from "@/components/HowToStart";
 import AboutOfek from "@/components/AboutOfek";
 import FAQ from "@/components/FAQ";
 import PerformanceList from "@/components/PerformanceList";
@@ -40,9 +40,9 @@ export default function Home() {
       <main className="bg-charcoalDark selection:bg-logoBlue selection:text-white">
         <Navbar />
         <Hero />
+        <TheProblem />
         <WhoItsFor />
         <Treatment />
-        <HowToStart />
         <AboutOfek />
         <FAQ />
         <PerformanceList />

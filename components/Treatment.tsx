@@ -249,10 +249,10 @@ export default function Treatment() {
             </div>
             <div className="pt-4 mt-4">
               <a
-                href="#how-it-works"
+                href="#performance-list"
                 className="inline-flex items-center gap-2 text-[#0E1116] hover:text-[#2F5E9E] text-sm font-medium"
               >
-                <span>איך מתחילים? קרא על השלבים</span>
+                <span>רוצה להתחיל? הצטרף לרשימת הקדימות</span>
                 <span className="text-[#2F5E9E]">←</span>
               </a>
             </div>

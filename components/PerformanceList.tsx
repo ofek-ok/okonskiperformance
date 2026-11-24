@@ -32,6 +32,24 @@ const TRACK_OPTIONS = [
   { id: "עדיין לא בטוח", label: "עדיין לא בטוח" },
 ];
 
+const START_STEPS = [
+  {
+    num: "01",
+    title: "השארת פרטים",
+    desc: "משאירים שם, טלפון ובאיזה תחום מדובר — בדקה אחת וללא התחייבות.",
+  },
+  {
+    num: "02",
+    title: "חזרה אישית עם פתיחת היומן",
+    desc: "אני חוזר אישית אל הנרשמים ברשימת הקדימות כדי להבין את הצורך ולבדוק התאמה.",
+  },
+  {
+    num: "03",
+    title: "תיאום מפגש ראשון",
+    desc: "בוחרים מועד נוח בקליניקה ומתחילים באבחון וטיפול — כולל הטבת מצטרפים מוקדמים.",
+  },
+];
+
 export default function PerformanceList() {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [formData, setFormData] = useState({
@@ -124,16 +142,16 @@ export default function PerformanceList() {
     <section
       id="performance-list"
       className="py-16 sm:py-24 bg-[#0E1116] scroll-mt-16 border-b border-white/[0.08]"
-      aria-label="שריון מקום והטבה"
+      aria-label="הצטרפות לרשימת הקדימות"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
-        {/* SECTION 6: FINAL CTA & CONVERSION (שריון מקום) */}
+        {/* Heading */}
         <div className="max-w-3xl text-right mb-12">
           <h2 className="text-2xl sm:text-4xl font-medium text-[#F4F6F9] tracking-tight leading-tight mb-4">
-            היומן נפתח בקרוב – שריינו לעצמכם עדיפות בתורים
+            היומן נפתח בקרוב — שריינו קדימות בתורים
           </h2>
           <p className="text-[#A7AAB4] text-sm sm:text-base leading-relaxed max-w-2xl">
-            לקראת פתיחת הקליניקה, כמות התורים הראשונית מוגבלת. הרשמה עכשיו מעניקה לכם קדימות מלאה בקביעת הטיפול הראשון + הטבת הצטרפות ייחודית.
+            כמות התורים הראשונית עם פתיחת הקליניקה מוגבלת. השארת פרטים עכשיו מכניסה אתכם לרשימת הקדימות — <strong className="text-[#F4F6F9] font-medium">אני קורא כל פנייה בעצמי</strong> וחוזר אליכם לפני כולם עם מחיר השקה למצטרפים מוקדמים.
           </p>
         </div>
 
@@ -148,14 +166,14 @@ export default function PerformanceList() {
                 aria-atomic="true"
               >
                 <h3 className="text-2xl font-medium text-[#F4F6F9] mb-3">
-                  המקום והטבת ההצטרפות שוריינו עבורך.
+                  נרשמת בהצלחה לרשימת הקדימות.
                 </h3>
                 <p className="text-[#A7AAB4] text-sm sm:text-base leading-relaxed mb-6">
-                  אחזור אליך אישית לשיחת תיאום קצרה לקראת פתיחת היומן. בינתיים, אם יש שאלה דחופה, אפשר לפנות אליי ישירות בוואטסאפ.
+                  אחזור אליך אישית כשהיומן נפתח לקביעת התורים הראשונים. בינתיים, אם יש שאלה דחופה, אפשר לפנות אליי ישירות בוואטסאפ.
                 </p>
                 <a
                   href={`https://wa.me/972555172571?text=${encodeURIComponent(
-                    `היי אופק, שריינתי מקום באתר למסלול ${selectedTopic}. אשמח לשוחח.`
+                    `היי אופק, נרשמתי לרשימת הקדימות באתר למסלול ${selectedTopic}. אשמח לשוחח.`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -170,7 +188,7 @@ export default function PerformanceList() {
                 onSubmit={handleSubmit}
                 noValidate
                 className="border border-white/[0.08] bg-[#151A22] rounded-xl p-6 sm:p-8 text-right space-y-6"
-                aria-label="טופס שריון עדיפות בתורים והטבת הצטרפות"
+                aria-label="טופס הצטרפות לרשימת הקדימות"
               >
                 {/* Name & Phone */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -238,10 +256,10 @@ export default function PerformanceList() {
                   </div>
                 </div>
 
-                {/* Preferred Track Selector — Radius 8px (rounded-lg), Spacing 8px (gap-2) */}
+                {/* Preferred Track Selector */}
                 <div className="pt-4 border-t border-white/[0.08]">
                   <label className="text-xs sm:text-sm font-medium text-[#F4F6F9] block mb-3">
-                    מסלול מועדף
+                    איזה מסלול הכי רלוונטי לך?
                   </label>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                     {TRACK_OPTIONS.map((track) => {
@@ -306,36 +324,55 @@ export default function PerformanceList() {
                     className="btn-primary w-full py-3 px-6 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     <span>
-                      {status === "loading" ? "שומר פרטים..." : "שריין לי מקום והטבה עכשיו ←"}
+                      {status === "loading" ? "שומר פרטים..." : "הצטרפות לרשימת הקדימות ←"}
                     </span>
                   </button>
                   <p className="text-xs text-[#A7AAB4] mt-3 text-right">
-                    ללא תשלום מראש | שיחת תיאום קצרה לפני ההגעה
+                    ללא תשלום מראש · ללא התחייבות · קדימות בתורים ומחיר ייחודי למצטרפים מוקדמים
                   </p>
                 </div>
               </form>
             )}
           </div>
 
-          {/* SIDEBAR: DIRECT CONTACT (5 Cols — Quiet Secondary Button) */}
+          {/* SIDEBAR: HOW IT STARTS + WHATSAPP (5 Cols) */}
           <div className="lg:col-span-5 flex flex-col gap-6 text-right">
             <div className="rounded-xl bg-[#151A22] border border-white/[0.08] p-6 sm:p-8">
-              <h3 className="text-lg sm:text-xl font-medium text-[#F4F6F9] mb-2">
-                מעדיפים להתייעץ קודם בוואטסאפ?
+              <h3 className="text-lg sm:text-xl font-medium text-[#F4F6F9] mb-4">
+                איך זה עובד מרגע ההרשמה?
               </h3>
-              <p className="text-sm text-[#A7AAB4] leading-relaxed mb-6">
-                לא חייבים לדעת מראש איזה מסלול בדיוק מתאים לכם. אפשר לשלוח הודעה קצרה ונבין יחד מה הצעד הנכון עבורכם.
-              </p>
+              <ol className="space-y-4 mb-6">
+                {START_STEPS.map((step) => (
+                  <li key={step.num} className="pt-4 first:pt-0 border-t first:border-t-0 border-white/[0.08] flex items-baseline gap-3">
+                    <span className="font-mono tabular-nums text-xs text-[#2F5E9E] shrink-0">
+                      {step.num}
+                    </span>
+                    <div>
+                      <strong className="text-sm font-medium text-[#F4F6F9] block mb-1">
+                        {step.title}
+                      </strong>
+                      <p className="text-xs sm:text-sm text-[#A7AAB4] leading-relaxed">
+                        {step.desc}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
 
-              <a
-                href="https://wa.me/972555172571?text=%D7%94%D7%99%D7%99%20%D7%90%D7%95%D7%A4%D7%A7%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%AA%D7%99%D7%99%D7%A2%D7%A5%20%D7%9C%D7%92%D7%91%D7%99%20%D7%98%D7%99%D7%A4%D7%95%D7%9C"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary w-full justify-between"
-              >
-                <span>שיחה ישירה בוואטסאפ</span>
-                <span className="text-[#A7AAB4]">←</span>
-              </a>
+              <div className="pt-6 border-t border-white/[0.08]">
+                <p className="text-xs sm:text-sm text-[#A7AAB4] mb-4">
+                  מעדיפים להתייעץ ישירות לפני השארת פרטים?
+                </p>
+                <a
+                  href="https://wa.me/972555172571?text=%D7%94%D7%99%D7%99%20%D7%90%D7%95%D7%A4%D7%A7%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%AA%D7%99%D7%99%D7%A2%D7%A5%20%D7%9C%D7%92%D7%91%D7%99%20%D7%98%D7%99%D7%A4%D7%95%D7%9C"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary w-full justify-between"
+                >
+                  <span>שיחה ישירה בוואטסאפ</span>
+                  <span className="text-[#A7AAB4]">←</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
