@@ -87,50 +87,17 @@ export default function Treatment() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         {/* Top Split: Heading + Interactive Clinical Modality Showcase */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-16">
-          <div className="lg:col-span-5 text-right lg:pt-2">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-16">
+          <div className="lg:col-span-5 text-right">
             <h2 className="text-2xl sm:text-4xl font-medium text-[#0E1116] leading-tight mb-4">
               איך עובד התהליך
             </h2>
             <p className="text-[#0E1116] text-base sm:text-lg leading-relaxed mb-3 font-medium">
               אין שני אנשים שמגיעים עם אותו עומס, אותה מגבלה או אותה מטרה.
             </p>
-            <p className="text-[#4B5262] text-sm sm:text-base leading-relaxed mb-6">
+            <p className="text-[#4B5262] text-sm sm:text-base leading-relaxed">
               לכן, הטיפול ב־Okonski Performance אינו מבוסס על סדר פעולות זהה לכל לקוח. הוא מתחיל בהבנת המצב שלך ומשלב את הכלים הקליניים המתאימים למה שעולה בתשאול ובהערכה.
             </p>
-
-            {/* Interactive Modality Selector Tabs */}
-            <div className="mb-2">
-              <p className="text-xs font-medium text-[#4B5262] mb-3">
-                כלים שמשתלבים בטיפול לפי הצורך (לחץ לצפייה):
-              </p>
-              <div
-                role="tablist"
-                aria-label="שיטות וכלים בתהליך הטיפול"
-                className="flex flex-wrap gap-2"
-              >
-                {modalities.map((item, idx) => {
-                  const isActive = idx === activeIndex;
-                  return (
-                    <button
-                      key={item.id}
-                      type="button"
-                      role="tab"
-                      aria-selected={isActive}
-                      aria-controls={`modality-panel-${item.id}`}
-                      onClick={() => setActiveIndex(idx)}
-                      className={`m-btn px-3 py-2 text-xs sm:text-sm font-medium rounded-lg border cursor-pointer focus:outline-none ${
-                        isActive
-                          ? "bg-[#2F5E9E] text-white border-[#2F5E9E]"
-                          : "bg-white text-[#0E1116] border-[#0E1116]/[0.12] hover:border-[#2F5E9E]"
-                      }`}
-                    >
-                      {item.label}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
           </div>
 
           <div className="lg:col-span-7">
@@ -153,7 +120,7 @@ export default function Treatment() {
                 />
               </div>
 
-              {/* Active Modality Caption Bar + Thumbnail Strip */}
+              {/* Active Modality Caption Bar + Thumbnail Strip + Clickable Tool Tabs */}
               <div className="p-4 sm:p-6 bg-white border-t border-[#0E1116]/[0.08] text-right">
                 <div className="flex flex-wrap items-baseline justify-between gap-2 mb-4">
                   <div className="flex items-center gap-2">
@@ -170,7 +137,7 @@ export default function Treatment() {
                 </div>
 
                 {/* 6 Thumbnail Previews */}
-                <div className="grid grid-cols-6 gap-2">
+                <div className="grid grid-cols-6 gap-2 mb-4">
                   {modalities.map((item, idx) => {
                     const isActive = idx === activeIndex;
                     return (
@@ -196,6 +163,36 @@ export default function Treatment() {
                       </button>
                     );
                   })}
+                </div>
+
+                {/* Interactive Modality Selector Tabs Underneath Images */}
+                <div className="pt-4 border-t border-[#0E1116]/[0.08]">
+                  <div
+                    role="tablist"
+                    aria-label="שיטות וכלים בתהליך הטיפול"
+                    className="flex flex-wrap gap-2"
+                  >
+                    {modalities.map((item, idx) => {
+                      const isActive = idx === activeIndex;
+                      return (
+                        <button
+                          key={item.id}
+                          type="button"
+                          role="tab"
+                          aria-selected={isActive}
+                          aria-controls={`modality-panel-${item.id}`}
+                          onClick={() => setActiveIndex(idx)}
+                          className={`m-btn px-3 py-2 text-xs sm:text-sm font-medium rounded-lg border cursor-pointer focus:outline-none ${
+                            isActive
+                              ? "bg-[#2F5E9E] text-white border-[#2F5E9E]"
+                              : "bg-[#F4F6F9] text-[#0E1116] border-[#0E1116]/[0.12] hover:border-[#2F5E9E]"
+                          }`}
+                        >
+                          {item.label}
+                        </button>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
