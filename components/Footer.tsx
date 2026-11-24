@@ -20,7 +20,7 @@ export default function Footer() {
             <Link href="/#hero" className="mb-3 inline-block focus:outline-none rounded-lg">
               <Image
                 src="/okonski-logo-updated.svg"
-                alt="Okonski Performance — ספורטתרפיה ושיקום תנועתי"
+                alt="Okonski Performance, ספורטתרפיה ושיקום תנועתי"
                 width={450}
                 height={346}
                 className="h-8 w-auto object-contain"

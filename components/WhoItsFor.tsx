@@ -64,7 +64,7 @@ const pillars: ServicePillar[] = [
   {
     title: "שיפור תנועה, יציבה וביצועים",
     topicId: "תנועה ויציבה",
-    lead: "לבנות גוף עמיד, חזק ומשוחרר יותר — שעומד בשגרה אינטנסיבית, מונע פציעות עתידיות ומחזיק לאורך שנים.",
+    lead: "לבנות גוף עמיד, חזק ומשוחרר יותר, שעומד בשגרה אינטנסיבית, מונע פציעות עתידיות ומחזיק לאורך שנים.",
     example:
       "שיפור טווחי תנועה ויציבה שנשחקים מול המסך, חיזוק נקודות תורפה לפני שהן הופכות לפציעה, ושיפור הגמישות והכוח באימון.",
     steps: [
@@ -110,7 +110,7 @@ function PillarDetails({ pillar }: { pillar: ServicePillar }) {
                 {step.num}
               </span>
               <div className="text-xs sm:text-sm leading-relaxed">
-                <strong className="text-[#F4F6F9] font-medium">{step.title} — </strong>
+                <strong className="text-[#F4F6F9] font-medium">{step.title}: </strong>
                 <span className="text-[#A7AAB4]">{step.desc}</span>
               </div>
             </li>
@@ -138,7 +138,7 @@ export default function WhoItsFor() {
             מה הגוף שלך צריך כרגע?
           </h2>
           <p className="text-[#A7AAB4] text-sm sm:text-base leading-relaxed">
-            אין פרוטוקול אחד לכולם. ספורטאי עם כתף תפוסה ומנהל עם גב נעול צריכים דברים שונים — ולכן כל טיפול מתחיל מהמצב שלך.
+            אין פרוטוקול אחד לכולם. ספורטאי עם כתף תפוסה ומנהל עם גב נעול צריכים דברים שונים, ולכן כל טיפול מתחיל מהמצב שלך.
           </p>
         </div>
 

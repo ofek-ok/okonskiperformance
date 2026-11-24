@@ -2,7 +2,7 @@ const problemPoints = [
   {
     num: "01",
     title: "מנוחה לבד לא פותרת את המקור",
-    body: "הפסקה של שבוע מאימונים מורידה את הרגישות רגעית, אבל ברגע שחוזרים לעומס — אותה כתף, גב או ברך חוזרים לכאוב בדיוק באותה נקודה.",
+    body: "הפסקה של שבוע מאימונים מורידה את הרגישות רגעית, אבל ברגע שחוזרים לעומס, אותה כתף, גב או ברך חוזרים לכאוב בדיוק באותה נקודה.",
   },
   {
     num: "02",
@@ -29,7 +29,7 @@ export default function TheProblem() {
             id="problem-heading"
             className="text-2xl sm:text-4xl font-medium text-[#F4F6F9] leading-tight mb-4"
           >
-            העומס מצטבר בשקט — עד שהגוף מתחיל לאותת.
+            העומס מצטבר בשקט, עד שהגוף מתחיל לאותת.
           </h2>
           <p className="text-[#A7AAB4] text-sm sm:text-base leading-relaxed">
             בין שעות ארוכות בישיבה ועבודה תובענית לבין אימונים אינטנסיביים, הגוף סופג עומסים יום אחרי יום. הבעיה היא שרוב האנשים מנסים לפתור את זה בדרכים זמניות שלא נוגעות בסיבה האמיתית.
@@ -57,7 +57,7 @@ export default function TheProblem() {
 
         <div className="mt-12 pt-8 border-t border-white/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <p className="text-sm sm:text-base text-[#F4F6F9]">
-            כדי לעצור את המעגל הזה, לא מטפלים רק בסימפטום — מתאימים את הטיפול למצב שלך.
+            כדי לעצור את המעגל הזה, לא מטפלים רק בסימפטום, אלא מתאימים את הטיפול למצב שלך.
           </p>
           <a
             href="#who-its-for"

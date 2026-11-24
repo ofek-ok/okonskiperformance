@@ -58,7 +58,7 @@ export default function Navbar() {
         <Link
           href="/#hero"
           className="flex items-center focus:outline-none rounded-lg shrink-0"
-          aria-label="Okonski Performance — עמוד הבית"
+          aria-label="Okonski Performance, עמוד הבית"
         >
           <Image
             src="/okonski-logo-updated.svg"

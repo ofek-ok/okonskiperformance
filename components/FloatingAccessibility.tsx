@@ -99,33 +99,33 @@ export default function FloatingAccessibility() {
           role="dialog"
           aria-modal="true"
           aria-label="תפריט נגישות האתר"
-          className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-4 bg-black/60 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-4 bg-[#0E1116]/80 backdrop-blur-sm"
           onClick={(e) => {
             if (e.target === e.currentTarget) setIsOpen(false);
           }}
         >
           <div
-            className="w-full sm:max-w-md rounded-t-2xl sm:rounded-2xl bg-charcoal border border-white/15 p-6 sm:p-7 shadow-2xl text-right animate-fade-up max-h-[90vh] overflow-y-auto"
+            className="w-full sm:max-w-md rounded-t-xl sm:rounded-xl bg-[#151A22] border border-white/[0.08] p-6 text-right max-h-[90vh] overflow-y-auto"
             dir="rtl"
           >
             {/* Header */}
-            <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
+            <div className="flex items-center justify-between pb-4 border-b border-white/[0.08] mb-6">
               <div className="flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="h-5 w-5 text-brand"
+                  className="h-5 w-5 text-[#2F5E9E]"
                   aria-hidden="true"
                 >
                   <circle cx="12" cy="4" r="2" />
                   <path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.38-.34-.61-.45-.49-.24-1.07-.27-1.58-.09-.28.1-.53.27-.74.49L9.42 9.12C8.44 10.2 6.89 10.98 5.35 11v2c1.99-.02 3.99-.95 5.24-2.31l.41-.45v4.76l-3.34 5.35 1.7 1.06 3.14-5.02c.07-.11.14-.23.19-.36l.32-.78.32.78c.05.13.12.25.19.36l3.14 5.02 1.7-1.06-3.34-5.35v-4.76l.41.45C14.66 12.03 16.66 12.98 18.65 13H19z" />
                 </svg>
-                <h2 className="text-lg font-bold text-white">תפריט נגישות</h2>
+                <h2 className="text-lg font-medium text-[#F4F6F9]">תפריט נגישות</h2>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-1.5 text-silver/60 hover:text-white rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
+                className="m-btn p-2 text-[#A7AAB4] hover:text-[#F4F6F9] rounded-lg hover:bg-white/[0.08] cursor-pointer"
                 aria-label="סגירת תפריט נגישות"
               >
                 <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -135,22 +135,22 @@ export default function FloatingAccessibility() {
             </div>
 
             {/* Options list */}
-            <div className="space-y-4">
+            <div className="space-y-3">
               {/* Font size */}
-              <div className="p-3.5 rounded-xl bg-primary/70 border border-white/5 flex items-center justify-between">
-                <span className="text-sm font-medium text-white">גודל טקסט</span>
+              <div className="p-4 rounded-xl bg-[#0E1116] border border-white/[0.08] flex items-center justify-between">
+                <span className="text-sm font-medium text-[#F4F6F9]">גודל טקסט</span>
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => setFontSizeLevel(Math.max(-1, fontSizeLevel - 1))}
                     disabled={fontSizeLevel <= -1}
-                    className="px-3 py-1.5 text-xs font-bold rounded-lg bg-white/10 text-white hover:bg-white/20 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+                    className="m-btn px-3 py-2 text-xs font-medium rounded-lg bg-[#151A22] border border-white/[0.08] text-[#F4F6F9] hover:border-white/[0.16] disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
                     aria-label="הקטנת גודל טקסט"
                   >
                     א-
                   </button>
                   <button
                     onClick={() => setFontSizeLevel(0)}
-                    className="px-2.5 py-1.5 text-xs rounded-lg bg-white/10 text-silver/80 hover:bg-white/20 cursor-pointer"
+                    className="m-btn px-3 py-2 text-xs rounded-lg bg-[#151A22] border border-white/[0.08] text-[#A7AAB4] hover:text-[#F4F6F9] hover:border-white/[0.16] cursor-pointer"
                     aria-label="איפוס גודל טקסט"
                   >
                     רגיל
@@ -158,7 +158,7 @@ export default function FloatingAccessibility() {
                   <button
                     onClick={() => setFontSizeLevel(Math.min(2, fontSizeLevel + 1))}
                     disabled={fontSizeLevel >= 2}
-                    className="px-3 py-1.5 text-xs font-bold rounded-lg bg-white/10 text-white hover:bg-white/20 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+                    className="m-btn px-3 py-2 text-xs font-medium rounded-lg bg-[#151A22] border border-white/[0.08] text-[#F4F6F9] hover:border-white/[0.16] disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
                     aria-label="הגדלת גודל טקסט"
                   >
                     א+
@@ -169,15 +169,15 @@ export default function FloatingAccessibility() {
               {/* High contrast toggle */}
               <button
                 onClick={() => setHighContrast(!highContrast)}
-                className={`w-full p-3.5 rounded-xl border flex items-center justify-between text-sm font-medium transition-colors cursor-pointer ${
+                className={`m-btn w-full p-4 rounded-xl border flex items-center justify-between text-sm font-medium cursor-pointer ${
                   highContrast
-                    ? "bg-brand/20 border-brand text-white"
-                    : "bg-primary/70 border-white/5 text-silver/90 hover:border-white/20"
+                    ? "bg-[#2F5E9E]/20 border-[#2F5E9E] text-[#F4F6F9]"
+                    : "bg-[#0E1116] border-white/[0.08] text-[#A7AAB4] hover:border-white/[0.16] hover:text-[#F4F6F9]"
                 }`}
                 aria-pressed={highContrast}
               >
                 <span>ניגודיות גבוהה</span>
-                <span className="text-xs px-2 py-0.5 rounded bg-white/10">
+                <span className="text-xs px-2 py-1 rounded-lg bg-[#151A22] border border-white/[0.08]">
                   {highContrast ? "פעיל" : "כבוי"}
                 </span>
               </button>
@@ -185,15 +185,15 @@ export default function FloatingAccessibility() {
               {/* Readable font toggle */}
               <button
                 onClick={() => setReadableFont(!readableFont)}
-                className={`w-full p-3.5 rounded-xl border flex items-center justify-between text-sm font-medium transition-colors cursor-pointer ${
+                className={`m-btn w-full p-4 rounded-xl border flex items-center justify-between text-sm font-medium cursor-pointer ${
                   readableFont
-                    ? "bg-brand/20 border-brand text-white"
-                    : "bg-primary/70 border-white/5 text-silver/90 hover:border-white/20"
+                    ? "bg-[#2F5E9E]/20 border-[#2F5E9E] text-[#F4F6F9]"
+                    : "bg-[#0E1116] border-white/[0.08] text-[#A7AAB4] hover:border-white/[0.16] hover:text-[#F4F6F9]"
                 }`}
                 aria-pressed={readableFont}
               >
                 <span>גופן קריא במיוחד</span>
-                <span className="text-xs px-2 py-0.5 rounded bg-white/10">
+                <span className="text-xs px-2 py-1 rounded-lg bg-[#151A22] border border-white/[0.08]">
                   {readableFont ? "פעיל" : "כבוי"}
                 </span>
               </button>
@@ -201,15 +201,15 @@ export default function FloatingAccessibility() {
               {/* Highlight links toggle */}
               <button
                 onClick={() => setHighlightLinks(!highlightLinks)}
-                className={`w-full p-3.5 rounded-xl border flex items-center justify-between text-sm font-medium transition-colors cursor-pointer ${
+                className={`m-btn w-full p-4 rounded-xl border flex items-center justify-between text-sm font-medium cursor-pointer ${
                   highlightLinks
-                    ? "bg-brand/20 border-brand text-white"
-                    : "bg-primary/70 border-white/5 text-silver/90 hover:border-white/20"
+                    ? "bg-[#2F5E9E]/20 border-[#2F5E9E] text-[#F4F6F9]"
+                    : "bg-[#0E1116] border-white/[0.08] text-[#A7AAB4] hover:border-white/[0.16] hover:text-[#F4F6F9]"
                 }`}
                 aria-pressed={highlightLinks}
               >
                 <span>הדגשת קישורים</span>
-                <span className="text-xs px-2 py-0.5 rounded bg-white/10">
+                <span className="text-xs px-2 py-1 rounded-lg bg-[#151A22] border border-white/[0.08]">
                   {highlightLinks ? "פעיל" : "כבוי"}
                 </span>
               </button>
@@ -217,32 +217,32 @@ export default function FloatingAccessibility() {
               {/* Stop motion toggle */}
               <button
                 onClick={() => setStopMotion(!stopMotion)}
-                className={`w-full p-3.5 rounded-xl border flex items-center justify-between text-sm font-medium transition-colors cursor-pointer ${
+                className={`m-btn w-full p-4 rounded-xl border flex items-center justify-between text-sm font-medium cursor-pointer ${
                   stopMotion
-                    ? "bg-brand/20 border-brand text-white"
-                    : "bg-primary/70 border-white/5 text-silver/90 hover:border-white/20"
+                    ? "bg-[#2F5E9E]/20 border-[#2F5E9E] text-[#F4F6F9]"
+                    : "bg-[#0E1116] border-white/[0.08] text-[#A7AAB4] hover:border-white/[0.16] hover:text-[#F4F6F9]"
                 }`}
                 aria-pressed={stopMotion}
               >
                 <span>עצירת אנימציות ותנועה</span>
-                <span className="text-xs px-2 py-0.5 rounded bg-white/10">
+                <span className="text-xs px-2 py-1 rounded-lg bg-[#151A22] border border-white/[0.08]">
                   {stopMotion ? "פעיל" : "כבוי"}
                 </span>
               </button>
             </div>
 
             {/* Actions */}
-            <div className="flex items-center justify-between pt-6 mt-6 border-t border-white/10">
+            <div className="flex items-center justify-between pt-6 mt-6 border-t border-white/[0.08]">
               <button
                 onClick={resetAll}
-                className="text-xs text-silver/60 hover:text-white underline cursor-pointer"
+                className="text-xs text-[#A7AAB4] hover:text-[#F4F6F9] underline cursor-pointer"
               >
                 איפוס כל ההגדרות
               </button>
               <Link
                 href="/accessibility"
                 onClick={() => setIsOpen(false)}
-                className="text-xs text-brand hover:text-brand-bright font-medium underline"
+                className="text-xs text-[#F4F6F9] hover:text-[#2F5E9E] font-medium underline"
               >
                 הצהרת נגישות מלאה
               </Link>

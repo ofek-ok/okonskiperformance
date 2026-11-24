@@ -49,7 +49,7 @@ export default function Hero() {
 
           {/* Sub-headline */}
           <p className="text-base sm:text-lg text-[#A7AAB4] font-normal leading-relaxed max-w-2xl mb-8">
-            ספורטתרפיה וטיפול גופני אישי לספורטאים, למתאמנים ולאנשי קריירה — משיקום פציעות וכאבים, דרך תחזוקה והתאוששות שוטפת, ועד לשיפור התנועה והביצועים.
+            ספורטתרפיה וטיפול גופני אישי לספורטאים, למתאמנים ולאנשי קריירה: משיקום פציעות וכאבים, דרך תחזוקה והתאוששות שוטפת, ועד לשיפור התנועה והביצועים.
           </p>
 
           {/* 3 Pillars — Right-Aligned Architectural Grid on 8% Hairlines */}
