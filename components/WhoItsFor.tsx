@@ -1,124 +1,35 @@
 "use client";
 
 interface ServicePillar {
+  num: string;
   title: string;
   topicId: string;
-  lead: string;
-  example: string;
-  steps: {
-    num: string;
-    title: string;
-    desc: string;
-  }[];
+  body: string;
 }
 
 const pillars: ServicePillar[] = [
   {
-    title: "כאב ופציעה",
+    num: "01",
+    title: "שיקום וטיפול בכאבים ופציעות",
     topicId: "כאב ופציעה",
-    lead: "כשכאב או מגבלה תנועתית עוצרים אותך באימון, בעבודה או בשגרה.",
-    example:
-      "כאב בכתף תחת עומס, גב או צוואר תפוסים משעות ישיבה, עומס מפרקי או פציעה שמקשה לחזור לפעילות מלאה.",
-    steps: [
-      {
-        num: "01",
-        title: "בודקים ומאתרים את המקור",
-        desc: "הערכה תפקודית ותנועתית, ולא רק מבט על הנקודה שכואבת.",
-      },
-      {
-        num: "02",
-        title: "טיפול ממוקד להורדת כאב ועומס",
-        desc: "שילוב עבודה מנואלית, דיקור מערבי וכלי ספורטתרפיה לפי הצורך.",
-      },
-      {
-        num: "03",
-        title: "חזרה בטוחה לפעילות",
-        desc: "דיוק תנועה ותרגול מותאם כדי לחזור לאימונים ולשגרה ולמנוע מהכאב לחזור.",
-      },
-    ],
+    body: "טיפול בכאבים, פציעות ומגבלות תנועה, במטרה לשפר את התפקוד ולסייע בחזרה הדרגתית לשגרה ולפעילות.",
   },
   {
+    num: "02",
     title: "תחזוקה והתאוששות",
     topicId: "תחזוקה והתאוששות",
-    lead: "כשאין פציעה נקודתית, אבל העומס המצטבר מהאימונים ומהשגרה מתחיל להכביד על הגוף.",
-    example:
-      "נוקשות בגב ובשכמות מישיבה ממושכת, עייפות ושחיקה שרירית בין אימונים, או גוף שמרגיש \"כבד\" ותפוס.",
-    steps: [
-      {
-        num: "01",
-        title: "מיפוי עומסים ונקודות תקיעות",
-        desc: "בדיקת תנועתיות לאיתור האזורים שסופגים את מירב העומס.",
-      },
-      {
-        num: "02",
-        title: "פריקת עומס ושחרור רקמות",
-        desc: "עבודה מנואלית עמוקה וטכניקות התאוששות לשחרור שרירים ופאשיה.",
-      },
-      {
-        num: "03",
-        title: "החזרת הגוף לאיפוס",
-        desc: "הכנת הגוף לשבוע הבא והרגלי תנועה קצרים לשמירה על תפקוד גבוה.",
-      },
-    ],
+    body: "התייחסות לעומסים מצטברים, נוקשות ועייפות גופנית, לשמירה על תנועה ותפקוד לאורך זמן.",
   },
   {
-    title: "שיפור תנועה, יציבה וביצועים",
+    num: "03",
+    title: "שיפור תנועה וביצועים",
     topicId: "תנועה ויציבה",
-    lead: "לבנות גוף עמיד, חזק ומשוחרר יותר, שעומד בשגרה אינטנסיבית, מונע פציעות עתידיות ומחזיק לאורך שנים.",
-    example:
-      "שיפור טווחי תנועה ויציבה שנשחקים מול המסך, חיזוק נקודות תורפה לפני שהן הופכות לפציעה, ושיפור הגמישות והכוח באימון.",
-    steps: [
-      {
-        num: "01",
-        title: "אבחון תנועה, יציבה ועומסים",
-        desc: "זיהוי מגבלות ודפוסי פיצוי שמייצרים שחיקה מצטברת.",
-      },
-      {
-        num: "02",
-        title: "פתיחת טווחי תנועה",
-        desc: "עבודה מנואלית ומתיחות מותאמות להרחבת חופש התנועה במפרקים.",
-      },
-      {
-        num: "03",
-        title: "חיזוק ובניית עמידות",
-        desc: "תרגול מדויק לשליטה בטווחים החדשים שמשתלב בקלות בשגרה שלך.",
-      },
-    ],
+    body: "עבודה על טווחי תנועה, יכולות גופניות ותפקוד, כדי לאפשר ביצוע טוב ויעיל יותר בפעילות היומיומית והספורטיבית.",
   },
 ];
 
 function selectTopic(topicId: string) {
   window.dispatchEvent(new CustomEvent("okonski:select-topic", { detail: topicId }));
-}
-
-function PillarDetails({ pillar }: { pillar: ServicePillar }) {
-  return (
-    <>
-      <div className="pt-4 mt-4 border-t border-[#0E1116]/[0.08] text-sm leading-relaxed">
-        <span className="text-[#0E1116] font-semibold block mb-1 text-xs sm:text-sm">לדוגמה:</span>
-        <p className="text-xs sm:text-sm text-[#4B5262] leading-relaxed">{pillar.example}</p>
-      </div>
-
-      <div className="flex-grow flex flex-col justify-between mt-6 pt-6 border-t border-[#0E1116]/[0.08]">
-        <h4 className="text-[#0E1116] text-xs sm:text-sm font-semibold mb-3">
-          איך עובדים:
-        </h4>
-        <ul className="space-y-3 mb-6 flex-grow">
-          {pillar.steps.map((step) => (
-            <li key={step.num} className="flex items-baseline gap-3">
-              <span className="font-mono tabular-nums text-[#2F5E9E] text-xs font-semibold shrink-0">
-                {step.num}
-              </span>
-              <div className="text-xs sm:text-sm leading-relaxed">
-                <strong className="text-[#0E1116] font-semibold">{step.title}: </strong>
-                <span className="text-[#4B5262]">{step.desc}</span>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </>
-  );
 }
 
 export default function WhoItsFor() {
@@ -132,49 +43,28 @@ export default function WhoItsFor() {
         <div className="max-w-3xl mb-12 text-right">
           <h2
             id="who-heading"
-            className="text-2xl sm:text-4xl font-semibold text-[#0E1116] leading-tight mb-4"
+            className="text-2xl sm:text-4xl font-semibold text-[#0E1116] leading-tight"
           >
             מה הגוף שלך צריך כרגע?
           </h2>
-          <p className="text-[#4B5262] text-sm sm:text-base leading-relaxed">
-            אין פרוטוקול אחד לכולם. ספורטאי עם כתף תפוסה ומנהל עם גב נעול צריכים דברים שונים, ולכן כל טיפול מתחיל מהמצב שלך.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 text-right items-stretch">
           {pillars.map((pillar) => (
             <article
-              key={pillar.title}
+              key={pillar.num}
               className="m-card h-full flex flex-col justify-between p-6 sm:p-8 rounded-xl bg-white border border-[#0E1116]/[0.08] shadow-[0_2px_12px_rgba(14,17,22,0.03)]"
             >
-              <div className="flex-1 flex flex-col">
-                <div>
-                  <h3 className="text-xl sm:text-2xl font-semibold text-[#0E1116] mb-2">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-sm text-[#4B5262] leading-relaxed">
-                    {pillar.lead}
-                  </p>
-                </div>
-
-                {/* Desktop: details visible */}
-                <div className="hidden lg:flex flex-col flex-1">
-                  <PillarDetails pillar={pillar} />
-                </div>
-
-                {/* Mobile: collapsible */}
-                <details className="lg:hidden group mt-4">
-                  <summary className="list-none cursor-pointer inline-flex items-center gap-2 text-sm font-medium text-[#0E1116] min-h-[44px] focus:outline-none">
-                    <span className="group-open:hidden">ראה איך זה עובד</span>
-                    <span className="hidden group-open:inline">הסתר פירוט</span>
-                    <svg className="w-4 h-4 transition-transform duration-150 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </summary>
-                  <div>
-                    <PillarDetails pillar={pillar} />
-                  </div>
-                </details>
+              <div>
+                <span className="font-mono tabular-nums text-xs font-semibold text-[#2F5E9E] block mb-3">
+                  {pillar.num}
+                </span>
+                <h3 className="text-xl sm:text-2xl font-semibold text-[#0E1116] mb-3">
+                  {pillar.title}
+                </h3>
+                <p className="text-sm sm:text-base text-[#4B5262] leading-relaxed mb-6">
+                  {pillar.body}
+                </p>
               </div>
 
               <div className="mt-auto pt-4 border-t border-[#0E1116]/[0.08]">
