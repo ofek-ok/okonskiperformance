@@ -86,12 +86,12 @@ export default function Hero() {
 
           {/* Main Headline (H1) at weight 600 */}
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold text-[#F4F6F9] tracking-tight leading-[1.14] mb-4">
-            אתה דורש מהגוף שלך הרבה. כאן דואגים שהוא יעמוד בזה.
+            סובל מכאבים? הגיע הזמן לחזור לתפקוד.
           </h1>
 
           {/* Sub-headline */}
           <p className="text-base sm:text-lg text-[#D0D5DF] font-normal leading-relaxed max-w-2xl mb-8">
-            ספורטתרפיה וטיפול גופני אישי לספורטאים, למתאמנים ולאנשי קריירה: משיקום פציעות וכאבים, דרך תחזוקה והתאוששות שוטפת, ועד לשיפור התנועה והביצועים.
+            ספורטתרפיה וטיפול גופני אישי לשיקום פציעות וכאבים, תחזוקה והתאוששות שוטפת, ושיפור התנועה והביצועים.
           </p>
 
           {/* 3 Pillars — Right-Aligned Architectural Grid on 8% Hairlines */}
