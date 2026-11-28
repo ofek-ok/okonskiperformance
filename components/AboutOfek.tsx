@@ -8,9 +8,9 @@ export default function AboutOfek() {
       aria-labelledby="about-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-          {/* Studio Portrait — Radius 12px (rounded-xl) */}
-          <div className="lg:col-span-5 order-first">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          {/* Studio Portrait — Sticky on Desktop so it accompanies the story */}
+          <div className="lg:col-span-5 order-first lg:sticky lg:top-24">
             <div className="m-photo-frame relative w-full max-w-[360px] rounded-xl overflow-hidden border border-[#0E1116]/[0.08] bg-white shadow-[0_2px_12px_rgba(14,17,22,0.04)]">
               <Image
                 src="/ofek-portrait-hd.jpg"
@@ -24,44 +24,87 @@ export default function AboutOfek() {
             </div>
           </div>
 
-          {/* SECTION 5: ABOUT (מי עומד מאחורי הטיפול) */}
-          <div className="lg:col-span-7 text-right">
-            <h2
-              id="about-heading"
-              className="text-2xl sm:text-4xl font-semibold text-[#0E1116] leading-tight mb-6"
-            >
-              להבין את הגוף של ספורטאי. להכיר את העומס של שגרה תובענית.
-            </h2>
+          {/* SECTION 5: ABOUT (מי אני) */}
+          <div className="lg:col-span-7 text-right space-y-8">
+            <div>
+              <h2
+                id="about-heading"
+                className="text-2xl sm:text-4xl font-semibold text-[#0E1116] leading-tight mb-6"
+              >
+                נעים להכיר, אני אופק.
+              </h2>
 
-            {/* Two Ruled Columns */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 py-6 mb-6 border-y border-[#0E1116]/[0.08]">
-              <div>
-                <span className="text-sm font-semibold text-[#0E1116] block mb-1">15 שנה על המזרן</span>
-                <p className="text-xs sm:text-sm text-[#4B5262] leading-relaxed">
-                  מאמן וחגורה שחורה בג&apos;יו־ג&apos;יטסו ברזילאי (BJJ). היכרות ממקור ראשון עם פציעות, עומסי שיא וגבולות גוף.
+              <div className="space-y-4 text-[#4B5262] text-base sm:text-lg leading-relaxed">
+                <p className="text-[#0E1116] font-medium">
+                  אני מנהל פרויקטים בכיר בעולם ההייטק, ספורטתרפיסט ומאמן אומנויות לחימה ובעיקר אדם שספורט, תנועה ופעילות גופנית הם חלק בלתי נפרד מחיי.
                 </p>
-              </div>
-              <div>
-                <span className="text-sm font-semibold text-[#0E1116] block mb-1">7 שנים בניהול פרויקטים</span>
-                <p className="text-xs sm:text-sm text-[#4B5262] leading-relaxed">
-                  ניסיון כמנהל פרויקטים טכנולוגיים בכיר: שעות ארוכות מול מחשב, פגישות ועבודה תחת סטרס גבוה.
+                <p>
+                  ביום יום אני משלב בין קריירה תובענית, אחריות מקצועית וניהול פרויקטים, לבין שגרת אימונים אינטנסיבית והרצון המתמיד לשמור על הגוף, להתקדם ולהשתפר.
+                </p>
+                <p>
+                  אבל הדרך שלי לעולם השיקום והטיפול לא הייתה רק דרך הלימודים וההכשרה המקצועית. היא עברה גם דרך הגוף שלי.
                 </p>
               </div>
             </div>
 
-            {/* Bio Text */}
-            <div className="space-y-4 text-[#4B5262] text-base sm:text-lg leading-relaxed">
-              <p className="font-medium text-[#0E1116]">
-                נעים להכיר, אני אופק אוקונסקי.
-              </p>
+            {/* Chapter 1 */}
+            <div className="pt-8 border-t border-[#0E1116]/[0.08]">
+              <h3 className="text-xl sm:text-2xl font-semibold text-[#0E1116] mb-4">
+                למדתי על שיקום גם מהצד השני
+              </h3>
+              <div className="space-y-4 text-[#4B5262] text-sm sm:text-base leading-relaxed">
+                <p>
+                  לאורך השנים התמודדתי עם מספר פציעות משמעותיות. קרעים ברצועות הברך שהצריכו ניתוחים ושיקום ממושך, ובהמשך גם שבר ברגל ופגיעה קשה בקרסול.
+                </p>
+                <p>
+                  אני מכיר מקרוב את ההתמודדות עם פציעה, את חוסר הוודאות, את המגבלות ואת התסכול שבצורך לעצור או לשנות את שגרת החיים.
+                </p>
+                <p className="text-[#0E1116] font-medium">
+                  אבל אני מכיר גם את הדרך חזרה.
+                </p>
+                <p>
+                  לאחר הפציעה בברך, הצלחתי לחזור להתאמן ברמה גבוהה בתוך כחצי שנה. לאחר הפגיעה בקרסול, חזרתי לרוץ 15 קילומטרים בתוך כשלושה חודשים.
+                </p>
+                <p>
+                  החוויות האלה נתנו לי נקודת מבט אישית על המשמעות של שיקום, התמדה, תהליך נכון והיכולת לחזור לעשות את הדברים שאתה אוהב.
+                </p>
+              </div>
+            </div>
 
-              <p>
-                מצד אחד, 15 שנה על המזרן, מאמן וחגורה שחורה בג&apos;יו־ג&apos;יטסו ברזילאי (BJJ). אני מכיר פציעות, עומסי שיא וגבולות גוף ממקור ראשון. מצד שני, 7 שנים כמנהל פרויקטים טכנולוגיים בכיר, שעות אינסופיות מול מחשב, פגישות ועומס מנטלי גבוה.
-              </p>
+            {/* Chapter 2 */}
+            <div className="pt-8 border-t border-[#0E1116]/[0.08]">
+              <h3 className="text-xl sm:text-2xl font-semibold text-[#0E1116] mb-4">
+                החיבור בין שני העולמות
+              </h3>
+              <div className="space-y-4 text-[#4B5262] text-sm sm:text-base leading-relaxed">
+                <p>
+                  החיים שלי משלבים שני עולמות: מצד אחד, קריירה בעולם ההייטק, ניהול פרויקטים ואחריות מקצועית. מצד שני, ספורט, אימונים, תנועה ושאיפה מתמדת לשפר יכולות ולשמור על הגוף.
+                </p>
+                <p>
+                  אני מכיר את האתגר שבניסיון לשלב בין עבודה, עומס, שגרה עמוסה והצורך להמשיך להיות פעיל ומתפקד.
+                </p>
+                <p>
+                  החיבור הזה משפיע גם על הדרך שבה אני מסתכל על טיפול ושיקום. הגוף הוא חלק בלתי נפרד מהחיים שלנו, והמטרה היא לא רק להתמודד עם כאב, אלא גם לשפר את התפקוד ולאפשר לנו להמשיך לעשות את הדברים שחשובים לנו.
+                </p>
+              </div>
+            </div>
 
-              <p className="text-[#0E1116]">
-                החיבור הזה הוליד את Okonski Performance: מקום שמבין את הגוף שלך, לא מבזבז זמן על פתרונות שטחיים, ויודע בדיוק איך לבנות תוכנית טיפול ושיקום שמשתלבת בחיים האמיתיים שלך.
-              </p>
+            {/* Chapter 3 */}
+            <div className="pt-8 border-t border-[#0E1116]/[0.08]">
+              <h3 className="text-xl sm:text-2xl font-semibold text-[#0E1116] mb-4">
+                מכאן נולד Okonski Performance
+              </h3>
+              <div className="space-y-4 text-[#4B5262] text-sm sm:text-base leading-relaxed">
+                <p>
+                  את Okonski Performance הקמתי מתוך החיבור בין הניסיון האישי שלי, ההכשרה המקצועית בספורטתרפיה והתשוקה לעולם השיקום, התנועה והביצועים.
+                </p>
+                <p>
+                  המטרה שלי היא להעניק מענה אישי ומקצועי לאנשים שמתמודדים עם כאבים ופציעות, לאנשים שרוצים לתחזק את הגוף ולשמור על תפקוד לאורך זמן, ולאלו ששואפים לשפר את היכולות הגופניות שלהם.
+                </p>
+                <p className="text-[#0E1116] font-medium">
+                  מבחינתי, כל אדם מגיע עם סיפור אחר, צרכים אחרים ומטרות אחרות. התפקיד שלי הוא להבין אותם ולבנות עבורו מענה שמתאים לו.
+                </p>
+              </div>
             </div>
           </div>
         </div>
