@@ -7,7 +7,6 @@ export const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/okonski.performance/",
   facebook: "https://www.facebook.com/share/18Pc4EghgP/?mibextid=wwXIfr",
   linkedin: "https://www.linkedin.com/company/okonski-preformance",
-  tiktok: "https://www.tiktok.com/@okonskiperformanc",
 };
 
 export default function Footer() {
@@ -75,19 +74,6 @@ export default function Footer() {
               >
                 <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
-              </a>
-
-              <a
-                href={SOCIAL_LINKS.tiktok}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="עקבו אחרי Okonski Performance ב-TikTok"
-                title="TikTok"
-                className="m-btn w-10 h-10 rounded-lg bg-[#151A22] border border-white/[0.08] text-[#A7AAB4] hover:text-[#F4F6F9] hover:border-white/[0.16] flex items-center justify-center cursor-pointer"
-              >
-                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.47 6.27 6.27 0 0 0 1.95-4.52V8.09a8.28 8.28 0 0 0 4.82 1.54v-3.5a4.8 4.8 0 0 1-1-.44z" />
                 </svg>
               </a>
             </div>

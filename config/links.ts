@@ -2,7 +2,6 @@ export type ConnectIconId =
   | "website"
   | "instagram"
   | "facebook"
-  | "tiktok"
   | "email"
   | "whatsapp"
   | "linkedin";
@@ -66,13 +65,13 @@ export const CONNECT_LINKS: ConnectLinkItem[] = [
     description: "העמוד הרשמי של Okonski Performance",
   },
   {
-    id: "tiktok",
-    title: "TikTok",
-    url: "https://www.tiktok.com/@okonskiperformanc",
-    icon: "tiktok",
+    id: "linkedin",
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/company/okonski-preformance",
+    icon: "linkedin",
     enabled: true,
     order: 4,
-    description: "@okonskiperformanc",
+    description: "Okonski Performance",
   },
   {
     id: "email",
@@ -82,14 +81,5 @@ export const CONNECT_LINKS: ConnectLinkItem[] = [
     enabled: true,
     order: 5,
     description: "okonski.preformance@gmail.com",
-  },
-  {
-    id: "linkedin",
-    title: "LinkedIn",
-    url: "https://www.linkedin.com/company/okonski-preformance",
-    icon: "linkedin",
-    enabled: false,
-    order: 6,
-    description: "Okonski Performance",
   },
 ];
