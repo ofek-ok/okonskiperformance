@@ -97,8 +97,8 @@ export default function Navbar() {
             href="/#performance-list"
             className="btn-secondary py-2 px-4 text-xs sm:text-sm whitespace-nowrap"
           >
-            <span className="sm:hidden">שריון מקום</span>
-            <span className="hidden sm:inline">שריון קדימות בתורים</span>
+            <span className="sm:hidden">הצטרפות לרשימה</span>
+            <span className="hidden sm:inline">הצטרפות לרשימת המתעניינים</span>
           </a>
 
           <button
@@ -146,7 +146,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               className="btn-primary w-full"
             >
-              שריון קדימות בתורים
+              הצטרפות לרשימת המתעניינים
             </a>
           </div>
         </nav>

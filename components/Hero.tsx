@@ -129,7 +129,7 @@ export default function Hero() {
           {/* Single Primary Button + Quiet Secondary Button Pair */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
             <a href="#performance-list" className="btn-primary">
-              <span>שריון קדימות בתורים</span>
+              <span>הצטרפות לרשימת המתעניינים</span>
               <span>←</span>
             </a>
             <a href="#treatment" className="btn-secondary">

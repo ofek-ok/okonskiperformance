@@ -28,7 +28,7 @@ type FormStatus = "idle" | "loading" | "success" | "error";
 const TRACK_OPTIONS = [
   { id: "כאב ופציעה", label: "כאב ופציעה" },
   { id: "תחזוקה והתאוששות", label: "תחזוקה והתאוששות" },
-  { id: "תנועה ויציבה", label: "תנועה ויציבה" },
+  { id: "שיפור תנועה וביצועים", label: "שיפור תנועה וביצועים" },
   { id: "עדיין לא בטוח", label: "עדיין לא בטוח" },
 ];
 
@@ -41,7 +41,7 @@ const START_STEPS = [
   {
     num: "02",
     title: "חזרה אישית עם פתיחת היומן",
-    desc: "אני חוזר אישית אל הנרשמים ברשימת הקדימות כדי להבין את הצורך ולבדוק התאמה.",
+    desc: "אני חוזר אישית אל הנרשמים ברשימת המתעניינים כדי להבין את הצורך ולבדוק התאמה.",
   },
   {
     num: "03",
@@ -142,16 +142,16 @@ export default function PerformanceList() {
     <section
       id="performance-list"
       className="py-16 sm:py-24 bg-[#0E1116] scroll-mt-16 border-b border-white/[0.08]"
-      aria-label="הצטרפות לרשימת הקדימות"
+      aria-label="הצטרפות לרשימת המתעניינים"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         {/* Heading */}
         <div className="max-w-3xl text-right mb-12">
           <h2 className="text-2xl sm:text-4xl font-medium text-[#F4F6F9] tracking-tight leading-tight mb-4">
-            היומן נפתח בקרוב. שריינו קדימות בתורים
+            הקליניקה נפתחת בקרוב. הצטרפו לרשימת המתעניינים
           </h2>
           <p className="text-[#A7AAB4] text-sm sm:text-base leading-relaxed max-w-2xl">
-            כמות התורים הראשונית עם פתיחת הקליניקה מוגבלת. השארת פרטים עכשיו מכניסה אתכם לרשימת הקדימות: <strong className="text-[#F4F6F9] font-medium">אני קורא כל פנייה בעצמי</strong> וחוזר אליכם לפני כולם עם מחיר השקה למצטרפים מוקדמים.
+            השאירו פרטים כדי לקבל עדכון אישי עם פתיחת היומן, קדימות בתיאום המפגשים הראשונים ומחיר השקה מיוחד למצטרפים המוקדמים.
           </p>
         </div>
 
@@ -166,14 +166,14 @@ export default function PerformanceList() {
                 aria-atomic="true"
               >
                 <h3 className="text-2xl font-medium text-[#F4F6F9] mb-3">
-                  נרשמת בהצלחה לרשימת הקדימות.
+                  הצטרפת בהצלחה לרשימת המתעניינים.
                 </h3>
                 <p className="text-[#A7AAB4] text-sm sm:text-base leading-relaxed mb-6">
-                  אחזור אליך אישית כשהיומן נפתח לקביעת התורים הראשונים. בינתיים, אם יש שאלה דחופה, אפשר לפנות אליי ישירות בוואטסאפ.
+                  ניצור איתך קשר אישי עם פתיחת היומן ונעדכן על ההטבה למצטרפים המוקדמים. בינתיים, אם יש שאלה דחופה, אפשר לפנות אליי ישירות בוואטסאפ.
                 </p>
                 <a
                   href={`https://wa.me/972555172571?text=${encodeURIComponent(
-                    `היי אופק, נרשמתי לרשימת הקדימות באתר למסלול ${selectedTopic}. אשמח לשוחח.`
+                    `היי אופק, הצטרפתי לרשימת המתעניינים באתר בתחום ${selectedTopic}. אשמח לשוחח.`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -188,7 +188,7 @@ export default function PerformanceList() {
                 onSubmit={handleSubmit}
                 noValidate
                 className="border border-white/[0.08] bg-[#151A22] rounded-xl p-6 sm:p-8 text-right space-y-6"
-                aria-label="טופס הצטרפות לרשימת הקדימות"
+                aria-label="טופס הצטרפות לרשימת המתעניינים"
               >
                 {/* Name & Phone */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -324,11 +324,11 @@ export default function PerformanceList() {
                     className="btn-primary w-full py-3 px-6 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     <span>
-                      {status === "loading" ? "שומר פרטים..." : "הצטרפות לרשימת הקדימות ←"}
+                      {status === "loading" ? "שומר פרטים..." : "הצטרפות לרשימת המתעניינים"}
                     </span>
                   </button>
                   <p className="text-xs text-[#A7AAB4] mt-3 text-right">
-                    ללא תשלום מראש · ללא התחייבות · קדימות בתורים ומחיר ייחודי למצטרפים מוקדמים
+                    ללא תשלום וללא התחייבות. ניצור קשר עם פתיחת היומן ונעדכן על ההטבה למצטרפים המוקדמים.
                   </p>
                 </div>
               </form>

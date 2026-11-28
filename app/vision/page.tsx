@@ -359,7 +359,7 @@ export default function VisionAndPolicyPage() {
                 href="/#performance-list"
                 className="w-full sm:w-auto bg-white text-black hover:bg-neutral-100 font-semibold text-sm sm:text-base px-8 py-3.5 rounded-full transition-all duration-200 shadow-[0_10px_30px_-5px_rgba(255,255,255,0.2)] inline-flex items-center justify-center active:scale-[0.98]"
               >
-                שריון קדימות בתורים ←
+                הצטרפות לרשימת המתעניינים ←
               </Link>
               <a
                 href="https://wa.me/972555172571"

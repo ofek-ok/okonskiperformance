@@ -234,7 +234,7 @@ export default function Treatment() {
             href="#performance-list"
             className="btn-secondary-light shrink-0 w-full md:w-auto"
           >
-            <span>רוצה להתחיל? שריון קדימות בתורים</span>
+            <span>הצטרפות לרשימת המתעניינים</span>
             <span>←</span>
           </a>
         </div>

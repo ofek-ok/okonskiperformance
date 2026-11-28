@@ -67,7 +67,7 @@ export default function FAQ() {
             href="#performance-list"
             className="btn-secondary-light w-full sm:w-auto"
           >
-            <span>שריון קדימות בתורים</span>
+            <span>הצטרפות לרשימת המתעניינים</span>
             <span>←</span>
           </a>
         </div>

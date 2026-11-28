@@ -23,7 +23,7 @@ const pillars: ServicePillar[] = [
   {
     num: "03",
     title: "שיפור תנועה וביצועים",
-    topicId: "תנועה ויציבה",
+    topicId: "שיפור תנועה וביצועים",
     body: "עבודה על טווחי תנועה, יכולות גופניות ותפקוד, כדי לאפשר ביצוע טוב ויעיל יותר בפעילות היומיומית והספורטיבית.",
   },
 ];
@@ -73,7 +73,7 @@ export default function WhoItsFor() {
                   onClick={() => selectTopic(pillar.topicId)}
                   className="text-[#2F5E9E] hover:text-[#264E86] text-sm font-semibold inline-flex items-center justify-between w-full gap-2 py-1"
                 >
-                  <span>זה אני, שריינו לי מקום</span>
+                  <span>הצטרפות לרשימת המתעניינים</span>
                   <span className="shrink-0">←</span>
                 </a>
               </div>
@@ -91,7 +91,7 @@ export default function WhoItsFor() {
             onClick={() => selectTopic("עדיין לא בטוח")}
             className="btn-secondary-light shrink-0 w-full md:w-auto"
           >
-            <span>שריון קדימות בתורים</span>
+            <span>הצטרפות לרשימת המתעניינים</span>
             <span>←</span>
           </a>
         </div>
