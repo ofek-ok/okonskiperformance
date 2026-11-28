@@ -51,23 +51,23 @@ const modalities = [
 const stages = [
   {
     num: "01",
-    title: "אבחון והקשבה מלאה",
-    body: "נבין מה הביא אותך לטיפול, מה מפריע לך, מהי שגרת האימונים או העבודה שלך ומה אתה רוצה להשיג.",
+    title: "היכרות והערכת מצב",
+    body: "נבין מה הביא אותך, מה אתה חווה כיום, מה ההיסטוריה הגופנית שלך ומה המטרות שלך.",
   },
   {
     num: "02",
-    title: "בדיקת תנועה מקיפה",
-    body: "בהתאם לצורך, נבחן תנועה, טווחי תנועה, חוסר איזון ומקורות עומס הרלוונטיים למטרת הטיפול.",
+    title: "הערכת תנועה ותפקוד",
+    body: "נבחן את התנועה, טווחי התנועה והיכולות הרלוונטיות בהתאם למצב ולמטרות שלך.",
   },
   {
     num: "03",
     title: "טיפול מותאם אישית",
-    body: "נבצע טיפול גופני המותאם לממצאים, המשלב טכניקות מנואליות, דיקור מערבי וכוסות רוח לפי הצורך המדויק.",
+    body: "נבחר את הכלים הטיפוליים המתאימים ונבנה מענה בהתאם לממצאים ולצרכים שלך.",
   },
   {
     num: "04",
-    title: "קביעת המשך תהליך",
-    body: "בסיום נסביר מה עלה במפגש, מה אפשר לעשות באופן עצמאי ומה עשוי להתאים להמשך, במידת הצורך.",
+    title: "תכנון המשך הדרך",
+    body: "נסכם את המפגש, נגדיר המלצות להמשך ונבחן האם נדרש תהליך נוסף, תחזוקה או מעקב.",
   },
 ];
 
@@ -90,13 +90,13 @@ export default function Treatment() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-16">
           <div className="lg:col-span-5 text-right">
             <h2 className="text-2xl sm:text-4xl font-semibold text-[#0E1116] leading-tight mb-4">
-              איך עובד התהליך
+              איך עובד התהליך?
             </h2>
             <p className="text-[#0E1116] text-base sm:text-lg leading-relaxed mb-3 font-medium">
               אין שני אנשים שמגיעים עם אותו עומס, אותה מגבלה או אותה מטרה.
             </p>
             <p className="text-[#4B5262] text-sm sm:text-base leading-relaxed">
-              לכן, הטיפול ב־Okonski Performance אינו מבוסס על סדר פעולות זהה לכל לקוח. הוא מתחיל בהבנת המצב שלך ומשלב את הכלים הקליניים המתאימים למה שעולה בתשאול ובהערכה.
+              לכן כל תהליך מתחיל בהבנת הצרכים האישיים ובהתאמת המענה למצב ולמטרות שלך.
             </p>
           </div>
 
@@ -222,38 +222,21 @@ export default function Treatment() {
           </ol>
         </div>
 
-        {/* Two Plain Editorial Columns */}
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 pt-8 border-t border-[#0E1116]/[0.08] text-right">
-          <div>
-            <h3 className="text-lg sm:text-xl font-semibold text-[#0E1116] mb-3">מה עשוי להשתלב במפגש?</h3>
-            <p className="text-sm sm:text-base text-[#4B5262] leading-relaxed mb-3">
-              בהתאם לצורך, המפגש יכול לכלול עבודה ידנית על רקמות רכות ושרירים, דיקור מערבי, כוסות רוח, עבודה על טווחי תנועה, מתיחות ותרגילי חיזוק מותאמים.
-            </p>
-            <p className="text-sm text-[#4B5262] leading-relaxed">
-              לא כל אדם זקוק לאותן טכניקות, ולא כל מפגש יכלול את כל המרכיבים.
+        {/* Clinical Tools Summary */}
+        <div className="pt-8 border-t border-[#0E1116]/[0.08] flex flex-col md:flex-row md:items-center justify-between gap-6 text-right">
+          <div className="max-w-2xl">
+            <h3 className="text-lg sm:text-xl font-semibold text-[#0E1116] mb-2">כלים טיפוליים</h3>
+            <p className="text-sm sm:text-base text-[#4B5262] leading-relaxed">
+              בהתאם לצורך, התהליך עשוי לשלב טיפול ידני, עיסוי ספורט, כוסות רוח, דיקור מערבי, תרגול תנועתי, עבודה על טווחי תנועה וחיזוק.
             </p>
           </div>
-
-          <div className="flex flex-col justify-between">
-            <div>
-              <h3 className="text-lg sm:text-xl font-medium text-[#0E1116] mb-3">ומה קורה לאחר המפגש הראשון?</h3>
-              <p className="text-sm sm:text-base text-[#4B5262] leading-relaxed mb-3">
-                מפגשי המשך יכולים לכלול טיפול גופני, תרגול, הנחיות לבית, התאמות עומס ומעקב אחר ההתקדמות.
-              </p>
-              <p className="text-sm text-[#4B5262] leading-relaxed">
-                אפשר להמשיך במפגשים בודדים או לבחון מסלול טיפולי מתאים. ההמלצה נקבעת לפי הצורך, כי לא כל אדם זקוק לאותו מספר מפגשים.
-              </p>
-            </div>
-            <div className="pt-4 mt-4">
-              <a
-                href="#performance-list"
-                className="inline-flex items-center gap-2 text-[#0E1116] hover:text-[#2F5E9E] text-sm font-medium"
-              >
-                <span>רוצה להתחיל? הצטרף לרשימת הקדימות</span>
-                <span className="text-[#2F5E9E]">←</span>
-              </a>
-            </div>
-          </div>
+          <a
+            href="#performance-list"
+            className="btn-secondary-light shrink-0 w-full md:w-auto"
+          >
+            <span>רוצה להתחיל? שריון קדימות בתורים</span>
+            <span>←</span>
+          </a>
         </div>
       </div>
     </section>
