@@ -94,24 +94,24 @@ function selectTopic(topicId: string) {
 function PillarDetails({ pillar }: { pillar: ServicePillar }) {
   return (
     <>
-      <div className="pt-4 mt-4 border-t border-white/[0.08] text-sm leading-relaxed">
-        <span className="text-[#F4F6F9] font-medium block mb-1 text-xs sm:text-sm">לדוגמה:</span>
-        <p className="text-xs sm:text-sm text-[#A7AAB4] leading-relaxed">{pillar.example}</p>
+      <div className="pt-4 mt-4 border-t border-[#0E1116]/[0.08] text-sm leading-relaxed">
+        <span className="text-[#0E1116] font-semibold block mb-1 text-xs sm:text-sm">לדוגמה:</span>
+        <p className="text-xs sm:text-sm text-[#4B5262] leading-relaxed">{pillar.example}</p>
       </div>
 
-      <div className="flex-grow flex flex-col justify-between mt-6 pt-6 border-t border-white/[0.08]">
-        <h4 className="text-[#F4F6F9] text-xs sm:text-sm font-medium mb-3">
+      <div className="flex-grow flex flex-col justify-between mt-6 pt-6 border-t border-[#0E1116]/[0.08]">
+        <h4 className="text-[#0E1116] text-xs sm:text-sm font-semibold mb-3">
           איך עובדים:
         </h4>
         <ul className="space-y-3 mb-6 flex-grow">
           {pillar.steps.map((step) => (
             <li key={step.num} className="flex items-baseline gap-3">
-              <span className="font-mono tabular-nums text-[#2F5E9E] text-xs shrink-0">
+              <span className="font-mono tabular-nums text-[#2F5E9E] text-xs font-semibold shrink-0">
                 {step.num}
               </span>
               <div className="text-xs sm:text-sm leading-relaxed">
-                <strong className="text-[#F4F6F9] font-medium">{step.title}: </strong>
-                <span className="text-[#A7AAB4]">{step.desc}</span>
+                <strong className="text-[#0E1116] font-semibold">{step.title}: </strong>
+                <span className="text-[#4B5262]">{step.desc}</span>
               </div>
             </li>
           ))}
@@ -125,36 +125,34 @@ export default function WhoItsFor() {
   return (
     <section
       id="who-its-for"
-      className="py-16 sm:py-24 bg-[#0E1116] border-b border-white/[0.08] scroll-mt-16"
+      className="py-16 sm:py-24 bg-[#F8F9FB] text-[#0E1116] border-b border-[#0E1116]/[0.08] scroll-mt-16"
       aria-labelledby="who-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
-        {/* Concrete Heading at Weight 500 */}
         <div className="max-w-3xl mb-12 text-right">
           <h2
             id="who-heading"
-            className="text-2xl sm:text-4xl font-medium text-[#F4F6F9] leading-tight mb-4"
+            className="text-2xl sm:text-4xl font-semibold text-[#0E1116] leading-tight mb-4"
           >
             מה הגוף שלך צריך כרגע?
           </h2>
-          <p className="text-[#A7AAB4] text-sm sm:text-base leading-relaxed">
+          <p className="text-[#4B5262] text-sm sm:text-base leading-relaxed">
             אין פרוטוקול אחד לכולם. ספורטאי עם כתף תפוסה ומנהל עם גב נעול צריכים דברים שונים, ולכן כל טיפול מתחיל מהמצב שלך.
           </p>
         </div>
 
-        {/* 3 Columns — Radius 12px (rounded-xl), Spacing 24px (gap-6, p-6) */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 text-right items-stretch">
           {pillars.map((pillar) => (
             <article
               key={pillar.title}
-              className="m-card h-full flex flex-col justify-between p-6 sm:p-8 rounded-xl bg-[#151A22] border border-white/[0.08]"
+              className="m-card h-full flex flex-col justify-between p-6 sm:p-8 rounded-xl bg-white border border-[#0E1116]/[0.08] shadow-[0_2px_12px_rgba(14,17,22,0.03)]"
             >
               <div className="flex-1 flex flex-col">
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-medium text-[#F4F6F9] mb-2">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-[#0E1116] mb-2">
                     {pillar.title}
                   </h3>
-                  <p className="text-sm text-[#A7AAB4] leading-relaxed">
+                  <p className="text-sm text-[#4B5262] leading-relaxed">
                     {pillar.lead}
                   </p>
                 </div>
@@ -166,7 +164,7 @@ export default function WhoItsFor() {
 
                 {/* Mobile: collapsible */}
                 <details className="lg:hidden group mt-4">
-                  <summary className="list-none cursor-pointer inline-flex items-center gap-2 text-sm font-medium text-[#F4F6F9] min-h-[44px] focus:outline-none">
+                  <summary className="list-none cursor-pointer inline-flex items-center gap-2 text-sm font-medium text-[#0E1116] min-h-[44px] focus:outline-none">
                     <span className="group-open:hidden">ראה איך זה עובד</span>
                     <span className="hidden group-open:inline">הסתר פירוט</span>
                     <svg className="w-4 h-4 transition-transform duration-150 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -179,29 +177,29 @@ export default function WhoItsFor() {
                 </details>
               </div>
 
-              <div className="mt-auto pt-4 border-t border-white/[0.08]">
+              <div className="mt-auto pt-4 border-t border-[#0E1116]/[0.08]">
                 <a
                   href="#performance-list"
                   onClick={() => selectTopic(pillar.topicId)}
-                  className="text-[#F4F6F9] hover:text-[#A7AAB4] text-sm font-medium inline-flex items-center justify-between w-full gap-2 group py-1"
+                  className="text-[#2F5E9E] hover:text-[#264E86] text-sm font-semibold inline-flex items-center justify-between w-full gap-2 py-1"
                 >
                   <span>זה אני, שריינו לי מקום</span>
-                  <span className="text-[#2F5E9E] shrink-0">←</span>
+                  <span className="shrink-0">←</span>
                 </a>
               </div>
             </article>
           ))}
         </div>
 
-        {/* Closing Bar with Quiet Secondary Button */}
-        <div className="mt-12 pt-8 border-t border-white/[0.08] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-right">
-          <p className="text-[#A7AAB4] text-sm sm:text-base leading-relaxed max-w-xl">
-            <strong className="text-[#F4F6F9] font-medium">לא בטוח לאיזה מסלול אתה שייך?</strong> בדיוק בשביל זה יש מפגש ראשון: קודם אבחון, ורק אחר כך תוכנית.
+        {/* Closing Bar with Light Secondary Button */}
+        <div className="mt-12 pt-8 border-t border-[#0E1116]/[0.08] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-right">
+          <p className="text-[#4B5262] text-sm sm:text-base leading-relaxed max-w-xl">
+            <strong className="text-[#0E1116] font-semibold">לא בטוח לאיזה מסלול אתה שייך?</strong> בדיוק בשביל זה יש מפגש ראשון: קודם אבחון, ורק אחר כך תוכנית.
           </p>
           <a
             href="#performance-list"
             onClick={() => selectTopic("עדיין לא בטוח")}
-            className="btn-secondary shrink-0 w-full md:w-auto"
+            className="btn-secondary-light shrink-0 w-full md:w-auto"
           >
             <span>שריון קדימות בתורים</span>
             <span>←</span>

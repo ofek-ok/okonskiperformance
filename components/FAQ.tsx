@@ -25,7 +25,7 @@ const questions = [
   ],
   [
     "איך מתאמים מפגש?",
-    "משאירים פרטים בטופס למטה או פונים בוואטסאפ. מתחילים בשיחת היכרות קצרה ובבדיקת התאמה, ולאחר מכן מתאמים מועד."
+    "משאירים פרטים בטופס למטה או פונים בוואטסאפ. כשנפתח היומן אני חוזר אליך אישית לבדיקת התאמה ותיאום מועד."
   ]
 ];
 
@@ -33,12 +33,12 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="bg-[#0E1116] py-16 sm:py-24 border-b border-white/[0.08] scroll-mt-16"
+      className="bg-white text-[#0E1116] py-16 sm:py-24 border-b border-[#0E1116]/[0.08] scroll-mt-16"
       aria-labelledby="faq-heading"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-8 text-right">
         <div className="mb-12">
-          <h2 id="faq-heading" className="text-2xl sm:text-4xl font-medium text-[#F4F6F9] leading-tight">
+          <h2 id="faq-heading" className="text-2xl sm:text-4xl font-semibold text-[#0E1116] leading-tight">
             שאלות נפוצות
           </h2>
         </div>
@@ -47,15 +47,15 @@ export default function FAQ() {
           {questions.map(([q, a]) => (
             <details
               key={q}
-              className="group rounded-xl bg-[#151A22] border border-white/[0.08] open:border-white/[0.16] px-6 py-4"
+              className="group rounded-xl bg-[#F8F9FB] border border-[#0E1116]/[0.08] open:border-[#2F5E9E]/40 px-6 py-4"
             >
-              <summary className="cursor-pointer text-[#F4F6F9] font-medium text-base sm:text-lg flex items-center justify-between gap-4 list-none focus:outline-none min-h-[40px]">
+              <summary className="cursor-pointer text-[#0E1116] font-medium text-base sm:text-lg flex items-center justify-between gap-4 list-none focus:outline-none min-h-[40px]">
                 <span className="leading-snug">{q}</span>
-                <span className="font-mono text-lg text-[#A7AAB4] transition-transform duration-150 group-open:rotate-45 shrink-0">
+                <span className="font-mono text-lg text-[#2F5E9E] transition-transform duration-150 group-open:rotate-45 shrink-0">
                   +
                 </span>
               </summary>
-              <p className="text-[#A7AAB4] text-sm sm:text-base leading-relaxed pt-3 mt-3 border-t border-white/[0.08] pl-1">
+              <p className="text-[#4B5262] text-sm sm:text-base leading-relaxed pt-3 mt-3 border-t border-[#0E1116]/[0.08] pl-1">
                 {a}
               </p>
             </details>
@@ -65,7 +65,7 @@ export default function FAQ() {
         <div className="mt-12 text-right">
           <a
             href="#performance-list"
-            className="btn-secondary w-full sm:w-auto"
+            className="btn-secondary-light w-full sm:w-auto"
           >
             <span>שריון קדימות בתורים</span>
             <span>←</span>

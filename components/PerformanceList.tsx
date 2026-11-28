@@ -271,7 +271,7 @@ export default function PerformanceList() {
                           onClick={() => setSelectedTopic(track.id)}
                           className={`m-btn text-xs sm:text-sm font-normal px-3 py-3 rounded-lg border cursor-pointer text-center ${
                             active
-                              ? "bg-[#F4F6F9] text-[#0E1116] border-[#F4F6F9] font-medium"
+                              ? "bg-[#2F5E9E]/20 text-white border-[#2F5E9E] font-medium"
                               : "bg-[#0E1116] text-[#A7AAB4] hover:text-[#F4F6F9] border-white/[0.08] hover:border-white/[0.16]"
                           }`}
                         >

@@ -83,13 +83,13 @@ export default function Treatment() {
   return (
     <section
       id="treatment"
-      className="py-16 sm:py-24 bg-[#F4F6F9] text-[#0E1116] border-b border-[#0E1116]/[0.08] scroll-mt-16"
+      className="py-16 sm:py-24 bg-white text-[#0E1116] border-b border-[#0E1116]/[0.08] scroll-mt-16"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         {/* Top Split: Heading + Interactive Clinical Modality Showcase */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-16">
           <div className="lg:col-span-5 text-right">
-            <h2 className="text-2xl sm:text-4xl font-medium text-[#0E1116] leading-tight mb-4">
+            <h2 className="text-2xl sm:text-4xl font-semibold text-[#0E1116] leading-tight mb-4">
               איך עובד התהליך
             </h2>
             <p className="text-[#0E1116] text-base sm:text-lg leading-relaxed mb-3 font-medium">
@@ -199,22 +199,22 @@ export default function Treatment() {
           </div>
         </div>
 
-        {/* 4 Steps — Unified Architectural Table on Crisp White */}
+        {/* 4 Steps — Unified Architectural Table on Crisp Soft Surface */}
         <div className="mb-12 text-right">
-          <h3 className="text-xl sm:text-2xl font-medium text-[#0E1116] mb-6">
+          <h3 className="text-xl sm:text-2xl font-semibold text-[#0E1116] mb-6">
             המפגש הראשון
           </h3>
-          <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 rounded-xl bg-white border border-[#0E1116]/[0.08] divide-y sm:divide-y-0 sm:divide-x sm:divide-x-reverse divide-[#0E1116]/[0.08] overflow-hidden">
+          <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 rounded-xl bg-[#F8F9FB] border border-[#0E1116]/[0.08] divide-y sm:divide-y-0 sm:divide-x sm:divide-x-reverse divide-[#0E1116]/[0.08] overflow-hidden">
             {stages.map((stage) => (
               <li
                 key={stage.num}
                 className="p-6 text-right flex flex-col justify-between"
               >
                 <div>
-                  <span className="font-mono tabular-nums text-xs text-[#2F5E9E] block mb-2">
+                  <span className="font-mono tabular-nums text-xs font-semibold text-[#2F5E9E] block mb-2">
                     {stage.num}
                   </span>
-                  <h4 className="text-lg font-medium text-[#0E1116] mb-2">{stage.title}</h4>
+                  <h4 className="text-lg font-semibold text-[#0E1116] mb-2">{stage.title}</h4>
                   <p className="text-sm text-[#4B5262] leading-relaxed">{stage.body}</p>
                 </div>
               </li>
@@ -225,7 +225,7 @@ export default function Treatment() {
         {/* Two Plain Editorial Columns */}
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 pt-8 border-t border-[#0E1116]/[0.08] text-right">
           <div>
-            <h3 className="text-lg sm:text-xl font-medium text-[#0E1116] mb-3">מה עשוי להשתלב במפגש?</h3>
+            <h3 className="text-lg sm:text-xl font-semibold text-[#0E1116] mb-3">מה עשוי להשתלב במפגש?</h3>
             <p className="text-sm sm:text-base text-[#4B5262] leading-relaxed mb-3">
               בהתאם לצורך, המפגש יכול לכלול עבודה ידנית על רקמות רכות ושרירים, דיקור מערבי, כוסות רוח, עבודה על טווחי תנועה, מתיחות ותרגילי חיזוק מותאמים.
             </p>

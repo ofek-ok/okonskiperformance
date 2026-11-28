@@ -57,7 +57,7 @@ export default function Hero() {
               poster={idx === 0 ? "/method-treatment.jpg" : undefined}
               onEnded={isActive ? handleEnded : undefined}
               className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ${
-                isActive ? "opacity-35" : "opacity-0"
+                isActive ? "opacity-55" : "opacity-0"
               }`}
             >
               <source src={src} type="video/mp4" />
@@ -66,8 +66,8 @@ export default function Hero() {
         })}
       </div>
 
-      {/* Solid Tinted Neutral Overlay */}
-      <div className="absolute inset-0 bg-[#0E1116]/70 pointer-events-none" aria-hidden="true" />
+      {/* Balanced Neutral Overlay for Clear Video & Crisp Text Contrast */}
+      <div className="absolute inset-0 bg-[#0E1116]/60 pointer-events-none" aria-hidden="true" />
 
       {/* Natural RTL Right-Aligned Composition */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 text-right">
@@ -84,13 +84,13 @@ export default function Hero() {
             />
           </div>
 
-          {/* Main Headline (H1) at weight 500 */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-medium text-[#F4F6F9] tracking-tight leading-[1.14] mb-4">
+          {/* Main Headline (H1) at weight 600 */}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold text-[#F4F6F9] tracking-tight leading-[1.14] mb-4">
             אתה דורש מהגוף שלך הרבה. כאן דואגים שהוא יעמוד בזה.
           </h1>
 
           {/* Sub-headline */}
-          <p className="text-base sm:text-lg text-[#A7AAB4] font-normal leading-relaxed max-w-2xl mb-8">
+          <p className="text-base sm:text-lg text-[#D0D5DF] font-normal leading-relaxed max-w-2xl mb-8">
             ספורטתרפיה וטיפול גופני אישי לספורטאים, למתאמנים ולאנשי קריירה: משיקום פציעות וכאבים, דרך תחזוקה והתאוששות שוטפת, ועד לשיפור התנועה והביצועים.
           </p>
 

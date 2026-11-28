@@ -32,9 +32,9 @@
     color: #FFFFFF;
   }
 
-  /* Headings at weight 400 to 500, no weight 800/900 */
+  /* Headings at weight 600 for crisp Hebrew hierarchy */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-medium tracking-tight;
+    @apply font-semibold tracking-tight;
     text-wrap: balance;
   }
 
@@ -71,6 +71,19 @@
   }
 
   .btn-secondary:active {
+    transform: scale(0.98);
+  }
+
+  .btn-secondary-light {
+    @apply inline-flex items-center justify-center gap-2
+           bg-white text-[#0E1116] font-medium px-6 py-3
+           text-sm rounded-lg
+           border border-[#0E1116]/[0.14]
+           hover:border-[#2F5E9E] hover:text-[#2F5E9E] cursor-pointer;
+    transition: border-color 160ms var(--ease-out), color 160ms var(--ease-out), transform 160ms var(--ease-out);
+  }
+
+  .btn-secondary-light:active {
     transform: scale(0.98);
   }
 
