@@ -36,7 +36,10 @@ export default function ConnectLinkCard({ item }: ConnectLinkCardProps) {
             {item.title}
           </span>
           {item.description && (
-            <span className="block text-xs sm:text-sm text-[#A7AAB4] truncate mt-1">
+            <span
+              dir={item.description.includes("@") ? "ltr" : undefined}
+              className="block text-xs sm:text-sm text-[#A7AAB4] mt-1 leading-snug"
+            >
               {item.description}
             </span>
           )}
